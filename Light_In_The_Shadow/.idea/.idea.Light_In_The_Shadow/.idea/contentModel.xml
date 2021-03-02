@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\scott\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\scott\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Light_In_The_Shadow.-104479467.00" t="ExcludeRecursive" />
+    <e p="C:\Users\scott\Documents\GitHub\LightInTheShadow\Light_In_The_Shadow" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="3rd Party" t="Include">
@@ -30,8 +33,107 @@
               <e p="FirstPersonMovement.cs" t="Include" />
             </e>
           </e>
-          <e p="SimpleCameraController.cs" t="Include" />
+          <e p="QuickOutline" t="Include">
+            <e p="Readme.txt" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="OutlineFill.shader" t="Include" />
+                <e p="OutlineMask.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Outline.cs" t="Include" />
+            </e>
+          </e>
+          <e p="WorldSpaceTransitions" t="Include">
+            <e p="AdvancedGizmo" t="Include">
+              <e p="Gizmo.cs" t="Include" />
+              <e p="Hover.cs" t="Include" />
+            </e>
+            <e p="AdvancedGizmo_std" t="Include">
+              <e p="Unlit-Color.shader" t="Include" />
+            </e>
+            <e p="AdvancedGizmo_urp" t="Include">
+              <e p="UnlitOnTop.shader" t="Include" />
+            </e>
+            <e p="common" t="Include">
+              <e p="AlignSectionPointToCenter.cs" t="Include" />
+              <e p="DragPanel.cs" t="Include" />
+              <e p="FPS_.cs" t="Include" />
+              <e p="GetBuildScenes.cs" t="Include" />
+              <e p="GizmoFollow.cs" t="Include" />
+              <e p="LocalTransition.cs" t="Include" />
+              <e p="MaxCamera.cs" t="Include" />
+              <e p="MyCanvasSetting.cs" t="Include" />
+              <e p="ReadOnlyAttribute.cs" t="Include" />
+              <e p="ReadOnlyDrawer.cs" t="Include" />
+              <e p="RenderingModeSwitch.cs" t="Include" />
+              <e p="SceneSwitch.cs" t="Include" />
+            </e>
+            <e p="fading" t="Include">
+              <e p="Editor" t="Include">
+                <e p="NoiseTextureWindow.cs" t="Include" />
+                <e p="TransitionGradientEditor.cs" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="DemoAnimations" t="Include">
+                  <e p="CamAnim.cs" t="Include" />
+                  <e p="GizmoAnim.cs" t="Include" />
+                  <e p="RadialAnim.cs" t="Include" />
+                </e>
+                <e p="Editor" t="Include">
+                  <e p="GradientOptionDrawer.cs" t="Include" />
+                </e>
+                <e p="EnvironmentTransitionExample.cs" t="Include" />
+                <e p="FadingTransition.cs" t="Include" />
+                <e p="FadingTransitionDemo.cs" t="Include" />
+                <e p="GradientSelector.cs" t="Include" />
+                <e p="LocalSphereTransitionExample.cs" t="Include" />
+                <e p="NoiseGenerator.cs" t="Include" />
+                <e p="SoftwareCursor.cs" t="Include" />
+                <e p="TextureSelector.cs" t="Include" />
+                <e p="TransitionGradient.cs" t="Include" />
+              </e>
+            </e>
+            <e p="fading_std" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="CGIncludes" t="Include">
+                  <e p="section_clipping_CS.cginc" t="Include" />
+                  <e p="standard_shadow_CS.cginc" t="Include" />
+                </e>
+                <e p="FadingDissolve.shader" t="Include" />
+                <e p="FadingDissolveGlow.shader" t="Include" />
+                <e p="FadingDissolveGlowInd.shader" t="Include" />
+                <e p="FadingDissolveMetBump.shader" t="Include" />
+                <e p="FadingScreenFading.shader" t="Include" />
+                <e p="FadingScreenFadingDS.shader" t="Include" />
+                <e p="FadingScreenMetalBumped.shader" t="Include" />
+                <e p="FadingScreenMetalBumpedDS.shader" t="Include" />
+                <e p="FadingTransparent.shader" t="Include" />
+                <e p="FadingTransparentDS.shader" t="Include" />
+                <e p="ScreenDissolveGlow.shader" t="Include" />
+              </e>
+            </e>
+            <e p="fading_urp" t="Include">
+              <e p="ExampleScenes" t="Include">
+                <e p="selectiveBloom" t="Include">
+                  <e p="AdditiveBlit.shader" t="Include" />
+                  <e p="BloomFeature.cs" t="Include" />
+                  <e p="BloomMaskFeature.cs" t="Include" />
+                  <e p="common" t="Include">
+                    <e p="CommandBufferBlur.cs" t="Include" />
+                    <e p="SeparableBlur.shader" t="Include" />
+                  </e>
+                  <e p="MaskedBrightnessBlit.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Settings_urp" t="Include">
+              <e p="AutoLoadPipelineAsset.cs" t="Include" />
+            </e>
+          </e>
         </e>
+        <e p="CameraFocus.cs" t="Include" />
         <e p="playerMovement.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="GameConstantStrings.cs" t="Include" />
@@ -40,6 +142,7 @@
           <e p="mouseLook.cs" t="Include" />
           <e p="UserInput.cs" t="Include" />
         </e>
+        <e p="TriggerFocus.cs" t="Include" />
       </e>
       <e p="Light_In_The_Shadow.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
