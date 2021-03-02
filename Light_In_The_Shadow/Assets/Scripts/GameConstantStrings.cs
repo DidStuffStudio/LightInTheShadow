@@ -8,11 +8,13 @@ public static class GameConstantStrings {
     public struct Tags {
         // Add the tag strings here
         public static string Ground { get; } = "Ground";
+        public static string LoadingScreenTrigger { get; } = "LoadingScreenTrigger";
     }
 
     public struct Layers {
         // Add the layers strings here
         public static int Ground => GetLayer("Ground");
+        public static int FocusPoint => GetLayer("FocusPoint");
     }
     
     public struct Scenes {

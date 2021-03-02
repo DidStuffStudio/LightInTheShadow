@@ -20,20 +20,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScreen.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LoadingScreen.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/LoadingScreen.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/LoadingScreen.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalSettings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalSettings.lighting.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/Camera loading screen.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/Camera loading screen.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/Loading Screen.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/Loading Screen.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/Loading Screen.renderTexture" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/Loading Screen.renderTexture.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/playerControls.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/Snaylo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/Snaylo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1 1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1 1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/Christian.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/Christian.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/LoadingScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/LoadingScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerControls.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerControls.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,17 +66,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CameraFocus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerControls.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/playerMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CameraFocus.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -64,9 +89,16 @@
         <option value="$PROJECT_DIR$/Assets/TorchMask.shader" />
         <option value="$PROJECT_DIR$/Assets/CameraFocus.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" />
       </list>
     </option>
   </component>
@@ -114,7 +146,8 @@
       <workItem from="1614083404558" duration="2855000" />
       <workItem from="1614684568127" duration="3267000" />
       <workItem from="1614690249979" duration="9000" />
-      <workItem from="1614690459898" duration="1258000" />
+      <workItem from="1614690459898" duration="4123000" />
+      <workItem from="1614699244801" duration="8004000" />
     </task>
     <servers />
   </component>
@@ -144,5 +177,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614669750894" />
+    <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup" timestamp="1614704458804">
+      <screen x="-521" y="-1440" width="2560" height="1440" />
+    </state>
+    <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
   </component>
 </project>

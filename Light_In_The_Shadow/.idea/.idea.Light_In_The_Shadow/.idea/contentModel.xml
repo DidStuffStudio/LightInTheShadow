@@ -133,15 +133,29 @@
           </e>
         </e>
         <e p="CameraFocus.cs" t="Include" />
-        <e p="playerMovement.cs" t="Include" />
+        <e p="Scenes" t="Include">
+          <e p="Testing" t="Include">
+            <e p="DragObject.cs" t="Include" />
+            <e p="RotateDrag.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="CinemachinePOVExtension.cs" t="Include" />
           <e p="FadeInScene.cs" t="Include" />
           <e p="GameConstantStrings.cs" t="Include" />
+          <e p="Inputmanager.cs" t="Include" />
           <e p="Level.cs" t="Include" />
           <e p="MasterManager.cs" t="Include" />
-          <e p="mouseLook.cs" t="Include" />
+          <e p="player scripts" t="Include">
+            <e p="playerController.cs" t="Include" />
+            <e p="playerMovement.cs" t="Include" />
+          </e>
+          <e p="PlayerColliderTrigger.cs" t="Include" />
+          <e p="playerControls.cs" t="Include" />
           <e p="Portal" t="Include">
+            <e p="Portal.cs" t="Include" />
             <e p="PortalCamera.cs" t="Include" />
+            <e p="PortalCameraParallax.cs" t="Include" />
             <e p="PortalTeleporter.cs" t="Include" />
             <e p="PortalTextureSetup.cs" t="Include" />
             <e p="ScreenCutoutShader.shader" t="Include" />

@@ -35,7 +35,7 @@ public class RotateDrag : MonoBehaviour
 
            if (transform.rotation.x >50 && transform.rotation.x<10)
            {
-               transform.rotation.x = 25;
+               // transform.rotation.x = 25;
            }
 
            transform.RotateAround(antennaBase.transform.position,Vector3.right,_rotation.x);

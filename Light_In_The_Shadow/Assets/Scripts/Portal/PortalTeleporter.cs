@@ -14,11 +14,13 @@ public class PortalTeleporter : MonoBehaviour {
 		if (playerIsOverlapping)
 		{
 			Vector3 portalToPlayer = player.position - transform.position;
+			
 			float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
 
 			// If this is true: The player has moved across the portal
 			if (dotProduct < 0f)
 			{
+				print("teleporting");
 				// Teleport him!
 				float rotationDiff = -Quaternion.Angle(transform.rotation, receiver.rotation);
 				rotationDiff += 180;
@@ -34,8 +36,9 @@ public class PortalTeleporter : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.tag == "Player")
+		if (other.CompareTag("Player"))
 		{
+			print(playerIsOverlapping);
 			playerIsOverlapping = true;
 		}
 	}
