@@ -76,7 +76,7 @@ ModelImporter:
     importCameras: 0
     importLights: 0
     fileIdsGeneration: 2
-    swapUVChannels: 0
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
