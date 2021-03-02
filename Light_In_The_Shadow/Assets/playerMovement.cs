@@ -4,28 +4,35 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    public CharacterController controller;
-    public float speed = 12f;
-    public float gravity = -9.81f;
+    float horizontal, vertical;
+    Rigidbody rb;
 
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
-
-    Vector3 velocity;
-
-    bool isGrounded; 
-
+    public float mouseSpeed,movementSpeed;    
+    public Transform viewport;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
 
-        Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move*speed*Time.deltaTime);
+        float moveHorizontal = Input.GetAxis("Horizontal");
 
-        velocity.y += gravity*Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        float moveVertical = Input.GetAxis("Vertical");
+
+        horizontal += mouseSpeed * mouseX;
+        vertical -= mouseSpeed * mouseY;
+        viewport.transform.eulerAngles = new Vector3(vertical,horizontal,0f);
+        transform.eulerAngles = new Vector3(0f, horizontal, 0f);
+
+        Vector3 move = new Vector3(moveHorizontal,0f,moveVertical);
+        movePlayer(move);
+    }
+    void movePlayer(Vector3 direction)
+    {
+        transform.Translate(direction * movementSpeed * Time.deltaTime);
     }
 }
