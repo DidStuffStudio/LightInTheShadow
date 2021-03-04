@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 
 public class PortalCameraParallax : MonoBehaviour {
     public Camera portalCamera;
     public Transform pairPortal;
+
+ 
+
     private void UpdateCamera(Camera camera) {
         portalCamera.projectionMatrix = camera.projectionMatrix;
         var relativePos = transform.InverseTransformPoint(camera.transform.position);
