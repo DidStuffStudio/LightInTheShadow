@@ -5,16 +5,18 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class playerController : MonoBehaviour
 {
-    private CharacterController controller;
+    [HideInInspector]
+    public CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-    private float playerSpeed = 2.0f;
+    public float playerSpeed = 2.0f;
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
     private Inputmanager inputmanager;
     private Transform cameraTransform;
-
-   
+    
+    [HideInInspector]
+    public bool isRunning;
 
 
     private void Start()
