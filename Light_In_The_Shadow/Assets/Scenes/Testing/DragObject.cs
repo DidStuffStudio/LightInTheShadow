@@ -5,9 +5,26 @@ using UnityEngine;
 
 public class DragObject : MonoBehaviour
 {
+    private Shader shader;
     private Vector3 mOffset;
     public GameObject antennaBase;
+    public GameObject antenna;
     private float mZCoord;
+    Renderer[] children;
+
+    private void Start()
+    {
+        children = GetComponentsInChildren<Renderer>();
+    }
+
+    private void Update()
+    {
+        foreach (Renderer rend in children)
+        {
+           // rend.material.SetFloat("_TVTransition");
+        }
+    }
+
     void OnMouseDown()
 
     {
