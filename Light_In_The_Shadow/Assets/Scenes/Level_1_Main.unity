@@ -6520,6 +6520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortalHouse
       objectReference: {fileID: 0}
+    - target: {fileID: 2378116966298475993, guid: aedd1e7ef1ccc8b4f8902ba6cb5d7ccd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23d76479198d1c446ac042be90acc84e, type: 2}
     - target: {fileID: 3488690961835361797, guid: aedd1e7ef1ccc8b4f8902ba6cb5d7ccd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
