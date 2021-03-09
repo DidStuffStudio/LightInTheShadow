@@ -118,3 +118,4 @@ Material:
     - _SectionPoint: {r: -1.5639665, g: 0.2115314, b: -2.71, a: 0}
     - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
     - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []

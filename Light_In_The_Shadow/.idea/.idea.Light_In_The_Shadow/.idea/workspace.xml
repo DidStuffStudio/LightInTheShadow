@@ -20,36 +20,105 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2_Main.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2_Main.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/New Lighting Settings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/New Lighting Settings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_LoadingScreen.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_LoadingScreen.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_NextScene.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_NextScene.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_NextSceneLoadingScreen.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_NextSceneLoadingScreen.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_World.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_World.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/LivingRoomDoor.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/LivingRoomDoor.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DetectClick.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Interactor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Interactor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Cave.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Cave.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/NewLayer.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/NewLayer.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_A.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_A.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_B.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_B.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_C.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_C.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_A.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_A.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_B.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_B.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_C.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_C.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_Mud.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_Mud.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/PortalHouse.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/PortalHouse.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1_Main.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1_Main/NavMesh.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1_Main/NavMesh.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1_Main/OcclusionCullingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1_Main/OcclusionCullingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TerrainData_06237a53-4bc6-4b98-ae3f-ac555fedf2ec.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TerrainData_06237a53-4bc6-4b98-ae3f-ac555fedf2ec.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TerrainData_60d3ad61-c3cf-40e7-be66-20da887694bc.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TerrainData_60d3ad61-c3cf-40e7-be66-20da887694bc.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Cave_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Cave_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Steps_Nrm_A_4K.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Steps_Nrm_A_4K.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Steps_Nrm_B_4K.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Steps_Nrm_B_4K.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Steps_Nrm_C_4K.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Steps_Nrm_C_4K.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Tunnel_Nrm_A.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Tunnel_Nrm_A.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Tunnel_Nrm_B.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Tunnel_Nrm_B.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Tunnel_Nrm_C.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/PortalHouse/Tunnel_Nrm_C.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Particles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Particles.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Fantasy Forest Environment Free Sample/Meshes/Prefabs/tree_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Fantasy Forest Environment Free Sample/Meshes/Prefabs/tree_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1011.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1011.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1012.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1012.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1013.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1013.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1014.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1014.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1015.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1015.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1021.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1021.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1022.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1022.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1023.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_std/materials/glowfading1023.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/fading1_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/fading1_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/fading23_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/fading23_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/fading25_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/fading25_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/fading2_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/fading2_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1011_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1011_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1012_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1012_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1013_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1013_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1014_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1014_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1015_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1015_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading101_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading101_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1021_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1021_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1022_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1022_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1023_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading1023_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading102_urp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/materials/glowfading102_urp.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DreamMonster1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DreamMonster1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/FadeInSceneMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/FadeInSceneMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalWaves_M.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalWaves_M.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Door.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Door.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Door.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Door.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1_Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1_Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleSceneLightingSettings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleSceneLightingSettings.lighting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_A.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_A.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_B.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_B.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_LoadingScreen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_LoadingScreen.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_NextScene.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_NextScene.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_NextSceneLoadingScreen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_NextSceneLoadingScreen.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_World.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal_Materials/CameraMat_World.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PortalWaves.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PortalWaves.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TentacleKill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TentacleKill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/HighResTenticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/HighResTenticle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,25 +130,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TentacleKill.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Tenticle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CameraFocus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerControls.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Tenticle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TentacleKill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Interactor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -93,18 +163,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" />
-        <option value="$PROJECT_DIR$/Assets/TentacleKill.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/Candice AI for Games/Scripts/CandiceAIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Tenticle.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/TentacleKill.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" />
+        <option value="$PROJECT_DIR$/Assets/DetectClick.cs" />
+        <option value="$PROJECT_DIR$/Assets/Interactor.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" />
       </list>
     </option>
   </component>
@@ -129,16 +202,22 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -157,11 +236,13 @@
       <workItem from="1614757432858" duration="9444000" />
       <workItem from="1614840106685" duration="5595000" />
       <workItem from="1615281538659" duration="11677000" />
+      <workItem from="1615310621954" duration="1156000" />
+      <workItem from="1615313572321" duration="4113000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />

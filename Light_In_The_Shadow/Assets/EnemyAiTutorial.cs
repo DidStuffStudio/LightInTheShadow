@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyAiTutorial : MonoBehaviour
 {
@@ -134,5 +135,13 @@ public class EnemyAiTutorial : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.layer == 10)
+        {
+           player.transform.position = player.GetComponent<playerController>().respawnLocation;
+        }
     }
 }

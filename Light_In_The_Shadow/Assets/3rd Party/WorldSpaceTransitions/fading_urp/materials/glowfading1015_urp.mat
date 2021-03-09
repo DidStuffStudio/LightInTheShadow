@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: glowfading1015_urp
-  m_Shader: {fileID: -6465566751694194690, guid: f88957b355e77a34a89e0339fd23e3b9,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: f88957b355e77a34a89e0339fd23e3b9, type: 3}
   m_ShaderKeywords: DISSOLVE DISSOLVE_GLOW DISSOLVE_TEXTURE GLOW GLOWISSOLVE SCREENDISSOLVE
     SCREENDISSOLVE_GLOW _DOUBLESIDED_ON _doubleSided
   m_LightmapFlags: 4
@@ -69,6 +68,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_8A2B8817: 0
     - _BumpScale: 1
@@ -117,3 +128,4 @@ Material:
     - _SectionPoint: {r: -0.075662136, g: 0.588626, b: -1.7377539, a: 0}
     - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
     - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []

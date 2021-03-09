@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\scott\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\scott\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_Light_In_The_Shadow.-104479467.00" t="ExcludeRecursive" />
+    <e p="C:\Users\scott\Documents\GitHub\LightInTheShadow\Light_In_The_Shadow" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -173,7 +175,10 @@
           </e>
         </e>
         <e p="CameraFocus.cs" t="Include" />
+        <e p="ChangeFadeGizmo.cs" t="Include" />
+        <e p="DetectClick.cs" t="Include" />
         <e p="EnemyAiTutorial.cs" t="Include" />
+        <e p="Interactor.cs" t="Include" />
         <e p="Scenes" t="Include">
           <e p="Testing" t="Include">
             <e p="DragObject.cs" t="Include" />
@@ -212,10 +217,7 @@
       <e p="Light_In_The_Shadow.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp/Bin" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
-    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_Light_In_The_Shadow.-1562579902.00" t="ExcludeRecursive" />
   </component>
 </project>

@@ -18,9 +18,11 @@ public class playerController : MonoBehaviour
     [HideInInspector]
     public bool isRunning;
 
+    public Vector3 respawnLocation;
 
     private void Start()
     {
+        respawnLocation = transform.position;
         controller = GetComponent<CharacterController>();
         inputmanager = Inputmanager.Instance;
         cameraTransform = Camera.main.transform;
