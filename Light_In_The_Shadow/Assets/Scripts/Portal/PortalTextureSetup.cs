@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PortalTextureSetup : MonoBehaviour {
-    public Camera cameraA;
-    public Camera cameraB;
-
-    public Material cameraMatA;
-    public Material cameraMatB;
+    [SerializeField] private Camera [] _cameras;
+    [SerializeField] private Material [] _materials;
 
     void Start() {
-        SetCameraTexture(cameraA, cameraMatA);
-        SetCameraTexture(cameraB, cameraMatB);
+        for (int i = 0; i < _cameras.Length; i++) {
+            SetCameraTexture(_cameras[i], _materials[i]);
+        }
     }
 
     private void SetCameraTexture(Camera camera, Material material) {

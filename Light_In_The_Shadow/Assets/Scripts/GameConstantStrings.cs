@@ -20,6 +20,8 @@ public static class GameConstantStrings {
     public struct Scenes {
         // Add the scene strings here
         public static string LoadingScreen => GetScene("LoadingScreen");
+        public static string Level1Main => GetScene("Scenes/Level_1_Main");
+        public static string Level2Main => GetScene("Scenes/Level_2_Main");
     }
 
     private static int GetLayer(string name) {

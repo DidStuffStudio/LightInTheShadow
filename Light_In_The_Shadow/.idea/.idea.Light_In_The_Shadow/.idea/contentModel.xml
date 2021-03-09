@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\scott\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\scott\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_Light_In_The_Shadow.-104479467.00" t="ExcludeRecursive" />
-    <e p="C:\Users\scott\Documents\GitHub\LightInTheShadow\Light_In_The_Shadow" t="IncludeRecursive">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -15,79 +13,6 @@
                   <e p="Skybox Cubemap Extended.shader" t="Include" />
                 </e>
               </e>
-            </e>
-          </e>
-          <e p="Candice AI for Games" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="CameraFollow.cs" t="Include" />
-              <e p="CandiceAIController.cs" t="Include" />
-              <e p="CandiceAIManager.cs" t="Include" />
-              <e p="CandiceConfig.cs" t="Include" />
-              <e p="CandiceGrid.cs" t="Include" />
-              <e p="Character.cs" t="Include" />
-              <e p="CharacterStat.cs" t="Include" />
-              <e p="CharacterStats.cs" t="Include" />
-              <e p="Editor" t="Include">
-                <e p="AddModifierWindow.cs" t="Include" />
-                <e p="AIController_Editor.cs" t="Include" />
-                <e p="AIManager_Editor.cs" t="Include" />
-                <e p="Autorun.cs" t="Include" />
-                <e p="SetupAssistant_Menu.cs" t="Include" />
-                <e p="SimpleAIController_Menu.cs" t="Include" />
-                <e p="StartupWindow.cs" t="Include" />
-                <e p="TileGridGenerator.cs" t="Include" />
-                <e p="WaypointEditor.cs" t="Include" />
-                <e p="WaypointManagerWindow.cs" t="Include" />
-              </e>
-              <e p="Faction.cs" t="Include" />
-              <e p="GameManager.cs" t="Include" />
-              <e p="HealthBarScript.cs" t="Include" />
-              <e p="Heap.cs" t="Include" />
-              <e p="Instructions.cs" t="Include" />
-              <e p="IPooledObject.cs" t="Include" />
-              <e p="Libs" t="Include">
-                <e p="Behavior Tree" t="Include">
-                  <e p="BehaviorAction.cs" t="Include" />
-                  <e p="BehaviorNode.cs" t="Include" />
-                  <e p="BehaviorStates.cs" t="Include" />
-                  <e p="BehaviorTree.cs" t="Include" />
-                  <e p="CandiceBehaviorNode.cs" t="Include" />
-                  <e p="CandiceBehaviorTree.cs" t="Include" />
-                  <e p="DefaultBehaviors.cs" t="Include" />
-                  <e p="DefaultBehaviourTree.cs" t="Include" />
-                  <e p="Inverter.cs" t="Include" />
-                  <e p="Selector.cs" t="Include" />
-                  <e p="Sequence.cs" t="Include" />
-                </e>
-                <e p="Finit State Machine" t="Include">
-                  <e p="Actions" t="Include">
-                    <e p="AttackAction.cs" t="Include" />
-                    <e p="IdleAction.cs" t="Include" />
-                    <e p="MoveAction.cs" t="Include" />
-                    <e p="PatrolAction.cs" t="Include" />
-                    <e p="TextAction.cs" t="Include" />
-                  </e>
-                  <e p="FSM.cs" t="Include" />
-                  <e p="FSMAction.cs" t="Include" />
-                  <e p="FSMState.cs" t="Include" />
-                </e>
-                <e p="Pathfinding" t="Include">
-                  <e p="Line.cs" t="Include" />
-                  <e p="Node.cs" t="Include" />
-                  <e p="Path.cs" t="Include" />
-                  <e p="PathFinding.cs" t="Include" />
-                </e>
-              </e>
-              <e p="ObjectPooler.cs" t="Include" />
-              <e p="ObjectScanner.cs" t="Include" />
-              <e p="ObstacleAvoidance.cs" t="Include" />
-              <e p="playerController.cs" t="Include" />
-              <e p="SimpleAIController.cs" t="Include" />
-              <e p="StatModifier.cs" t="Include" />
-              <e p="TacticsPlayer.cs" t="Include" />
-              <e p="Tile.cs" t="Include" />
-              <e p="TurnManager.cs" t="Include" />
-              <e p="Waypoint.cs" t="Include" />
             </e>
           </e>
           <e p="Fantasy Forest Environment Free Sample" t="Include">
@@ -158,28 +83,6 @@
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="Stylized Nature Environment" t="Include">
             <e p="Readme.txt" t="Include" />
-          </e>
-          <e p="World Portal System Package" t="Include">
-            <e p="Readme.txt" t="Include" />
-            <e p="Scripts" t="Include">
-              <e p="CrossPlatformInputManager.cs" t="Include" />
-              <e p="CurveControlledBob.cs" t="Include" />
-              <e p="HeadBob.cs" t="Include" />
-              <e p="LerpControlledBob.cs" t="Include" />
-              <e p="Linker.cs" t="Include" />
-              <e p="MouseLook.cs" t="Include" />
-              <e p="PlatformSpecific" t="Include">
-                <e p="MobileInput.cs" t="Include" />
-                <e p="StandaloneInput.cs" t="Include" />
-              </e>
-              <e p="Portal.cs" t="Include" />
-              <e p="PortalableFirstPersonController.cs" t="Include" />
-              <e p="VirtualInput.cs" t="Include" />
-            </e>
-            <e p="Shaders" t="Include">
-              <e p="Portal.shader" t="Include" />
-              <e p="ToonLit.shader" t="Include" />
-            </e>
           </e>
           <e p="WorldSpaceTransitions" t="Include">
             <e p="AdvancedGizmo" t="Include">
@@ -283,6 +186,7 @@
           <e p="GameConstantStrings.cs" t="Include" />
           <e p="Inputmanager.cs" t="Include" />
           <e p="Level.cs" t="Include" />
+          <e p="MainCamera.cs" t="Include" />
           <e p="MasterManager.cs" t="Include" />
           <e p="player scripts" t="Include">
             <e p="playerController.cs" t="Include" />
@@ -308,7 +212,10 @@
       <e p="Light_In_The_Shadow.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp\Bin" t="ExcludeRecursive" />
+      <e p="Temp/Bin" t="ExcludeRecursive" />
     </e>
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_Light_In_The_Shadow.-1562579902.00" t="ExcludeRecursive" />
   </component>
 </project>

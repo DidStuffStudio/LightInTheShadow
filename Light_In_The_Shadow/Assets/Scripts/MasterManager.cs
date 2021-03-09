@@ -14,44 +14,63 @@ public class MasterManager : MonoBehaviour {
             var masterManagerGameObject = new GameObject();
             _instance = masterManagerGameObject.AddComponent<MasterManager>();
             masterManagerGameObject.name = typeof(MasterManager).ToString();
-
-            // make instance persistent across scenes
-            DontDestroyOnLoad(masterManagerGameObject);
-
             return _instance;
         }
     }
 
     private UserInput _userInput;
-    
+    private int _levelIndex = 0;
+    public bool loadingScreenTransitionStarted = false;
 
     public GameObject loadingScreen;
 
     private void Awake() {
-        if (_instance == null) _instance = this;
+        if (_instance == null) {
+            _instance = this;
+            // make instance persistent across scenes
+            DontDestroyOnLoad(gameObject);
+        }
 
-        _instance = this;
         // set the user input control
         var component = GetComponent<UserInput>();
         if (component == null) _userInput = gameObject.AddComponent<UserInput>();
         else _userInput = GetComponent<UserInput>();
-        
+
         // loadingScreen.SetActive(false);
     }
 
-    IEnumerator LoadNextScene(string sceneToLoad) {
+    public void StartLoadingNextScene() {
+        _levelIndex++;
+        StartCoroutine(LoadNextScene(_levelIndex));
+    }
+
+    private IEnumerator LoadNextScene(int sceneToLoad) {
         // loadingScreen.SetActive(true);
+        loadingScreenTransitionStarted = true;
 
+        yield return new WaitForSeconds(0.5f);
+
+        print("Loading next scene: " + sceneToLoad);
         AsyncOperation loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad);
-        float loadProgress = loadingOperation.progress;
+        // float loadProgress = loadingOperation.progress;
 
-        while (!loadingOperation.isDone)
-        {
+        while (!loadingOperation.isDone) {
             yield return null;
         }
-        
+
+        // yield return new WaitForSeconds(5.0f);
+
         // loadingScreen.SetActive(false);
     }
+
+    public void LoadingScreenTransitionFinished() {
+        print("The loading screen transition has finished");
+        loadingScreen.SetActive(false);
+        loadingScreenTransitionStarted = false;
+    }
     
-    
+
+    private IEnumerator FallingDownThroughNeuronsTransition() {
+        yield return new WaitForSeconds(5.0f);
+    }
 }
