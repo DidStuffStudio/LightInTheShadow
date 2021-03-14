@@ -2,12 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class MasterManager : MonoBehaviour {
     // instance of the Master Manager
     private static MasterManager _instance;
 
+    public VolumeProfile[] levelPP;
+    
+    public Portal loadingPortal;
+    public Camera loadingPortalCam;
+    public Transform recievingCollider;
     public static MasterManager Instance {
         get {
             if (_instance != null) return _instance;
@@ -41,22 +47,27 @@ public class MasterManager : MonoBehaviour {
 
     public void StartLoadingNextScene() {
         _levelIndex++;
+
         StartCoroutine(LoadNextScene(_levelIndex));
+
     }
 
     private IEnumerator LoadNextScene(int sceneToLoad) {
         // loadingScreen.SetActive(true);
         loadingScreenTransitionStarted = true;
-
-        yield return new WaitForSeconds(0.5f);
+        
+        yield return new WaitForSeconds(0.1f);
 
         print("Loading next scene: " + sceneToLoad);
-        AsyncOperation loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad);
+        AsyncOperation loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
+        
         // float loadProgress = loadingOperation.progress;
 
         while (!loadingOperation.isDone) {
             yield return null;
         }
+        SceneManager.UnloadSceneAsync(_levelIndex-1);
+        SceneManager.SetActiveScene(SceneManager.GetSceneAt(_levelIndex));
 
         // yield return new WaitForSeconds(5.0f);
 
@@ -67,6 +78,21 @@ public class MasterManager : MonoBehaviour {
         print("The loading screen transition has finished");
         loadingScreen.SetActive(false);
         loadingScreenTransitionStarted = false;
+        GetComponentInChildren<Volume>().profile = levelPP[_levelIndex];
+        NewPortalSetup();
+
+
+    }
+
+    private void NewPortalSetup()
+    {
+        var portalGameObject = GameObject.FindWithTag("LevelPortal");
+        Portal portal = portalGameObject.GetComponent<Portal>();
+        PortalTeleporter teleporter = portalGameObject.GetComponent<PortalTeleporter>();
+        portal.linkedPortal = loadingPortal;
+        portal.portalCam = loadingPortalCam;
+        teleporter.player = GameObject.FindWithTag("Player").transform;
+        teleporter.receiver = recievingCollider;
     }
     
 

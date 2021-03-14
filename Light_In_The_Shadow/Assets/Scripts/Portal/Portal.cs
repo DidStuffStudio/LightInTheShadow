@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour {
     public Portal linkedPortal;
-    [SerializeField] private Camera portalCam;
+    public Camera portalCam;
     private Camera playerCam;
 
     void Awake () {

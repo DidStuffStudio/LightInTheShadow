@@ -8,9 +8,11 @@ public class PortalTeleporter : MonoBehaviour {
 
     private bool playerIsOverlapping = false;
 
+    public bool isFinalPortal = false;
+
     // Update is called once per frame
     void Update() {
-        if (playerIsOverlapping) {
+        if (playerIsOverlapping && !isFinalPortal) {
             print("DEW IT");
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
@@ -22,7 +24,7 @@ public class PortalTeleporter : MonoBehaviour {
                 player.Rotate(Vector3.up, rotationDiff);
 
                 Vector3 positionOffset = Quaternion.Euler(0f, rotationDiff, 0f) * portalToPlayer;
-                player.position = receiver.position + positionOffset;
+                player.position = receiver.position;// + positionOffset;
 
                 playerIsOverlapping = false;
                 if(!MasterManager.Instance.loadingScreenTransitionStarted) MasterManager.Instance.StartLoadingNextScene();

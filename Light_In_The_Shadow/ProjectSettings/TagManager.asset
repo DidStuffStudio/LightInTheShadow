@@ -7,6 +7,8 @@ TagManager:
   - LoadingScreenTrigger
   - Tile
   - Enemy
+  - LevelPortal
+  - LoadingScreen
   layers:
   - Default
   - TransparentFX
