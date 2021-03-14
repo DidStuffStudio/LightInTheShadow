@@ -25,7 +25,6 @@
             <e p="Scripts" t="Include">
               <e p="FastIK" t="Include">
                 <e p="FastIKCCD.cs" t="Include" />
-                <e p="FastIKFabric.cs" t="Include" />
                 <e p="FastIKLook.cs" t="Include" />
               </e>
               <e p="Sample" t="Include">
@@ -174,11 +173,7 @@
             </e>
           </e>
         </e>
-        <e p="CameraFocus.cs" t="Include" />
-        <e p="ChangeFadeGizmo.cs" t="Include" />
-        <e p="DetectClick.cs" t="Include" />
-        <e p="EnemyAiTutorial.cs" t="Include" />
-        <e p="Interactor.cs" t="Include" />
+        <e p="MenuLogic.cs" t="Include" />
         <e p="Scenes" t="Include">
           <e p="Testing" t="Include">
             <e p="DragObject.cs" t="Include" />
@@ -186,10 +181,15 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CameraFocus.cs" t="Include" />
+          <e p="ChangeFadeGizmo.cs" t="Include" />
           <e p="CinemachinePOVExtension.cs" t="Include" />
+          <e p="DetectClick.cs" t="Include" />
+          <e p="EnemyAI.cs" t="Include" />
           <e p="FadeInScene.cs" t="Include" />
           <e p="GameConstantStrings.cs" t="Include" />
           <e p="Inputmanager.cs" t="Include" />
+          <e p="Interactor.cs" t="Include" />
           <e p="Level.cs" t="Include" />
           <e p="MainCamera.cs" t="Include" />
           <e p="MasterManager.cs" t="Include" />
@@ -208,12 +208,15 @@
             <e p="PortalTextureSetup.cs" t="Include" />
             <e p="ScreenCutoutShader.shader" t="Include" />
           </e>
+          <e p="TentacleKill.cs" t="Include" />
+          <e p="Tenticle.cs" t="Include" />
+          <e p="Testing" t="Include">
+            <e p="FogChange.cs" t="Include" />
+          </e>
+          <e p="TriggerEvent.cs" t="Include" />
+          <e p="TriggerFocus.cs" t="Include" />
           <e p="UserInput.cs" t="Include" />
         </e>
-        <e p="TentacleKill.cs" t="Include" />
-        <e p="Tenticle.cs" t="Include" />
-        <e p="TriggerEvent.cs" t="Include" />
-        <e p="TriggerFocus.cs" t="Include" />
       </e>
       <e p="Light_In_The_Shadow.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

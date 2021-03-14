@@ -20,36 +20,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Level_2_PP.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Level_2_PP.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Level_3_PP.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Level_3_PP.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TriggerEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TriggerEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MenuLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/MenuLogic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/NavMesh.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/NavMesh.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Background.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/LightInTheShadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/LightInTheShadow.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/ReasonableGames.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/ReasonableGames.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Test_Rough.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Test_Rough.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/FastIK/FastIKFabric.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/FastIK/FastIKFabric.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/Sample/SampleRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/Sample/SampleRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraFocus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraFocus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DetectClick.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DetectClick.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DreamMonster1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DreamMonster1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Interactor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Interactor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Cave.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Cave.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/PortalHouse.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PortalHouse.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1_Main.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1_Main.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2_Main.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2_Main.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TentacleKill.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TentacleKill.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tenticle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tenticle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_06237a53-4bc6-4b98-ae3f-ac555fedf2ec.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_06237a53-4bc6-4b98-ae3f-ac555fedf2ec.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_60d3ad61-c3cf-40e7-be66-20da887694bc.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_60d3ad61-c3cf-40e7-be66-20da887694bc.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TriggerEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TriggerEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TriggerFocus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TriggerFocus.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,24 +100,20 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Tenticle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CameraFocus.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TriggerEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TentacleKill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Interactor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MenuLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -100,16 +133,20 @@
         <option value="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" />
         <option value="$PROJECT_DIR$/Assets/TentacleKill.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" />
         <option value="$PROJECT_DIR$/Assets/DetectClick.cs" />
         <option value="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" />
         <option value="$PROJECT_DIR$/Assets/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/TriggerEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAiTutorial.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/Sample/SampleRotator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/MenuLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
       </list>
     </option>
@@ -131,6 +168,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/LiTS_TestBuilds\Light_In_The_Shadow.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\scott\Desktop\LiTS_TestBuilds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />

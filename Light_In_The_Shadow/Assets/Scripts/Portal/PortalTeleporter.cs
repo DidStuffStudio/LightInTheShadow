@@ -22,13 +22,17 @@ public class PortalTeleporter : MonoBehaviour {
                 float rotationDiff = -Quaternion.Angle(transform.rotation, receiver.rotation);
                 rotationDiff += 180;
                 player.Rotate(Vector3.up, rotationDiff);
-
+                
                 Vector3 positionOffset = Quaternion.Euler(0f, rotationDiff, 0f) * portalToPlayer;
                 player.position = receiver.position;// + positionOffset;
 
                 playerIsOverlapping = false;
                 if(!MasterManager.Instance.loadingScreenTransitionStarted) MasterManager.Instance.StartLoadingNextScene();
-                else MasterManager.Instance.LoadingScreenTransitionFinished();
+                else
+                {
+                    MasterManager.Instance.LoadingScreenTransitionFinished();
+                    player.GetComponent<playerController>().NewRespawnPoint();
+                }
             }
         }
     }

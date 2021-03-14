@@ -25,7 +25,7 @@ public class MasterManager : MonoBehaviour {
     }
 
     private UserInput _userInput;
-    private int _levelIndex = 0;
+    private int _levelIndex =1;
     public bool loadingScreenTransitionStarted = false;
 
     public GameObject loadingScreen;
@@ -57,31 +57,22 @@ public class MasterManager : MonoBehaviour {
         loadingScreenTransitionStarted = true;
         
         yield return new WaitForSeconds(0.1f);
-
-        print("Loading next scene: " + sceneToLoad);
         AsyncOperation loadingOperation = SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
-        
         // float loadProgress = loadingOperation.progress;
-
         while (!loadingOperation.isDone) {
             yield return null;
         }
         SceneManager.UnloadSceneAsync(_levelIndex-1);
         SceneManager.SetActiveScene(SceneManager.GetSceneAt(_levelIndex));
-
         // yield return new WaitForSeconds(5.0f);
-
         // loadingScreen.SetActive(false);
     }
 
     public void LoadingScreenTransitionFinished() {
-        print("The loading screen transition has finished");
         loadingScreen.SetActive(false);
         loadingScreenTransitionStarted = false;
         GetComponentInChildren<Volume>().profile = levelPP[_levelIndex];
-        NewPortalSetup();
-
-
+        if(_levelIndex < 2) NewPortalSetup();
     }
 
     private void NewPortalSetup()
