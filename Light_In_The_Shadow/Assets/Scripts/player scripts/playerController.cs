@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 public class playerController : MonoBehaviour
@@ -15,8 +16,9 @@ public class playerController : MonoBehaviour
     private float gravityValue = -9.81f;
     //private Inputmanager inputmanager;
     private Transform cameraTransform;
-<<<<<<< Updated upstream
+
     private bool playerFrozen;
+    public inventorySystem inventory;
     [HideInInspector]
     public bool isRunning;
 
@@ -24,25 +26,22 @@ public class playerController : MonoBehaviour
     public CinemachineVirtualCamera playerCam;
     
     
-=======
+
     private PlayerControls playerControls;
     
-    [HideInInspector]
-    public bool isRunning;
 
-    public GameObject inventoryHolder,itemHolder;
+    public GameObject inventoryHolder,itemHolder,dropBtn,useBtn;
     public bool inventoryOpen;
-    private inventorySystem inventory;
+    
     public string tagName;
     public float distance;// min distance to object via raycast before being able to pick up the object
 
     private void Awake()
     {
         playerControls = new PlayerControls();
-        inventory = GameObject.Find("inventory").GetComponent<inventorySystem>();
     }
 
->>>>>>> Stashed changes
+
     private void Start()
     {
         playerCam = GetComponentInChildren<CinemachineVirtualCamera>();
@@ -53,6 +52,7 @@ public class playerController : MonoBehaviour
 
         playerControls.Player.OpenInventory.performed += _ => OpenInventory();
         playerControls.Player.PickUp.started += _ => pickupObject();
+        playerControls.Player.HighlightObject.performed += _ => highlightObject();
 
     }
     
@@ -64,16 +64,15 @@ public class playerController : MonoBehaviour
         {
             playerVelocity.y = 0f;
         }
-<<<<<<< Updated upstream
+
 
         if (!playerFrozen)
         {
 
-        Vector2 movement = inputmanager.getPlayerMovement() ;
-=======
+
         
         Vector2 movement = playerControls.Player.Movement.ReadValue<Vector2>();
->>>>>>> Stashed changes
+
         Vector3 move = new Vector3(movement.x,0f,movement.y);
         move = cameraTransform.forward * move.z+cameraTransform.right*move.x;
         move.y = 0;
@@ -81,7 +80,7 @@ public class playerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-<<<<<<< Updated upstream
+
                     
         }
     }
@@ -111,7 +110,7 @@ public class playerController : MonoBehaviour
             gravityValue = -9.81f;
         }
 
-=======
+
 
        
         
@@ -121,10 +120,12 @@ public class playerController : MonoBehaviour
         if (!inventoryHolder.activeSelf)
         {
             inventoryHolder.SetActive(true);
+            FreezePlayer(true);
         }
         else
         {
             inventoryHolder.SetActive(false);
+            FreezePlayer(false);
 
         }
     }
@@ -139,19 +140,31 @@ public class playerController : MonoBehaviour
             
             if (hitInfo.transform.gameObject.tag == tagName)
             {
-                Debug.Log("Hit " + hitInfo.transform.gameObject.name);
                 GameObject temp = Instantiate(hitInfo.transform.gameObject, itemHolder.transform, false);
+                inventory.itemsInInventory.Add(hitInfo.transform.gameObject);
+                temp.name = "UI";
                 temp.transform.localPosition = new Vector3(100 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
                 temp.transform.localScale *= 25;
                 temp.transform.gameObject.layer = 5;
-                inventory.itemsInInventory.Add(temp);
-                Destroy(hitInfo.transform.gameObject);
+                hitInfo.transform.gameObject.SetActive(false);
 
             }
 
         }
     }
+    void highlightObject()
+    {
+        RaycastHit hitInfo = new RaycastHit();
+        bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+        if (hit && hitInfo.transform.gameObject.layer ==5)
+        {
 
+            inventory.highlightedItem = hitInfo.transform.gameObject;
+            
+
+        }
+
+    }
 
 
     private void OnEnable()
@@ -161,6 +174,6 @@ public class playerController : MonoBehaviour
     private void OnDisable()
     {
         playerControls.Disable();
->>>>>>> Stashed changes
+
     }
 }

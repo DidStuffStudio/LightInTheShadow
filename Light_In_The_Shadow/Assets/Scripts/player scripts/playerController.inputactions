@@ -36,6 +36,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "HighlightObject",
+                    "type": "Button",
+                    "id": "0a744d71-e088-46cb-98af-da45e13fb313",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -108,7 +116,7 @@
                 {
                     "name": "",
                     "id": "dc4c2a99-2796-436c-b9f0-87e4001366d4",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/q",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Player",
@@ -119,11 +127,22 @@
                 {
                     "name": "",
                     "id": "33dbefbf-a2c2-432b-a2c6-19aa788d4253",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/e",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Player",
                     "action": "PickUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c361317d-8170-4e50-925b-c3c90b507687",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Player",
+                    "action": "HighlightObject",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

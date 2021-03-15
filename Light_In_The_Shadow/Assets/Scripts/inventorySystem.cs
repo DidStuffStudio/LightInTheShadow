@@ -8,17 +8,9 @@ public class inventorySystem : MonoBehaviour
     [SerializeField]
     public List<GameObject> itemsInInventory = new List<GameObject>();
     public GameObject highlightedItem;
-    public GameObject descriptionPanel;
-    private PlayerControls playerControls;
-    private void Awake()
-    {
-        playerControls = new PlayerControls();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerControls.Player.PickUp.started += _ => highlightObject();
-    }
+    public GameObject descriptionPanel,buttonPanel,itemsholder;
+
+
 
     // Update is called once per frame
     void Update()
@@ -26,6 +18,7 @@ public class inventorySystem : MonoBehaviour
         if (highlightedItem == null)
         {
             descriptionPanel.SetActive(false);
+            
         }
         else
         {
@@ -35,16 +28,29 @@ public class inventorySystem : MonoBehaviour
         }
         
     }
-
-    void highlightObject()
+    public void dropItem()
     {
-        Debug.Log("Mouse is down");
-
-        RaycastHit hitInfo = new RaycastHit();
-        bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-        if (hit)
+        Transform player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
+        for (int i = 0; i < itemsInInventory.Count; i++)
         {
-            Debug.Log("Hit " + hitInfo.transform.gameObject.name);
+            if (itemsInInventory[i].name == highlightedItem.name)
+            {
+                GameObject removeItem = itemsInInventory[i];
+                GameObject insceneItem = GameObject.Find(removeItem.name);
+                Destroy(highlightedItem);
+                removeItem.SetActive(true);
+                removeItem.transform.position = new Vector3(player.position.x+1, player.position.y, player.position.z+1);
+                itemsInInventory.Remove(removeItem);
+                highlightedItem = null;
+            }
         }
+        
+
+        
     }
+
+    
+
+    
 }

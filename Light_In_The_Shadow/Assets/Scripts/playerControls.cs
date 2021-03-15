@@ -49,6 +49,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""HighlightObject"",
+                    ""type"": ""Button"",
+                    ""id"": ""0a744d71-e088-46cb-98af-da45e13fb313"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -121,7 +129,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""dc4c2a99-2796-436c-b9f0-87e4001366d4"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Player"",
@@ -132,11 +140,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""33dbefbf-a2c2-432b-a2c6-19aa788d4253"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Player"",
                     ""action"": ""PickUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c361317d-8170-4e50-925b-c3c90b507687"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Player"",
+                    ""action"": ""HighlightObject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -157,6 +176,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_OpenInventory = m_Player.FindAction("OpenInventory", throwIfNotFound: true);
         m_Player_PickUp = m_Player.FindAction("PickUp", throwIfNotFound: true);
+        m_Player_HighlightObject = m_Player.FindAction("HighlightObject", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -210,6 +230,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_OpenInventory;
     private readonly InputAction m_Player_PickUp;
+    private readonly InputAction m_Player_HighlightObject;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -218,6 +239,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @OpenInventory => m_Wrapper.m_Player_OpenInventory;
         public InputAction @PickUp => m_Wrapper.m_Player_PickUp;
+        public InputAction @HighlightObject => m_Wrapper.m_Player_HighlightObject;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -239,6 +261,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @PickUp.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPickUp;
                 @PickUp.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPickUp;
                 @PickUp.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPickUp;
+                @HighlightObject.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHighlightObject;
+                @HighlightObject.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHighlightObject;
+                @HighlightObject.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHighlightObject;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -255,6 +280,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @PickUp.started += instance.OnPickUp;
                 @PickUp.performed += instance.OnPickUp;
                 @PickUp.canceled += instance.OnPickUp;
+                @HighlightObject.started += instance.OnHighlightObject;
+                @HighlightObject.performed += instance.OnHighlightObject;
+                @HighlightObject.canceled += instance.OnHighlightObject;
             }
         }
     }
@@ -274,5 +302,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnOpenInventory(InputAction.CallbackContext context);
         void OnPickUp(InputAction.CallbackContext context);
+        void OnHighlightObject(InputAction.CallbackContext context);
     }
 }

@@ -449,7 +449,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 570469227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1018930818}
+        m_TargetAssemblyTypeName: inventorySystem, Assembly-CSharp
+        m_MethodName: dropItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &570469227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,6 +923,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6039674235842143485, guid: cbd7bebb9c5930c4d9e7300d66c6bec2, type: 3}
   m_PrefabInstance: {fileID: 1619835054}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1018930818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018930817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529a16c6ba520934aba9c8bd89df1081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsInInventory: []
+  highlightedItem: {fileID: 0}
+  descriptionPanel: {fileID: 589520500}
+  buttonPanel: {fileID: 874366526}
+  itemsholder: {fileID: 727556851}
 --- !u!4 &1018930819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6039674235842143483, guid: cbd7bebb9c5930c4d9e7300d66c6bec2, type: 3}
@@ -930,9 +959,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1018930821}
   playerSpeed: 2
+  inventory: {fileID: 1018930818}
   isRunning: 0
+  respawnLocation: {x: 0, y: 0, z: 0}
+  playerCam: {fileID: 0}
   inventoryHolder: {fileID: 1456325880}
   itemHolder: {fileID: 727556851}
+  dropBtn: {fileID: 0}
+  useBtn: {fileID: 0}
   inventoryOpen: 0
   tagName: PickedUp
   distance: 1
@@ -1245,6 +1279,7 @@ GameObject:
   - component: {fileID: 1468861874}
   - component: {fileID: 1468861872}
   - component: {fileID: 1468861873}
+  - component: {fileID: 1468861875}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -1353,6 +1388,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1468861875
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468861870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 8608ec81ee27a15488d33f9dad239e91, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: -752.4352, y: 495.82336, z: 47.007202}
 --- !u!1 &1572327453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,6 +1648,10 @@ PrefabInstance:
     - target: {fileID: 6039674235842143485, guid: cbd7bebb9c5930c4d9e7300d66c6bec2, type: 3}
       propertyPath: m_Name
       value: fpsPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039674235842143485, guid: cbd7bebb9c5930c4d9e7300d66c6bec2, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6039674235842143482, guid: cbd7bebb9c5930c4d9e7300d66c6bec2, type: 3}
@@ -1929,7 +1985,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1995956386}
-  - component: {fileID: 1995956387}
   m_Layer: 5
   m_Name: inventory
   m_TagString: Untagged
@@ -1957,21 +2012,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1995956387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995956385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 529a16c6ba520934aba9c8bd89df1081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemsInInventory: []
-  highlightedItem: {fileID: 0}
-  descriptionPanel: {fileID: 589520500}
 --- !u!1 &2009217178
 GameObject:
   m_ObjectHideFlags: 0
