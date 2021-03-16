@@ -40,6 +40,7 @@ public class MasterManager : MonoBehaviour {
 
         // set the user input control
         var component = GetComponent<UserInput>();
+        
         if (component == null) _userInput = gameObject.AddComponent<UserInput>();
         else _userInput = GetComponent<UserInput>();
     }
@@ -60,11 +61,11 @@ public class MasterManager : MonoBehaviour {
         while (!loadingOperation.isDone) {
             yield return null;
         }
-        if(_levelIndex > 0) SceneManager.UnloadSceneAsync(_levelIndex - 1);
-        SceneManager.SetActiveScene(SceneManager.GetSceneAt(_levelIndex));
     }
 
     public void LoadingScreenTransitionFinished() {
+        if(_levelIndex > 0) SceneManager.UnloadSceneAsync(_levelIndex - 1);
+        SceneManager.SetActiveScene(SceneManager.GetSceneAt(_levelIndex));
         print("The loading screen transition has finished");
         loadingScreen.SetActive(false);
         loadingScreenTransitionStarted = false;

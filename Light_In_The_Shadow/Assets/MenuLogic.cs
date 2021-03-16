@@ -40,7 +40,7 @@ public class MenuLogic : MonoBehaviour {
         settingsPanel.SetActive(false);
         paused = false;
         if (isMainMenu) {
-            // manager.StartLoadingNextScene();
+            manager.StartLoadingNextScene();
         }
     }
 
