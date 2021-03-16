@@ -6,10 +6,10 @@ using UnityEngine;
 public class Portal : MonoBehaviour {
     public Portal linkedPortal;
     public Camera portalCam;
-    private Camera playerCam;
+    private Camera _playerCamera;
 
     void Awake () {
-        playerCam = Camera.main;
+        _playerCamera = Camera.main;
     }
 
     private void Update() {
@@ -19,7 +19,7 @@ public class Portal : MonoBehaviour {
     private void UpdatePortalCamera() {
         // make portal camera position and rotation the same relative to this portal as player camera relative to linked portal
         var m = transform.localToWorldMatrix * linkedPortal.transform.worldToLocalMatrix *
-                playerCam.transform.localToWorldMatrix;
+                _playerCamera.transform.localToWorldMatrix;
         portalCam.transform.SetPositionAndRotation(m.GetColumn(3), m.rotation);
     }
 }
