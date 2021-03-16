@@ -57,6 +57,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""rotateObject"",
+                    ""type"": ""Value"",
+                    ""id"": ""e1edb997-53f8-4d1a-b43c-e9d3c68445db"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -158,6 +166,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""HighlightObject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7fd594bb-1b1f-43a3-8e6b-91e798b61610"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player"",
+                    ""action"": ""rotateObject"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -177,6 +196,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player_OpenInventory = m_Player.FindAction("OpenInventory", throwIfNotFound: true);
         m_Player_PickUp = m_Player.FindAction("PickUp", throwIfNotFound: true);
         m_Player_HighlightObject = m_Player.FindAction("HighlightObject", throwIfNotFound: true);
+        m_Player_rotateObject = m_Player.FindAction("rotateObject", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -231,6 +251,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_OpenInventory;
     private readonly InputAction m_Player_PickUp;
     private readonly InputAction m_Player_HighlightObject;
+    private readonly InputAction m_Player_rotateObject;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -240,6 +261,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @OpenInventory => m_Wrapper.m_Player_OpenInventory;
         public InputAction @PickUp => m_Wrapper.m_Player_PickUp;
         public InputAction @HighlightObject => m_Wrapper.m_Player_HighlightObject;
+        public InputAction @rotateObject => m_Wrapper.m_Player_rotateObject;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -264,6 +286,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @HighlightObject.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHighlightObject;
                 @HighlightObject.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHighlightObject;
                 @HighlightObject.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHighlightObject;
+                @rotateObject.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotateObject;
+                @rotateObject.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotateObject;
+                @rotateObject.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotateObject;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -283,6 +308,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @HighlightObject.started += instance.OnHighlightObject;
                 @HighlightObject.performed += instance.OnHighlightObject;
                 @HighlightObject.canceled += instance.OnHighlightObject;
+                @rotateObject.started += instance.OnRotateObject;
+                @rotateObject.performed += instance.OnRotateObject;
+                @rotateObject.canceled += instance.OnRotateObject;
             }
         }
     }
@@ -303,5 +331,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnOpenInventory(InputAction.CallbackContext context);
         void OnPickUp(InputAction.CallbackContext context);
         void OnHighlightObject(InputAction.CallbackContext context);
+        void OnRotateObject(InputAction.CallbackContext context);
     }
 }

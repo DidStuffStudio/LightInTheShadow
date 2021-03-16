@@ -47,7 +47,6 @@ public class playerController : MonoBehaviour
         playerCam = GetComponentInChildren<CinemachineVirtualCamera>();
         respawnLocation = transform.position;
         controller = GetComponent<CharacterController>();
-        //inputmanager = Inputmanager.Instance;
         cameraTransform = Camera.main.transform;
 
         playerControls.Player.OpenInventory.performed += _ => OpenInventory();
@@ -65,12 +64,8 @@ public class playerController : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
-
         if (!playerFrozen)
         {
-
-
-        
         Vector2 movement = playerControls.Player.Movement.ReadValue<Vector2>();
 
         Vector3 move = new Vector3(movement.x,0f,movement.y);
@@ -79,9 +74,7 @@ public class playerController : MonoBehaviour
         controller.Move(move * Time.deltaTime * playerSpeed);
 
         playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
-
-                    
+        controller.Move(playerVelocity * Time.deltaTime);        
         }
     }
 
@@ -109,12 +102,8 @@ public class playerController : MonoBehaviour
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 300.0f;
             gravityValue = -9.81f;
         }
-
-
-
-       
-        
     }
+
     void OpenInventory()
     {
         if (!inventoryHolder.activeSelf)
@@ -126,7 +115,10 @@ public class playerController : MonoBehaviour
         {
             inventoryHolder.SetActive(false);
             FreezePlayer(false);
-
+            Destroy(inventory.rotatableObject);
+            inventory.rotatableObject = null;
+            inventory.highlightedItem = null;
+            inventory.descriptionPanel.SetActive(false);
         }
     }
 
@@ -136,36 +128,29 @@ public class playerController : MonoBehaviour
         RaycastHit hitInfo = new RaycastHit();
         bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
         if (hit && hitInfo.distance < distance)
-        {
-            
+        { 
             if (hitInfo.transform.gameObject.tag == tagName)
             {
                 GameObject temp = Instantiate(hitInfo.transform.gameObject, itemHolder.transform, false);
+                
                 inventory.itemsInInventory.Add(hitInfo.transform.gameObject);
                 temp.name = "UI";
                 temp.transform.localPosition = new Vector3(100 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
                 temp.transform.localScale *= 25;
                 temp.transform.gameObject.layer = 5;
                 hitInfo.transform.gameObject.SetActive(false);
-
             }
-
         }
     }
     void highlightObject()
     {
         RaycastHit hitInfo = new RaycastHit();
         bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-        if (hit && hitInfo.transform.gameObject.layer ==5)
+        if (hit && hitInfo.transform.gameObject.layer == 5)
         {
-
-            inventory.highlightedItem = hitInfo.transform.gameObject;
-            
-
+            inventory.showHightlightedItem(hitInfo.transform.gameObject);
         }
-
     }
-
 
     private void OnEnable()
     {

@@ -9,24 +9,30 @@ public class inventorySystem : MonoBehaviour
     public List<GameObject> itemsInInventory = new List<GameObject>();
     public GameObject highlightedItem;
     public GameObject descriptionPanel,buttonPanel,itemsholder;
+    public GameObject rotatableObject;
 
+    private void Update()
+    {
+        if (Input.GetMouseButton(0) && rotatableObject != null)
+        {
 
+                rotatableObject.transform.rotation = Quaternion.Euler(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
+        }
+       
+    }
 
     // Update is called once per frame
-    void Update()
+    public void showHightlightedItem(GameObject item)
     {
-        if (highlightedItem == null)
-        {
-            descriptionPanel.SetActive(false);
-            
-        }
-        else
-        {
-            descriptionPanel.SetActive(true);
-            descriptionPanel.transform.GetChild(0).GetComponent<Text>().text = highlightedItem.GetComponent<item>().itemName;
-            descriptionPanel.transform.GetChild(1).GetComponent<Text>().text = highlightedItem.GetComponent<item>().description;
-        }
-        
+        highlightedItem = item;
+        descriptionPanel.SetActive(true);
+        descriptionPanel.transform.GetChild(0).GetComponent<Text>().text = item.GetComponent<item>().itemName;
+        descriptionPanel.transform.GetChild(1).GetComponent<Text>().text = item.GetComponent<item>().description;
+        GameObject meme = Instantiate(item,descriptionPanel.transform.parent);
+        meme.transform.localPosition = new Vector3(0,0,200);
+        meme.transform.localScale *= 15;
+        meme.layer = 0;
+        rotatableObject = meme;
     }
     public void dropItem()
     {
@@ -43,6 +49,7 @@ public class inventorySystem : MonoBehaviour
                 removeItem.transform.position = new Vector3(player.position.x+1, player.position.y, player.position.z+1);
                 itemsInInventory.Remove(removeItem);
                 highlightedItem = null;
+                descriptionPanel.SetActive(false);
             }
         }
         

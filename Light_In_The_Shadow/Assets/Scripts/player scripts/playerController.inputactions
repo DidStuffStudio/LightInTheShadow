@@ -44,6 +44,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "rotateObject",
+                    "type": "Value",
+                    "id": "e1edb997-53f8-4d1a-b43c-e9d3c68445db",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -143,6 +151,17 @@
                     "processors": "",
                     "groups": "Player",
                     "action": "HighlightObject",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7fd594bb-1b1f-43a3-8e6b-91e798b61610",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player",
+                    "action": "rotateObject",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
