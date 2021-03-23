@@ -10,6 +10,7 @@ TagManager:
   - LevelPortal
   - LoadingScreen
   - PickedUp
+  - DialNumber
   layers:
   - Default
   - TransparentFX

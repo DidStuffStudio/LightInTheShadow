@@ -9,6 +9,7 @@ public static class GameConstantStrings {
         // Add the tag strings here
         public static string Ground { get; } = "Ground";
         public static string LoadingScreenTrigger { get; } = "LoadingScreenTrigger";
+        public static string DialNumber { get; } = "DialNumber";
     }
 
     public struct Layers {
