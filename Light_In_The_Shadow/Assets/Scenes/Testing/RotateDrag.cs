@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class RotateDrag : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class RotateDrag : MonoBehaviour
     public GameObject antennaBase;
     public GameObject antenna;
     public GameObject screen;
+    public AudioMixer masterMix;
 
     private float rotationAngle;
     private float quatRotation;
@@ -26,7 +28,6 @@ public class RotateDrag : MonoBehaviour
         _sensitivity = 0.1f;
         _rotation = Vector3.zero;
         rend = screen.GetComponent<Renderer>();
-        //MeshRenderer rend = screen.GetComponent<MeshRenderer>();
     }
      
     void Update()
@@ -34,52 +35,74 @@ public class RotateDrag : MonoBehaviour
         if(_isRotating)
         {
 
-            quatRotation = antenna.transform.rotation.eulerAngles.x;
-            rotationAngle = antenna.transform.rotation.eulerAngles.x;
-            Debug.Log("rotation " + quatRotation);
-            
-            _mouseOffset = (Input.mousePosition - _mouseReference);
-            Debug.Log(_rotation.x);
-            _rotation.x = -(_mouseOffset.x) * _sensitivity;
-            
-            if (quatRotation>85 && _mouseOffset.x <= _previousMouseOffset.x)
-            {
-                //_rotation.x += _rotation.x;
-              
-                
-                
-                return;
-            }
-
-            if (quatRotation<5 && _mouseOffset.x >= _previousMouseOffset.x)
-            {
-                return;
-            }
-            _previousMouseOffset = _mouseOffset;
-            rotationAngle -= 15;
-
             rotationAngle=Map(rotationAngle, 0, 360, 0, 20f);
-        
-       
-            //Debug.Log(screen.GetComponent<MeshRenderer>().material.GetFloat("Vector1_c2ed4abf816445a0a71419d361dcdacf")); 
-            screen.GetComponent<MeshRenderer>().material.SetFloat("Vector1_c2ed4abf816445a0a71419d361dcdacf",rotationAngle);
-            
+            if (antenna.name == "LeftAntenna")
+            {
+                quatRotation = antenna.transform.rotation.eulerAngles.x;
+                rotationAngle = antenna.transform.rotation.eulerAngles.x;
 
-            
+                _mouseOffset = (Input.mousePosition - _mouseReference);
 
-            
-            transform.RotateAround(antennaBase.transform.position,Vector3.right,_rotation.x);
-            
-            // store mouse
-            _mouseReference = Input.mousePosition;
+                _rotation.x = -(_mouseOffset.x) * _sensitivity;
+
+                if (quatRotation > 85 && _mouseOffset.x <= _previousMouseOffset.x)
+                {
+                    return;
+                }
+
+                if (quatRotation < 5 && _mouseOffset.x >= _previousMouseOffset.x)
+                {
+                    return;
+                }
+                _previousMouseOffset = _mouseOffset;
+                rotationAngle -= 15;
+
+                //Debug.Log(screen.GetComponent<MeshRenderer>().material.GetFloat("Vector1_c2ed4abf816445a0a71419d361dcdacf"));
+
+                screen.GetComponent<MeshRenderer>().material.SetFloat("Vector1_c2ed4abf816445a0a71419d361dcdacf", rotationAngle);
+
+                transform.RotateAround(antennaBase.transform.position, Vector3.right, _rotation.x);
+
+                // store mouse
+                _mouseReference = Input.mousePosition;
+            }
+            if (antenna.name == "RightAntenna")
+            {
+
+
+                quatRotation = antenna.transform.rotation.eulerAngles.x;
+                rotationAngle = antenna.transform.rotation.eulerAngles.x;
+
+                _mouseOffset = (Input.mousePosition - _mouseReference);
+
+                _rotation.x = -(_mouseOffset.x) * _sensitivity;
+
+                if (quatRotation > 340  && quatRotation < 350)
+                {
+                    masterMix.SetFloat("whiteNoise", -80);
+                    masterMix.SetFloat("tv", 0);
+                }
+                else
+                {
+                    masterMix.SetFloat("whiteNoise",-10);
+                    masterMix.SetFloat("tv", -80);
+                }
+                _previousMouseOffset = _mouseOffset;
+                rotationAngle -= 15;
+
+
+                transform.RotateAround(antennaBase.transform.position, Vector3.right, _rotation.x);
+
+                // store mouse
+                _mouseReference = Input.mousePosition;
+            }
+
+
 
 
         }
-        
 
 
-        //rend.material.SetFloat("_TVTransition",rotationAngle);
-        //Debug.Log(rend.material.GetFloat("_TVTransition"));
     }
      
     void OnMouseDown()
