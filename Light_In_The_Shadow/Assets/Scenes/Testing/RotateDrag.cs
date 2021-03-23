@@ -28,6 +28,8 @@ public class RotateDrag : MonoBehaviour
         _sensitivity = 0.1f;
         _rotation = Vector3.zero;
         rend = screen.GetComponent<Renderer>();
+        masterMix.SetFloat("whiteNoise", -10);
+        masterMix.SetFloat("tv", -80);
     }
      
     void Update()
@@ -68,8 +70,6 @@ public class RotateDrag : MonoBehaviour
             }
             if (antenna.name == "RightAntenna")
             {
-
-
                 quatRotation = antenna.transform.rotation.eulerAngles.x;
                 rotationAngle = antenna.transform.rotation.eulerAngles.x;
 
