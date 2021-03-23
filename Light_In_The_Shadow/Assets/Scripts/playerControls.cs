@@ -137,7 +137,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""dc4c2a99-2796-436c-b9f0-87e4001366d4"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Player"",

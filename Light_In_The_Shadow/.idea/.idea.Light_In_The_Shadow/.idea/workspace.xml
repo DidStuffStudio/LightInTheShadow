@@ -20,73 +20,98 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/MenuLogic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MenuLogic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/NavMesh.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/NavMesh.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Background.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/LightInTheShadow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/LightInTheShadow.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/ReasonableGames.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/ReasonableGames.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Test_Rough.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Test_Rough.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock1.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock1.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock10.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock10.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock11.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock11.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock3.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock3.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock4.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock4.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock5.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock5.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock6.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock6.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock7.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock7.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock8.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock8.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock9.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Ground/Rock9.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/RocksMaterial.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/RocksMaterial.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite1.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite1.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite3.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite3.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite4.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite4.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite5.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/FBX/Stalagmites/Stalagmite5.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock10.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock10.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock11.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock11.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock4.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock4.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock5.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock5.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock6.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock6.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock7.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock7.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock8.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock8.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock9.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Rock9.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite4.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite4.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite5.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Prefabs/Stalagmite5.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Scenes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Scenes/Demo.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/LowPoly Rocks/Scenes/Demo.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/FastIK/FastIKFabric.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/FastIK/FastIKFabric.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/Sample/SampleRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/Sample/SampleRotator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CameraFocus.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CameraFocus.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DetectClick.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DetectClick.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DreamMonster1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DreamMonster1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Cave.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Cave.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/PortalHouse.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PortalHouse.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Plugins/Octane/Editor.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Plugins/Octane/Editor.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Door.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Door.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/DreamMonster1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/DreamMonster1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TentacleKill.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TentacleKill.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tenticle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tenticle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_06237a53-4bc6-4b98-ae3f-ac555fedf2ec.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_06237a53-4bc6-4b98-ae3f-ac555fedf2ec.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_60d3ad61-c3cf-40e7-be66-20da887694bc.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainData_60d3ad61-c3cf-40e7-be66-20da887694bc.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TriggerEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TriggerEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TriggerFocus.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TriggerFocus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerControls.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +124,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Helpers/CinemachineInputProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -139,15 +165,16 @@
         <option value="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" />
         <option value="$PROJECT_DIR$/Assets/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" />
         <option value="$PROJECT_DIR$/Assets/TriggerEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAiTutorial.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/Sample/SampleRotator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/MenuLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
       </list>
     </option>
   </component>
@@ -217,6 +244,7 @@
       <workItem from="1615310621954" duration="1156000" />
       <workItem from="1615313572321" duration="5394000" />
       <workItem from="1615712701374" duration="7529000" />
+      <workItem from="1616009095775" duration="5295000" />
     </task>
     <servers />
   </component>

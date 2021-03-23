@@ -30,7 +30,7 @@ public class inventorySystem : MonoBehaviour
         descriptionPanel.transform.GetChild(1).GetComponent<Text>().text = item.GetComponent<item>().description;
         GameObject meme = Instantiate(item,descriptionPanel.transform.parent);
         meme.transform.localPosition = new Vector3(0,0,200);
-        meme.transform.localScale *= 15;
+        meme.transform.localScale *= 5;
         meme.layer = 0;
         rotatableObject = meme;
     }

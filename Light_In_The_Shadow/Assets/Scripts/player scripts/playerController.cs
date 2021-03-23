@@ -150,6 +150,8 @@ public class playerController : MonoBehaviour
         {
             inventory.showHightlightedItem(hitInfo.transform.gameObject);
         }
+        
+            
     }
 
     private void OnEnable()

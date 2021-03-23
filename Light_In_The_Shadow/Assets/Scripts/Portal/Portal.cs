@@ -1,15 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class Portal : MonoBehaviour {
     public Portal linkedPortal;
     public Camera portalCam;
-    private Camera _playerCamera;
+    private CinemachineVirtualCamera _playerCamera;
 
     void Awake () {
-        _playerCamera = Camera.main;
+        _playerCamera = FindObjectOfType<CinemachineVirtualCamera>();
     }
 
     private void Update() {

@@ -25,7 +25,7 @@ public class MasterManager : MonoBehaviour {
         }
     }
 
-    private UserInput _userInput;
+    //private UserInput _userInput;
     private int _levelIndex = 0;
     public bool loadingScreenTransitionStarted = false;
 
@@ -39,10 +39,10 @@ public class MasterManager : MonoBehaviour {
         }
 
         // set the user input control
-        var component = GetComponent<UserInput>();
+        //var component = GetComponent<UserInput>();
         
-        if (component == null) _userInput = gameObject.AddComponent<UserInput>();
-        else _userInput = GetComponent<UserInput>();
+        //if (component == null) _userInput = gameObject.AddComponent<UserInput>();
+        //else _userInput = GetComponent<UserInput>();
     }
 
     public void StartLoadingNextScene() {
