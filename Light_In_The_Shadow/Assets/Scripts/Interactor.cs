@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class Interactor : MonoBehaviour
 {
-    public Camera cam;
-    public float interactionDistance;
+    private Camera cam;
+    public float interactionDistance = 20;
     private GameObject _lastHitObject;
+    public bool inventoryItemHit;
+    public GameObject inventoryItem;
     private void Start()
     {
         cam = Camera.main;
@@ -20,7 +22,21 @@ public class Interactor : MonoBehaviour
         RaycastHit hit;
 
         if (!Physics.Raycast(ray, out hit)) return;
-        if (hit.transform.gameObject.layer == 11 && hit.distance < interactionDistance)
+
+        if (hit.transform.gameObject.layer == 12 && hit.distance < interactionDistance)
+        {
+            hit.transform.gameObject.GetComponent<item>().canvas.SetActive(true);
+            inventoryItem = hit.transform.gameObject;
+            inventoryItemHit = true;
+        }
+        else if(inventoryItemHit)
+        {
+            inventoryItemHit = false;
+            inventoryItem.GetComponent<item>().canvas.SetActive(false);
+            inventoryItem = null;
+        }
+        
+        if (hit.transform.gameObject.CompareTag("ClickInteract") && hit.distance < interactionDistance)
         {
             _lastHitObject = hit.transform.gameObject;
             hit.transform.GetComponent<Outline>().enabled = true;
@@ -28,13 +44,14 @@ public class Interactor : MonoBehaviour
             if (hit.transform.gameObject.GetComponent<DetectClick>() == null) return;
             hit.transform.gameObject.GetComponent<DetectClick>().Click();
         }
-        
         else
         {
             if (_lastHitObject == null) return;
             if (_lastHitObject.transform.gameObject.GetComponent<Outline>() == null) return;
             _lastHitObject.transform.GetComponent<Outline>().enabled = false;
         }
+
+
 
     }
 }

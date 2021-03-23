@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,15 +6,22 @@ using UnityEngine;
 public class item : MonoBehaviour
 {
     public string itemName, description;
-    // Start is called before the first frame update
+
+    [HideInInspector]
+    public GameObject canvas;
+    private GameObject _player;
+    
+    
     void Start()
     {
+        _player = Camera.main.gameObject;
+        canvas = GetComponentInChildren<Canvas>().gameObject;
+        canvas.SetActive(false);
         gameObject.name = itemName;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        canvas.transform.LookAt(_player.transform, Vector3.up);
     }
 }

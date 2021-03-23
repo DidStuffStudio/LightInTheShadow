@@ -17,24 +17,23 @@ public class playerController : MonoBehaviour
     private float gravityValue = -9.81f;
     //private Inputmanager inputmanager;
     private Transform cameraTransform;
-    public GameObject[] menuPanels = new GameObject[6]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is blur plane
-    public bool paused = false, isMainMenu = false;
+    public GameObject[] menuPanels = new GameObject[7]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is blur plane, 6 is help menu
     private bool playerFrozen;
     public inventorySystem inventory;
     [HideInInspector]
     public bool isRunning;
     public Vector3 respawnLocation;
     public CinemachineVirtualCamera playerCam;
-
-
-    private PlayerControls playerControls;
+    public PlayerControls playerControls;
+    public GameObject itemHolder;
+    private bool inventoryOpen, paused, isMainMenu;
+    private Interactor interactRayCast;
+    public GameObject torch;
+    private MasterManager _masterManager;
+    public bool hasTorch;
+    public Text helpText;
     
-
-    public GameObject itemHolder,dropBtn,useBtn;
-    public bool inventoryOpen;
     
-    public string tagName;
-    public float distance;// min distance to object via raycast before being able to pick up the object
 
     private void Awake()
     {
@@ -47,8 +46,15 @@ public class playerController : MonoBehaviour
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0)) {
             isMainMenu = true;
             FreezePlayer(true);
+            DOFSwitch(false);
         }
-        else menuPanels[0].SetActive(false);
+        else
+        {
+            ClosePanels();
+            menuPanels[4].SetActive(true);
+        }
+
+        interactRayCast = GetComponent<Interactor>();
         respawnLocation = transform.position;
         controller = GetComponent<CharacterController>();
         cameraTransform = Camera.main.transform;
@@ -56,6 +62,9 @@ public class playerController : MonoBehaviour
         playerControls.Player.PickUp.started += _ => pickupObject();
         playerControls.Player.HighlightObject.performed += _ => highlightObject();
         playerControls.Player.PlayPause.performed += _ => PlayPause();
+        playerControls.Player.Torch.performed += _ => EquipTorch();
+        _masterManager = GetComponentInParent<MasterManager>();
+        torch.SetActive(false);
 
     }
     
@@ -82,6 +91,11 @@ public class playerController : MonoBehaviour
         }
     }
 
+    public void PlayFromMainMenu()
+    {
+        FreezePlayer(false);
+        DOFSwitch(true);
+    }
     public void NewRespawnPoint()
     {
         respawnLocation = transform.position;
@@ -102,50 +116,69 @@ public class playerController : MonoBehaviour
         {
             playerFrozen = false;
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 300.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 300.0f;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 120.0f;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 120.0f;
             gravityValue = -9.81f;
         }
     }
 
+    public void OpenHelpMenu(bool enable)
+    {
+        var t = 1.0f;
+        if (enable) t = 0.0f;
+        Time.timeScale = t;
+        ClosePanels();
+        FreezePlayer(enable);
+        menuPanels[5].SetActive(enable);
+        menuPanels[6].SetActive(enable);
+        menuPanels[4].SetActive(!enable);
+        DOFSwitch(true);
+    }
     void OpenInventory()
     {
         if (paused || isMainMenu) return;
         
         if (!menuPanels[3].activeSelf)
         {
+            torch.SetActive(false);
             menuPanels[3].SetActive(true);
+            menuPanels[5].SetActive(true);
             FreezePlayer(true);
+            DOFSwitch(false);
+            Time.timeScale = 0.0f;
+
+
         }
         else
         {
+            Time.timeScale = 1.0f;
             menuPanels[3].SetActive(false);
             FreezePlayer(false);
             Destroy(inventory.rotatableObject);
             inventory.rotatableObject = null;
             inventory.highlightedItem = null;
             inventory.descriptionPanel.SetActive(false);
+            menuPanels[5].SetActive(false);
+            DOFSwitch(true);
+            if(hasTorch) torch.SetActive(true);
+           
         }
     }
 
 
     void pickupObject()
     {
-        RaycastHit hitInfo = new RaycastHit();
-        bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-        if (hit && hitInfo.distance < distance)
-        { 
-            if (hitInfo.transform.gameObject.tag == tagName)
-            {
-                GameObject temp = Instantiate(hitInfo.transform.gameObject, itemHolder.transform, false);
-                
-                inventory.itemsInInventory.Add(hitInfo.transform.gameObject);
-                temp.name = "UI";
-                temp.transform.localPosition = new Vector3(100 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
-                temp.transform.localScale *= 25;
-                temp.transform.gameObject.layer = 5;
-                hitInfo.transform.gameObject.SetActive(false);
-            }
+        if (interactRayCast.inventoryItemHit)
+        {
+            GameObject temp = Instantiate(interactRayCast.inventoryItem, itemHolder.transform, false);
+            inventory.itemsInInventory.Add(interactRayCast.inventoryItem);
+            temp.name = "UI";
+            temp.transform.localPosition = new Vector3(100 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
+            temp.transform.localScale *= 25;
+            temp.transform.gameObject.layer = 5;
+            interactRayCast.inventoryItemHit = false;
+            Destroy(interactRayCast.inventoryItem);
+            interactRayCast.inventoryItem = null;
         }
     }
     void highlightObject()
@@ -164,7 +197,7 @@ public class playerController : MonoBehaviour
     public void PlayPause()
     {
 
-        if (isMainMenu) return;
+        if (isMainMenu || menuPanels[3].activeSelf) return;
         ClosePanels();
         if (paused)
         {
@@ -173,6 +206,7 @@ public class playerController : MonoBehaviour
             menuPanels[4].SetActive(true);
             paused = false;
             menuPanels[5].SetActive(false);
+            DOFSwitch(true);
         }
         else
         {  
@@ -181,6 +215,7 @@ public class playerController : MonoBehaviour
             paused = true;
             Time.timeScale = 0.0f;
             menuPanels[5].SetActive(true);
+            DOFSwitch(false);
         }
     }
 
@@ -191,6 +226,15 @@ public class playerController : MonoBehaviour
         {
             panel.SetActive(false);
         }
+    }
+
+    void DOFSwitch(bool enabled)
+    {
+        foreach (var pp in _masterManager.levelPP)
+        {
+            pp.components[0].active = enabled;
+        }
+
     }
     
     public void Settings() {
@@ -214,6 +258,12 @@ public class playerController : MonoBehaviour
         else SceneManager.LoadScene(0);
     }
 
+    void EquipTorch()
+    {
+        if (!hasTorch) return;
+        torch.SetActive(!torch.activeSelf);
+    }
+    
     private void OnEnable()
     {
         playerControls.Enable();
@@ -221,6 +271,7 @@ public class playerController : MonoBehaviour
     private void OnDisable()
     {
         playerControls.Disable();
-
     }
+    
+    
 }
