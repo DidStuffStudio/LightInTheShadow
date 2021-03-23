@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 6f92d9c5c8888aa4ca1574f4b9db70ae, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 477cc4148fad3449482a3bc3178594e2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -1621,6 +1621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EA_Pier1_end
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 72319510d946ec04cad1d75fc861de34, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72319510d946ec04cad1d75fc861de34, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1945,6 +1949,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 72319510d946ec04cad1d75fc861de34, type: 3}
       propertyPath: m_Name
       value: EA_Pier1_end (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 72319510d946ec04cad1d75fc861de34, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72319510d946ec04cad1d75fc861de34, type: 3}
       propertyPath: m_RootOrder
@@ -3143,6 +3151,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 403873325982847067, guid: e7728ab62d3df60419236bc8d33dbff8, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216431708551310256, guid: e7728ab62d3df60419236bc8d33dbff8, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4725187282777115163, guid: e7728ab62d3df60419236bc8d33dbff8, type: 3}
       propertyPath: m_Name
       value: Deadtree1LOD0

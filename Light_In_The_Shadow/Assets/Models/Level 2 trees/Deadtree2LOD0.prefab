@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 374685345045083210}
   - component: {fileID: 2510705252247011456}
   - component: {fileID: 6109411244307124233}
+  - component: {fileID: 266890686}
   m_Layer: 0
   m_Name: Deadtree2LOD0
   m_TagString: Untagged
@@ -193,6 +194,19 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6450268019342805198}
   m_Enabled: 1
+--- !u!65 &266890686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167849938430697813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.67, y: 7.02, z: 1.2}
+  m_Center: {x: 0.11785686, y: 2.9936154, z: 0.15964985}
 --- !u!1 &5146372495636890002
 GameObject:
   m_ObjectHideFlags: 0
