@@ -16,7 +16,7 @@ public class inventorySystem : MonoBehaviour
         if (Input.GetMouseButton(0) && rotatableObject != null)
         {
 
-                rotatableObject.transform.rotation = Quaternion.Euler(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
+                rotatableObject.transform.rotation = Quaternion.Euler(-Input.mousePosition.x, -Input.mousePosition.y, -Input.mousePosition.z);
         }
        
     }

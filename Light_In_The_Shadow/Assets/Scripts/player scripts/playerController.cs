@@ -24,7 +24,7 @@ public class playerController : MonoBehaviour
 
     public Vector3 respawnLocation;
     public CinemachineVirtualCamera playerCam;
-    
+    public GameObject blur;
     
 
     private PlayerControls playerControls;
@@ -110,9 +110,11 @@ public class playerController : MonoBehaviour
         {
             inventoryHolder.SetActive(true);
             FreezePlayer(true);
+            blur.SetActive(true);
         }
         else
         {
+            blur.SetActive(false);
             inventoryHolder.SetActive(false);
             FreezePlayer(false);
             Destroy(inventory.rotatableObject);

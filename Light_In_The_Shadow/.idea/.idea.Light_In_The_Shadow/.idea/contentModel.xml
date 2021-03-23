@@ -182,6 +182,11 @@
             </e>
           </e>
         </e>
+        <e p="BlurRender" t="Include">
+          <e p="KawaseBlur.cs" t="Include" />
+          <e p="KawaseBlur.shader" t="Include" />
+          <e p="testOffset.shader" t="Include" />
+        </e>
         <e p="MenuLogic.cs" t="Include" />
         <e p="Scenes" t="Include">
           <e p="Testing" t="Include">

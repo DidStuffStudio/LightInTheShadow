@@ -9,12 +9,14 @@ public class MenuLogic : MonoBehaviour {
     public GameObject settingsPanel, pauseMenuPanel, mainMenuPanel;
     public bool paused = false, isMainMenu = false;
     public MasterManager manager;
+    public GameObject blur;
 
     private void Start() {
         manager = MasterManager.Instance;
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0)) {
             isMainMenu = true;
             player.FreezePlayer(true);
+            blur.SetActive(true);
         }
         else mainMenuPanel.SetActive(false);
     }
@@ -27,6 +29,7 @@ public class MenuLogic : MonoBehaviour {
                 pauseMenuPanel.SetActive(true);
                 paused = true;
                 Time.timeScale = 0.0f;
+                blur.SetActive(true);
             }
             else Play();
         }
@@ -39,6 +42,7 @@ public class MenuLogic : MonoBehaviour {
         pauseMenuPanel.SetActive(false);
         settingsPanel.SetActive(false);
         paused = false;
+        blur.SetActive(false);
         if (isMainMenu) {
             manager.StartLoadingNextScene();
         }
