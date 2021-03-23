@@ -65,6 +65,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""PlayPause"",
+                    ""type"": ""Button"",
+                    ""id"": ""d5231fd2-f0fd-4430-aec5-6bac5b2c5a6b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Torch"",
+                    ""type"": ""Button"",
+                    ""id"": ""26c5cc1a-e637-4a91-a17f-1daa96892cda"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -177,6 +193,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""rotateObject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""19a91bd2-2dea-43de-88af-584f85596ff9"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayPause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""be5516b5-dad0-42ae-b353-e18aa0ee2b45"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Torch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -197,6 +235,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player_PickUp = m_Player.FindAction("PickUp", throwIfNotFound: true);
         m_Player_HighlightObject = m_Player.FindAction("HighlightObject", throwIfNotFound: true);
         m_Player_rotateObject = m_Player.FindAction("rotateObject", throwIfNotFound: true);
+        m_Player_PlayPause = m_Player.FindAction("PlayPause", throwIfNotFound: true);
+        m_Player_Torch = m_Player.FindAction("Torch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -252,6 +292,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_PickUp;
     private readonly InputAction m_Player_HighlightObject;
     private readonly InputAction m_Player_rotateObject;
+    private readonly InputAction m_Player_PlayPause;
+    private readonly InputAction m_Player_Torch;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -262,6 +304,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @PickUp => m_Wrapper.m_Player_PickUp;
         public InputAction @HighlightObject => m_Wrapper.m_Player_HighlightObject;
         public InputAction @rotateObject => m_Wrapper.m_Player_rotateObject;
+        public InputAction @PlayPause => m_Wrapper.m_Player_PlayPause;
+        public InputAction @Torch => m_Wrapper.m_Player_Torch;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -289,6 +333,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @rotateObject.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotateObject;
                 @rotateObject.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotateObject;
                 @rotateObject.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotateObject;
+                @PlayPause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayPause;
+                @PlayPause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayPause;
+                @PlayPause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayPause;
+                @Torch.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTorch;
+                @Torch.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTorch;
+                @Torch.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTorch;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -311,6 +361,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @rotateObject.started += instance.OnRotateObject;
                 @rotateObject.performed += instance.OnRotateObject;
                 @rotateObject.canceled += instance.OnRotateObject;
+                @PlayPause.started += instance.OnPlayPause;
+                @PlayPause.performed += instance.OnPlayPause;
+                @PlayPause.canceled += instance.OnPlayPause;
+                @Torch.started += instance.OnTorch;
+                @Torch.performed += instance.OnTorch;
+                @Torch.canceled += instance.OnTorch;
             }
         }
     }
@@ -332,5 +388,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnPickUp(InputAction.CallbackContext context);
         void OnHighlightObject(InputAction.CallbackContext context);
         void OnRotateObject(InputAction.CallbackContext context);
+        void OnPlayPause(InputAction.CallbackContext context);
+        void OnTorch(InputAction.CallbackContext context);
     }
 }

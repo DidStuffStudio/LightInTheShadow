@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
@@ -16,21 +17,20 @@ public class playerController : MonoBehaviour
     private float gravityValue = -9.81f;
     //private Inputmanager inputmanager;
     private Transform cameraTransform;
-
+    public GameObject[] menuPanels = new GameObject[6]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is blur plane
+    public bool paused = false, isMainMenu = false;
     private bool playerFrozen;
     public inventorySystem inventory;
     [HideInInspector]
     public bool isRunning;
-
     public Vector3 respawnLocation;
     public CinemachineVirtualCamera playerCam;
-    public GameObject blur;
-    
+
 
     private PlayerControls playerControls;
     
 
-    public GameObject inventoryHolder,itemHolder,dropBtn,useBtn;
+    public GameObject itemHolder,dropBtn,useBtn;
     public bool inventoryOpen;
     
     public string tagName;
@@ -44,14 +44,18 @@ public class playerController : MonoBehaviour
 
     private void Start()
     {
-        playerCam = GetComponentInChildren<CinemachineVirtualCamera>();
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0)) {
+            isMainMenu = true;
+            FreezePlayer(true);
+        }
+        else menuPanels[0].SetActive(false);
         respawnLocation = transform.position;
         controller = GetComponent<CharacterController>();
         cameraTransform = Camera.main.transform;
-
         playerControls.Player.OpenInventory.performed += _ => OpenInventory();
         playerControls.Player.PickUp.started += _ => pickupObject();
         playerControls.Player.HighlightObject.performed += _ => highlightObject();
+        playerControls.Player.PlayPause.performed += _ => PlayPause();
 
     }
     
@@ -106,16 +110,16 @@ public class playerController : MonoBehaviour
 
     void OpenInventory()
     {
-        if (!inventoryHolder.activeSelf)
+        if (paused || isMainMenu) return;
+        
+        if (!menuPanels[3].activeSelf)
         {
-            inventoryHolder.SetActive(true);
+            menuPanels[3].SetActive(true);
             FreezePlayer(true);
-            blur.SetActive(true);
         }
         else
         {
-            blur.SetActive(false);
-            inventoryHolder.SetActive(false);
+            menuPanels[3].SetActive(false);
             FreezePlayer(false);
             Destroy(inventory.rotatableObject);
             inventory.rotatableObject = null;
@@ -154,6 +158,60 @@ public class playerController : MonoBehaviour
         }
         
             
+    }
+    
+
+    public void PlayPause()
+    {
+
+        if (isMainMenu) return;
+        ClosePanels();
+        if (paused)
+        {
+            Time.timeScale = 1.0f;
+            FreezePlayer(false);
+            menuPanels[4].SetActive(true);
+            paused = false;
+            menuPanels[5].SetActive(false);
+        }
+        else
+        {  
+            FreezePlayer(true);
+            menuPanels[1].SetActive(true);
+            paused = true;
+            Time.timeScale = 0.0f;
+            menuPanels[5].SetActive(true);
+        }
+    }
+
+
+    void ClosePanels()
+    {
+        foreach (var panel in menuPanels)
+        {
+            panel.SetActive(false);
+        }
+    }
+    
+    public void Settings() {
+        ClosePanels();
+        menuPanels[2].SetActive(true);
+    }
+
+    public void Back() {
+        ClosePanels();
+        if (isMainMenu)menuPanels[0].SetActive(true);
+        else menuPanels[1].SetActive(true);
+    }
+
+
+    public void Quality(int qualityIndex) {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
+    public void Exit() {
+        if (isMainMenu) Application.Quit();
+        else SceneManager.LoadScene(0);
     }
 
     private void OnEnable()

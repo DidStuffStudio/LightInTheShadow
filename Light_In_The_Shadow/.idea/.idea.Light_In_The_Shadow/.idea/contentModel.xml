@@ -182,12 +182,16 @@
             </e>
           </e>
         </e>
+        <e p="ActivateObjectInRange.cs" t="Include" />
         <e p="BlurRender" t="Include">
           <e p="KawaseBlur.cs" t="Include" />
           <e p="KawaseBlur.shader" t="Include" />
           <e p="testOffset.shader" t="Include" />
         </e>
+        <e p="DialNumber.cs" t="Include" />
+        <e p="flicker.cs" t="Include" />
         <e p="MenuLogic.cs" t="Include" />
+        <e p="rotateAround.cs" t="Include" />
         <e p="Scenes" t="Include">
           <e p="Testing" t="Include">
             <e p="DragObject.cs" t="Include" />
@@ -221,6 +225,9 @@
             <e p="PortalTeleporter.cs" t="Include" />
             <e p="PortalTextureSetup.cs" t="Include" />
             <e p="ScreenCutoutShader.shader" t="Include" />
+          </e>
+          <e p="Puzzles" t="Include">
+            <e p="PhonePuzzle.cs" t="Include" />
           </e>
           <e p="TentacleKill.cs" t="Include" />
           <e p="Tenticle.cs" t="Include" />
