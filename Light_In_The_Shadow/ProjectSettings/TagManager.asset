@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - LevelPortal
   - LoadingScreen
+  - PickedUp
   layers:
   - Default
   - TransparentFX
@@ -16,15 +17,15 @@ TagManager:
   - 
   - Water
   - UI
-  - Torch
+  - 
   - Object
   - Ground
   - FocusPoint
   - Player
   - Clickable
   - 
-  - 
-  - 
+  - Torch
+  - Hidden
   - 
   - 
   - 
