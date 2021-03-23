@@ -177,7 +177,7 @@ public class playerController : MonoBehaviour
             temp.transform.localScale *= 25;
             temp.transform.gameObject.layer = 5;
             interactRayCast.inventoryItemHit = false;
-            Destroy(interactRayCast.inventoryItem);
+            // Destroy(interactRayCast.inventoryItem);
             interactRayCast.inventoryItem = null;
         }
     }

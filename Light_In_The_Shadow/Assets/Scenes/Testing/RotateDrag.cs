@@ -21,7 +21,11 @@ public class RotateDrag : MonoBehaviour
     private float quatRotation;
     private Vector3 _previousMouseOffset;
     Renderer rend;
-    
+
+    private bool rightAntennaIsAtCorrectAngle = false;
+    private bool leftAntennaIsAtCorrectAngle = false;
+
+    [SerializeField] private TVPuzzle _tvPuzzle;
      
     void Start ()
     {
@@ -32,8 +36,8 @@ public class RotateDrag : MonoBehaviour
         masterMix.SetFloat("tv", -80);
     }
      
-    void Update()
-    {
+    void Update() {
+        CheckIfTVPuzzleSolved();
         if(_isRotating)
         {
 
@@ -52,10 +56,11 @@ public class RotateDrag : MonoBehaviour
                     return;
                 }
 
-                if (quatRotation < 5 && _mouseOffset.x >= _previousMouseOffset.x)
-                {
+                if (quatRotation < 5 && _mouseOffset.x >= _previousMouseOffset.x) {
+                    leftAntennaIsAtCorrectAngle = true;
                     return;
                 }
+                leftAntennaIsAtCorrectAngle = false;
                 _previousMouseOffset = _mouseOffset;
                 rotationAngle -= 15;
 
@@ -81,11 +86,13 @@ public class RotateDrag : MonoBehaviour
                 {
                     masterMix.SetFloat("whiteNoise", -80);
                     masterMix.SetFloat("tv", 0);
+                    rightAntennaIsAtCorrectAngle = true;
                 }
                 else
                 {
                     masterMix.SetFloat("whiteNoise",-10);
                     masterMix.SetFloat("tv", -80);
+                    rightAntennaIsAtCorrectAngle = false;
                 }
                 _previousMouseOffset = _mouseOffset;
                 rotationAngle -= 15;
@@ -104,7 +111,14 @@ public class RotateDrag : MonoBehaviour
 
 
     }
-     
+
+    private void CheckIfTVPuzzleSolved() {
+        if(leftAntennaIsAtCorrectAngle && rightAntennaIsAtCorrectAngle) {
+            print("TV Puzzle solved, fade out");
+            _tvPuzzle.FadeOutCutscene();
+        }
+    }
+
     void OnMouseDown()
     {
         // rotating flag

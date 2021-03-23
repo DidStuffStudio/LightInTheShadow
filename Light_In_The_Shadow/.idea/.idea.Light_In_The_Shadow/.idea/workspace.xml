@@ -20,53 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Cut_Scene_VirtualCamTimeline.playable" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/Cut_Scene_VirtualCamTimeline.playable.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/LivingRoomCam.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/LivingRoomCam.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/01 Kai Engel - Augmentations.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/01 Kai Engel - Augmentations.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/02 Kai Engel - Illumination.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/02 Kai Engel - Illumination.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/03 Kai Engel - Contention.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/03 Kai Engel - Contention.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/04 Kai Engel - Sentinel.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/04 Kai Engel - Sentinel.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/05 Kai Engel - Great Expectations.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/05 Kai Engel - Great Expectations.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/06 Kai Engel - Dark Alleys.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/06 Kai Engel - Dark Alleys.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/07 Kai Engel - Interception.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/07 Kai Engel - Interception.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/08 Kai Engel - Downfall.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/08 Kai Engel - Downfall.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/09 Kai Engel - Homeroad.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/09 Kai Engel - Homeroad.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/10 Kai Engel - Cabaret.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/10 Kai Engel - Cabaret.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/Kai Engel - Silence.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/Kai Engel - Silence.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TorchPickUp.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TorchPickUp.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/TorchPickUp.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/TorchPickUp.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/ItemCanvas.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/ItemCanvas.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Cut_Scene_VirtualCamTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Cut_Scene_VirtualCamTimeline.playable" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/Christian.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/Christian.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Level_2_PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Level_2_PP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Level_3_PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Level_3_PP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrains/Level_1_Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrains/Level_1_Terrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,27 +42,40 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Helpers/CinemachineInputProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ActivateObjectInRange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3rd Party/NastyWizard_CelSobel/CelShadingSobel/Shaders/Post/PostFunctions.cginc" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/EnvironmentTransitionExample.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerControls.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Flicker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TorchPickUp.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/flicker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MenuLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerControls.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TorchPickUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/common/GizmoFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Helpers/CinemachineInputProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ActivateObjectInRange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/FadingTransition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerFocus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Extended.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DialNumber.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -110,12 +87,10 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/Candice AI for Games/Scripts/CandiceAIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Tenticle.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" />
         <option value="$PROJECT_DIR$/Assets/TentacleKill.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" />
@@ -138,8 +113,11 @@
         <option value="$PROJECT_DIR$/Assets/Flicker.cs" />
         <option value="$PROJECT_DIR$/Assets/TorchPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" />
       </list>
     </option>
   </component>
@@ -161,33 +139,29 @@
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/LiTS_TestBuilds\Light_In_The_Shadow.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../../../../../LiTS_TestBuilds\Light_In_The_Shadow.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\scott\Desktop\LiTS_TestBuilds" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="selectedOptions">
-        <set />
-      </option>
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="selectedOptions">
-        <set />
-      </option>
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -240,14 +214,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1614669750894" />
+    <state x="477" y="292" width="958" height="490" key="find.popup" timestamp="1616530010744">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="477" y="292" width="958" height="490" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616530010744" />
     <state x="616" y="249" key="run.anything.popup" timestamp="1615714561659">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="249" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615714561659" />
-    <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup" timestamp="1615283428601">
-      <screen x="-521" y="-1415" width="2560" height="1415" />
+    <state x="619" y="259" width="672" height="484" key="search.everywhere.popup" timestamp="1616529976108">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
+    <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>

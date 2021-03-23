@@ -10,6 +10,12 @@ public static class GameConstantStrings {
         public static string Ground { get; } = "Ground";
         public static string LoadingScreenTrigger { get; } = "LoadingScreenTrigger";
         public static string DialNumber { get; } = "DialNumber";
+        public static string Tile { get; } = "Tile";
+        public static string Enemy { get; } = "Enemy";
+        public static string LevelPortal { get; } = "LevelPortal";
+        public static string LoadingScreen { get; } = "LoadingScreen";
+        public static string PickedUp { get; } = "PickedUp";
+        public static string ClickInteract { get; } = "ClickInteract";
     }
 
     public struct Layers {
