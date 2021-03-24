@@ -88,9 +88,6 @@
             "m_Id": "32a765a51d3c4a729338f5812dba4fe0"
         },
         {
-            "m_Id": "19fb3ddb24c2448abfc5c83761602b1f"
-        },
-        {
             "m_Id": "0714752f0a2f4aaeb5d677ca637b7658"
         },
         {
@@ -382,9 +379,6 @@
             },
             {
                 "m_Id": "75797e0fec544d768a789732b394d398"
-            },
-            {
-                "m_Id": "19fb3ddb24c2448abfc5c83761602b1f"
             }
         ]
     },
@@ -704,39 +698,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "19fb3ddb24c2448abfc5c83761602b1f",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.Alpha",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "2a1f7ab3c6d741d498fb349577598a05"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "1f15d8998b2a4e969c25274ad0168ad3",
     "m_Id": 1,
@@ -780,21 +741,6 @@
     },
     "m_Labels": [],
     "m_Space": 0
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "2a1f7ab3c6d741d498fb349577598a05",
-    "m_Id": 0,
-    "m_DisplayName": "Alpha",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Alpha",
-    "m_StageCapability": 2,
-    "m_Value": 1.0,
-    "m_DefaultValue": 1.0,
-    "m_Labels": []
 }
 
 {
@@ -1241,7 +1187,7 @@
     "m_ActiveSubTarget": {
         "m_Id": "bed9c0358db8488ca85c25c3883aee75"
     },
-    "m_SurfaceType": 1,
+    "m_SurfaceType": 0,
     "m_AlphaMode": 0,
     "m_TwoSided": false,
     "m_AlphaClip": false,
@@ -1769,7 +1715,7 @@
         "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
         "m_Guid": ""
     },
-    "m_DefaultType": 0
+    "m_DefaultType": 3
 }
 
 {

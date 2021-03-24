@@ -22,6 +22,6 @@ public class item : MonoBehaviour
 
     private void Update()
     {
-        canvas.transform.LookAt(_player.transform, Vector3.up);
+        canvas.transform.LookAt(_player.transform);
     }
 }

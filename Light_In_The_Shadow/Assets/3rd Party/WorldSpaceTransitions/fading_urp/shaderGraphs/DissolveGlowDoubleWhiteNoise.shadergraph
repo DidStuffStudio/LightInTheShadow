@@ -7493,9 +7493,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -878.0000610351563,
-            "y": -1555.9998779296875,
-            "width": 147.00001525878907,
+            "x": -883.0000610351563,
+            "y": -1570.0,
+            "width": 147.0,
             "height": 34.0
         }
     },
@@ -8292,8 +8292,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -507.4469909667969,
-            "y": -450.9600830078125,
+            "x": -277.0000305175781,
+            "y": -341.0,
             "width": 208.0,
             "height": 326.0
         }
@@ -14145,7 +14145,7 @@
     },
     "m_Name": "_TVTransition",
     "m_DefaultReferenceName": "Vector1_c2ed4abf816445a0a71419d361dcdacf",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_TVTransition",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,

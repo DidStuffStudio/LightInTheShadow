@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PhonePuzzle : MonoBehaviour {
 
@@ -18,6 +19,17 @@ public class PhonePuzzle : MonoBehaviour {
     public Vector3 _mouseDownPosition;
     public bool goingBackToOriginalPos;
     
+    [SerializeField] private GameObject kitchenCamera, phoneCam, memoryPrefab, phone;
+    [SerializeField] private Transform memorySpawnLocation;
+    [SerializeField] private FadeInScene sceneFader;
+    [SerializeField] private Animator _memoryLightAnimator;
+    [SerializeField] private ParticleSystem particles;
+    [SerializeField] private Volume postProcessing;
+    [SerializeField] private AudioSource kitchenAudioSource;
+    [SerializeField] private AudioClip[] audioClips;
+    [SerializeField] private playerController player;
+
+    private bool fadingOut;
     
     public string currentNumber;
     private string [] possibleNumbersToCall = {"911", "112"};
@@ -26,36 +38,31 @@ public class PhonePuzzle : MonoBehaviour {
 
     private void Start() {
         _camera = Camera.main;
-        originalRotation = transform.rotation;
+        originalRotation = rotaryPhone.transform.rotation;
     }
 
     private void Update() {
         if (_isRotating) {
-            _rotation = rotaryPhone.transform.rotation.eulerAngles.x;
-            var mouseOffset = Input.mousePosition.x - _mouseDownPosition.x;
+            _rotation = rotaryPhone.transform.localRotation.eulerAngles.x;
+            var mousePosition = Input.mousePosition - _mouseDownPosition;
             // var rotationValue = (mouseOffset > 0) ? -Input.mousePosition.x - _mouseDownPosition.x : Input.mousePosition.x - _mouseDownPosition.x;
-            _rotation = -Mathf.Abs(mouseOffset * rotationSensitivity);
+            _rotation = Mathf.Abs(Vector3.Magnitude(mousePosition) * rotationSensitivity);
             // print(_rotation);
-            transform.RotateAround(rotaryPhone.transform.position, Vector3.forward, angle: _rotation);
+            rotaryPhone.transform.RotateAround(rotaryPhone.transform.position, rotaryPhone.transform.forward, angle: _rotation);
+            
+            
         }
         else {
-            transform.rotation = Quaternion.Lerp(transform.rotation, originalRotation, goBackRotationSpeed);
+            rotaryPhone.transform.rotation = Quaternion.Lerp(rotaryPhone.transform.rotation, originalRotation, goBackRotationSpeed);
         }
+        
+        if (!fadingOut) return;
+        var particleSystemShape = particles.shape;
+        postProcessing.weight = Map(sceneFader.increment, 8, 0, 1, 0);
+        particleSystemShape.radius = Map(sceneFader.increment, 8, 0, 4.3f, 0);
+        
     }
-
-    private void GetDialNumber() {
-        if(_isRotating) return;
-        RaycastHit hit;
-        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity)) {
-            if (hit.collider.CompareTag(GameConstantStrings.Tags.DialNumber)) {
-                currentNumber = hit.collider.name;
-                print(currentNumber);
-            }
-        }
-    }
-
-
+    
     public void UpdateDialNumber() {
         // check if any of the possible numbers to call contains the currently dialed number
         var aux = _dialedNumber + currentNumber;
@@ -74,7 +81,61 @@ public class PhonePuzzle : MonoBehaviour {
     }
 
     private void CallNumber() {
-        print("Calling " + _dialedNumber);
         _dialedNumber = "";
+        StartKitchenCutScene();
+    }
+    
+    
+
+    public void FocusOnPhone(bool focus)
+    {
+        phone.GetComponent<Collider>().enabled = !focus;
+        phone.GetComponent<Outline>().enabled = !focus;
+        phoneCam.SetActive(focus);
+    }
+    
+    public void FadeInScene()
+    {
+        sceneFader.fadeInNow = true;
+        kitchenAudioSource.PlayOneShot(audioClips[0]); //Play memory opening
+    }
+    
+    public void StartKitchenCutScene()
+    {
+        FocusOnPhone(focus: false);
+        player.FreezePlayerForCutScene(true);
+        phone.GetComponent<Collider>().enabled = false;
+        phone.GetComponent<Outline>().enabled = false;
+        sceneFader.speed = 0.002f;
+        kitchenAudioSource.PlayOneShot(audioClips[1]);
+        kitchenCamera.SetActive(true);
+        sceneFader.fadeInNow = true;
+        fadingOut = true;
+        StartCoroutine(PlayMemoryLight());
+    }
+    public void EndKitchenCutScene()
+    {
+        player.FreezePlayerForCutScene(false);
+        kitchenCamera.SetActive(false);
+    }
+
+    IEnumerator PlayMemoryLight()
+    {
+        yield return new WaitForSeconds(15.0f);
+        _memoryLightAnimator.Play("MemoryLightAnimation");
+        yield return new WaitForSeconds(2.0f);
+        SpawnMemory();
+    }
+
+    void SpawnMemory()
+    {
+        particles.gameObject.SetActive(false);
+        Instantiate(memoryPrefab, memorySpawnLocation.position, memorySpawnLocation.rotation);
+        kitchenAudioSource.PlayOneShot(audioClips[2]);
+    }
+
+    float Map(float s, float a1, float a2, float b1, float b2)
+    {
+        return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
     }
 }

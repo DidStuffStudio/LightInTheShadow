@@ -303,6 +303,7 @@ MonoBehaviour:
   antenna: {fileID: 3478794218867244639}
   screen: {fileID: 3478794219951609949}
   masterMix: {fileID: 24100000, guid: 06e32cbd96db7774ebb8661cabfd3d24, type: 2}
+  _tvPuzzle: {fileID: 0}
 --- !u!1 &3478794219019321866
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +577,7 @@ MonoBehaviour:
   antenna: {fileID: 3478794219547663273}
   screen: {fileID: 3478794219951609949}
   masterMix: {fileID: 24100000, guid: 06e32cbd96db7774ebb8661cabfd3d24, type: 2}
+  _tvPuzzle: {fileID: 0}
 --- !u!1 &3478794219951609949
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +883,7 @@ GameObject:
   - component: {fileID: 3478794219697744337}
   - component: {fileID: 3478794219697744342}
   m_Layer: 9
-  m_Name: Test TV
+  m_Name: TV with antennas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

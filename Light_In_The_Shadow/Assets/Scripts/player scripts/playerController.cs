@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -31,7 +32,8 @@ public class playerController : MonoBehaviour
     public GameObject torch;
     private MasterManager _masterManager;
     public bool hasTorch;
-    public Text helpText;
+    public Text helpText, inventoryInformText;
+    private bool _canEquipTorch = true, _canOpenInventory = true, _wasHoldingTorch = false;
     
     
 
@@ -71,6 +73,7 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
+        torch.transform.parent.transform.rotation = cameraTransform.rotation;
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -116,8 +119,8 @@ public class playerController : MonoBehaviour
         {
             playerFrozen = false;
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 120.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 120.0f;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 50.0f;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 50.0f;
             gravityValue = -9.81f;
         }
     }
@@ -136,12 +139,20 @@ public class playerController : MonoBehaviour
     }
     void OpenInventory()
     {
-        if (paused || isMainMenu) return;
+        if (paused || isMainMenu || !_canOpenInventory) return;
+
+
         
         if (!menuPanels[3].activeSelf)
         {
-            torch.SetActive(false);
-            menuPanels[3].SetActive(true);
+            if (torch.activeSelf)
+            {
+                torch.SetActive(false);
+                _wasHoldingTorch = true;
+            }
+            else _wasHoldingTorch = false;
+
+                menuPanels[3].SetActive(true);
             menuPanels[5].SetActive(true);
             FreezePlayer(true);
             DOFSwitch(false);
@@ -160,7 +171,7 @@ public class playerController : MonoBehaviour
             inventory.descriptionPanel.SetActive(false);
             menuPanels[5].SetActive(false);
             DOFSwitch(true);
-            if(hasTorch) torch.SetActive(true);
+            if(hasTorch && _wasHoldingTorch) torch.SetActive(true);
            
         }
     }
@@ -173,12 +184,14 @@ public class playerController : MonoBehaviour
             GameObject temp = Instantiate(interactRayCast.inventoryItem, itemHolder.transform, false);
             inventory.itemsInInventory.Add(interactRayCast.inventoryItem);
             temp.name = "UI";
-            temp.transform.localPosition = new Vector3(100 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
-            temp.transform.localScale *= 25;
+            temp.transform.localPosition = new Vector3(-100 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
+            temp.transform.localScale *= 50;
             temp.transform.gameObject.layer = 5;
             interactRayCast.inventoryItemHit = false;
             // Destroy(interactRayCast.inventoryItem);
+            StartCoroutine(InventoryAddInform(interactRayCast.inventoryItem.GetComponent<item>().name));
             interactRayCast.inventoryItem = null;
+            
         }
     }
     void highlightObject()
@@ -189,9 +202,7 @@ public class playerController : MonoBehaviour
         {
             inventory.showHightlightedItem(hitInfo.transform.gameObject);
         }
-        
-            
-    }
+        }
     
 
     public void PlayPause()
@@ -260,10 +271,26 @@ public class playerController : MonoBehaviour
 
     void EquipTorch()
     {
-        if (!hasTorch) return;
+        if (!hasTorch || !_canEquipTorch) return;
         torch.SetActive(!torch.activeSelf);
     }
-    
+
+    public void FreezePlayerForCutScene(bool freeze)
+    {
+        FreezePlayer(freeze);
+        torch.SetActive(!freeze);
+        _canEquipTorch = !freeze;
+        _canOpenInventory = !freeze;
+
+    }
+
+    IEnumerator InventoryAddInform(string name)
+    {
+        inventoryInformText.text = "A " + name + " has been added to your inventory (Press tab to view it)";
+        menuPanels[7].SetActive(true);
+        yield return new WaitForSeconds(5.0f);
+        menuPanels[7].SetActive(false);
+    }
     private void OnEnable()
     {
         playerControls.Enable();

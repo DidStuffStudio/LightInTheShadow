@@ -45,27 +45,21 @@ public class RotateDrag : MonoBehaviour
             if (antenna.name == "LeftAntenna")
             {
                 quatRotation = antenna.transform.rotation.eulerAngles.x;
-                rotationAngle = antenna.transform.rotation.eulerAngles.x;
 
                 _mouseOffset = (Input.mousePosition - _mouseReference);
 
                 _rotation.x = -(_mouseOffset.x) * _sensitivity;
 
-                if (quatRotation > 85 && _mouseOffset.x <= _previousMouseOffset.x)
-                {
-                    return;
-                }
+                if (quatRotation > 85 && _mouseOffset.x <= _previousMouseOffset.x) return;
 
-                if (quatRotation < 5 && _mouseOffset.x >= _previousMouseOffset.x) {
-                    leftAntennaIsAtCorrectAngle = true;
-                    return;
-                }
-                leftAntennaIsAtCorrectAngle = false;
+
+                if (quatRotation < 5 && _mouseOffset.x >= _previousMouseOffset.x) return;
+
+                if (quatRotation > 0 && quatRotation < 10)leftAntennaIsAtCorrectAngle = true;
+                else leftAntennaIsAtCorrectAngle = false;
+                
                 _previousMouseOffset = _mouseOffset;
-                rotationAngle -= 15;
-
-                //Debug.Log(screen.GetComponent<MeshRenderer>().material.GetFloat("Vector1_c2ed4abf816445a0a71419d361dcdacf"));
-
+                
                 screen.GetComponent<MeshRenderer>().material.SetFloat("Vector1_c2ed4abf816445a0a71419d361dcdacf", rotationAngle);
 
                 transform.RotateAround(antennaBase.transform.position, Vector3.right, _rotation.x);
@@ -96,8 +90,7 @@ public class RotateDrag : MonoBehaviour
                 }
                 _previousMouseOffset = _mouseOffset;
                 rotationAngle -= 15;
-
-
+                
                 transform.RotateAround(antennaBase.transform.position, Vector3.right, _rotation.x);
 
                 // store mouse

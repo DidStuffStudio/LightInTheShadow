@@ -13,16 +13,18 @@ public class TorchPickUp : MonoBehaviour
     private bool _inRange;
     private PlayerControls _playerControls;
     private playerController _playerController;
-    
+
+    private Action func; 
 
     void Start()
     {
+
         _playerController = FindObjectOfType<playerController>();
         _playerControls = _playerController.playerControls;
         _playerCam = Camera.main.gameObject;
         canvas = GetComponentInChildren<Canvas>().gameObject;
         canvas.SetActive(false);
-        _playerControls.Player.PickUp.started += _ => PickupTorch();
+        //_playerControls.Player.PickUp.started += _ => PickupTorch();
         
     }
 
@@ -46,6 +48,7 @@ public class TorchPickUp : MonoBehaviour
         if(_inRange) _playerController.hasTorch = true;
         _playerController.helpText.text = "You picked up a torch! Toggle it using the right mouse button.";
         _playerController.OpenHelpMenu(true);
+        
         Destroy(gameObject);
     }
 
@@ -53,6 +56,7 @@ public class TorchPickUp : MonoBehaviour
     {
         if (!_inRange) return;
         canvas.transform.LookAt(_playerCam.transform);
+        if(Input.GetKeyDown(KeyCode.E)) PickupTorch();
     }
     
 }
