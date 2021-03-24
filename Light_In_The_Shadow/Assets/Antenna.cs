@@ -52,6 +52,7 @@ public class Antenna : MonoBehaviour
         transform.LookAt(gameObjects[0].transform);
         gameObjects[0].transform.position += new Vector3(0,0,_mouseDelta * sensitivity);
         _mouseDelta = Input.mousePosition.x - _mouseStart ;
+        
     }
     
     

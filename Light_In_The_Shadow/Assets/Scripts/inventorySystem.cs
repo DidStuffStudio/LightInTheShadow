@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,31 +12,47 @@ public class inventorySystem : MonoBehaviour
     public GameObject highlightedItem;
     public GameObject descriptionPanel,buttonPanel,itemsholder;
     public GameObject rotatableObject;
+    public float _sensitivity = 0.5f;
+    private Vector3 _mouseReference;
+    private Vector3 _mouseOffset;
+    private Vector3 _rotation;
+    private bool _isRotating;
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && rotatableObject != null)
+        if (Input.GetMouseButtonDown(0) && rotatableObject)
         {
-
-                rotatableObject.transform.rotation = Quaternion.Euler(-Input.mousePosition.x, -Input.mousePosition.y, -Input.mousePosition.z);
+            print("mouse down");
+            _isRotating = true;
+            _mouseReference = Input.mousePosition;
         }
-       
+        else if(Input.GetMouseButtonUp(0))_isRotating = false;
+        if (!_isRotating) return;
+        _mouseOffset.x = ( _mouseReference.x-Input.mousePosition.x );
+        _mouseOffset.y = ( _mouseReference.y-Input.mousePosition.y );
+        _rotation.z = _mouseOffset.x * _sensitivity;
+        _rotation.x = _mouseOffset.y * _sensitivity;
+        rotatableObject.transform.Rotate(_rotation, Space.World);
+        //rotatableObject.transform.localRotation = quaternion.Euler(_mouseOffset * _sensitivity);
     }
 
     // Update is called once per frame
     public void showHightlightedItem(GameObject item)
     {
-        highlightedItem = item;
+        if (item == rotatableObject) return;
+        if(rotatableObject) Destroy(rotatableObject);
         descriptionPanel.SetActive(true);
         descriptionPanel.transform.GetChild(0).GetComponent<Text>().text = item.GetComponent<item>().itemName;
         descriptionPanel.transform.GetChild(1).GetComponent<Text>().text = item.GetComponent<item>().description;
         GameObject meme = Instantiate(item,descriptionPanel.transform.parent);
-        meme.transform.localPosition = new Vector3(0,0,200);
+        meme.transform.localPosition = new Vector3(0,0,300);
         meme.transform.localScale *= 10;
         meme.layer = 0;
         rotatableObject = meme;
     }
-    public void dropItem()
+    
+    
+    /*public void dropItem()
     {
         Transform player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         
@@ -52,12 +70,10 @@ public class inventorySystem : MonoBehaviour
                 descriptionPanel.SetActive(false);
             }
         }
-        
-
-        
-    }
-
+   
+    }*/
     
-
-    
+ 
+     
 }
+

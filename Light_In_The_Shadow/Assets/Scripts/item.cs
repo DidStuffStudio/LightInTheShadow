@@ -10,10 +10,11 @@ public class item : MonoBehaviour
     [HideInInspector]
     public GameObject canvas;
     private GameObject _player;
-    
+    public bool inInventory;
     
     void Start()
     {
+        if(inInventory) return;
         _player = Camera.main.gameObject;
         canvas = GetComponentInChildren<Canvas>().gameObject;
         canvas.SetActive(false);
@@ -22,6 +23,7 @@ public class item : MonoBehaviour
 
     private void Update()
     {
+        if (inInventory) return;
         canvas.transform.LookAt(_player.transform);
     }
 }

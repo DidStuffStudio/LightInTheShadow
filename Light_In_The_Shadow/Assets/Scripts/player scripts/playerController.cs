@@ -178,20 +178,21 @@ public class playerController : MonoBehaviour
 
 
     void pickupObject()
-    {
+    {    
         if (interactRayCast.inventoryItemHit)
         {
             GameObject temp = Instantiate(interactRayCast.inventoryItem, itemHolder.transform, false);
-            inventory.itemsInInventory.Add(interactRayCast.inventoryItem);
-            temp.name = "UI";
-            temp.transform.localPosition = new Vector3(-100 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
+            Destroy(temp.transform.GetChild(0).gameObject);
+            inventory.itemsInInventory.Add(temp);
+            temp.name = temp.name + "UI";
+            temp.GetComponent<item>().inInventory = true;
+            temp.transform.localPosition = new Vector3(-250 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
             temp.transform.localScale *= 50;
             temp.transform.gameObject.layer = 5;
             interactRayCast.inventoryItemHit = false;
-            // Destroy(interactRayCast.inventoryItem);
             StartCoroutine(InventoryAddInform(interactRayCast.inventoryItem.GetComponent<item>().name));
+            Destroy(interactRayCast.inventoryItem.gameObject);
             interactRayCast.inventoryItem = null;
-            
         }
     }
     void highlightObject()

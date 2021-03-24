@@ -32,7 +32,7 @@ public class Interactor : MonoBehaviour
         else if(inventoryItemHit)
         {
             inventoryItemHit = false;
-            inventoryItem.GetComponent<item>().canvas.SetActive(false);
+            if(inventoryItem) inventoryItem.GetComponent<item>().canvas.SetActive(false);
             inventoryItem = null;
         }
         
