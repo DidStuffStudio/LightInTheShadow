@@ -1,30 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PortalCamera : MonoBehaviour {
+    [SerializeField] private Transform playerCamera;
+    [SerializeField] private Transform portal;
+    [SerializeField] private Transform otherPortal;
 
-	public Transform playerCamera;
-	public Transform portal;
-	public Transform otherPortal;
-	
-	// Update is called once per frame
-	void Update () {
-		
+    private void Start() {
+        playerCamera = Camera.main.transform;
+    }
 
-		float angularDifferenceBetweenPortalRotations = Quaternion.Angle(portal.rotation, otherPortal.rotation);
-		Quaternion portalRotationalDifference = Quaternion.AngleAxis(angularDifferenceBetweenPortalRotations, Vector3.up);
-		Vector3 newCameraDirection = portalRotationalDifference * playerCamera.forward;
-		transform.localRotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
-		
-		// this works
-		// transform.localRotation = Quaternion.LookRotation(angularDifferenceBetweenPortalRotations * otherPortal.InverseTransformDirection(otherPortal.forward), otherPortal.InverseTransformDirection(otherPortal.up));
-		
-		// this works better
-		// transform.rotation = Quaternion.LookRotation(angularDifferenceBetweenPortalRotations * portal.forward, portal.up);
-		
-		// position of this portal camera
-		Vector3 playerOffsetFromPortal = playerCamera.position - otherPortal.position;
-		transform.position = portal.position + playerOffsetFromPortal;
-	}
+    private void Update() {
+        Vector3 playerOffsetFromPortal = playerCamera.position - otherPortal.position;
+        transform.position = portal.position + playerOffsetFromPortal;
+
+        float angularDifferenceBetweenPortalRotations = Quaternion.Angle(portal.rotation, otherPortal.rotation);
+
+        Quaternion portalRotationalDifference =
+            Quaternion.AngleAxis(angularDifferenceBetweenPortalRotations, Vector3.up);
+        Vector3 newCameraDirection = portalRotationalDifference * playerCamera.forward;
+        transform.rotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
+    }
 }

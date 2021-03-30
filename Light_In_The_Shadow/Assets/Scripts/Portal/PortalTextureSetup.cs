@@ -15,7 +15,7 @@ public class PortalTextureSetup : MonoBehaviour {
 
     private void SetCameraTexture(Camera camera, Material material) {
         if (camera.targetTexture != null) camera.targetTexture.Release();
-        camera.targetTexture = new RenderTexture(2000, 2000, 24);
+        camera.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
         material.mainTexture = camera.targetTexture;
     }
 }

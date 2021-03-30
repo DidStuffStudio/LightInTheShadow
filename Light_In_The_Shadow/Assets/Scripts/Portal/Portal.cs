@@ -7,17 +7,13 @@ using UnityEngine;
 public class Portal : MonoBehaviour {
     public Portal linkedPortal;
     public Camera portalCam;
-    private CinemachineVirtualCamera _playerCamera;
+    private Camera _playerCamera;
 
-    void Awake () {
-        _playerCamera = FindObjectOfType<CinemachineVirtualCamera>();
+    void Awake() {
+        _playerCamera = Camera.main;
     }
 
     private void Update() {
-        UpdatePortalCamera();
-    }
-
-    private void UpdatePortalCamera() {
         // make portal camera position and rotation the same relative to this portal as player camera relative to linked portal
         var m = transform.localToWorldMatrix * linkedPortal.transform.worldToLocalMatrix *
                 _playerCamera.transform.localToWorldMatrix;

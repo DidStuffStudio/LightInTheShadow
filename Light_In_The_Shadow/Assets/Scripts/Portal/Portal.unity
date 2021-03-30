@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 61631449}
   receiver: {fileID: 506863143}
+  isFinalPortal: 0
 --- !u!1 &114529722
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +582,7 @@ GameObject:
   - component: {fileID: 219505946}
   - component: {fileID: 219505945}
   m_Layer: 0
-  m_Name: Camera_B
+  m_Name: Camera_Luigi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,8 +601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 620293912}
-  portal: {fileID: 359342513}
-  otherPortal: {fileID: 1795980265}
+  portal: {fileID: 1795980265}
+  otherPortal: {fileID: 359342513}
 --- !u!114 &219505946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +676,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: f3220737071ba85438bb10a2db1bbb26, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -692,8 +693,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219505944}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32, y: 2, z: 0}
+  m_LocalRotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 2, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -713,7 +714,7 @@ GameObject:
   - component: {fileID: 266738593}
   - component: {fileID: 266738592}
   m_Layer: 0
-  m_Name: Camera_A
+  m_Name: Camera_Mario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -760,7 +761,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: f3220737071ba85438bb10a2db1bbb26, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -777,8 +778,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266738586}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalRotation: {x: 0.7071069, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 32, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -797,8 +798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 620293912}
-  portal: {fileID: 1795980265}
-  otherPortal: {fileID: 359342513}
+  portal: {fileID: 359342513}
+  otherPortal: {fileID: 1795980265}
 --- !u!114 &266738593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,7 +1032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359342513}
   m_Layer: 0
-  m_Name: Portal_B
+  m_Name: Portal_Mario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1044,8 +1045,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359342512}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 12.13, z: -5.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1241201286}
@@ -1053,7 +1054,7 @@ Transform:
   - {fileID: 1673692489}
   m_Father: {fileID: 1358546023}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &430111150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506863142}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.44}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 359342513}
@@ -1208,6 +1209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 61631449}
   receiver: {fileID: 63226735}
+  isFinalPortal: 0
 --- !u!1 &571361840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1449,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5240771479555520439, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5241267463746980526, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_Name
       value: First person controller
@@ -1457,6 +1463,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5253712882846181220, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256384803381100468, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: m_AllowMSAA
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1513,7 +1523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094881928}
   m_Layer: 0
-  m_Name: World_A
+  m_Name: World_Luigi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1743,8 +1753,9 @@ GameObject:
   - component: {fileID: 1241201286}
   - component: {fileID: 1241201288}
   - component: {fileID: 1241201287}
+  - component: {fileID: 1241201289}
   m_Layer: 0
-  m_Name: RenderPlane
+  m_Name: RenderPlane_Mario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1758,7 +1769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241201285}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 0.2, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 359342513}
@@ -1813,6 +1824,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241201285}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1241201289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241201285}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360bec8ba06b45e9a2ead9300d3656ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedPortal: {fileID: 1241201289}
+  portalCam: {fileID: 219505949}
 --- !u!1 &1264365535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,7 +2038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1358546023}
   m_Layer: 0
-  m_Name: World_B
+  m_Name: World_Mario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2707,10 +2732,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beee037a601d949ba9cdb5af56526e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraA: {fileID: 266738590}
-  cameraB: {fileID: 219505949}
-  cameraMatA: {fileID: 2100000, guid: 5c823358fb2684db99ff5715262556e0, type: 2}
-  cameraMatB: {fileID: 2100000, guid: 57535d3efce324fafb3a9d0e2aee2336, type: 2}
+  _cameras:
+  - {fileID: 266738590}
+  - {fileID: 219505949}
+  _materials:
+  - {fileID: 2100000, guid: 57535d3efce324fafb3a9d0e2aee2336, type: 2}
+  - {fileID: 2100000, guid: 5c823358fb2684db99ff5715262556e0, type: 2}
 --- !u!4 &1787570573
 Transform:
   m_ObjectHideFlags: 0
@@ -2735,7 +2762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1795980265}
   m_Layer: 0
-  m_Name: Portal_A
+  m_Name: Portal_Luigi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2748,8 +2775,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795980264}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1779864376}
@@ -2757,7 +2784,7 @@ Transform:
   - {fileID: 63226735}
   m_Father: {fileID: 1094881928}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1849546519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,8 +2986,9 @@ GameObject:
   - component: {fileID: 1926896409}
   - component: {fileID: 1926896411}
   - component: {fileID: 1926896410}
+  - component: {fileID: 1926896412}
   m_Layer: 0
-  m_Name: RenderPlane
+  m_Name: RenderPlane_Luigi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2975,7 +3003,7 @@ Transform:
   m_GameObject: {fileID: 1926896408}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0.5}
-  m_LocalScale: {x: 0.21, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.2, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1795980265}
   m_RootOrder: 1
@@ -3029,6 +3057,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926896408}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1926896412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926896408}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360bec8ba06b45e9a2ead9300d3656ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedPortal: {fileID: 1926896412}
+  portalCam: {fileID: 266738590}
 --- !u!1 &1988255274
 GameObject:
   m_ObjectHideFlags: 0
