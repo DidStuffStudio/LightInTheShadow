@@ -23,7 +23,13 @@ public class TVPuzzle : MonoBehaviour
     [SerializeField] private GameObject memoryPrefab;
     [SerializeField] private Transform memorySpawnLocation;
     private bool finished, fadingOut;
+    private DetectClick _doorClicker;
 
+
+    private void Start()
+    {
+        _doorClicker = _doorAnimator.GetComponentInChildren<DetectClick>();
+    }
 
     public void EndTVCutScene()
     {
@@ -50,10 +56,13 @@ public class TVPuzzle : MonoBehaviour
             _fadeInScene.fadeInNow = true;
             doorAudioSource.PlayOneShot(_audioClips[3]);
             _doorAnimator.gameObject.layer = 0;
+            tv.GetComponent<DetectClick>().canClick = true;
             for (int i = 0; i < _doorAnimator.transform.childCount; i++)
             {
                 _doorAnimator.transform.GetChild(i).gameObject.layer = 0;
             }
+
+            
         }
         else
         {
@@ -67,8 +76,8 @@ public class TVPuzzle : MonoBehaviour
         FocusOnTV(focus: false);
         finished = true;
         // fade out and makes dolly movement camera --> activate dolly camera
-        tv.GetComponent<Collider>().enabled = false;
-        tv.GetComponent<Outline>().enabled = false;
+        tv.GetComponent<Collider>().enabled = tv.GetComponent<Outline>().enabled = false;
+        _fadeInScene.reverse = true;
         _fadeInScene.speed = 0.0008f;
         var particleSystemVelocityOverLifetime = _particleSystem.velocityOverLifetime;
         particleSystemVelocityOverLifetime.speedModifierMultiplier = -1;
@@ -90,6 +99,7 @@ public class TVPuzzle : MonoBehaviour
 
     private void Update()
     {
+        _doorClicker.canClick = _playerController.currentTagTorchHit == "ClickInteract";
         if (antennaA.antennaCorrect && antennaB.antennaCorrect && !finished) FadeOutCutscene();
         if (!fadingOut) return;
         var particleSystemShape = _particleSystem.shape;

@@ -31,9 +31,10 @@ public class playerController : MonoBehaviour
     private Interactor interactRayCast;
     public GameObject torch;
     private MasterManager _masterManager;
-    public bool hasTorch;
+    public bool hasTorch, holdingTorch;
     public Text helpText, inventoryInformText;
     private bool _canEquipTorch = true, _canOpenInventory = true, _wasHoldingTorch = false;
+    public string currentTagTorchHit;
     
     
 
@@ -72,7 +73,7 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        torch.transform.parent.transform.rotation = cameraTransform.rotation;
+
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -91,6 +92,14 @@ public class playerController : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);        
         }
+
+        if (!holdingTorch)
+        {
+            currentTagTorchHit = "Nothing";
+            return;
+        }
+        torch.transform.parent.transform.rotation = cameraTransform.rotation;
+        currentTagTorchHit = interactRayCast.currentTag;
     }
 
     public void PlayFromMainMenu()
@@ -258,15 +267,15 @@ public class playerController : MonoBehaviour
     {
         if (!hasTorch || !_canEquipTorch) return;
         torch.SetActive(!torch.activeSelf);
+        holdingTorch = torch.activeSelf;
     }
 
     public void FreezePlayerForCutScene(bool freeze)
     {
         FreezePlayer(freeze);
-        torch.SetActive(!freeze);
         _canEquipTorch = !freeze;
         _canOpenInventory = !freeze;
-
+        if(!freeze)EquipTorch();
     }
 
     IEnumerator InventoryAddInform(string name)

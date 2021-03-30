@@ -18,7 +18,6 @@ public class FadeInScene : MonoBehaviour
     public bool reverse;
 
 
-
     void Start()
     {
         children = GetComponentsInChildren<Renderer>();
@@ -27,6 +26,7 @@ public class FadeInScene : MonoBehaviour
 
     void Update()
     {
+        
         if (!fadeInNow) return;
         
         if (!reverse)

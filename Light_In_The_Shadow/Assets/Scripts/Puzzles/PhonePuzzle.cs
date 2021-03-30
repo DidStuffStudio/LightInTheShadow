@@ -19,7 +19,7 @@ public class PhonePuzzle : MonoBehaviour {
     public Vector3 _mouseDownPosition;
     public bool goingBackToOriginalPos;
     
-    [SerializeField] private GameObject kitchenCamera, phoneCam, memoryPrefab, phone;
+    [SerializeField] private GameObject kitchenCamera, phoneCam, memoryPrefab, numbersCanvas;
     [SerializeField] private Transform memorySpawnLocation;
     [SerializeField] private FadeInScene sceneFader;
     [SerializeField] private Animator _memoryLightAnimator;
@@ -29,6 +29,7 @@ public class PhonePuzzle : MonoBehaviour {
     [SerializeField] private AudioClip[] audioClips;
     [SerializeField] private playerController player;
 
+    [SerializeField] private DetectClick _lightSwitchClicker;
     private bool fadingOut;
     
     public string currentNumber;
@@ -39,6 +40,7 @@ public class PhonePuzzle : MonoBehaviour {
     private void Start() {
         _camera = Camera.main;
         originalRotation = rotaryPhone.transform.rotation;
+        
     }
 
     private void Update() {
@@ -55,6 +57,8 @@ public class PhonePuzzle : MonoBehaviour {
         else {
             rotaryPhone.transform.rotation = Quaternion.Lerp(rotaryPhone.transform.rotation, originalRotation, goBackRotationSpeed);
         }
+
+        _lightSwitchClicker.canClick = player.currentTagTorchHit == "ClickInteract";
         
         if (!fadingOut) return;
         var particleSystemShape = particles.shape;
@@ -90,30 +94,31 @@ public class PhonePuzzle : MonoBehaviour {
 
     public void FocusOnPhone(bool focus)
     {
-        phone.GetComponent<Collider>().enabled = !focus;
-        phone.GetComponent<Outline>().enabled = !focus;
+        rotaryPhone.GetComponent<Collider>().enabled = !focus;
+        rotaryPhone.GetComponent<Outline>().enabled = !focus;
         phoneCam.SetActive(focus);
     }
     
     public void FadeInScene()
     {
+        numbersCanvas.SetActive(true);
         sceneFader.fadeInNow = true;
-        kitchenAudioSource.PlayOneShot(audioClips[0]); //Play memory opening
+        kitchenAudioSource.PlayOneShot(audioClips[0]);
+        rotaryPhone.GetComponent<DetectClick>().canClick = true; //Play memory opening
     }
     
     public void StartKitchenCutScene()
     {
         FocusOnPhone(focus: false);
         player.FreezePlayerForCutScene(true);
-        phone.GetComponent<Collider>().enabled = false;
-        phone.GetComponent<Outline>().enabled = false;
+        rotaryPhone.GetComponent<Collider>().enabled = rotaryPhone.GetComponent<Outline>().enabled = false;
         sceneFader.speed = 0.002f;
+        numbersCanvas.SetActive(false);
         var particleSystemVelocityOverLifetime = particles.velocityOverLifetime;
         particleSystemVelocityOverLifetime.speedModifierMultiplier = -1;
         kitchenAudioSource.PlayOneShot(audioClips[1]);
         kitchenCamera.SetActive(true);
-        sceneFader.fadeInNow = true;
-        fadingOut = true;
+        sceneFader.reverse = sceneFader.fadeInNow = fadingOut =true;
         StartCoroutine(PlayMemoryLight());
     }
     public void EndKitchenCutScene()
