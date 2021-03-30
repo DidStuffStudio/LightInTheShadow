@@ -462,8 +462,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 4684040776900071836}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
         m_MethodName: Settings
         m_Mode: 1
         m_Arguments:
@@ -595,8 +595,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 4684040776900071836}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
         m_Arguments:
@@ -728,9 +728,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
-        m_MethodName: Play
+      - m_Target: {fileID: 4684040776900071836}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: PlayPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1884,7 +1884,6 @@ GameObject:
   - component: {fileID: 954926337}
   - component: {fileID: 954926336}
   - component: {fileID: 954926335}
-  - component: {fileID: 954926339}
   - component: {fileID: 2106097799}
   - component: {fileID: 2106097800}
   m_Layer: 5
@@ -1981,26 +1980,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &954926339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954926334}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fadeed54a69966141a804df06f7c5c32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4684040776900071836}
-  settingsPanel: {fileID: 585554831}
-  pauseMenuPanel: {fileID: 1522602762}
-  mainMenuPanel: {fileID: 4892700204647691949}
-  paused: 0
-  isMainMenu: 0
-  manager: {fileID: 7985086443184911361}
-  blur: {fileID: 8151544380900868368}
 --- !u!114 &2106097799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,8 +2297,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 7985086443184911361}
+        m_TargetAssemblyTypeName: MasterManager, Assembly-CSharp
         m_MethodName: Quality
         m_Mode: 3
         m_Arguments:
@@ -2617,7 +2596,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 32
@@ -3101,8 +3080,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 7985086443184911361}
+        m_TargetAssemblyTypeName: MasterManager, Assembly-CSharp
         m_MethodName: Quality
         m_Mode: 3
         m_Arguments:
@@ -3610,8 +3589,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 4684040776900071836}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -3895,8 +3874,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 7985086443184911361}
+        m_TargetAssemblyTypeName: MasterManager, Assembly-CSharp
         m_MethodName: Quality
         m_Mode: 3
         m_Arguments:
@@ -5941,7 +5920,7 @@ MonoBehaviour:
   m_VerticalAxis:
     Value: -40
     m_SpeedMode: 0
-    m_MaxSpeed: 50
+    m_MaxSpeed: 100
     m_AccelTime: 0.5
     m_DecelTime: 0.5
     m_InputAxisName: 
@@ -5965,7 +5944,7 @@ MonoBehaviour:
   m_HorizontalAxis:
     Value: 172.70538
     m_SpeedMode: 0
-    m_MaxSpeed: 50
+    m_MaxSpeed: 100
     m_AccelTime: 0.5
     m_DecelTime: 0.5
     m_InputAxisName: 
@@ -6708,9 +6687,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
-        m_MethodName: Play
+      - m_Target: {fileID: 4684040776900071836}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: PlayFromMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7080,8 +7059,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 4684040776900071836}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
         m_MethodName: Settings
         m_Mode: 1
         m_Arguments:
@@ -7709,8 +7688,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954926339}
-        m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
+      - m_Target: {fileID: 4684040776900071836}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -7995,9 +7974,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 7.497
       objectReference: {fileID: 0}
+    - target: {fileID: 3795896728770864503, guid: 2f7886b44b503fc49a0e52c64e2e1625, type: 3}
+      propertyPath: m_Intensity
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4065855628616835063, guid: 2f7886b44b503fc49a0e52c64e2e1625, type: 3}
       propertyPath: m_Name
       value: Torch (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442002821251030744, guid: 2f7886b44b503fc49a0e52c64e2e1625, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034317629140477081, guid: 2f7886b44b503fc49a0e52c64e2e1625, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244594113034605107, guid: 2f7886b44b503fc49a0e52c64e2e1625, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6707410001438499971, guid: 2f7886b44b503fc49a0e52c64e2e1625, type: 3}
