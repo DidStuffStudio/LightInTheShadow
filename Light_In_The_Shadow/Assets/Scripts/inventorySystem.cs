@@ -7,36 +7,46 @@ using UnityEngine.UI;
 
 public class inventorySystem : MonoBehaviour
 {
-    [SerializeField]
+    
     public List<GameObject> itemsInInventory = new List<GameObject>();
-    public GameObject highlightedItem;
-    public GameObject descriptionPanel,buttonPanel,itemsholder;
-    public GameObject rotatableObject;
-    public float _sensitivity = 0.5f;
+    public List<String> idsInInventory = new List<string>();
+    public GameObject descriptionPanel,rotatableObject,buttonPanel,itemsholder;
+    [SerializeField] private GameObject rotatePivot;
+    [SerializeField] private  float _sensitivity = 0.5f;
     private Vector3 _mouseReference;
     private Vector3 _mouseOffset;
     private Vector3 _rotation;
     private bool _isRotating;
+    [SerializeField] private Camera _uiCamera;
 
+    private Vector3 _mousePreviousPosition = Vector3.zero, _mouseDeltaPostion = Vector3.zero;
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && rotatableObject)
-        {
-            print("mouse down");
-            _isRotating = true;
-            _mouseReference = Input.mousePosition;
-        }
-        else if(Input.GetMouseButtonUp(0))_isRotating = false;
-        if (!_isRotating) return;
-        _mouseOffset.x = ( _mouseReference.x-Input.mousePosition.x );
-        _mouseOffset.y = ( _mouseReference.y-Input.mousePosition.y );
-        _rotation.z = _mouseOffset.x * _sensitivity;
-        _rotation.x = _mouseOffset.y * _sensitivity;
-        rotatableObject.transform.Rotate(_rotation, Space.World);
-        //rotatableObject.transform.localRotation = quaternion.Euler(_mouseOffset * _sensitivity);
-    }
 
-    // Update is called once per frame
+        
+        
+        if(!rotatableObject || !descriptionPanel.activeSelf) return;
+        if (Input.GetMouseButton(0))
+        {
+            var cameraRightVector = _uiCamera.transform.right;
+            _mouseDeltaPostion = Input.mousePosition - _mousePreviousPosition;
+            if (Vector3.Dot(rotatePivot.transform.up, Vector3.up) >= 0)
+            {
+                rotatableObject.transform.Rotate(rotatePivot.transform.up, Vector3.Dot(_mouseDeltaPostion, cameraRightVector), Space.World);
+            }
+
+            else
+            {
+                rotatableObject.transform.Rotate(rotatePivot.transform.up, -Vector3.Dot(_mouseDeltaPostion, cameraRightVector), Space.World);
+            }
+        
+            rotatableObject.transform.Rotate(cameraRightVector, Vector3.Dot(_mouseDeltaPostion, _uiCamera.transform.up), Space.World);
+        }
+
+        _mousePreviousPosition = Input.mousePosition;
+        
+    }
+    
     public void showHightlightedItem(GameObject item)
     {
         if (item == rotatableObject) return;
@@ -44,8 +54,8 @@ public class inventorySystem : MonoBehaviour
         descriptionPanel.SetActive(true);
         descriptionPanel.transform.GetChild(0).GetComponent<Text>().text = item.GetComponent<item>().itemName;
         descriptionPanel.transform.GetChild(1).GetComponent<Text>().text = item.GetComponent<item>().description;
-        GameObject meme = Instantiate(item,descriptionPanel.transform.parent);
-        meme.transform.localPosition = new Vector3(0,0,300);
+        GameObject meme = Instantiate(item,rotatePivot.transform);
+        meme.transform.localPosition = Vector3.zero;
         meme.transform.localScale *= 10;
         meme.layer = 0;
         rotatableObject = meme;

@@ -40,7 +40,7 @@ public class TVPuzzle : MonoBehaviour
         bool hasKey = false;
         foreach (var item in InventorySystem.itemsInInventory)
         {
-            if (item.name == "Key") hasKey = true;
+            if (item.name.Contains("Key")) hasKey = true;
         }
 
         if (hasKey)
@@ -70,6 +70,8 @@ public class TVPuzzle : MonoBehaviour
         tv.GetComponent<Collider>().enabled = false;
         tv.GetComponent<Outline>().enabled = false;
         _fadeInScene.speed = 0.0008f;
+        var particleSystemVelocityOverLifetime = _particleSystem.velocityOverLifetime;
+        particleSystemVelocityOverLifetime.speedModifierMultiplier = -1;
         _fadeInScene.fadeInNow = true;
         _playerController.FreezePlayerForCutScene(true);
         cinemachineDollyCamera.SetActive(true);

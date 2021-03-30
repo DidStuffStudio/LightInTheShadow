@@ -81,6 +81,7 @@ public class PhonePuzzle : MonoBehaviour {
     }
 
     private void CallNumber() {
+        
         _dialedNumber = "";
         StartKitchenCutScene();
     }
@@ -107,6 +108,8 @@ public class PhonePuzzle : MonoBehaviour {
         phone.GetComponent<Collider>().enabled = false;
         phone.GetComponent<Outline>().enabled = false;
         sceneFader.speed = 0.002f;
+        var particleSystemVelocityOverLifetime = particles.velocityOverLifetime;
+        particleSystemVelocityOverLifetime.speedModifierMultiplier = -1;
         kitchenAudioSource.PlayOneShot(audioClips[1]);
         kitchenCamera.SetActive(true);
         sceneFader.fadeInNow = true;

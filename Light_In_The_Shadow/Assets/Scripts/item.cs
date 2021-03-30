@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class item : MonoBehaviour
 {
-    public string itemName, description;
+    public string itemName, description, id;
 
     [HideInInspector]
     public GameObject canvas;

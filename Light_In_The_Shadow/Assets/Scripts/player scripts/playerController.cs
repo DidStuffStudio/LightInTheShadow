@@ -119,8 +119,8 @@ public class playerController : MonoBehaviour
         {
             playerFrozen = false;
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 50.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 50.0f;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 100.0f;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 100.0f;
             gravityValue = -9.81f;
         }
     }
@@ -151,8 +151,8 @@ public class playerController : MonoBehaviour
                 _wasHoldingTorch = true;
             }
             else _wasHoldingTorch = false;
-
-                menuPanels[3].SetActive(true);
+            ClosePanels();
+            menuPanels[3].SetActive(true);
             menuPanels[5].SetActive(true);
             FreezePlayer(true);
             DOFSwitch(false);
@@ -167,7 +167,6 @@ public class playerController : MonoBehaviour
             FreezePlayer(false);
             Destroy(inventory.rotatableObject);
             inventory.rotatableObject = null;
-            inventory.highlightedItem = null;
             inventory.descriptionPanel.SetActive(false);
             menuPanels[5].SetActive(false);
             DOFSwitch(true);
@@ -185,7 +184,9 @@ public class playerController : MonoBehaviour
             Destroy(temp.transform.GetChild(0).gameObject);
             inventory.itemsInInventory.Add(temp);
             temp.name = temp.name + "UI";
+            inventory.idsInInventory.Add(temp.GetComponent<item>().id);
             temp.GetComponent<item>().inInventory = true;
+            temp.GetComponent<Outline>().enabled = false;
             temp.transform.localPosition = new Vector3(-250 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
             temp.transform.localScale *= 50;
             temp.transform.gameObject.layer = 5;

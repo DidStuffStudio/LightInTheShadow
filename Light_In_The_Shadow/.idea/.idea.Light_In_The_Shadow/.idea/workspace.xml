@@ -20,15 +20,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Key_Item.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Key_Item.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Gold.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Gold.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalBlock.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/PortalBlock.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/kEY.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/kEY.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PortalBlock.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PortalBlock.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-6_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-6_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-6_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-6_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-0.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-1.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-1.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/PortalBlockForceField.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/PortalBlockForceField.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/untitled.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/untitled.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Antenna.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Antenna.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalWaves_M.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalWaves_M.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Tentacles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Tentacles.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Dad_Kitchen.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Dad_Kitchen.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/OcclusionCullingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/OcclusionCullingData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Key_Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Key_Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/KitchenMemory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/KitchenMemory.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMemory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMemory.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +112,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/FadingTransition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/EnvironmentTransitionExample.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PortalBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Helpers/CinemachineInputProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,14 +169,16 @@
         <option value="$PROJECT_DIR$/Assets/TorchPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/PassToTVPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Antenna.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
+        <option value="$PROJECT_DIR$/Assets/PortalBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
       </list>
     </option>
   </component>
@@ -192,6 +251,8 @@
       <workItem from="1616009095775" duration="5295000" />
       <workItem from="1616486042877" duration="20397000" />
       <workItem from="1616570959921" duration="29131000" />
+      <workItem from="1616657823366" duration="1125000" />
+      <workItem from="1617084184557" duration="12125000" />
     </task>
     <servers />
   </component>
@@ -233,12 +294,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="249" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615714561659" />
-    <state x="707" y="237" width="768" height="492" key="search.everywhere.popup" timestamp="1616609293697">
+    <state x="707" y="237" width="768" height="492" key="search.everywhere.popup" timestamp="1617102216515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
-    <state x="707" y="237" width="768" height="492" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616609293697" />
+    <state x="707" y="237" width="768" height="492" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617102216515" />
     <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>

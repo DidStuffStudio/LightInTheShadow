@@ -208,6 +208,7 @@
         <e p="flicker.cs" t="Include" />
         <e p="MenuLogic.cs" t="Include" />
         <e p="PassToTVPuzzle.cs" t="Include" />
+        <e p="PortalBlock.cs" t="Include" />
         <e p="rotateAround.cs" t="Include" />
         <e p="Scenes" t="Include">
           <e p="Testing" t="Include">

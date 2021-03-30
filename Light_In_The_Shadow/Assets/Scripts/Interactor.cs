@@ -26,13 +26,18 @@ public class Interactor : MonoBehaviour
         if (hit.transform.gameObject.layer == 12 && hit.distance < interactionDistance)
         {
             hit.transform.gameObject.GetComponent<item>().canvas.SetActive(true);
+            hit.transform.gameObject.GetComponent<Outline>().enabled = true;
             inventoryItem = hit.transform.gameObject;
             inventoryItemHit = true;
         }
         else if(inventoryItemHit)
         {
             inventoryItemHit = false;
-            if(inventoryItem) inventoryItem.GetComponent<item>().canvas.SetActive(false);
+            if (inventoryItem)
+            {
+                inventoryItem.GetComponent<item>().canvas.SetActive(false);
+                inventoryItem.GetComponent<Outline>().enabled = false;
+            }
             inventoryItem = null;
         }
         
