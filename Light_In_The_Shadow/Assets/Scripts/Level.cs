@@ -23,6 +23,7 @@ public class Level : MonoBehaviour
         // activate the appropriate fragment
         memoryFragments[i].SetActive(true);
         memorySlots[i].SetActive(false);
+        _puzzlesSolved++;
         if (_puzzlesSolved >= numberOfPuzzles) _puzzlesCompleted = true;
     }
 
