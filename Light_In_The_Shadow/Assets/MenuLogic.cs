@@ -68,9 +68,7 @@ public class MenuLogic : MonoBehaviour {
     }
 
 
-    public void Quality(int qualityIndex) {
-        QualitySettings.SetQualityLevel(qualityIndex);
-    }
+   
 
     public void Exit() {
         if (isMainMenu) Application.Quit();

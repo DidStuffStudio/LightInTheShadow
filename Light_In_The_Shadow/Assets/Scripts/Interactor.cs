@@ -10,9 +10,11 @@ public class Interactor : MonoBehaviour
     private GameObject _lastHitObject;
     public bool inventoryItemHit;
     public GameObject inventoryItem;
+    private int layerMask = 13;
     private void Start()
     {
         cam = Camera.main;
+        layerMask = LayerMask.GetMask("Torch", "Player", "UI");
     }
 
     private void Update()
@@ -20,8 +22,8 @@ public class Interactor : MonoBehaviour
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
-
-        if (!Physics.Raycast(ray, out hit)) return;
+        
+        if (!Physics.Raycast(ray, out hit,layerMask)) return;
 
         if (hit.transform.gameObject.layer == 12 && hit.distance < interactionDistance)
         {

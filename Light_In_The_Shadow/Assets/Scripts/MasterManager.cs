@@ -88,4 +88,8 @@ public class MasterManager : MonoBehaviour {
     private IEnumerator FallingDownThroughNeuronsTransition() {
         yield return new WaitForSeconds(5.0f);
     }
+    
+    public void Quality(int qualityIndex) {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
 }

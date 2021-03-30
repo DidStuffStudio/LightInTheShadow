@@ -48,7 +48,6 @@ public class playerController : MonoBehaviour
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0)) {
             isMainMenu = true;
             FreezePlayer(true);
-            DOFSwitch(false);
         }
         else
         {
@@ -97,7 +96,6 @@ public class playerController : MonoBehaviour
     public void PlayFromMainMenu()
     {
         FreezePlayer(false);
-        DOFSwitch(true);
     }
     public void NewRespawnPoint()
     {
@@ -135,7 +133,6 @@ public class playerController : MonoBehaviour
         menuPanels[5].SetActive(enable);
         menuPanels[6].SetActive(enable);
         menuPanels[4].SetActive(!enable);
-        DOFSwitch(true);
     }
     void OpenInventory()
     {
@@ -155,7 +152,6 @@ public class playerController : MonoBehaviour
             menuPanels[3].SetActive(true);
             menuPanels[5].SetActive(true);
             FreezePlayer(true);
-            DOFSwitch(false);
             Time.timeScale = 0.0f;
 
 
@@ -163,14 +159,13 @@ public class playerController : MonoBehaviour
         else
         {
             Time.timeScale = 1.0f;
-            menuPanels[3].SetActive(false);
+            ClosePanels();
             FreezePlayer(false);
             Destroy(inventory.rotatableObject);
             inventory.rotatableObject = null;
             inventory.descriptionPanel.SetActive(false);
-            menuPanels[5].SetActive(false);
-            DOFSwitch(true);
             if(hasTorch && _wasHoldingTorch) torch.SetActive(true);
+            menuPanels[4].SetActive(true);
            
         }
     }
@@ -218,17 +213,14 @@ public class playerController : MonoBehaviour
             FreezePlayer(false);
             menuPanels[4].SetActive(true);
             paused = false;
-            menuPanels[5].SetActive(false);
-            DOFSwitch(true);
         }
         else
         {  
+            paused = true;
             FreezePlayer(true);
             menuPanels[1].SetActive(true);
-            paused = true;
             Time.timeScale = 0.0f;
             menuPanels[5].SetActive(true);
-            DOFSwitch(false);
         }
     }
 
@@ -239,15 +231,6 @@ public class playerController : MonoBehaviour
         {
             panel.SetActive(false);
         }
-    }
-
-    void DOFSwitch(bool enabled)
-    {
-        foreach (var pp in _masterManager.levelPP)
-        {
-            pp.components[0].active = enabled;
-        }
-
     }
     
     public void Settings() {
