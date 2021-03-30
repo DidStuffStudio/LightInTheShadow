@@ -35,11 +35,11 @@ public class PortalTeleporter : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) _playerIsOverlapping = true;
     }
 
-    void OnTriggerExit(Collider other) {
+    private void OnTriggerExit(Collider other) {
         if (other.CompareTag("Player")) _playerIsOverlapping = false;
     }
 }
