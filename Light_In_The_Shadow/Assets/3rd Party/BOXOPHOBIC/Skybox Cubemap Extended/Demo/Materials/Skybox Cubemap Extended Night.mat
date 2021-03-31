@@ -88,7 +88,7 @@ Material:
     - _EnableRotation: 1
     - _Exposure: 1.22
     - _Float0: -0.21
-    - _FogFill: 0
+    - _FogFill: 0.836
     - _FogHeight: 1
     - _FogIntensity: 1
     - _FogMessage: -0.17

@@ -41,7 +41,7 @@ public class PortalCamera : MonoBehaviour {
         }
 
         if (targetPortalCamera.targetTexture != null) targetPortalCamera.targetTexture.Release();
-        targetPortalCamera.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        targetPortalCamera.targetTexture = new RenderTexture(Screen.width * 2, Screen.height * 2, 24);
         _material.mainTexture = targetPortalCamera.targetTexture;
     }
 
