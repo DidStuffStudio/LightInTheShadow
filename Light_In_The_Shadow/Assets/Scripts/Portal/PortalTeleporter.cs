@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalTeleporter : MonoBehaviour {
+public class PortalTeleporter : MonoBehaviour
+{
     public Transform player;
     public Transform receiver;
 
@@ -12,14 +13,16 @@ public class PortalTeleporter : MonoBehaviour {
     [SerializeField] private bool isFinalPortal = false;
 
     // Update is called once per frame
-    void Update() {
-        if (_playerIsOverlapping && !isFinalPortal) {
+    void Update()
+    {
+        if (_playerIsOverlapping && !isFinalPortal)
+        {
             Vector3 portalToPlayer = player.position - transform.position;
             float dotProduct = Vector3.Dot(transform.forward, portalToPlayer);
             // If this is true: The player has moved across the portal - so teleport him
             print(dotProduct);
-            if (dotProduct < 0f) {
-                
+            if (dotProduct < 0f)
+            {
                 player.GetComponent<CharacterController>().enabled = false;
                 float rotationDiff = -Quaternion.Angle(transform.rotation, receiver.rotation);
                 rotationDiff += 180;
@@ -31,23 +34,20 @@ public class PortalTeleporter : MonoBehaviour {
 
                 _playerIsOverlapping = false;
                 player.GetComponent<CharacterController>().enabled = true;
-                if (isInternalLevelPortal) return; 
-                
-                if (!MasterManager.Instance.loadingScreenTransitionStarted)
-                    MasterManager.Instance.StartLoadingNextScene();
-                else {
-                    MasterManager.Instance.UnloadPreviousScene();
-                    player.GetComponent<playerController>().NewRespawnPoint(); // set the new respawning point to the player
-                }
+                if (isInternalLevelPortal) return;
+
+                MasterManager.Instance.StartLoadingNextScene();
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other)
+    {
         if (other.CompareTag("Player")) _playerIsOverlapping = true;
     }
 
-    private void OnTriggerExit(Collider other) {
+    private void OnTriggerExit(Collider other)
+    {
         if (other.CompareTag("Player")) _playerIsOverlapping = false;
     }
 }

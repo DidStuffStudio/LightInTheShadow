@@ -10,8 +10,8 @@ public class MasterManager : MonoBehaviour {
     private static MasterManager _instance;
     public VolumeProfile[] levelPP; //TODO Make post processing volumes and fog lerp between levels
     private int _levelIndex = 0;
-    public bool loadingScreenTransitionStarted = false;
-    
+    [SerializeField] private playerController player;
+
     public static MasterManager Instance {
         get {
             if (_instance != null) return _instance;
@@ -35,25 +35,27 @@ public class MasterManager : MonoBehaviour {
 
     public void StartLoadingNextScene() {
         // increase the level index to be the one after the active scene
-        _levelIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        _levelIndex++;
         LoadNextScene(_levelIndex);
     }
 
     private void LoadNextScene(int sceneToLoad) {
-        
-        loadingScreenTransitionStarted = true;
         SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
-        SceneManager.SetActiveScene(SceneManager.GetSceneAt(_levelIndex));
     }
 
     public void UnloadPreviousScene()
     {
-        if (_levelIndex > 0) SceneManager.UnloadSceneAsync(_levelIndex - 1);
-        loadingScreen.SetActive(false);
-        loadingScreenTransitionStarted = false;
-        GetComponentInChildren<Volume>().profile = levelPP[_levelIndex];
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(_levelIndex));
+        if (_levelIndex > 0 && _levelIndex < 4) SceneManager.UnloadSceneAsync(_levelIndex - 1);
+        GetComponentInChildren<Volume>().profile = levelPP[_levelIndex-1];
     }
 
+    public void ToggleNeurons(bool enable)
+    {
+        loadingScreen.SetActive(enable);
+        if (enable) return;
+        player.GetComponent<playerController>().NewRespawnPoint();
+    }
     public void Quality(int qualityIndex) {
         QualitySettings.SetQualityLevel(qualityIndex);
     }

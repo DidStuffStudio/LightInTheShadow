@@ -20,16 +20,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Level 1 Sky.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Level 1 Sky.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Level 2 Sky.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Level 2 Sky.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Level 3 Sky.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Level 3 Sky.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Follow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Follow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Settings/MainForwardRenderer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Settings/MainForwardRenderer.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Demo/Materials/Skybox Cubemap Extended Night.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Fantasy Forest Environment Free Sample/Meshes/Prefabs/tree_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Fantasy Forest Environment Free Sample/Meshes/Prefabs/tree_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_a.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_a.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_b.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_b.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_c.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_c.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_d.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_d.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_e.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_e.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_f.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_f.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_g.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_g.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_h.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_h.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_i.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_i.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_j.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_j.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_k.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_k.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +71,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DialNumber.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Follow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Extended.shader" root0="FORCE_HIGHLIGHTING" />
@@ -121,11 +150,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Follow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
       </list>
     </option>
   </component>
@@ -202,6 +233,7 @@
       <workItem from="1616657823366" duration="1125000" />
       <workItem from="1617084184557" duration="21253000" />
       <workItem from="1617173518190" duration="8437000" />
+      <workItem from="1617183396190" duration="6701000" />
     </task>
     <servers />
   </component>

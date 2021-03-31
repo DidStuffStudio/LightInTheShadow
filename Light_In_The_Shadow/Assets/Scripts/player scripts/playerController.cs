@@ -105,6 +105,10 @@ public class playerController : MonoBehaviour
     public void PlayFromMainMenu()
     {
         FreezePlayer(false);
+        ClosePanels();
+        menuPanels[4].SetActive(true);
+        isMainMenu = false;
+
     }
     public void NewRespawnPoint()
     {

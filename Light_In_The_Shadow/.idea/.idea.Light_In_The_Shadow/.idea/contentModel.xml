@@ -206,6 +206,7 @@
         </e>
         <e p="DialNumber.cs" t="Include" />
         <e p="flicker.cs" t="Include" />
+        <e p="Follow.cs" t="Include" />
         <e p="MenuLogic.cs" t="Include" />
         <e p="PassToTVPuzzle.cs" t="Include" />
         <e p="PortalBlock.cs" t="Include" />

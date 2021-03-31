@@ -13,9 +13,9 @@ public class TriggerEvent : MonoBehaviour
    {
       if (onlyForPlayer)
       {
-         if (other.gameObject.tag == "Player")
+         if (other.gameObject.CompareTag("Player"))
          {
-            OnTrigger.Invoke();
+            OnTrigger?.Invoke();
          }
       }
       else
