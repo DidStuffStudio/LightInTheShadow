@@ -9,8 +9,8 @@ public class MasterManager : MonoBehaviour {
     // instance of the Master Manager
     private static MasterManager _instance;
     public VolumeProfile[] levelPP; //TODO Make post processing volumes and fog lerp between levels
-    private int _levelIndex = 0;
-    [SerializeField] private playerController player;
+    public int _levelIndex = 1;
+    public playerController player;
 
     public static MasterManager Instance {
         get {

@@ -15,7 +15,6 @@ public class playerController : MonoBehaviour
     private bool groundedPlayer;
     public float playerSpeed = 2.0f;
     private float jumpHeight = 1.0f;
-    private float gravityValue = -9.81f;
     //private Inputmanager inputmanager;
     private Transform cameraTransform;
     public GameObject[] menuPanels = new GameObject[7]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is blur plane, 6 is help menu
@@ -35,8 +34,8 @@ public class playerController : MonoBehaviour
     public Text helpText, inventoryInformText;
     private bool _canEquipTorch = true, _canOpenInventory = true, _wasHoldingTorch = false;
     public string currentTagTorchHit;
-    
-    
+    public float gravity = -2;
+
 
     private void Awake()
     {
@@ -83,13 +82,11 @@ public class playerController : MonoBehaviour
         if (!playerFrozen)
         {
         Vector2 movement = playerControls.Player.Movement.ReadValue<Vector2>();
-
         Vector3 move = new Vector3(movement.x,0f,movement.y);
         move = cameraTransform.forward * move.z+cameraTransform.right*move.x;
         move.y = 0;
         controller.Move(move * Time.deltaTime * playerSpeed);
-
-        playerVelocity.y += gravityValue * Time.deltaTime;
+        playerVelocity.y += Physics.gravity.y * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);        
         }
 
@@ -123,7 +120,7 @@ public class playerController : MonoBehaviour
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0.0f;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0.0f;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0.0f;
-            gravityValue = 0.0f;
+            Physics.gravity = new Vector3(0,0,0);
         }
 
         else
@@ -132,7 +129,7 @@ public class playerController : MonoBehaviour
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 100.0f;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 100.0f;
-            gravityValue = -9.81f;
+            Physics.gravity = new Vector3(0,gravity,0);
         }
     }
 

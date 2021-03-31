@@ -15,11 +15,10 @@ public class TVPuzzle : MonoBehaviour
     [SerializeField] private GameObject cinemachineTVFocusCamera;
     [SerializeField] private GameObject tv;
     [SerializeField] private Antenna antennaA, antennaB;
-    private Camera mainCamera;
-    public inventorySystem InventorySystem;
+    private inventorySystem InventorySystem;
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private Volume _postProcessing;
-    [SerializeField] private playerController _playerController;
+    private playerController _playerController;
     [SerializeField] private GameObject memoryPrefab;
     [SerializeField] private Transform memorySpawnLocation;
     private bool finished, fadingOut;
@@ -29,6 +28,9 @@ public class TVPuzzle : MonoBehaviour
     private void Start()
     {
         _doorClicker = _doorAnimator.GetComponentInChildren<DetectClick>();
+        _playerController = MasterManager.Instance.player;
+        InventorySystem = _playerController.GetComponent<inventorySystem>();
+
     }
 
     public void EndTVCutScene()

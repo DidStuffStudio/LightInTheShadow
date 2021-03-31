@@ -27,7 +27,7 @@ public class PhonePuzzle : MonoBehaviour {
     [SerializeField] private Volume postProcessing;
     [SerializeField] private AudioSource kitchenAudioSource;
     [SerializeField] private AudioClip[] audioClips;
-    [SerializeField] private playerController player;
+    private playerController player;
 
     [SerializeField] private DetectClick _lightSwitchClicker;
     private bool fadingOut;
@@ -40,7 +40,8 @@ public class PhonePuzzle : MonoBehaviour {
     private void Start() {
         _camera = Camera.main;
         originalRotation = rotaryPhone.transform.rotation;
-        
+        player = MasterManager.Instance.player;
+
     }
 
     private void Update() {

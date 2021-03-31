@@ -34,7 +34,6 @@ public class PortalCamera : MonoBehaviour {
         if (shader == null) throw new ArgumentNullException(nameof(shader));
         if (_material == null) {
             // throw new ArgumentNullException(nameof(material));
-            print("Creating new material for " + transform.name);
             _material = new Material(shader) {name = transform.name + "_Mat"};
 
             renderPlane.GetComponent<Renderer>().material = _material;

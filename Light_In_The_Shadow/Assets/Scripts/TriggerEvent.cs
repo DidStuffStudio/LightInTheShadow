@@ -8,6 +8,8 @@ public class TriggerEvent : MonoBehaviour
 {
    public UnityEvent OnTrigger;
    public bool onlyForPlayer;
+   public bool isNeuronTrigger, enable;
+
 
    private void OnTriggerEnter(Collider other)
    {
@@ -21,6 +23,11 @@ public class TriggerEvent : MonoBehaviour
       else
       {
          OnTrigger?.Invoke();
+      }
+
+      if (isNeuronTrigger && other.gameObject.CompareTag("Player"))
+      {
+         MasterManager.Instance.ToggleNeurons(enable);
       }
    }
 }

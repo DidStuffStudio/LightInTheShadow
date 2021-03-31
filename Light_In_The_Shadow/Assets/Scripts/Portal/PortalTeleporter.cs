@@ -7,7 +7,7 @@ public class PortalTeleporter : MonoBehaviour
     public Transform player;
     public Transform receiver;
 
-    [SerializeField] private bool isInternalLevelPortal;
+    [SerializeField] private bool shouldPortalLoadNextLevel;
     private bool _playerIsOverlapping = false;
 
     [SerializeField] private bool isFinalPortal = false;
@@ -34,7 +34,7 @@ public class PortalTeleporter : MonoBehaviour
 
                 _playerIsOverlapping = false;
                 player.GetComponent<CharacterController>().enabled = true;
-                if (isInternalLevelPortal) return;
+                if (!shouldPortalLoadNextLevel) return;
 
                 MasterManager.Instance.StartLoadingNextScene();
             }
