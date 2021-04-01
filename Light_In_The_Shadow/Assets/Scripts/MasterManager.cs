@@ -46,21 +46,23 @@ public class MasterManager : MonoBehaviour {
         // increase the level index to be the one after the active scene
         if (levelIndex > 0) ChangeLevelAudio();
         levelIndex++;
-        LoadNextScene(levelIndex);
+        StartCoroutine(LoadNextScene(levelIndex));
     }
 
-    private void LoadNextScene(int sceneToLoad) {
-        SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
+    private IEnumerator LoadNextScene(int sceneToLoad) {
+        var asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
         portals[0].SetActive(false);
         portals[1].SetActive(false);
         portals[2].SetActive(true);
         portals[3].SetActive(true);
+        while (!asyncOperation.isDone) yield return null;
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(levelIndex));
+        GetComponentInChildren<Volume>().profile = levelPP[levelIndex - 1];
+        UnloadPreviousScene();
     }
 
     public void UnloadPreviousScene() {
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(levelIndex));
         if (levelIndex > 0 && levelIndex < 4) SceneManager.UnloadSceneAsync(levelIndex - 1);
-        GetComponentInChildren<Volume>().profile = levelPP[levelIndex - 1];
     }
 
     public void ToggleNeurons(bool enable) {
