@@ -12,6 +12,7 @@ public class MasterManager : MonoBehaviour {
     public int levelIndex = 1;
     public playerController player;
     public SoundtrackMaster soundtrackMaster;
+    public GameObject[] portals = new GameObject[4];
 
     public static MasterManager Instance {
         get {
@@ -52,6 +53,10 @@ public class MasterManager : MonoBehaviour {
 
     private void LoadNextScene(int sceneToLoad) {
         SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
+        portals[0].SetActive(false);
+        portals[1].SetActive(false);
+        portals[2].SetActive(true);
+        portals[3].SetActive(true);
     }
 
     public void UnloadPreviousScene()
@@ -64,7 +69,11 @@ public class MasterManager : MonoBehaviour {
     public void ToggleNeurons(bool enable)
     {
         loadingScreen.SetActive(enable);
+        portals[0].SetActive(enable);
+        portals[1].SetActive(enable);
         if (enable) return;
+        portals[2].SetActive(false);
+        portals[3].SetActive(false);
         player.GetComponent<playerController>().NewRespawnPoint();
     }
     public void Quality(int qualityIndex) {

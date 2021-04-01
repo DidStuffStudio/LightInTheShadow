@@ -103,7 +103,8 @@ public class playerController : MonoBehaviour
         ClosePanels();
         menuPanels[4].SetActive(true);
         isMainMenu = false;
-       
+        MasterManager.Instance.portals[0].SetActive(true);
+        MasterManager.Instance.portals[1].SetActive(true);
         MasterManager.Instance.soundtrackMaster.MainThemeVolume(0,5.0f);
         MasterManager.Instance.soundtrackMaster.PlayLevelMusic(0, true);
         MasterManager.Instance.soundtrackMaster.PlayLevelAmbience(0, true);
