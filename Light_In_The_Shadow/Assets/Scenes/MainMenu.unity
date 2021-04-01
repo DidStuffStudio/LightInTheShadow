@@ -507,19 +507,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 27128460, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_Size.z
-      value: 32.43583
+      value: 222.73524
       objectReference: {fileID: 0}
     - target: {fileID: 27128460, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_Center.y
-      value: -0.0000021201024
+      value: -0.000014597104
       objectReference: {fileID: 0}
     - target: {fileID: 27128460, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_Center.z
-      value: 16.16792
+      value: 111.31764
       objectReference: {fileID: 0}
     - target: {fileID: 327119702, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 844978934, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 956740931, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_CastShadows

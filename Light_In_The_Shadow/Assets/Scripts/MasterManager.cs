@@ -24,15 +24,14 @@ public class MasterManager : MonoBehaviour {
         }
     }
 
-    public void ChangeLevelAudio()
-    {
+    public void ChangeLevelAudio() {
         soundtrackMaster.LevelMusicVolume(levelIndex, 0.0f, 10.0f);
         soundtrackMaster.PlayLevelMusic(2, true);
         soundtrackMaster.PlayLevelAmbience(2, true);
         soundtrackMaster.LevelMusicVolume(levelIndex + 1, 100.0f, 10.0f);
         soundtrackMaster.LevelAmbienceVolume(levelIndex, 0.0f, 2.0f);
     }
-    
+
     public GameObject loadingScreen;
 
     private void Awake() {
@@ -41,12 +40,11 @@ public class MasterManager : MonoBehaviour {
             // make instance persistent across scenes
             DontDestroyOnLoad(gameObject);
         }
-
     }
 
     public void StartLoadingNextScene() {
         // increase the level index to be the one after the active scene
-        if(levelIndex > 0) ChangeLevelAudio();
+        if (levelIndex > 0) ChangeLevelAudio();
         levelIndex++;
         LoadNextScene(levelIndex);
     }
@@ -59,15 +57,13 @@ public class MasterManager : MonoBehaviour {
         portals[3].SetActive(true);
     }
 
-    public void UnloadPreviousScene()
-    {
+    public void UnloadPreviousScene() {
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(levelIndex));
         if (levelIndex > 0 && levelIndex < 4) SceneManager.UnloadSceneAsync(levelIndex - 1);
-        GetComponentInChildren<Volume>().profile = levelPP[levelIndex-1];
+        GetComponentInChildren<Volume>().profile = levelPP[levelIndex - 1];
     }
 
-    public void ToggleNeurons(bool enable)
-    {
+    public void ToggleNeurons(bool enable) {
         loadingScreen.SetActive(enable);
         portals[0].SetActive(enable);
         portals[1].SetActive(enable);
@@ -76,6 +72,7 @@ public class MasterManager : MonoBehaviour {
         portals[3].SetActive(false);
         player.GetComponent<playerController>().NewRespawnPoint();
     }
+
     public void Quality(int qualityIndex) {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
