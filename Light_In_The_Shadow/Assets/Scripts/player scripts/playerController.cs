@@ -29,7 +29,6 @@ public class playerController : MonoBehaviour
     private bool inventoryOpen, paused, isMainMenu;
     private Interactor interactRayCast;
     public GameObject torch;
-    private MasterManager _masterManager;
     public bool hasTorch, holdingTorch;
     public Text helpText, inventoryInformText;
     private bool _canEquipTorch = true, _canOpenInventory = true, _wasHoldingTorch = false;
@@ -64,7 +63,6 @@ public class playerController : MonoBehaviour
         playerControls.Player.HighlightObject.performed += _ => highlightObject();
         playerControls.Player.PlayPause.performed += _ => PlayPause();
         playerControls.Player.Torch.performed += _ => EquipTorch();
-        _masterManager = GetComponentInParent<MasterManager>();
         torch.SetActive(false);
 
     }
@@ -105,7 +103,13 @@ public class playerController : MonoBehaviour
         ClosePanels();
         menuPanels[4].SetActive(true);
         isMainMenu = false;
-
+       
+        MasterManager.Instance.soundtrackMaster.MainThemeVolume(0,5.0f);
+        MasterManager.Instance.soundtrackMaster.PlayLevelMusic(0, true);
+        MasterManager.Instance.soundtrackMaster.PlayLevelAmbience(0, true);
+        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(1,100, 5.0f);
+        MasterManager.Instance.soundtrackMaster.LevelAmbienceVolume(1,0, 0.1f);
+        
     }
     public void NewRespawnPoint()
     {

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: d2e5fd69d3907b944b05fe24ce764fb9, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 477cc4148fad3449482a3bc3178594e2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -2384,8 +2384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   receiver: {fileID: 0}
-  shouldPortalLoadNextLevel: 0
-  isFinalPortal: 0
+  portalNumber: 0
 --- !u!114 &1122642514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2946,6 +2945,10 @@ PrefabInstance:
     - target: {fileID: 2246981013074526929, guid: 09a36e0e211c7ef40affa402cb8a475e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108076374807040528, guid: 09a36e0e211c7ef40affa402cb8a475e, type: 3}
+      propertyPath: MaxDistance
+      value: 111.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09a36e0e211c7ef40affa402cb8a475e, type: 3}

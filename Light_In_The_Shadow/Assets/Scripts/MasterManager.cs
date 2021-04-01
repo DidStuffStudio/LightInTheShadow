@@ -9,8 +9,9 @@ public class MasterManager : MonoBehaviour {
     // instance of the Master Manager
     private static MasterManager _instance;
     public VolumeProfile[] levelPP; //TODO Make post processing volumes and fog lerp between levels
-    public int _levelIndex = 1;
+    public int levelIndex = 1;
     public playerController player;
+    public SoundtrackMaster soundtrackMaster;
 
     public static MasterManager Instance {
         get {
@@ -20,6 +21,15 @@ public class MasterManager : MonoBehaviour {
             masterManagerGameObject.name = typeof(MasterManager).ToString();
             return _instance;
         }
+    }
+
+    public void ChangeLevelAudio()
+    {
+        soundtrackMaster.LevelMusicVolume(levelIndex, 0.0f, 10.0f);
+        soundtrackMaster.PlayLevelMusic(2, true);
+        soundtrackMaster.PlayLevelAmbience(2, true);
+        soundtrackMaster.LevelMusicVolume(levelIndex + 1, 100.0f, 10.0f);
+        soundtrackMaster.LevelAmbienceVolume(levelIndex, 0.0f, 2.0f);
     }
     
     public GameObject loadingScreen;
@@ -35,8 +45,9 @@ public class MasterManager : MonoBehaviour {
 
     public void StartLoadingNextScene() {
         // increase the level index to be the one after the active scene
-        _levelIndex++;
-        LoadNextScene(_levelIndex);
+        if(levelIndex > 0) ChangeLevelAudio();
+        levelIndex++;
+        LoadNextScene(levelIndex);
     }
 
     private void LoadNextScene(int sceneToLoad) {
@@ -45,9 +56,9 @@ public class MasterManager : MonoBehaviour {
 
     public void UnloadPreviousScene()
     {
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(_levelIndex));
-        if (_levelIndex > 0 && _levelIndex < 4) SceneManager.UnloadSceneAsync(_levelIndex - 1);
-        GetComponentInChildren<Volume>().profile = levelPP[_levelIndex-1];
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(levelIndex));
+        if (levelIndex > 0 && levelIndex < 4) SceneManager.UnloadSceneAsync(levelIndex - 1);
+        GetComponentInChildren<Volume>().profile = levelPP[levelIndex-1];
     }
 
     public void ToggleNeurons(bool enable)

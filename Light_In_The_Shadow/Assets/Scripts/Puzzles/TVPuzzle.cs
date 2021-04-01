@@ -41,6 +41,7 @@ public class TVPuzzle : MonoBehaviour
         cinemachineDollyCamera.SetActive(false);
         _playerController.FreezePlayerForCutScene(false);
         // go back to camera
+        StartCoroutine(WaitToReturnMusic());
     }
 
     public void CheckIfHasKey()
@@ -86,7 +87,9 @@ public class TVPuzzle : MonoBehaviour
         _fadeInScene.fadeInNow = true;
         _playerController.FreezePlayerForCutScene(true);
         cinemachineDollyCamera.SetActive(true);
-        doorAudioSource.PlayOneShot(_audioClips[2]);
+        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,0.0f, 1.0f);
+        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(0, true);
+        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(100.0f, 1.0f);
         fadingOut = true;
         StartCoroutine(PlayMemoryLight());
     }
@@ -100,7 +103,8 @@ public class TVPuzzle : MonoBehaviour
     }
 
     private void Update()
-    {
+    {    
+        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f) FocusOnTV(false);
         _doorClicker.canClick = _playerController.currentTagTorchHit == "ClickInteract";
         if (antennaA.antennaCorrect && antennaB.antennaCorrect && !finished) FadeOutCutscene();
         if (!fadingOut) return;
@@ -128,5 +132,12 @@ public class TVPuzzle : MonoBehaviour
     float Map(float s, float a1, float a2, float b1, float b2)
     {
         return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+    }
+    
+    IEnumerator WaitToReturnMusic()
+    {
+        yield return new WaitForSeconds(10.0f);
+        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,100.0f, 5.0f);
+        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(0.0f, 5.0f);
     }
 }

@@ -45,6 +45,7 @@ public class PhonePuzzle : MonoBehaviour {
     }
 
     private void Update() {
+        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f) FocusOnPhone(false);
         if (_isRotating) {
             _rotation = rotaryPhone.transform.localRotation.eulerAngles.x;
             var mousePosition = Input.mousePosition - _mouseDownPosition;
@@ -117,7 +118,11 @@ public class PhonePuzzle : MonoBehaviour {
         numbersCanvas.SetActive(false);
         var particleSystemVelocityOverLifetime = particles.velocityOverLifetime;
         particleSystemVelocityOverLifetime.speedModifierMultiplier = -1;
-        kitchenAudioSource.PlayOneShot(audioClips[1]);
+        
+        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,0.0f, 1.0f);
+        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(1, true);
+        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(100.0f, 1.0f);
+        
         kitchenCamera.SetActive(true);
         sceneFader.reverse = sceneFader.fadeInNow = fadingOut =true;
         StartCoroutine(PlayMemoryLight());
@@ -126,6 +131,7 @@ public class PhonePuzzle : MonoBehaviour {
     {
         player.FreezePlayerForCutScene(false);
         kitchenCamera.SetActive(false);
+        StartCoroutine(WaitToReturnMusic());
     }
 
     IEnumerator PlayMemoryLight()
@@ -146,5 +152,12 @@ public class PhonePuzzle : MonoBehaviour {
     float Map(float s, float a1, float a2, float b1, float b2)
     {
         return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+    }
+
+    IEnumerator WaitToReturnMusic()
+    {
+        yield return new WaitForSeconds(10.0f);
+        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,100.0f, 5.0f);
+        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(0.0f, 5.0f);
     }
 }
