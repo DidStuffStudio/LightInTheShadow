@@ -19,10 +19,11 @@ public class TVPuzzle : MonoBehaviour
     [SerializeField] private ParticleSystem _particleSystem;
     [SerializeField] private Volume _postProcessing;
     private playerController _playerController;
-    [SerializeField] private GameObject memoryPrefab;
+    [SerializeField] private GameObject memoryPrefab, boy;
     [SerializeField] private Transform memorySpawnLocation;
-    private bool finished, fadingOut;
+    private bool finished, fadingOut, focusedOnTV;
     private DetectClick _doorClicker;
+    
 
 
     private void Start()
@@ -30,6 +31,8 @@ public class TVPuzzle : MonoBehaviour
         _doorClicker = _doorAnimator.GetComponentInChildren<DetectClick>();
         _playerController = MasterManager.Instance.player;
         InventorySystem = _playerController.GetComponent<inventorySystem>();
+        tv.GetComponent<DetectClick>().canClick = false;
+        tv.GetComponent<Outline>().enabled = false;
 
     }
 
@@ -80,6 +83,9 @@ public class TVPuzzle : MonoBehaviour
         finished = true;
         // fade out and makes dolly movement camera --> activate dolly camera
         tv.GetComponent<Collider>().enabled = tv.GetComponent<Outline>().enabled = false;
+        antennaA.GetComponentInChildren<Outline>().enabled = false;
+        antennaB.GetComponentInChildren<Outline>().enabled = false;
+        
         _fadeInScene.reverse = true;
         _fadeInScene.speed = 0.0008f;
         var particleSystemVelocityOverLifetime = _particleSystem.velocityOverLifetime;
@@ -87,16 +93,22 @@ public class TVPuzzle : MonoBehaviour
         _fadeInScene.fadeInNow = true;
         _playerController.FreezePlayerForCutScene(true);
         cinemachineDollyCamera.SetActive(true);
-        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,0.0f, 1.0f);
-        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(0, true);
-        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(100.0f, 1.0f);
+        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,0.0f, 5.0f);
+        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(2, false);
+        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(1, true);
+        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(100.0f, 5.0f);
         fadingOut = true;
         StartCoroutine(PlayMemoryLight());
     }
 
     public void FocusOnTV(bool focus)
     {
-        print("Focused on TV!: " + focus);
+        print("Focusing on the telvision "+ focus);
+        antennaA.GetComponentInChildren<DetectClick>().canClick = antennaB.GetComponentInChildren<DetectClick>().canClick = focus;
+        MasterManager.Instance.interactor.mouseControl = focus;
+        MasterManager.Instance.LockCursor(!focus);
+        focusedOnTV = focus;
+        boy.SetActive(!focus);
         tv.GetComponent<Collider>().enabled = !focus;
         tv.GetComponent<Outline>().enabled = !focus;
         cinemachineTVFocusCamera.SetActive(focus);
@@ -104,7 +116,7 @@ public class TVPuzzle : MonoBehaviour
 
     private void Update()
     {    
-        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f) FocusOnTV(false);
+        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f && focusedOnTV) FocusOnTV(false);
         _doorClicker.canClick = _playerController.currentTagTorchHit == "ClickInteract";
         if (antennaA.antennaCorrect && antennaB.antennaCorrect && !finished) FadeOutCutscene();
         if (!fadingOut) return;
@@ -137,7 +149,7 @@ public class TVPuzzle : MonoBehaviour
     IEnumerator WaitToReturnMusic()
     {
         yield return new WaitForSeconds(10.0f);
-        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,100.0f, 5.0f);
-        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(0.0f, 5.0f);
+        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,100.0f, 10.0f);
+        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(0.0f, 10.0f);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -17,7 +18,7 @@ public class playerController : MonoBehaviour
     private float jumpHeight = 1.0f;
     //private Inputmanager inputmanager;
     private Transform cameraTransform;
-    public GameObject[] menuPanels = new GameObject[7]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is blur plane, 6 is help menu
+    public GameObject[] menuPanels = new GameObject[7]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is help menu, 6 is inventory inform
     private bool playerFrozen;
     public inventorySystem inventory;
     [HideInInspector]
@@ -34,6 +35,7 @@ public class playerController : MonoBehaviour
     private bool _canEquipTorch = true, _canOpenInventory = true, _wasHoldingTorch = false;
     public string currentTagTorchHit;
     public float gravity = -2;
+    [SerializeField] private ForwardRendererData _forwardRendererData;
 
 
     private void Awake()
@@ -44,6 +46,8 @@ public class playerController : MonoBehaviour
 
     private void Start()
     {
+        _forwardRendererData.rendererFeatures[0].SetActive(false);
+        MasterManager.Instance.LockCursor(false);
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0)) {
             isMainMenu = true;
             FreezePlayer(true);
@@ -106,10 +110,12 @@ public class playerController : MonoBehaviour
         MasterManager.Instance.portals[0].SetActive(true);
         MasterManager.Instance.portals[1].SetActive(true);
         MasterManager.Instance.soundtrackMaster.MainThemeVolume(0,5.0f);
-        MasterManager.Instance.soundtrackMaster.PlayLevelMusic(0, true);
-        MasterManager.Instance.soundtrackMaster.PlayLevelAmbience(0, true);
+        MasterManager.Instance.soundtrackMaster.PlayLevelMusic(1, true);
+        MasterManager.Instance.soundtrackMaster.PlayLevelAmbience(1, true);
         MasterManager.Instance.soundtrackMaster.LevelMusicVolume(1,100, 5.0f);
         MasterManager.Instance.soundtrackMaster.LevelAmbienceVolume(1,0, 0.1f);
+        MasterManager.Instance.LockCursor(true);
+        
         
     }
     public void NewRespawnPoint()
@@ -140,14 +146,15 @@ public class playerController : MonoBehaviour
 
     public void OpenHelpMenu(bool enable)
     {
+        _forwardRendererData.rendererFeatures[0].SetActive(enable);
         var t = 1.0f;
-        if (enable) t = 0.0f;
+        if (enable) t = 0;
         Time.timeScale = t;
         ClosePanels();
         FreezePlayer(enable);
-        menuPanels[5].SetActive(enable);
-        menuPanels[6].SetActive(enable);
         menuPanels[4].SetActive(!enable);
+        menuPanels[5].SetActive(enable);
+        MasterManager.Instance.LockCursor(!enable);
     }
     void OpenInventory()
     {
@@ -157,6 +164,7 @@ public class playerController : MonoBehaviour
         
         if (!menuPanels[3].activeSelf)
         {
+            _forwardRendererData.rendererFeatures[0].SetActive(true);
             if (torch.activeSelf)
             {
                 torch.SetActive(false);
@@ -165,14 +173,13 @@ public class playerController : MonoBehaviour
             else _wasHoldingTorch = false;
             ClosePanels();
             menuPanels[3].SetActive(true);
-            menuPanels[5].SetActive(true);
             FreezePlayer(true);
-            Time.timeScale = 0.0f;
-
-
+            Time.timeScale = 0;
+            MasterManager.Instance.LockCursor(false);
         }
         else
         {
+            _forwardRendererData.rendererFeatures[0].SetActive(false);
             Time.timeScale = 1.0f;
             ClosePanels();
             FreezePlayer(false);
@@ -181,7 +188,7 @@ public class playerController : MonoBehaviour
             inventory.descriptionPanel.SetActive(false);
             if(hasTorch && _wasHoldingTorch) torch.SetActive(true);
             menuPanels[4].SetActive(true);
-           
+            MasterManager.Instance.LockCursor(true);
         }
     }
 
@@ -190,7 +197,7 @@ public class playerController : MonoBehaviour
     {    
         if (interactRayCast.inventoryItemHit)
         {
-            GameObject temp = Instantiate(interactRayCast.inventoryItem, itemHolder.transform, false);
+            var temp = Instantiate(interactRayCast.inventoryItem.gameObject, itemHolder.transform, false);
             Destroy(temp.transform.GetChild(0).gameObject);
             inventory.itemsInInventory.Add(temp);
             temp.name = temp.name + "UI";
@@ -214,7 +221,7 @@ public class playerController : MonoBehaviour
         {
             inventory.showHightlightedItem(hitInfo.transform.gameObject);
         }
-        }
+    }
     
 
     public void PlayPause()
@@ -224,6 +231,8 @@ public class playerController : MonoBehaviour
         ClosePanels();
         if (paused)
         {
+            _forwardRendererData.rendererFeatures[0].SetActive(false);
+            MasterManager.Instance.LockCursor(true);
             Time.timeScale = 1.0f;
             FreezePlayer(false);
             menuPanels[4].SetActive(true);
@@ -231,11 +240,12 @@ public class playerController : MonoBehaviour
         }
         else
         {  
+            _forwardRendererData.rendererFeatures[0].SetActive(true);
+            MasterManager.Instance.LockCursor(false);
             paused = true;
             FreezePlayer(true);
             menuPanels[1].SetActive(true);
-            Time.timeScale = 0.0f;
-            menuPanels[5].SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
@@ -256,7 +266,10 @@ public class playerController : MonoBehaviour
     public void Back() {
         ClosePanels();
         if (isMainMenu)menuPanels[0].SetActive(true);
-        else menuPanels[1].SetActive(true);
+        else
+        {
+            menuPanels[1].SetActive(true);
+        }
     }
 
 
@@ -264,10 +277,8 @@ public class playerController : MonoBehaviour
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
-    public void Exit() {
-        if (isMainMenu) Application.Quit();
-        else SceneManager.LoadScene(0);
-    }
+    public void Exit() => Application.Quit();
+
 
     void EquipTorch()
     {
@@ -287,9 +298,9 @@ public class playerController : MonoBehaviour
     IEnumerator InventoryAddInform(string name)
     {
         inventoryInformText.text = "A " + name + " has been added to your inventory (Press tab to view it)";
-        menuPanels[7].SetActive(true);
-        yield return new WaitForSeconds(5.0f);
-        menuPanels[7].SetActive(false);
+        menuPanels[6].SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        menuPanels[6].SetActive(false);
     }
     private void OnEnable()
     {

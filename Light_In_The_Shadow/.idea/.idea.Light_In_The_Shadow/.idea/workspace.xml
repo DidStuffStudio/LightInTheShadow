@@ -20,11 +20,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/Low_Poly_Mini_Village/Prefabs/NewLayer.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/3rd Party/Low_Poly_Mini_Village/Prefabs/NewLayer.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/BigBossMan.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/BigBossMan.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/BoyCharacter.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/BoyCharacter.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceIceBaby.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceIceBaby.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Ice_M.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Ice_M.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/SimpleParallax.shadersubgraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/SimpleParallax.shadersubgraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Banging Fist.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Banging Fist.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/BigBossMan.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/BigBossMan.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/BoyPhone.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/BoyPhone.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Rummaging.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Rummaging.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Run Forward Arc Right.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Run Forward Arc Right.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/TweakAntenna.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/TweakAntenna.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/TweakingAntenna.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/TweakingAntenna.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/NavMesh.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/NavMesh.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ci_d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ci_d.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ci_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ci_mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ci_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ci_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ci_roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ci_roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMem.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMem.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Kitchen.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Kitchen.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/LevelBounds.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/LevelBounds.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/LivingRoom.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/LivingRoom.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/ExampleAssets/Textures/Concrete/Ground_Normal.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/ExampleAssets/Textures/Concrete/Ground_Normal.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/shaderGraphs/DissolveGlowDoubleCharacters.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/shaderGraphs/DissolveGlowDoubleCharacters.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Level_1/Soundtrack.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Level_1/Soundtrack.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Antenna.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Antenna.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Antenna1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Antenna1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Bottle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Bottle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Cabinet.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Cabinet.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/CoffeeTable.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/CoffeeTable.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Couch.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Couch.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/HighResTenticle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/HighResTenticle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Kitchen.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Kitchen.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Lamp.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Lamp.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Right Hook.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Right Hook.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/TV.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/TV.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/kEY.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/kEY.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/MainForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/MainForwardRenderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/TorchLight.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/TorchLight.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/KitchenMemory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/KitchenMemory.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMemory.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMemory.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/ItemCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/ItemCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,22 +188,22 @@
         <option value="$PROJECT_DIR$/Assets/Antenna.cs" />
         <option value="$PROJECT_DIR$/Assets/PortalBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/MenuLogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/Follow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
-        <option value="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" />
       </list>
     </option>
   </component>
@@ -203,6 +282,9 @@
       <workItem from="1617173518190" duration="8437000" />
       <workItem from="1617183396190" duration="12856000" />
       <workItem from="1617259789162" duration="21330000" />
+      <workItem from="1617346459468" duration="10093000" />
+      <workItem from="1617363140065" duration="130000" />
+      <workItem from="1617363812194" duration="12586000" />
     </task>
     <servers />
   </component>
@@ -244,12 +326,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="249" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617269131842" />
-    <state x="707" y="237" width="768" height="492" key="search.everywhere.popup" timestamp="1617282290870">
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1617374872021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
-    <state x="707" y="237" width="768" height="492" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617282290870" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617374872021" />
     <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>

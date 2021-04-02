@@ -20,7 +20,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Level_1
+  m_Name: Level_1_Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: a1cd294f4b516674c842c25de4d574b4
   m_Children: []
@@ -109,7 +109,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Level_3
+  m_Name: Level_3_Ambience
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 57ef130ce935aaf47809d404484cf4bf
   m_Children: []
@@ -235,7 +235,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Level_2
+  m_Name: Level_2_Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 2ccbe04dd27de024abe2420971f4c0e1
   m_Children: []
@@ -325,20 +325,20 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: 00026430243ac7c45b14d906ba8e1603
-    name: Level_3_Music_Volume
   - guid: 9fd3f15ad19245d4e8bb27111c62f763
     name: Footsteps_Volume
-  - guid: cd2c461935efc43478ff10097cfd4e27
-    name: Level_1_Music_Volume
   - guid: 886e216e085ff14488352f849868b139
     name: Level_1_Ambience_Volume
-  - guid: 8d3e0531adbd77d449b332e9a40ca325
-    name: Level_2_Music_Volume
+  - guid: cd2c461935efc43478ff10097cfd4e27
+    name: Level_1_Music_Volume
   - guid: d86ca16dfce5a34498b1ddd07413e4d0
     name: Level_2_Ambience_Volume
+  - guid: 8d3e0531adbd77d449b332e9a40ca325
+    name: Level_2_Music_Volume
   - guid: 3fdfef2372e0ea646b4851065b972aea
     name: Level_3_Ambience_Volume
+  - guid: 00026430243ac7c45b14d906ba8e1603
+    name: Level_3_Music_Volume
   - guid: 0368d9366ce635944a48e1916d0f7999
     name: Level_Ambience_Volume
   - guid: f1e1c6f94d9a4fa4185fe58298bd651f
@@ -541,7 +541,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Boss_Fight
+  m_Name: Level_3_Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 3fc5e3a32b7bf7144946fe93f988f3cf
   m_Children: []
@@ -610,7 +610,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Level_2
+  m_Name: Level_2_Ambience
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 617ee4422ce16c641bb04c68ec48bb49
   m_Children: []
@@ -731,7 +731,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Level_1
+  m_Name: Level_1_Ambience
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 37eafe2de3755e845a8d37320481d1bf
   m_Children: []

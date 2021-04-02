@@ -11,8 +11,10 @@ public class MasterManager : MonoBehaviour {
     public VolumeProfile[] levelPP; //TODO Make post processing volumes and fog lerp between levels
     public int levelIndex = 1;
     public playerController player;
+    public inventorySystem inventory;
     public SoundtrackMaster soundtrackMaster;
     public GameObject[] portals = new GameObject[4];
+    public Interactor interactor;
 
     public static MasterManager Instance {
         get {
@@ -24,14 +26,19 @@ public class MasterManager : MonoBehaviour {
         }
     }
 
-    public void ChangeLevelAudio() {
-        soundtrackMaster.LevelMusicVolume(levelIndex, 0.0f, 10.0f);
-        soundtrackMaster.PlayLevelMusic(2, true);
-        soundtrackMaster.PlayLevelAmbience(2, true);
-        soundtrackMaster.LevelMusicVolume(levelIndex + 1, 100.0f, 10.0f);
-        soundtrackMaster.LevelAmbienceVolume(levelIndex, 0.0f, 2.0f);
+    public void ChangeLevelAudio()
+    {
+        // Level 1 music is index 0, level 2 is 1 and so on
+        soundtrackMaster.LevelMusicVolume(levelIndex, 100.0f, 10.0f); // increase volume of next level music
+        soundtrackMaster.PlayLevelMusic(levelIndex, true); // play next level music
+        soundtrackMaster.PlayLevelAmbience(levelIndex, true); // play next level ambience
+        soundtrackMaster.LevelMusicVolume(levelIndex - 1, 0.0f, 10.0f); //reduce volume of previous level music
+        soundtrackMaster.LevelAmbienceVolume(levelIndex - 1 , 0.0f, 0.1f);
+        soundtrackMaster.LevelAmbienceVolume(levelIndex , 0.0f, 0.1f);// reduce volume of previous level ambience
     }
 
+    
+    
     public GameObject loadingScreen;
 
     private void Awake() {
@@ -42,10 +49,27 @@ public class MasterManager : MonoBehaviour {
         }
     }
 
+    public void LockCursor(bool @lock){
+
+        if (@lock)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        
+        
+    }
+    
+    
     public void StartLoadingNextScene() {
         // increase the level index to be the one after the active scene
-        if (levelIndex > 0) ChangeLevelAudio();
         levelIndex++;
+        if (levelIndex > 1) ChangeLevelAudio();
         StartCoroutine(LoadNextScene(levelIndex));
     }
 

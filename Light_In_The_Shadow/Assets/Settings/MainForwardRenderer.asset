@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
-  m_Name: UI
+  m_Name: UI Render Opaques
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    passTag: UI
+    passTag: UI Render Opaques
     Event: 1000
     filterSettings:
-      RenderQueueType: 1
+      RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
         m_Bits: 32
@@ -61,7 +61,7 @@ MonoBehaviour:
         serializedVersion: 2
         m_Bits: 8192
       PassNames: []
-    overrideMaterial: {fileID: 0}
+    overrideMaterial: {fileID: 2100000, guid: 311313efa011949e98b6761d652ad13c, type: 2}
     overrideMaterialPassIndex: 0
     overrideDepthState: 0
     depthCompareFunction: 4
@@ -71,6 +71,45 @@ MonoBehaviour:
       stencilReference: 1
       stencilCompareFunction: 8
       passOperation: 2
+      failOperation: 1
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
+--- !u!114 &-6148222525862061518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: UI Render Transparents
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: UI Render Transparents
+    Event: 1000
+    filterSettings:
+      RenderQueueType: 1
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 32
+      PassNames: []
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
       failOperation: 0
       zFailOperation: 0
     cameraSettings:
@@ -134,7 +173,8 @@ MonoBehaviour:
   - {fileID: -5556479498259362428}
   - {fileID: -7029920946400939479}
   - {fileID: -7147743160970713450}
-  m_RendererFeatureMap: 848d82f8556be3b229b2b13625b4709e96e69c28771dce9c
+  - {fileID: -6148222525862061518}
+  m_RendererFeatureMap: 848d82f8556be3b229b2b13625b4709e96e69c28771dce9c32daeff92f20adaa
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -175,11 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e2e32e102e44abeb72209e7ce030c3, type: 3}
   m_Name: KawaseBlur
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     renderPassEvent: 350
     blurMaterial: {fileID: 2100000, guid: a00afda211f274f6ca6cce958e4e13a5, type: 2}
-    blurPasses: 4
+    blurPasses: 10
     downsample: 1
-    copyToFramebuffer: 0
+    copyToFramebuffer: 1
     targetName: _blurTexture

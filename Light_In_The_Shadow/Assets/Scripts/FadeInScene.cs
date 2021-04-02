@@ -14,7 +14,7 @@ public class FadeInScene : MonoBehaviour
     //public GameObject GO;
     Renderer[] children;
     public float speed;
-    [SerializeField] private float maxDistance;
+    [SerializeField] private float maxDistance, minDistance;
     public bool reverse;
 
 
@@ -54,7 +54,7 @@ public class FadeInScene : MonoBehaviour
         
         if (reverse)
         {
-            if (increment > 0.0f)
+            if (increment > minDistance)
             {
                 foreach (Renderer rend in children)
                 {
@@ -69,7 +69,7 @@ public class FadeInScene : MonoBehaviour
             }
             else
             {
-                increment = 0.0f;
+                increment = minDistance;
                 reverse = false;
                 fadeInNow = false;
             }

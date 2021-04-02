@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Management.Instrumentation;
 using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class PhonePuzzle : MonoBehaviour {
     public Vector3 _mouseDownPosition;
     public bool goingBackToOriginalPos;
     
-    [SerializeField] private GameObject kitchenCamera, phoneCam, memoryPrefab, numbersCanvas;
+    [SerializeField] private GameObject kitchenCamera, phoneCam, memoryPrefab, numbersCanvas, boy;
     [SerializeField] private Transform memorySpawnLocation;
     [SerializeField] private FadeInScene sceneFader;
     [SerializeField] private Animator _memoryLightAnimator;
@@ -28,9 +29,10 @@ public class PhonePuzzle : MonoBehaviour {
     [SerializeField] private AudioSource kitchenAudioSource;
     [SerializeField] private AudioClip[] audioClips;
     private playerController player;
+    
 
     [SerializeField] private DetectClick _lightSwitchClicker;
-    private bool fadingOut;
+    private bool fadingOut, focusedOnPhone;
     
     public string currentNumber;
     private string [] possibleNumbersToCall = {"911", "112"};
@@ -41,11 +43,13 @@ public class PhonePuzzle : MonoBehaviour {
         _camera = Camera.main;
         originalRotation = rotaryPhone.transform.rotation;
         player = MasterManager.Instance.player;
+        rotaryPhone.GetComponent<DetectClick>().canClick = false; 
+        rotaryPhone.GetComponent<Outline>().enabled = false;
 
     }
 
     private void Update() {
-        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f) FocusOnPhone(false);
+        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f && focusedOnPhone) FocusOnPhone(false);
         if (_isRotating) {
             _rotation = rotaryPhone.transform.localRotation.eulerAngles.x;
             var mousePosition = Input.mousePosition - _mouseDownPosition;
@@ -96,6 +100,9 @@ public class PhonePuzzle : MonoBehaviour {
 
     public void FocusOnPhone(bool focus)
     {
+        MasterManager.Instance.interactor.mouseControl = focus;
+        boy.SetActive(!focus);
+        focusedOnPhone = focus;
         rotaryPhone.GetComponent<Collider>().enabled = !focus;
         rotaryPhone.GetComponent<Outline>().enabled = !focus;
         phoneCam.SetActive(focus);
@@ -119,9 +126,10 @@ public class PhonePuzzle : MonoBehaviour {
         var particleSystemVelocityOverLifetime = particles.velocityOverLifetime;
         particleSystemVelocityOverLifetime.speedModifierMultiplier = -1;
         
-        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,0.0f, 1.0f);
-        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(1, true);
-        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(100.0f, 1.0f);
+        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,0.0f, 5.0f);
+        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(1, false);
+        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(2, true);
+        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(100.0f, 5.0f);
         
         kitchenCamera.SetActive(true);
         sceneFader.reverse = sceneFader.fadeInNow = fadingOut =true;

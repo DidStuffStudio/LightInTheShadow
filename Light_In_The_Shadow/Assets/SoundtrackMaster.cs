@@ -31,7 +31,7 @@ public class SoundtrackMaster : MonoBehaviour
     private void Start()
     {
         var mainThemeSrc = gameObject.AddComponent<AudioSource>();
-        mainThemeSrc.playOnAwake = false;
+        mainThemeSrc.playOnAwake = true;
         mainThemeSrc.loop = true;
         mainThemeSrc.clip = mainThemeClip;
         mainThemeSrc.outputAudioMixerGroup = mainTheme;
@@ -93,7 +93,8 @@ public class SoundtrackMaster : MonoBehaviour
 
     public void PlayLevelMusic(int index, bool play) // Level music indices: Level 1 - 1, Level 2 - 2, Level 3 - 3
     {
-        index ++;
+        
+        print("Playing audiosource index from music "+index);
         if(play) audioSources[index].Play();
         else audioSources[index].Stop();
     }
@@ -123,7 +124,8 @@ public class SoundtrackMaster : MonoBehaviour
 
     public void PlayLevelAmbience(int index, bool play) //Level ambience indices: Level 1 = 4, level 2 = 5, Level 3 = 6
     {
-        index += levelMusicClips.Length + 1;
+        index += levelMusicClips.Length;
+        print("Playing audiosource index from ambience "+index);
         if(play) audioSources[index].Play();
         else audioSources[index].Stop();
     }
@@ -154,7 +156,7 @@ public class SoundtrackMaster : MonoBehaviour
     
     public void PlayMemoryMusic(int index, bool play) //Memory music indices: 1 = 7, 2 = 8, 3 = 9, 4 = 10, 5 = 11
     {
-        index += levelMusicClips.Length + levelAmbienceClips.Length + 1;
+        index += levelMusicClips.Length + levelAmbienceClips.Length;
         if(play) audioSources[index].Play();
         else audioSources[index].Stop();
     }
@@ -164,7 +166,7 @@ public class SoundtrackMaster : MonoBehaviour
     
     public void PlayPortalSounds(int index, bool play) // Portal indices: Humming - 12, Passthrough - 13, Wind - 14
     {
-        index += levelMusicClips.Length + levelAmbienceClips.Length + memoryMusicClips.Length + 1;
+        index += levelMusicClips.Length + levelAmbienceClips.Length + memoryMusicClips.Length;
         if(play) audioSources[index].Play();
         else audioSources[index].Stop();
     }

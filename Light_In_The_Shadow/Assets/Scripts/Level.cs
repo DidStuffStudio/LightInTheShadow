@@ -16,7 +16,8 @@ public class Level : MonoBehaviour
     private inventorySystem _inventorySystem;
     private void Start()
     {
-        _inventorySystem = GameObject.FindWithTag("Player").GetComponent<inventorySystem>();
+        _inventorySystem = MasterManager.Instance.inventory;
+        
     }
 
     public void SetPuzzleSolved(int i) {
@@ -24,7 +25,11 @@ public class Level : MonoBehaviour
         memoryFragments[i].SetActive(true);
         memorySlots[i].SetActive(false);
         _puzzlesSolved++;
-        if (_puzzlesSolved >= numberOfPuzzles) _puzzlesCompleted = true;
+        if (_puzzlesSolved >= numberOfPuzzles)
+        {
+            _puzzlesCompleted = true;
+            portalBlock.GetComponent<Collider>().enabled = false;
+        }
     }
 
     public void CheckInventoryForMemory(int i)
@@ -36,7 +41,7 @@ public class Level : MonoBehaviour
     void Update()
     {
         if (!_puzzlesCompleted) return;
-
+        
         portalBlock.transform.localScale -= Vector3.one*0.002f;
         if (!(Vector3.Distance(portalBlock.transform.localScale, Vector3.zero) <= 0.1)) return;
         portalBlock.SetActive(false);

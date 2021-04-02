@@ -57,7 +57,11 @@ public class inventorySystem : MonoBehaviour
         GameObject meme = Instantiate(item,rotatePivot.transform);
         meme.transform.localPosition = Vector3.zero;
         meme.transform.localScale *= 10;
-        meme.layer = 0;
+        meme.layer = 5;
+        foreach (var go in meme.GetComponentsInChildren<MeshRenderer>())
+        {
+            go.transform.gameObject.layer = 5;
+        }
         rotatableObject = meme;
     }
     
