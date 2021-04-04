@@ -3,153 +3,75 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-
-public class TVPuzzle : MonoBehaviour
+[ExecuteInEditMode]
+public class TVPuzzle : PuzzleMaster
 {
-    [SerializeField] private Animator _doorAnimator, _memoryLightAnimator; // open door animator
-    [SerializeField] private FadeInScene _fadeInScene; // living room fad in scene
-    [SerializeField] private AudioSource doorAudioSource;
-    [SerializeField] private AudioClip[] _audioClips;
 
-    [SerializeField] private GameObject cinemachineDollyCamera;
-    [SerializeField] private GameObject cinemachineTVFocusCamera;
-    [SerializeField] private GameObject tv;
-    [SerializeField] private Antenna antennaA, antennaB;
-    private inventorySystem InventorySystem;
-    [SerializeField] private ParticleSystem _particleSystem;
-    [SerializeField] private Volume _postProcessing;
-    private playerController _playerController;
-    [SerializeField] private GameObject memoryPrefab, boy;
-    [SerializeField] private Transform memorySpawnLocation;
-    private bool finished, fadingOut, focusedOnTV;
-    private DetectClick _doorClicker;
+
+    [Header("Unique Parameters")] 
+    [SerializeField] private Antenna antennaA;
+    [SerializeField] private Antenna antennaB;
+    [Space]
+    [SerializeField] private Animator door;
     
+    private DetectClick _doorClickInteract;
 
-
-    private void Start()
+    protected override void Start()
     {
-        _doorClicker = _doorAnimator.GetComponentInChildren<DetectClick>();
-        _playerController = MasterManager.Instance.player;
-        InventorySystem = _playerController.GetComponent<inventorySystem>();
-        tv.GetComponent<DetectClick>().canClick = false;
-        tv.GetComponent<Outline>().enabled = false;
-
-    }
-
-    public void EndTVCutScene()
-    {
-        print("The recorded animation has finished");
-
-        // deactivate cinemachine camera
-        cinemachineDollyCamera.SetActive(false);
-        _playerController.FreezePlayerForCutScene(false);
-        // go back to camera
-        StartCoroutine(WaitToReturnMusic());
+        base.Start();
+        _doorClickInteract = door.GetComponentInChildren<DetectClick>();
     }
 
     public void CheckIfHasKey()
     {
         bool hasKey = false;
-        foreach (var item in InventorySystem.itemsInInventory)
+        foreach (var item in inventorySystem.itemsInInventory)
         {
             if (item.name.Contains("Key")) hasKey = true;
         }
 
         if (hasKey)
         {
-            doorAudioSource.PlayOneShot(_audioClips[0]);
-            _doorAnimator.Play("Scene");
-            _fadeInScene.fadeInNow = true;
-            doorAudioSource.PlayOneShot(_audioClips[3]);
-            _doorAnimator.gameObject.layer = 0;
-            tv.GetComponent<DetectClick>().canClick = true;
-            for (int i = 0; i < _doorAnimator.transform.childCount; i++)
-            {
-                _doorAnimator.transform.GetChild(i).gameObject.layer = 0;
-            }
-
-            
+            puzzleAudio.active = true;
+            StartCoroutine(puzzleAudio.PlayVoiceClip());
+            MasterManager.Instance.soundtrackMaster.PlaySoundEffect(1); // Play memory fade in sfx
+            door.Play("Scene");
+            MasterManager.Instance.soundtrackMaster.PlaySoundEffect(3); // Play door open sfx
+            _doorClickInteract.canClick = true;
+            fadeInNow = true;
         }
         else
         {
-            doorAudioSource.PlayOneShot(_audioClips[1]);
+            MasterManager.Instance.soundtrackMaster.PlaySoundEffect(2); // Play door locked sfx
         }
     }
 
-    // once you solved the TV puzzle
-    public void FadeOutCutscene()
+    public void EndLivngRoomCutscene()
     {
-        FocusOnTV(focus: false);
-        finished = true;
-        // fade out and makes dolly movement camera --> activate dolly camera
-        tv.GetComponent<Collider>().enabled = tv.GetComponent<Outline>().enabled = false;
+        base.EndCutScene();
+    }
+
+    public void SwitchChildAnimation()
+    {
+        base.BoyAnimations();
+    }
+
+    protected override void FadeOutCutscene()
+    {
+        base.FadeOutCutscene();
         antennaA.GetComponentInChildren<Outline>().enabled = false;
         antennaB.GetComponentInChildren<Outline>().enabled = false;
-        
-        _fadeInScene.reverse = true;
-        _fadeInScene.speed = 0.0008f;
-        var particleSystemVelocityOverLifetime = _particleSystem.velocityOverLifetime;
-        particleSystemVelocityOverLifetime.speedModifierMultiplier = -1;
-        _fadeInScene.fadeInNow = true;
-        _playerController.FreezePlayerForCutScene(true);
-        cinemachineDollyCamera.SetActive(true);
-        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,0.0f, 5.0f);
-        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(2, false);
-        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(1, true);
-        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(100.0f, 5.0f);
-        fadingOut = true;
-        StartCoroutine(PlayMemoryLight());
     }
 
-    public void FocusOnTV(bool focus)
+    protected override void Update()
     {
-        print("Focusing on the telvision "+ focus);
-        antennaA.GetComponentInChildren<DetectClick>().canClick = antennaB.GetComponentInChildren<DetectClick>().canClick = focus;
-        MasterManager.Instance.interactor.mouseControl = focus;
-        MasterManager.Instance.LockCursor(!focus);
-        focusedOnTV = focus;
-        boy.SetActive(!focus);
-        tv.GetComponent<Collider>().enabled = !focus;
-        tv.GetComponent<Outline>().enabled = !focus;
-        cinemachineTVFocusCamera.SetActive(focus);
-    }
-
-    private void Update()
-    {    
-        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f && focusedOnTV) FocusOnTV(false);
-        _doorClicker.canClick = _playerController.currentTagTorchHit == "ClickInteract";
-        if (antennaA.antennaCorrect && antennaB.antennaCorrect && !finished) FadeOutCutscene();
-        if (!fadingOut) return;
-        var particleSystemShape = _particleSystem.shape;
-        _postProcessing.weight = Map(_fadeInScene.increment, 8, 0, 1, 0);
-        particleSystemShape.radius = Map(_fadeInScene.increment, 8, 0, 4.3f, 0);
-    }
-
-    IEnumerator PlayMemoryLight()
-    {
-        yield return new WaitForSeconds(15.0f);
-        _memoryLightAnimator.Play("MemoryLightAnimation");
-        yield return new WaitForSeconds(2.0f);
-        SpawnMemory();
-    }
-
-    void SpawnMemory()
-    {
-        _particleSystem.gameObject.SetActive(false);
-        Instantiate(memoryPrefab, memorySpawnLocation.position, memorySpawnLocation.rotation);
-        doorAudioSource.PlayOneShot(_audioClips[4]);
-        tv.gameObject.SetActive(false);
-    }
-
-    float Map(float s, float a1, float a2, float b1, float b2)
-    {
-        return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
-    }
-    
-    IEnumerator WaitToReturnMusic()
-    {
-        yield return new WaitForSeconds(10.0f);
-        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,100.0f, 10.0f);
-        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(0.0f, 10.0f);
+        if (playerController == null)
+        {
+            print("It's the player controller..");
+            return;
+        }
+        _doorClickInteract.canClick = playerController.currentTagTorchHit == "ClickInteract";
+        if (antennaA.antennaCorrect && antennaB.antennaCorrect && !finished) correct = true;
+        base.Update();
     }
 }

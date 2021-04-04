@@ -38,7 +38,7 @@ public class Interactor : MonoBehaviour
             if (!hit.transform.gameObject.CompareTag("ClickInteract")) return;
             currentTag = hit.transform.gameObject.tag;
             var detectClick = hit.transform.gameObject.GetComponent<DetectClick>();
-            if (detectClick == null || !detectClick.canClick) return;
+            if (detectClick == null) return;
             _lastHitObject = hit.transform.gameObject;
             hit.transform.GetComponent<Outline>().enabled = true;
             if (!Input.GetMouseButtonDown(0)) return;

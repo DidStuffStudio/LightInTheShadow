@@ -208,16 +208,15 @@
         <e p="flicker.cs" t="Include" />
         <e p="Follow.cs" t="Include" />
         <e p="MenuLogic.cs" t="Include" />
-        <e p="PassToTVPuzzle.cs" t="Include" />
         <e p="PortalBlock.cs" t="Include" />
         <e p="rotateAround.cs" t="Include" />
         <e p="Scenes" t="Include">
           <e p="Testing" t="Include">
             <e p="DragObject.cs" t="Include" />
-            <e p="RotateDrag.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AlertAnimationObservers.cs" t="Include" />
           <e p="CameraFocus.cs" t="Include" />
           <e p="ChangeFadeGizmo.cs" t="Include" />
           <e p="DetectClick.cs" t="Include" />
@@ -247,6 +246,8 @@
           </e>
           <e p="Puzzles" t="Include">
             <e p="PhonePuzzle.cs" t="Include" />
+            <e p="PuzzleAudio.cs" t="Include" />
+            <e p="PuzzleMaster.cs" t="Include" />
             <e p="TVPuzzle.cs" t="Include" />
           </e>
           <e p="TentacleKill.cs" t="Include" />

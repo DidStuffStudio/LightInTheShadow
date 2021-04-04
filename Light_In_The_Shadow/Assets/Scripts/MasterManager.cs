@@ -102,4 +102,11 @@ public class MasterManager : MonoBehaviour {
     public void Quality(int qualityIndex) {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
+    
+    public IEnumerator WaitToReturnMusic()
+    {
+        yield return new WaitForSeconds(10.0f);
+        soundtrackMaster.LevelMusicVolume(levelIndex-1,100.0f, 10.0f);
+        soundtrackMaster.MemoryMusicVolume(0.0f, 10.0f);
+    }
 }

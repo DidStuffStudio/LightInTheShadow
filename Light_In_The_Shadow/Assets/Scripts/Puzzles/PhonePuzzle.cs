@@ -13,7 +13,7 @@ public class PhonePuzzle : MonoBehaviour {
     
     // reference to the phone game object to rotate around
     [SerializeField] private GameObject rotaryPhone;
-    [SerializeField] private float goBackRotationSpeed = 1;
+    [SerializeField] private float goBackRotationSpeed = 0.2f;
     public bool _isRotating = false;
     public float _rotation;
     [SerializeField] private float rotationSensitivity = 0.1f;
@@ -35,7 +35,7 @@ public class PhonePuzzle : MonoBehaviour {
     private bool fadingOut, focusedOnPhone;
     
     public string currentNumber;
-    private string [] possibleNumbersToCall = {"911", "112"};
+    private string [] possibleNumbersToCall = {"911", "112", "999", "000"};
     public string _dialedNumber = "";
     private Quaternion originalRotation;
 
@@ -101,6 +101,7 @@ public class PhonePuzzle : MonoBehaviour {
     public void FocusOnPhone(bool focus)
     {
         MasterManager.Instance.interactor.mouseControl = focus;
+        MasterManager.Instance.LockCursor(!focus);
         boy.SetActive(!focus);
         focusedOnPhone = focus;
         rotaryPhone.GetComponent<Collider>().enabled = !focus;

@@ -25,17 +25,20 @@ public class SoundtrackMaster : MonoBehaviour
     [Space]
     public AudioMixerGroup[] portalSounds;
     public AudioClip[] portalSoundsClips;
-    [Space]
-    public List<AudioSource> audioSources = new List<AudioSource>();
-
+    [Space] public AudioClip[] sfxClips;
+    private AudioSource _sfxAudioSource;
+    private List<AudioSource> audioSources = new List<AudioSource>();
+    
     private void Start()
     {
+        _sfxAudioSource = gameObject.AddComponent<AudioSource>();
         var mainThemeSrc = gameObject.AddComponent<AudioSource>();
         mainThemeSrc.playOnAwake = true;
         mainThemeSrc.loop = true;
         mainThemeSrc.clip = mainThemeClip;
         mainThemeSrc.outputAudioMixerGroup = mainTheme;
         audioSources.Add(mainThemeSrc);
+        audioSources[0].time = 62;
         
         var i = 1;
         var mixGrpIndex = 1;
@@ -89,6 +92,7 @@ public class SoundtrackMaster : MonoBehaviour
         audioSources[audioSources.Count - 2].loop = false;
 
         PlayMainTheme(true);
+        
     }
 
     public void PlayLevelMusic(int index, bool play) // Level music indices: Level 1 - 1, Level 2 - 2, Level 3 - 3
@@ -182,6 +186,11 @@ public class SoundtrackMaster : MonoBehaviour
     public void MainThemeVolume(float targetVolume, float overTime)
     {
         StartCoroutine(FadeAudio("Main_Theme_Volume", Map(targetVolume, 0,100,-80,0), overTime));
+    }
+
+    public void PlaySoundEffect(int i)
+    {
+        _sfxAudioSource.PlayOneShot(sfxClips[i]);
     }
     
     public void SetGlobalVolume(float volume) => audioMixer.SetFloat("Master_Volume", Map(volume, 0, 100, -80, 20));

@@ -91,13 +91,13 @@ public class playerController : MonoBehaviour
         playerVelocity.y += Physics.gravity.y * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);        
         }
-
-        if (!holdingTorch)
+        torch.transform.parent.transform.rotation = cameraTransform.rotation;
+        
+        /*if (!holdingTorch)
         {
             currentTagTorchHit = "Nothing";
             return;
-        }
-        torch.transform.parent.transform.rotation = cameraTransform.rotation;
+        }*/
         currentTagTorchHit = interactRayCast.currentTag;
     }
 
@@ -138,8 +138,8 @@ public class playerController : MonoBehaviour
         {
             playerFrozen = false;
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 100.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 100.0f;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 50.0f;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 50.0f;
             Physics.gravity = new Vector3(0,gravity,0);
         }
     }

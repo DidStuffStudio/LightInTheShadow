@@ -217,8 +217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Memory
-  description: It feels good to finally accept that this happened.
-  id: KitchenMemory
+  description: A repressed and somewhat uncharming memory.
+  id: LivingRoomMemory
   canvas: {fileID: 0}
   inInventory: 0
 --- !u!135 &-9012624999380278217
