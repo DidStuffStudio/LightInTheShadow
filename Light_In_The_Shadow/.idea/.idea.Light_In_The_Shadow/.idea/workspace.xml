@@ -23,53 +23,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/BigBossMaterial.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/BigBossMaterial.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Agony.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Agony.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Banging Fist (1).fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Banging Fist (1).fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Banging Fist.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Banging Fist.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BigBossController.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BigBossController.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Sitting Yell.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Sitting Yell.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/README.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/TestDecal.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/TestDecal.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/URP_NiloCatExtension_ScreenSpaceDecal_Unlit.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/URP_NiloCatExtension_ScreenSpaceDecal_Unlit.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/BossMan.shadergraph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/BossMan.shadergraph.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/BigBossMan.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/BigBossMan.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/DecalCube.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/DecalCube.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BangFistLeft.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BangFistLeft.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BangFistRight.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BangFistRight.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BreathDarkness.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BreathDarkness.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Pain.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Pain.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Level_3_Cliffs.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Level_3_Cliffs.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-0.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-0.exr.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/shaderGraphs/DissolveGlowDoubleCharacters.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading_urp/shaderGraphs/DissolveGlowDoubleCharacters.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Tentacles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Tentacles.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Banging Fist.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Banging Fist.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/DreamMonster1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/DreamMonster1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Kitchen.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Kitchen.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_a.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_a.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_b.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_b.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_c.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_c.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_d.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_d.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_e.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_e.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_f.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_f.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_g.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_g.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_h.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_h.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_i.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_i.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_j.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_j.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BigBossController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BigBossController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu/OcclusionCullingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu/OcclusionCullingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu/OcclusionCullingData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu/OcclusionCullingData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/MainForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/MainForwardRenderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/BigBossMan.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/BigBossMan.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PortalBlockForceField.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PortalBlockForceField.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/DreamMonster1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/DreamMonster1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +163,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AlertObservers.cs" />
         <option value="$PROJECT_DIR$/Assets/PassToTVPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InputManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Antenna.cs" />
@@ -176,8 +184,9 @@
         <option value="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
         <option value="$PROJECT_DIR$/Assets/Flicker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
       </list>
     </option>
   </component>
@@ -266,7 +275,7 @@
       <workItem from="1617521725081" duration="9515000" />
       <workItem from="1617536419697" duration="20123000" />
       <workItem from="1617606750097" duration="40655000" />
-      <workItem from="1617651901225" duration="5896000" />
+      <workItem from="1617651901225" duration="9292000" />
     </task>
     <servers />
   </component>
@@ -312,12 +321,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="249" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617611348039" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1617706847531">
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1617733205918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617706847531" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617733205918" />
     <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>

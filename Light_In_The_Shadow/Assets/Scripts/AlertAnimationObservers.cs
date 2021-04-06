@@ -11,7 +11,8 @@ public class AlertAnimationObservers : MonoBehaviour
         TVPuzzleEndCutScene,
         PhonePuzzleEndCutScene,
         TVChildAnimations,
-        KitchenChildAnimations
+        KitchenChildAnimations,
+        BossManLogic
         
     }
 
@@ -46,7 +47,30 @@ public class AlertAnimationObservers : MonoBehaviour
                     FindObjectOfType<PhonePuzzle>().SwitchChildAnimation();
                     break;
                 }
+
+                case AlertWho.BossManLogic:
+                {
+                    BossManLogic(message);
+                    break;
+                }
             }
         }
+
+      
+    }
+
+    void BossManLogic(string message)
+    {
+        
+        if (message.Equals("BreathDarkness"))
+        {
+            StartCoroutine(FindObjectOfType<BossFight>().BreathDarkness());
+        }
+        
+        else if (message.Equals("SpawnMonsters"))
+        {
+            FindObjectOfType<BossFight>().SpawnMonsters();
+        }
+        
     }
 }

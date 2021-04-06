@@ -227,7 +227,6 @@
           <e p="Testing" t="Include">
             <e p="DragObject.cs" t="Include" />
           </e>
-          <e p="URP_NiloCatExtension_ScreenSpaceDecal_Unlit.shader" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="AlertAnimationObservers.cs" t="Include" />
