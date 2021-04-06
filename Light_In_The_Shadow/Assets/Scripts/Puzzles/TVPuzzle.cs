@@ -1,77 +1,73 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.Rendering;
-[ExecuteInEditMode]
-public class TVPuzzle : PuzzleMaster
+
+namespace Puzzles
 {
+    public class TVPuzzle : PuzzleMaster
+    {
 
 
-    [Header("Unique Parameters")] 
-    [SerializeField] private Antenna antennaA;
-    [SerializeField] private Antenna antennaB;
-    [Space]
-    [SerializeField] private Animator door;
+        [Header("Unique Parameters")] 
+        [SerializeField] private Antenna antennaA;
+        [SerializeField] private Antenna antennaB;
+        [Space]
+        [SerializeField] private Animator door;
     
-    private DetectClick _doorClickInteract;
+        private DetectClick _doorClickInteract;
 
-    protected override void Start()
-    {
-        base.Start();
-        _doorClickInteract = door.GetComponentInChildren<DetectClick>();
-    }
-
-    public void CheckIfHasKey()
-    {
-        bool hasKey = false;
-        foreach (var item in inventorySystem.itemsInInventory)
+        protected override void Start()
         {
-            if (item.name.Contains("Key")) hasKey = true;
+            base.Start();
+            _doorClickInteract = door.GetComponentInChildren<DetectClick>();
         }
 
-        if (hasKey)
+        public void CheckIfHasKey()
         {
-            puzzleAudio.active = true;
-            StartCoroutine(puzzleAudio.PlayVoiceClip());
-            MasterManager.Instance.soundtrackMaster.PlaySoundEffect(1); // Play memory fade in sfx
-            door.Play("Scene");
-            MasterManager.Instance.soundtrackMaster.PlaySoundEffect(3); // Play door open sfx
-            _doorClickInteract.canClick = true;
-            fadeInNow = true;
+            var hasKey = false;
+            foreach (var item in inventorySystem.itemsInInventory.Where(item => item.name.Contains("Key"))) hasKey = true;
+            if (hasKey)
+            {
+                door.Play("Scene");
+                MasterManager.Instance.soundtrackMaster.PlaySoundEffect(3); // Play door open sfx
+                base.FadeInScene();
+            }
+            else
+            {
+                MasterManager.Instance.soundtrackMaster.PlaySoundEffect(2); // Play door locked sfx
+            }
         }
-        else
+
+        protected override void FadeOutCutscene()
         {
-            MasterManager.Instance.soundtrackMaster.PlaySoundEffect(2); // Play door locked sfx
+            base.FadeOutCutscene();
+            antennaA.GetComponent<Collider>().enabled = false;
+            antennaB.GetComponent<Collider>().enabled = false;
+            MasterManager.Instance.interactor.DisableLastHitObject(antennaA.gameObject);
+            MasterManager.Instance.interactor.DisableLastHitObject(antennaB.gameObject);
         }
-    }
-
-    public void EndLivngRoomCutscene()
-    {
-        base.EndCutScene();
-    }
-
-    public void SwitchChildAnimation()
-    {
-        base.BoyAnimations();
-    }
-
-    protected override void FadeOutCutscene()
-    {
-        base.FadeOutCutscene();
-        antennaA.GetComponentInChildren<Outline>().enabled = false;
-        antennaB.GetComponentInChildren<Outline>().enabled = false;
-    }
-
-    protected override void Update()
-    {
-        if (playerController == null)
+        
+        public void FocusOnTelevision(bool focus)
         {
-            print("It's the player controller..");
-            return;
+            antennaA.canInteract = focus;
+            antennaB.canInteract = focus;
+            antennaA.GetComponent<DetectClick>().clickEnabled = focus;
+            antennaB.GetComponent<DetectClick>().clickEnabled = focus;
+            base.FocusOnPuzzleItem(focus);
         }
-        _doorClickInteract.canClick = playerController.currentTagTorchHit == "ClickInteract";
-        if (antennaA.antennaCorrect && antennaB.antennaCorrect && !finished) correct = true;
-        base.Update();
+
+        protected override void Update()
+        {
+            if (antennaA.antennaCorrect && antennaB.antennaCorrect && !finished) correct = true;
+            if (correct)
+            {
+                antennaB.masterMix.SetFloat("tv", -80.0f);
+                antennaB.masterMix.SetFloat("whiteNoise", -80.0f);
+            }
+            base.Update();
+        }
+        
+        public void EndLivingRoomCutscene() => base.EndCutScene();
+        public void SwitchChildAnimation() => base.BoyAnimations();
+        
     }
 }

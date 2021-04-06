@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
     //States
     public float sightRange;//, attackRange;
     public bool playerInSightRange, playerInAttackRange;
-
+    public bool canKill = true;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -139,6 +139,7 @@ public class EnemyAI : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
+        if (!canKill) return;
         if (other.gameObject.layer == 10)
         {
            player.transform.position = player.GetComponent<playerController>().respawnLocation;

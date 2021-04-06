@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Puzzles;
 using UnityEngine;
 
 public class AlertAnimationObservers : MonoBehaviour
@@ -24,7 +25,7 @@ public class AlertAnimationObservers : MonoBehaviour
             {
                 case AlertWho.TVPuzzleEndCutScene:
                 {
-                    FindObjectOfType<TVPuzzle>().EndLivngRoomCutscene();
+                    FindObjectOfType<TVPuzzle>().EndLivingRoomCutscene();
                     break;
                 }
                 
@@ -36,13 +37,13 @@ public class AlertAnimationObservers : MonoBehaviour
                 
                 case AlertWho.PhonePuzzleEndCutScene:
                 {
-                    //FindObjectOfType<PhonePuzzle>().EndCutScene();
+                    FindObjectOfType<PhonePuzzle>().EndKitchenCutscene();
                     break;
                 }
 
                 case AlertWho.KitchenChildAnimations:
                 {
-                    //FindObjectOfType<TVPuzzle>().EndCutScene();
+                    FindObjectOfType<PhonePuzzle>().SwitchChildAnimation();
                     break;
                 }
             }

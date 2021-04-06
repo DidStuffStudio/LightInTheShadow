@@ -25,13 +25,16 @@ public class SoundtrackMaster : MonoBehaviour
     [Space]
     public AudioMixerGroup[] portalSounds;
     public AudioClip[] portalSoundsClips;
-    [Space] public AudioClip[] sfxClips;
+    [Space] 
+    public AudioMixerGroup sfx;
+    public AudioClip[] sfxClips;
     private AudioSource _sfxAudioSource;
     private List<AudioSource> audioSources = new List<AudioSource>();
     
     private void Start()
     {
         _sfxAudioSource = gameObject.AddComponent<AudioSource>();
+        _sfxAudioSource.outputAudioMixerGroup = sfx;
         var mainThemeSrc = gameObject.AddComponent<AudioSource>();
         mainThemeSrc.playOnAwake = true;
         mainThemeSrc.loop = true;

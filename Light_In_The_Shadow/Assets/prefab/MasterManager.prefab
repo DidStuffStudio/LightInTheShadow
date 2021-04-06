@@ -1097,7 +1097,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5e6c0b495f9548b4bbf6ce4c94dc6aad, type: 3}
   - {fileID: 8300000, guid: 0248b93121564ee46a101fda7dbd752e, type: 3}
   - {fileID: 8300000, guid: bc5d2876fb9decd4e87742b7ad1ec8c6, type: 3}
-  audioSources: []
+  sfx: {fileID: 551071862254585210, guid: f5a861d778d99b84a9dc031ed4607910, type: 2}
+  sfxClips:
+  - {fileID: 8300000, guid: b50d7f79f2f70a34dbda17a1337a4c44, type: 3}
+  - {fileID: 8300000, guid: b960688e62c61c84bb7d4f0dd8b36963, type: 3}
+  - {fileID: 8300000, guid: 8ff1c275779ceb1429e79e221f3c885a, type: 3}
+  - {fileID: 8300000, guid: 3f16a77505560e240acf5af76630af28, type: 3}
 --- !u!114 &780587526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1105,7 +1110,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780587524}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f45facc01772ba47a9ae17bb7061b71, type: 3}
   m_Name: 
@@ -1124,7 +1129,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7879483583777132306, guid: f5a861d778d99b84a9dc031ed4607910, type: 2}
   m_audioClip: {fileID: 8300000, guid: 4b20d5e4b92e3d342ac1ff8d54b8ff83, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -4212,7 +4217,6 @@ MonoBehaviour:
   interactionDistance: 10
   inventoryItemHit: 0
   inventoryItem: {fileID: 0}
-  currentTag: Nothing
   mouseControl: 0
 --- !u!1 &4792450537007467355
 GameObject:
@@ -5425,7 +5429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 180511455969281634, guid: d42135f9c2c4c4289b7d6d0969317cfe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.415
+      value: 3.41
       objectReference: {fileID: 0}
     - target: {fileID: 180511455969281634, guid: d42135f9c2c4c4289b7d6d0969317cfe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5763,7 +5767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 180511455969281634, guid: d42135f9c2c4c4289b7d6d0969317cfe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.415
+      value: 3.41
       objectReference: {fileID: 0}
     - target: {fileID: 180511455969281634, guid: d42135f9c2c4c4289b7d6d0969317cfe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6260,7 +6264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8837360224491372457, guid: 414e662f97e99a84d90bb7ead5ce03b2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8837360224491372470, guid: 414e662f97e99a84d90bb7ead5ce03b2, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6340,7 +6344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8837360224850474898, guid: 414e662f97e99a84d90bb7ead5ce03b2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8837360224850474899, guid: 414e662f97e99a84d90bb7ead5ce03b2, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6463,6 +6467,10 @@ PrefabInstance:
       propertyPath: dropBtn
       value: 
       objectReference: {fileID: 3610929481935178875}
+    - target: {fileID: 1188996090140254208, guid: cbd7bebb9c5930c4d9e7300d66c6bec2, type: 3}
+      propertyPath: gravity
+      value: -9.81
+      objectReference: {fileID: 0}
     - target: {fileID: 1188996090140254208, guid: cbd7bebb9c5930c4d9e7300d66c6bec2, type: 3}
       propertyPath: helpText
       value: 

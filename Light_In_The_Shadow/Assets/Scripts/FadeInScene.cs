@@ -14,7 +14,7 @@ public class FadeInScene : MonoBehaviour
     //public GameObject GO;
     Renderer[] children;
     public float speed;
-    [SerializeField] private float maxDistance, minDistance;
+    public float maxDistance, minDistance;
     public bool reverse;
 
 

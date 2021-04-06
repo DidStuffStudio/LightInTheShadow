@@ -113,8 +113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Key
   description: This is a rusty old key. I wonder what this is for..? hmm
-  canvas: {fileID: 0}
+  id: 
   inInventory: 0
+  shouldPlaySpawnEffect: 0
+  spawnEffect: {fileID: 0}
+  spawnWaitTime: 1
 --- !u!114 &1755672182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,8 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineColor: {r: 1, g: 0.43137255, b: 0, a: 1}
+  outlineWidth: 10
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []

@@ -13,7 +13,7 @@ public class Level : MonoBehaviour
     public int _puzzlesSolved = 0, numberOfPuzzles = 2;
     private bool _puzzlesCompleted;
 
-    private inventorySystem _inventorySystem;
+    private InventorySystem _inventorySystem;
     private void Start()
     {
         _inventorySystem = MasterManager.Instance.inventory;

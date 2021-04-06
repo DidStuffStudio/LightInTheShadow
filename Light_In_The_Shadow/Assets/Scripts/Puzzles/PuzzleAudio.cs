@@ -1,25 +1,33 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class PuzzleAudio : MonoBehaviour
+namespace Puzzles
 {
-    public bool active = false;
-    [SerializeField] private AudioClip[] voiceClips;
-    [SerializeField] private float minimumWaitTime = 10.0f, maximumWaitTime = 20.0f;
-    [SerializeField] private AudioSource _audioSource;
-    
-
-    public IEnumerator PlayVoiceClip()
+    public class PuzzleAudio : MonoBehaviour
     {
-        while (active)
+        public bool active = false;
+        [SerializeField] private AudioClip[] voiceClips;
+        [SerializeField] private float minimumWaitTime = 10.0f, maximumWaitTime = 20.0f;
+        [SerializeField] private AudioSource audioSource;
+
+        private void Start()
         {
-            var t = Random.Range(minimumWaitTime, maximumWaitTime);
-            var i = Random.Range(0, voiceClips.Length - 1);
-            yield return new WaitForSeconds(t);
-            _audioSource.PlayOneShot(voiceClips[i]);
+            if (active) StartCoroutine(PlayVoiceClip());
         }
+
+        public IEnumerator PlayVoiceClip()
+        {
+            while (active)
+            {
+                var t = Random.Range(minimumWaitTime, maximumWaitTime);
+                var i = Random.Range(0, voiceClips.Length - 1);
+                yield return new WaitForSeconds(t);
+                audioSource.PlayOneShot(voiceClips[i]);
+            }
+        }
+        
+        
     }
 }

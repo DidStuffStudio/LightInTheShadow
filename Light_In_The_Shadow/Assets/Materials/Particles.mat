@@ -52,9 +52,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_6c17a22affe947739e4968bf2276ccb6: 0.001
-    - Vector1_989d560fc7194d1fa07c30c200b7132e: 0.1
-    - Vector1_b86526b2a99641418468e8522a1aa73a: 0.6
+    - Vector1_6c17a22affe947739e4968bf2276ccb6: 0.1
+    - Vector1_989d560fc7194d1fa07c30c200b7132e: 0.02
+    - Vector1_b86526b2a99641418468e8522a1aa73a: 5
     - _FADE_PLANE: 1
     - _FADE_SPHERE: 0
     - _Glossiness: 1
@@ -71,6 +71,7 @@ Material:
     - _doubleSided: 0
     - _inverse: 1
     m_Colors:
+    - Color_eaf35aa4705a4154a5acd30c19fb8645: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0, g: 0, b: 0, a: 0.29803923}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Glow: {r: 0, g: 0.9254902, b: 1, a: 0}

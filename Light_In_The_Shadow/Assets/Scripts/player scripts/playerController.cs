@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -15,12 +16,13 @@ public class playerController : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     public float playerSpeed = 2.0f;
+    private float _privatePlayerSpeed;
     private float jumpHeight = 1.0f;
     //private Inputmanager inputmanager;
     private Transform cameraTransform;
     public GameObject[] menuPanels = new GameObject[7]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is help menu, 6 is inventory inform
     private bool playerFrozen;
-    public inventorySystem inventory;
+    public InventorySystem inventory;
     [HideInInspector]
     public bool isRunning;
     public Vector3 respawnLocation;
@@ -33,7 +35,6 @@ public class playerController : MonoBehaviour
     public bool hasTorch, holdingTorch;
     public Text helpText, inventoryInformText;
     private bool _canEquipTorch = true, _canOpenInventory = true, _wasHoldingTorch = false;
-    public string currentTagTorchHit;
     public float gravity = -2;
     [SerializeField] private ForwardRendererData _forwardRendererData;
 
@@ -72,35 +73,36 @@ public class playerController : MonoBehaviour
     }
     
 
-    void Update()
+    void FixedUpdate()
     {
 
         groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
-        {
-            playerVelocity.y = 0f;
-        }
 
+        _privatePlayerSpeed = !controller.isGrounded ? 0.0f : playerSpeed;
+
+        if (controller.isGrounded)
+        {
+            _privatePlayerSpeed = playerSpeed;
+            playerVelocity.y = gravity;
+        }
+        else if(!playerFrozen)
+        {
+            _privatePlayerSpeed = 0.0f;
+            playerVelocity.y += gravity * Time.deltaTime;
+        }
+        
         if (!playerFrozen)
         {
-        Vector2 movement = playerControls.Player.Movement.ReadValue<Vector2>();
-        Vector3 move = new Vector3(movement.x,0f,movement.y);
-        move = cameraTransform.forward * move.z+cameraTransform.right*move.x;
-        move.y = 0;
-        controller.Move(move * Time.deltaTime * playerSpeed);
-        playerVelocity.y += Physics.gravity.y * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);        
+            var movement = playerControls.Player.Movement.ReadValue<Vector2>();
+            var move = new Vector3(movement.x,0f,movement.y);
+            move = cameraTransform.forward * move.z+cameraTransform.right*move.x;
+            move.y = 0;
+            controller.Move(move * Time.deltaTime * _privatePlayerSpeed);
+            controller.Move(playerVelocity * Time.deltaTime);        
         }
         torch.transform.parent.transform.rotation = cameraTransform.rotation;
-        
-        /*if (!holdingTorch)
-        {
-            currentTagTorchHit = "Nothing";
-            return;
-        }*/
-        currentTagTorchHit = interactRayCast.currentTag;
     }
-
+    
     public void PlayFromMainMenu()
     {
         FreezePlayer(false);
@@ -208,9 +210,10 @@ public class playerController : MonoBehaviour
             temp.transform.localScale *= 50;
             temp.transform.gameObject.layer = 5;
             interactRayCast.inventoryItemHit = false;
-            StartCoroutine(InventoryAddInform(interactRayCast.inventoryItem.GetComponent<item>().name));
-            Destroy(interactRayCast.inventoryItem.gameObject);
-            interactRayCast.inventoryItem = null;
+            var item = interactRayCast.inventoryItem.gameObject;
+            StartCoroutine(InventoryAddInform(item.GetComponent<item>().name));
+            interactRayCast.ReleaseInventoryItem(item);
+            Destroy(item);
         }
     }
     void highlightObject()
@@ -219,7 +222,7 @@ public class playerController : MonoBehaviour
         bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
         if (hit && hitInfo.transform.gameObject.layer == 5)
         {
-            inventory.showHightlightedItem(hitInfo.transform.gameObject);
+            inventory.ShowHighlightedItem(hitInfo.transform.gameObject);
         }
     }
     
@@ -309,6 +312,7 @@ public class playerController : MonoBehaviour
     private void OnDisable()
     {
         playerControls.Disable();
+        _forwardRendererData.rendererFeatures[0].SetActive(false);
     }
     
     

@@ -11,7 +11,7 @@ public class MasterManager : MonoBehaviour {
     public VolumeProfile[] levelPP; //TODO Make post processing volumes and fog lerp between levels
     public int levelIndex = 1;
     public playerController player;
-    public inventorySystem inventory;
+    public InventorySystem inventory;
     public SoundtrackMaster soundtrackMaster;
     public GameObject[] portals = new GameObject[4];
     public Interactor interactor;
@@ -109,4 +109,5 @@ public class MasterManager : MonoBehaviour {
         soundtrackMaster.LevelMusicVolume(levelIndex-1,100.0f, 10.0f);
         soundtrackMaster.MemoryMusicVolume(0.0f, 10.0f);
     }
+    
 }

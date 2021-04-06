@@ -8,7 +8,7 @@ public class DialNumber : MonoBehaviour {
     private void OnMouseDown() {
         phonePuzzle.currentNumber = this.gameObject.name;
         phonePuzzle._isRotating = true;
-        phonePuzzle._mouseDownPosition = Input.mousePosition;
+        phonePuzzle.mouseDownPosition = Input.mousePosition;
     }
 
     private void OnMouseUp() {

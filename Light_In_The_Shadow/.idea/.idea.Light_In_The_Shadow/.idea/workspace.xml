@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,108 +23,450 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/LivingRoomCutscene.playable" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animation/LivingRoomCutscene.playable.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monsters.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monsters.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/TV_Puzzle_Voice_1.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/TV_Puzzle_Voice_1.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Bathroom.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Bathroom.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/BedroomScene.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Block Out/BedroomScene.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Animators.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Animators/Dad_LivingRoom.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Animators/Dad_LivingRoom.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Animators/TweakAntenna.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Animators/TweakAntenna.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Animators/Walking In.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Animators/Walking In.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Sad Walk.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Sad Walk.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/SadWalk.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/SadWalk.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Sitting Laughing.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Sitting Laughing.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/TweakAntenna.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/TweakAntenna.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/TweakingAntenna.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/TweakingAntenna.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Right Hook.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Right Hook.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Run Forward Arc Right.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Run Forward Arc Right.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Shoulder Hit And Fall.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Shoulder Hit And Fall.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Talking.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Talking.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 4.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_138240d3-2131-493b-9f26-875688005997.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_138240d3-2131-493b-9f26-875688005997.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_1eacff5b-d118-477f-82e5-86de526d7c41.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_1eacff5b-d118-477f-82e5-86de526d7c41.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_7328af93-94c9-430f-942a-0ae0493b4735.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_7328af93-94c9-430f-942a-0ae0493b4735.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_a17b9eb1-465e-42e5-99dc-4936699dd1fe.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_a17b9eb1-465e-42e5-99dc-4936699dd1fe.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_a7c93f6c-3661-4719-8a32-3c9c6b56c8b2.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_a7c93f6c-3661-4719-8a32-3c9c6b56c8b2.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_b31e38bf-ae64-4c6b-9eb5-433c55ff3412.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_b31e38bf-ae64-4c6b-9eb5-433c55ff3412.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_b35abe0f-e16e-48a9-82fd-be7b3c87e73c.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_b35abe0f-e16e-48a9-82fd-be7b3c87e73c.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_eb4280c0-8c09-4837-8481-e97df15cb5c9.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Terrains/TerrainData_eb4280c0-8c09-4837-8481-e97df15cb5c9.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/DemoScense.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/DemoScense/DemoScense.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/DemoScense/DemoScense.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/DemoScense/DemoScenseSettings.lighting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/DemoScense/DemoScenseSettings.lighting.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Ball.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Ball.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Ball2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Ball2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Buff.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Buff.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Buff2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Buff2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Buff3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Buff3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Cube.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Cube.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/DarkBall.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/DarkBall.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/DarkBall2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/DarkBall2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion4.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion4.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion5.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion5.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion6.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion6.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion7.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion7.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion8.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion8.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion9.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion9.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FantasyEffect.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FantasyEffect.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FantasySun.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FantasySun.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FantasySun2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FantasySun2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Flame.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Flame.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Flame2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Flame2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FlameEmission.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FlameEmission.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/GreemPlame.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/GreemPlame.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Hole.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Hole.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Laser bombardment.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Laser bombardment.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Laser bombardment2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Laser bombardment2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Laser bombardment3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Laser bombardment3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Laser bombardment4.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Laser bombardment4.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningBall.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningBall.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningBall2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningBall2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningCloud.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningCloud.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningState.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningState.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningState2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningState2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningState3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/LightningState3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Poison.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Poison.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Portal.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Portal.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Portal2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Portal2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Portal3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Portal3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Smoke.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Smoke.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Snow.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Snow.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Sparking.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Sparking.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Sparking2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Sparking2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Sparking3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Sparking3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/SpirEmission.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/SpirEmission.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csDestroyEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csDestroyEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csMouseOrbit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csMouseOrbit.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csParticleEffectPackLightControl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csParticleEffectPackLightControl.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csParticleMove.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csParticleMove.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/ShurikenEffectEditor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/ShurikenEffectEditor/Shuriken Effect Editor Manual.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/ShurikenEffectEditor/Shuriken Effect Editor Manual.pdf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/ShurikenEffectEditor/csShurikenEffectChanger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/ShurikenEffectEditor/csShurikenEffectChanger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/ShurikenEffectEditor/csShurikenEffectEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/ShurikenEffectEditor/csShurikenEffectEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Cube.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Cube.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Cube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Cube.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Light3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning5.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning5.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Lightning5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Line.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Line.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Line.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Mark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Mark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Particle.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Particle.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Particle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Particle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring5.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring5.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring6.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring6.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring7.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring7.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring8.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring8.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Ring8.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke5.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke5.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke6.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke6.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke7.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke7.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/SnowCrystal4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark5.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark5.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark6.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark6.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark7.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark7.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark8.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark8.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Spark8.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Star3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/multifulline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/multifulline.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/multifulline2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/multifulline2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/KitchenCutScene.playable" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/KitchenCutScene.playable.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Heavy Magical Explosion_SI 03.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Heavy Magical Explosion_SI 03.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Heavy Magical Explosion_SI 04.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Heavy Magical Explosion_SI 04.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Aliens-Monsters-37.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Aliens-Monsters-37.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Aliens-Monsters-39.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Aliens-Monsters-39.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Creature_Monster_Attack_09.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Creature_Monster_Attack_09.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Monster 31.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Monster 31.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Monster_Roar_Growl_009.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Monster_Roar_Growl_009.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Spaces - Space Explosions_01.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Spaces - Space Explosions_01.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Monster.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Monster.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/LivingRoom_Father.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/LivingRoom_Father.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Animators.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Animators/BoyPhone.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Animators/BoyPhone.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Animators/Dad_Kitchen.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Animators/Dad_Kitchen.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Animators/Mum_Kitchen.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Animators/Mum_Kitchen.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/RunForPhone.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/RunForPhone.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/BigBossMan.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/BigBossMan.shadergraph.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/IgniteCoders/Simple Water Shader/Resources/Shader Graphs_WaterShader.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/IgniteCoders/Simple Water Shader/Resources/Shader Graphs_WaterShader.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Cut_Scene_VirtualCamTimeline.playable" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Cut_Scene_VirtualCamTimeline.playable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Alien Talking Communication_SI 03.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Alien Talking Communication_SI 03.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Dad_LivingRoom.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Dad_LivingRoom.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Right Hook.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Right Hook.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Rummaging.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Rummaging.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Run Forward Arc Right.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Run Forward Arc Right.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Shoulder Hit And Fall.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Shoulder Hit And Fall.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Sitting Laughing.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Sitting Laughing.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/TV with antennas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/TV with antennas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/TweakAntenna.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/TweakAntenna.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/TweakingAntenna.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/TweakingAntenna.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PassToTVPuzzle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PassToTVPuzzle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/KitchenCam.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/KitchenCam.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/KitchenCutSceneCamTimeline.playable" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/KitchenCutSceneCamTimeline.playable.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Antenna.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Antenna.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Level_1/Soundtrack.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Level_1/Soundtrack.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DialNumber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DialNumber.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BigBossMan.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BigBossMan.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BoyCharacter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BoyCharacter.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Particles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Particles.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Cave.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Cave.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Rock_C.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_C.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_Mud.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PortalHouse/Step_Mud.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/BoyPhone.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/BoyPhone.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Dad_Kitchen.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Dad_Kitchen.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Mum_Kitchen.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Mum_Kitchen.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Animators/Dad_LivingRoom.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/Animators/Dad_LivingRoom.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/TweakAntenna.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/TweakAntenna.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/TweakingAntenna.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 1/TweakingAntenna.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Run Forward Arc Right.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 2/Run Forward Arc Right.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-6_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-6_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-6_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-6_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-7_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-7_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-7_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-7_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-0.exr.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inputmanager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inputmanager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Characters.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Characters.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PortalBlockForceField.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PortalBlockForceField.shadergraph" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrains/Level_2_Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrains/Level_2_Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/DreamMonster1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/DreamMonster1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Key_Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Key_Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/KitchenMemory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/KitchenMemory.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Kitchen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Kitchen.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefab/LivingRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/LivingRoom.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/fpsPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/fpsPlayer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +479,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DialNumber.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Follow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
@@ -142,25 +487,28 @@
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Extended.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ActivateObjectInRange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TorchPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossFight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoundtrackMaster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Antenna.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/FadingTransition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/EnvironmentTransitionExample.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PortalBlock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.3/Runtime/Helpers/CinemachineInputProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/NastyWizard_CelSobel/CelShadingSobel/Shaders/Post/PostFunctions.cginc" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Smrvfx-master/Smrvfx-master/Packages/jp.keijiro.smrvfx/Runtime/SkinnedMeshBaker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Flicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" root0="FORCE_HIGHLIGHTING" />
@@ -176,15 +524,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/CameraFocus.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" />
-        <option value="$PROJECT_DIR$/Assets/3rd Party/Candice AI for Games/Scripts/CandiceAIController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Tenticle.cs" />
-        <option value="$PROJECT_DIR$/Assets/TentacleKill.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnemyAiTutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" />
         <option value="$PROJECT_DIR$/Assets/DetectClick.cs" />
         <option value="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" />
@@ -202,31 +541,40 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" />
         <option value="$PROJECT_DIR$/Assets/TorchPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" />
-        <option value="$PROJECT_DIR$/Assets/Antenna.cs" />
         <option value="$PROJECT_DIR$/Assets/PortalBlock.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/item.cs" />
         <option value="$PROJECT_DIR$/Assets/MenuLogic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" />
         <option value="$PROJECT_DIR$/Assets/Follow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/testPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AlertObservers.cs" />
         <option value="$PROJECT_DIR$/Assets/PassToTVPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Antenna.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" />
+        <option value="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/SkinnedCollisionHelper.cs" />
+        <option value="$PROJECT_DIR$/Assets/UpdateMeshCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
+        <option value="$PROJECT_DIR$/Assets/MeshColliderUpdate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
       </list>
     </option>
   </component>
@@ -312,7 +660,9 @@
       <workItem from="1617392453795" duration="1344000" />
       <workItem from="1617434314444" duration="1412000" />
       <workItem from="1617460957256" duration="10802000" />
-      <workItem from="1617521725081" duration="8881000" />
+      <workItem from="1617521725081" duration="9515000" />
+      <workItem from="1617536419697" duration="20123000" />
+      <workItem from="1617606750097" duration="40655000" />
     </task>
     <servers />
   </component>
@@ -354,16 +704,16 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="477" y="292" width="958" height="490" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616530010744" />
-    <state x="616" y="249" key="run.anything.popup" timestamp="1617527993972">
+    <state x="616" y="249" key="run.anything.popup" timestamp="1617611348039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="249" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617527993972" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1617529416295">
+    <state x="616" y="249" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617611348039" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1617648548940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617529416295" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617648548940" />
     <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>

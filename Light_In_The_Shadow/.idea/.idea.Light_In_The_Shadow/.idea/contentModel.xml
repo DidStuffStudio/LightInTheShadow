@@ -197,6 +197,19 @@
             </e>
           </e>
         </e>
+        <e p="48 Particle Effect Pack" t="Include">
+          <e p="Script" t="Include">
+            <e p="csDestroyEffect.cs" t="Include" />
+            <e p="csMouseOrbit.cs" t="Include" />
+            <e p="csParticleEffectPackLightControl.cs" t="Include" />
+            <e p="csParticleMove.cs" t="Include" />
+            <e p="csShowAllEffect.cs" t="Include" />
+          </e>
+          <e p="ShurikenEffectEditor" t="Include">
+            <e p="csShurikenEffectChanger.cs" t="Include" />
+            <e p="csShurikenEffectEditor.cs" t="Include" />
+          </e>
+        </e>
         <e p="ActivateObjectInRange.cs" t="Include" />
         <e p="Antenna.cs" t="Include" />
         <e p="BlurRender" t="Include">
@@ -217,8 +230,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AlertAnimationObservers.cs" t="Include" />
+          <e p="BossFight.cs" t="Include" />
           <e p="CameraFocus.cs" t="Include" />
           <e p="ChangeFadeGizmo.cs" t="Include" />
+          <e p="DarkThought.cs" t="Include" />
           <e p="DetectClick.cs" t="Include" />
           <e p="EnemyAI.cs" t="Include" />
           <e p="FadeInScene.cs" t="Include" />

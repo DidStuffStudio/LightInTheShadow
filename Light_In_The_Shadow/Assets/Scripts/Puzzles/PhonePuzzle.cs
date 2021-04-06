@@ -3,80 +3,52 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Management.Instrumentation;
 using System.Runtime.CompilerServices;
+using Puzzles;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class PhonePuzzle : MonoBehaviour {
+public class PhonePuzzle : PuzzleMaster
+{
+    [Space] [Header("Unique Parameters")] 
+    [SerializeField] private GameObject numbersCanvas;
 
-    private Camera _camera;
-    
-    // reference to the phone game object to rotate around
-    [SerializeField] private GameObject rotaryPhone;
-    [SerializeField] private float goBackRotationSpeed = 0.2f;
-    public bool _isRotating = false;
-    public float _rotation;
-    [SerializeField] private float rotationSensitivity = 0.1f;
-    public Vector3 _mouseDownPosition;
-    public bool goingBackToOriginalPos;
-    
-    [SerializeField] private GameObject kitchenCamera, phoneCam, memoryPrefab, numbersCanvas, boy;
-    [SerializeField] private Transform memorySpawnLocation;
-    [SerializeField] private FadeInScene sceneFader;
-    [SerializeField] private Animator _memoryLightAnimator;
-    [SerializeField] private ParticleSystem particles;
-    [SerializeField] private Volume postProcessing;
-    [SerializeField] private AudioSource kitchenAudioSource;
-    [SerializeField] private AudioClip[] audioClips;
-    private playerController player;
-    
-
-    [SerializeField] private DetectClick _lightSwitchClicker;
-    private bool fadingOut, focusedOnPhone;
-    
+    [HideInInspector] 
+    public bool goingBackToOriginalPos, _isRotating;
+    [HideInInspector]
+    public Vector3 mouseDownPosition = Vector3.zero;
+    [HideInInspector]
     public string currentNumber;
-    private string [] possibleNumbersToCall = {"911", "112", "999", "000"};
-    public string _dialedNumber = "";
-    private Quaternion originalRotation;
-
-    private void Start() {
-        _camera = Camera.main;
-        originalRotation = rotaryPhone.transform.rotation;
-        player = MasterManager.Instance.player;
-        rotaryPhone.GetComponent<DetectClick>().canClick = false; 
-        rotaryPhone.GetComponent<Outline>().enabled = false;
-
+    
+    private readonly float _goBackRotationSpeed = 0.2f;
+    private readonly float _rotationSensitivity = 0.01f;
+    private readonly string [] _possibleNumbersToCall = {"911", "112", "999", "000"};
+    private string _dialedNumber = "";
+    private Quaternion _originalRotation;
+    private float _rotation;
+    protected override void Start() {
+        base.Start();
+        fadeSpeedIncrement = 0.001f;
+        _originalRotation = puzzleObject.transform.rotation;
     }
 
-    private void Update() {
-        if(Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f && focusedOnPhone) FocusOnPhone(false);
+    protected override void Update()
+    { 
+        base.Update();
+     if (currentNumber.Length > 3) currentNumber = "";
         if (_isRotating) {
-            _rotation = rotaryPhone.transform.localRotation.eulerAngles.x;
-            var mousePosition = Input.mousePosition - _mouseDownPosition;
-            // var rotationValue = (mouseOffset > 0) ? -Input.mousePosition.x - _mouseDownPosition.x : Input.mousePosition.x - _mouseDownPosition.x;
-            _rotation = Mathf.Abs(Vector3.Magnitude(mousePosition) * rotationSensitivity);
-            // print(_rotation);
-            rotaryPhone.transform.RotateAround(rotaryPhone.transform.position, rotaryPhone.transform.forward, angle: _rotation);
-            
-            
+            _rotation = puzzleObject.transform.localRotation.eulerAngles.x;
+            var mousePosition = Input.mousePosition - mouseDownPosition;
+            _rotation = Mathf.Abs(Vector3.Magnitude(mousePosition) * _rotationSensitivity);
+            puzzleObject.transform.RotateAround(puzzleObject.transform.position, puzzleObject.transform.forward, angle: _rotation);
         }
-        else {
-            rotaryPhone.transform.rotation = Quaternion.Lerp(rotaryPhone.transform.rotation, originalRotation, goBackRotationSpeed);
-        }
-
-        _lightSwitchClicker.canClick = player.currentTagTorchHit == "ClickInteract";
-        
-        if (!fadingOut) return;
-        var particleSystemShape = particles.shape;
-        postProcessing.weight = Map(sceneFader.increment, 8, 0, 1, 0);
-        particleSystemShape.radius = Map(sceneFader.increment, 8, 0, 4.3f, 0);
-        
+        else puzzleObject.transform.rotation = Quaternion.Lerp(puzzleObject.transform.rotation, _originalRotation, _goBackRotationSpeed);
     }
     
     public void UpdateDialNumber() {
         // check if any of the possible numbers to call contains the currently dialed number
         var aux = _dialedNumber + currentNumber;
-        foreach (var number in possibleNumbersToCall) {
+        foreach (var number in _possibleNumbersToCall) {
             if (number == aux) {
                 // the user starts calling the possible number
                 _dialedNumber = aux;
@@ -93,80 +65,22 @@ public class PhonePuzzle : MonoBehaviour {
     private void CallNumber() {
         
         _dialedNumber = "";
-        StartKitchenCutScene();
+        correct = true;
     }
-    
-    
-
-    public void FocusOnPhone(bool focus)
+    protected override void FadeOutCutscene()
     {
-        MasterManager.Instance.interactor.mouseControl = focus;
-        MasterManager.Instance.LockCursor(!focus);
-        boy.SetActive(!focus);
-        focusedOnPhone = focus;
-        rotaryPhone.GetComponent<Collider>().enabled = !focus;
-        rotaryPhone.GetComponent<Outline>().enabled = !focus;
-        phoneCam.SetActive(focus);
+        numbersCanvas.SetActive(false);
+        base.FadeOutCutscene();
     }
-    
-    public void FadeInScene()
+
+    protected override void FadeInScene()
     {
         numbersCanvas.SetActive(true);
-        sceneFader.fadeInNow = true;
-        kitchenAudioSource.PlayOneShot(audioClips[0]);
-        rotaryPhone.GetComponent<DetectClick>().canClick = true; //Play memory opening
-    }
-    
-    public void StartKitchenCutScene()
-    {
-        FocusOnPhone(focus: false);
-        player.FreezePlayerForCutScene(true);
-        rotaryPhone.GetComponent<Collider>().enabled = rotaryPhone.GetComponent<Outline>().enabled = false;
-        sceneFader.speed = 0.002f;
-        numbersCanvas.SetActive(false);
-        var particleSystemVelocityOverLifetime = particles.velocityOverLifetime;
-        particleSystemVelocityOverLifetime.speedModifierMultiplier = -1;
-        
-        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,0.0f, 5.0f);
-        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(1, false);
-        MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(2, true);
-        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(100.0f, 5.0f);
-        
-        kitchenCamera.SetActive(true);
-        sceneFader.reverse = sceneFader.fadeInNow = fadingOut =true;
-        StartCoroutine(PlayMemoryLight());
-    }
-    public void EndKitchenCutScene()
-    {
-        player.FreezePlayerForCutScene(false);
-        kitchenCamera.SetActive(false);
-        StartCoroutine(WaitToReturnMusic());
+        base.FadeInScene();
     }
 
-    IEnumerator PlayMemoryLight()
-    {
-        yield return new WaitForSeconds(15.0f);
-        _memoryLightAnimator.Play("MemoryLightAnimation");
-        yield return new WaitForSeconds(2.0f);
-        SpawnMemory();
-    }
+    public void FocusOnPhone(bool focus) => base.FocusOnPuzzleItem(focus);
+    public void EndKitchenCutscene() => base.EndCutScene();
+    public void SwitchChildAnimation() => base.BoyAnimations();
 
-    void SpawnMemory()
-    {
-        particles.gameObject.SetActive(false);
-        Instantiate(memoryPrefab, memorySpawnLocation.position, memorySpawnLocation.rotation);
-        kitchenAudioSource.PlayOneShot(audioClips[2]);
-    }
-
-    float Map(float s, float a1, float a2, float b1, float b2)
-    {
-        return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
-    }
-
-    IEnumerator WaitToReturnMusic()
-    {
-        yield return new WaitForSeconds(10.0f);
-        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,100.0f, 5.0f);
-        MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(0.0f, 5.0f);
-    }
 }

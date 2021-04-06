@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FirstPersonAudio : MonoBehaviour
 {
@@ -10,20 +13,27 @@ public class FirstPersonAudio : MonoBehaviour
     [Tooltip("Minimum velocity for the step audio to play")]
     public float velocityThreshold = .01f;
 
-    
 
-    
-    void FixedUpdate()
+    private void Start()
     {
-        if (character.controller.velocity.magnitude >= velocityThreshold && character.controller.isGrounded)
+        StartCoroutine(SlowUpdate());
+    }
+
+    IEnumerator SlowUpdate()
+    {
+        while (true)
         {
-           stepAudio.Play();
+            if (character.controller.velocity.magnitude >= velocityThreshold && character.controller.isGrounded)
+            {
+                stepAudio.volume = Mathf.Clamp01(character.controller.velocity.magnitude);
+            }
+            else
+            {
+                stepAudio.volume = 0.0f;
+            }
+
+            yield return new WaitForSeconds(0.2f);
         }
-        else
-        {
-            stepAudio.Stop();
-        }
- 
     }
     void PlayRandomClip(AudioSource audio, AudioClip[] clips)
     {

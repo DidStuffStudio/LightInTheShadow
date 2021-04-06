@@ -14,6 +14,8 @@ public class Antenna : MonoBehaviour
     [SerializeField] private MeshRenderer meshRenderer;
     private Material _tvMaterial;
     [SerializeField]private bool isSoundAntenna, isVisualAntenna;
+    public bool canInteract;
+    private float distance;
     private void Start()
     {
         _tvMaterial = meshRenderer.material;
@@ -23,22 +25,24 @@ public class Antenna : MonoBehaviour
 
     private void Update()
     {
-        var distance = Vector3.Distance(gameObjects[0].transform.position, gameObjects[1].transform.position);
+        distance = Vector3.Distance(gameObjects[0].transform.position, gameObjects[1].transform.position);
         antennaCorrect = distance < correctWindow;
 
         if (isVisualAntenna)_tvMaterial.SetFloat("_TVTransition", Mathf.Clamp01(distance));
         if (!isSoundAntenna) return;
-        masterMix.SetFloat("whiteNoise", Map(distance, 1, 0, -20, -80));
-        masterMix.SetFloat("tv", Map(distance, 0, 1, 0, -80));
+        masterMix.SetFloat("whiteNoise", Map(distance, 3.8f, 0, 20, -80));
+        masterMix.SetFloat("tv", Map(distance, 0, 3.8f, 20, -80));
     }
 
     void OnMouseDown()
     {
+        if (!canInteract) return;
         _mouseStart = Input.mousePosition.x;
     }
 
     private void OnMouseDrag()
     {
+        if (!canInteract) return;
         if (gameObjects[0].transform.position.z < _lookAtStart - maxValue)
         {
             gameObjects[0].transform.position = new Vector3( gameObjects[0].transform.position.x, gameObjects[0].transform.position.y,_lookAtStart - maxValue+ 0.1f);
