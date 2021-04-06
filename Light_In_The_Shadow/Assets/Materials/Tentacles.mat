@@ -69,9 +69,11 @@ Material:
     - _UseNormalMap: 0
     - _UseRoughnessMap: 0
     - _doubleSided: 0
+    - _health: 100
     - _inverse: 1
     m_Colors:
-    - Color_eaf35aa4705a4154a5acd30c19fb8645: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+    - Color_75ef8c5a49554fc286800d86b7868caa: {r: 1, g: 1, b: 1, a: 1}
+    - Color_eaf35aa4705a4154a5acd30c19fb8645: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 0, g: 0, b: 0, a: 0.29803923}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Glow: {r: 0, g: 0.9254902, b: 1, a: 0}

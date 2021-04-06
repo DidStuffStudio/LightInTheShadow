@@ -12,6 +12,7 @@ TagManager:
   - PickedUp
   - DialNumber
   - ClickInteract
+  - BossManBones
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,6 @@ TagManager:
   - Player
   - Clickable
   - InventoryItem
-  - Torch
-  - Hidden
   - DarkThoughts
   - BigBossMan
   - 
@@ -45,6 +44,8 @@ TagManager:
   - 
   - 
   - 
+  - Torch
+  - Hidden
   m_SortingLayers:
   - name: Default
     uniqueID: 0

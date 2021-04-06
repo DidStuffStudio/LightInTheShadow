@@ -9,7 +9,7 @@ OcclusionCullingSettings:
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: 256a270d274f8b54c814b048ffe6bad9
-  m_OcclusionCullingData: {fileID: 36300000, guid: 78c43648f110aa7439e3643872ca52b7, type: 2}
+  m_OcclusionCullingData: {fileID: 36300000, guid: 1b97c7df5823b4ecaa51e25b2cab381a, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ GameObject:
   m_TagString: PickedUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!114 &203346590
 MonoBehaviour:
@@ -1786,7 +1786,7 @@ GameObject:
   m_TagString: PickedUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!114 &1031307233
 MonoBehaviour:
@@ -2536,7 +2536,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!23 &1261175122
 MeshRenderer:
@@ -3234,10 +3234,6 @@ PrefabInstance:
     - target: {fileID: 1469635825094006891, guid: 09a36e0e211c7ef40affa402cb8a475e, type: 3}
       propertyPath: m_Name
       value: DreamMonster1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1775641111774602560, guid: 09a36e0e211c7ef40affa402cb8a475e, type: 3}
-      propertyPath: player
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2246981013074526929, guid: 09a36e0e211c7ef40affa402cb8a475e, type: 3}
       propertyPath: m_RootOrder

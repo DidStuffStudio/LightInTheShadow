@@ -9,8 +9,12 @@ public class Flicker : MonoBehaviour
 
     public GameObject lightCone;
     public Light spotlight;
-    
-    
+    private float _intensity;
+    private void Start()
+    {
+        _intensity = spotlight.intensity;
+    }
+
     void Update() 
     {
         if ( Random.value > 0.9 ) //a random chance
@@ -23,7 +27,7 @@ public class Flicker : MonoBehaviour
             else
             {
                 lightCone.SetActive(true);
-                spotlight.intensity = 15.0f;//turn it on
+                spotlight.intensity = _intensity;//turn it on
             }
         }
     }
