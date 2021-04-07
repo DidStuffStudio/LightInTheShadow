@@ -23,62 +23,133 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BangFistLeft.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BangFistLeft.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BangFistRight.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BangFistRight.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BreathDarkness.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BreathDarkness.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Pain.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Pain.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Level_3_Cliffs.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Level_3_Cliffs.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/LightingData.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/LightingData.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-0_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-1_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-2_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-3_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-4_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_dir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_dir.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_light.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Lightmap-5_comp_light.exr.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-0.exr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/monsterExplode.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/monsterExplode.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CopyOutline.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CopyOutline.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FlyingCollisionCheck.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FlyingCollisionCheck.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HurtPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HurtPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Monsters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingBeanController.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingBeanController.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/TentacleKill.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/TentacleKill.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/Tenticle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Testing/Tenticle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Monster.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Monster/DreamMonster1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Monster/DreamMonster1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingSpiderBean.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingSpiderBean.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_a.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_a.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_b.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_b.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_c.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_c.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_d.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_d.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_e.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_e.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_f.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_f.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_g.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_g.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_h.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_h.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_i.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_i.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_j.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/Stylized Nature Environment/Prefabs/tree_j.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch end 1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch end 1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch end 2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch end 2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch end 3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch end 3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch start 1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch start 1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch start 2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch start 2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch start 3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Crouch/Crouch start 3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Jump.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Jump/Jump 1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Jump/Jump 1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Jump/Jump 2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Jump/Jump 2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Jump/Jump 3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Jump/Jump 3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Landing.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Landing/Landing 1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Landing/Landing 1.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Landing/Landing 2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Landing/Landing 2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Landing/Landing 3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Landing/Landing 3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Steps.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Audio/Steps.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Demo &amp; documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Demo &amp; documentation/Demo FP controller full.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Demo &amp; documentation/Demo FP controller full.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Demo &amp; documentation/Demo FP controller.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Demo &amp; documentation/Demo FP controller.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Demo &amp; documentation/readme.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Demo &amp; documentation/readme.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/First person controller full.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/First person controller full.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/First person controller.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/First person controller.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/Crouch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/Crouch.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/GroundCheck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/GroundCheck.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/Jump.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/Jump.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/Zoom.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/Zoom.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/FirstPersonLook.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/FirstPersonLook.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/FirstPersonMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/FirstPersonMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csParticleMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csParticleMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Flash3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Texture/Smoke3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Tentacles.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Tentacles.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BigBossController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BigBossController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BreathDarkness.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/BreathDarkness.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Pain.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Big Boss Man/Pain.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Level 2 trees/Deadtree1LOD0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Level 2 trees/Deadtree1LOD0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Level 2 trees/Deadtree2LOD0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Level 2 trees/Deadtree2LOD0.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraFocus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraFocus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TentacleKill.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TentacleKill.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tenticle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tenticle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/MainForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/MainForwardRenderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/PortalBlockForceField.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/PortalBlockForceField.shadergraph" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/DreamMonster1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/DreamMonster1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Torch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Torch.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +167,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Follow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Extended.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ActivateObjectInRange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" root0="FORCE_HIGHLIGHTING" />
@@ -106,7 +178,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/TorchPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossFight.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoundtrackMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Antenna.cs" root0="FORCE_HIGHLIGHTING" />
@@ -124,24 +195,21 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Flicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CopyOutline.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HurtPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/common/GizmoFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MenuLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FlyingCollisionCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerFocus.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" />
-        <option value="$PROJECT_DIR$/Assets/DetectClick.cs" />
-        <option value="$PROJECT_DIR$/Assets/ChangeFadeGizmo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Interactor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/TriggerEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAiTutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/FastIK/Scripts/Sample/SampleRotator.cs" />
@@ -169,23 +237,29 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" />
         <option value="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" />
         <option value="$PROJECT_DIR$/Assets/Scenes/SkinnedCollisionHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/UpdateMeshCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/MeshColliderUpdate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Flicker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/FlyingCollisionCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" />
+        <option value="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csParticleMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" />
+        <option value="$PROJECT_DIR$/Assets/HurtPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
+        <option value="$PROJECT_DIR$/Assets/CopyOutline.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
       </list>
     </option>
@@ -276,6 +350,8 @@
       <workItem from="1617536419697" duration="20123000" />
       <workItem from="1617606750097" duration="40655000" />
       <workItem from="1617651901225" duration="9292000" />
+      <workItem from="1617779194524" duration="9876000" />
+      <workItem from="1617789658000" duration="21259000" />
     </task>
     <servers />
   </component>
@@ -305,10 +381,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617462323199" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1616536377214">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1617779941340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616536377214" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617779941340" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1614669750894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -317,16 +393,16 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="477" y="292" width="958" height="490" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616530010744" />
-    <state x="616" y="249" key="run.anything.popup" timestamp="1617611348039">
+    <state x="616" y="249" width="672" height="677" key="run.anything.popup" timestamp="1617787098785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="249" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617611348039" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1617733205918">
+    <state x="616" y="249" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617787098785" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1617797829027">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617733205918" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617797829027" />
     <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>

@@ -34,19 +34,6 @@
               </e>
             </e>
           </e>
-          <e p="First person controller" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="Components" t="Include">
-                <e p="Crouch.cs" t="Include" />
-                <e p="FirstPersonAudio.cs" t="Include" />
-                <e p="GroundCheck.cs" t="Include" />
-                <e p="Jump.cs" t="Include" />
-                <e p="Zoom.cs" t="Include" />
-              </e>
-              <e p="FirstPersonLook.cs" t="Include" />
-              <e p="FirstPersonMovement.cs" t="Include" />
-            </e>
-          </e>
           <e p="IgniteCoders" t="Include">
             <e p="Simple Water Shader" t="Include">
               <e p="Info" t="Include">
@@ -217,9 +204,14 @@
           <e p="KawaseBlur.shader" t="Include" />
           <e p="testOffset.shader" t="Include" />
         </e>
+        <e p="CopyOutline.cs" t="Include" />
+        <e p="DarkThoughtWalking.cs" t="Include" />
         <e p="DialNumber.cs" t="Include" />
         <e p="flicker.cs" t="Include" />
+        <e p="FlyingBeanSpider.cs" t="Include" />
+        <e p="FlyingCollisionCheck.cs" t="Include" />
         <e p="Follow.cs" t="Include" />
+        <e p="HurtPlayer.cs" t="Include" />
         <e p="MenuLogic.cs" t="Include" />
         <e p="PortalBlock.cs" t="Include" />
         <e p="rotateAround.cs" t="Include" />
@@ -231,11 +223,9 @@
         <e p="Scripts" t="Include">
           <e p="AlertAnimationObservers.cs" t="Include" />
           <e p="BossFight.cs" t="Include" />
-          <e p="CameraFocus.cs" t="Include" />
           <e p="ChangeFadeGizmo.cs" t="Include" />
           <e p="DarkThought.cs" t="Include" />
           <e p="DetectClick.cs" t="Include" />
-          <e p="EnemyAI.cs" t="Include" />
           <e p="FadeInScene.cs" t="Include" />
           <e p="GameConstantStrings.cs" t="Include" />
           <e p="Inputmanager.cs" t="Include" />
@@ -265,10 +255,10 @@
             <e p="PuzzleMaster.cs" t="Include" />
             <e p="TVPuzzle.cs" t="Include" />
           </e>
-          <e p="TentacleKill.cs" t="Include" />
-          <e p="Tenticle.cs" t="Include" />
           <e p="Testing" t="Include">
             <e p="FogChange.cs" t="Include" />
+            <e p="TentacleKill.cs" t="Include" />
+            <e p="Tenticle.cs" t="Include" />
           </e>
           <e p="TriggerEvent.cs" t="Include" />
           <e p="TriggerFocus.cs" t="Include" />

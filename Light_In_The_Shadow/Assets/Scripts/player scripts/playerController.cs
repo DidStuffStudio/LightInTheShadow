@@ -36,7 +36,9 @@ public class playerController : MonoBehaviour
     public Text helpText, inventoryInformText;
     private bool _canEquipTorch = true, _canOpenInventory = true, _wasHoldingTorch = false;
     public float gravity = -2;
+    public int mouseSensitivity = 150;
     [SerializeField] private ForwardRendererData _forwardRendererData;
+    public int playerHealth = 100;
 
 
     private void Awake()
@@ -67,7 +69,9 @@ public class playerController : MonoBehaviour
         playerControls.Player.PickUp.started += _ => pickupObject();
         playerControls.Player.HighlightObject.performed += _ => highlightObject();
         playerControls.Player.PlayPause.performed += _ => PlayPause();
-        playerControls.Player.Torch.performed += _ => EquipTorch();
+        playerControls.Player.Torch.performed += _ => EquipTorch(true);
+        playerControls.Player.Torch.canceled += _ => EquipTorch(false);
+        
         torch.SetActive(false);
 
     }
@@ -76,6 +80,10 @@ public class playerController : MonoBehaviour
     void FixedUpdate()
     {
 
+        if (playerHealth <= 0)
+        {
+            transform.position = GetComponent<playerController>().respawnLocation;
+        }
         groundedPlayer = controller.isGrounded;
 
         _privatePlayerSpeed = !controller.isGrounded ? 0.0f : playerSpeed;
@@ -140,8 +148,8 @@ public class playerController : MonoBehaviour
         {
             playerFrozen = false;
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 50.0f;
-            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 50.0f;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = mouseSensitivity;
+            playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = mouseSensitivity;
             Physics.gravity = new Vector3(0,gravity,0);
         }
     }
@@ -167,12 +175,12 @@ public class playerController : MonoBehaviour
         if (!menuPanels[3].activeSelf)
         {
             _forwardRendererData.rendererFeatures[0].SetActive(true);
-            if (torch.activeSelf)
+            /*if (torch.activeSelf)
             {
                 torch.SetActive(false);
                 _wasHoldingTorch = true;
             }
-            else _wasHoldingTorch = false;
+            else _wasHoldingTorch = false;*/
             ClosePanels();
             menuPanels[3].SetActive(true);
             FreezePlayer(true);
@@ -188,7 +196,7 @@ public class playerController : MonoBehaviour
             Destroy(inventory.rotatableObject);
             inventory.rotatableObject = null;
             inventory.descriptionPanel.SetActive(false);
-            if(hasTorch && _wasHoldingTorch) torch.SetActive(true);
+            //if(hasTorch && _wasHoldingTorch) torch.SetActive(true);
             menuPanels[4].SetActive(true);
             MasterManager.Instance.LockCursor(true);
         }
@@ -283,11 +291,11 @@ public class playerController : MonoBehaviour
     public void Exit() => Application.Quit();
 
 
-    void EquipTorch()
+    void EquipTorch(bool equip)
     {
         if (!hasTorch || !_canEquipTorch) return;
-        torch.SetActive(!torch.activeSelf);
-        holdingTorch = torch.activeSelf;
+        holdingTorch = equip;
+        torch.SetActive(equip);
     }
 
     public void FreezePlayerForCutScene(bool freeze)
@@ -295,7 +303,7 @@ public class playerController : MonoBehaviour
         FreezePlayer(freeze);
         _canEquipTorch = !freeze;
         _canOpenInventory = !freeze;
-        if(!freeze)EquipTorch();
+        //if(!freeze)EquipTorch();
     }
 
     IEnumerator InventoryAddInform(string name)

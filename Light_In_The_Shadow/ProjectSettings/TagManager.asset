@@ -13,6 +13,8 @@ TagManager:
   - DialNumber
   - ClickInteract
   - BossManBones
+  - FlyingBounds
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -29,8 +31,8 @@ TagManager:
   - InventoryItem
   - DarkThoughts
   - BigBossMan
-  - 
-  - 
+  - DarkBreath
+  - DarkBreathBlock
   - 
   - 
   - 

@@ -111,5 +111,4 @@ public class MasterManager : MonoBehaviour {
         soundtrackMaster.LevelMusicVolume(levelIndex-1,100.0f, 10.0f);
         soundtrackMaster.MemoryMusicVolume(0.0f, 10.0f);
     }
-    
 }

@@ -76,11 +76,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Torch"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""26c5cc1a-e637-4a91-a17f-1daa96892cda"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Digital"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": ""Press(pressPoint=0.01)""
                 }
             ],
             ""bindings"": [
@@ -211,7 +211,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Player"",
                     ""action"": ""Torch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

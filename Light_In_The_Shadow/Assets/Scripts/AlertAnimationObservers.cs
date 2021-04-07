@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Puzzles;
@@ -20,6 +21,7 @@ public class AlertAnimationObservers : MonoBehaviour
     
     public void AlertObservers(string message)
     {
+        
         if (message.Equals("AnimationComplete"))
         {
             switch (alertWho)
@@ -50,11 +52,14 @@ public class AlertAnimationObservers : MonoBehaviour
 
                 case AlertWho.BossManLogic:
                 {
-                    BossManLogic(message);
                     break;
                 }
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
+        
+        else BossManLogic(message);
 
       
     }
@@ -64,12 +69,12 @@ public class AlertAnimationObservers : MonoBehaviour
         
         if (message.Equals("BreathDarkness"))
         {
-            StartCoroutine(FindObjectOfType<BossFight>().BreathDarkness());
+            StartCoroutine(FindObjectOfType<BossFight>().SpawnDarkness());
         }
         
         else if (message.Equals("SpawnMonsters"))
         {
-            FindObjectOfType<BossFight>().SpawnMonsters();
+            StartCoroutine(FindObjectOfType<BossFight>().SpawnMonsters());
         }
         
     }

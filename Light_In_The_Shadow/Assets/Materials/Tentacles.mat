@@ -69,7 +69,7 @@ Material:
     - _UseNormalMap: 0
     - _UseRoughnessMap: 0
     - _doubleSided: 0
-    - _health: 100
+    - _health: 1000
     - _inverse: 1
     m_Colors:
     - Color_75ef8c5a49554fc286800d86b7868caa: {r: 1, g: 1, b: 1, a: 1}

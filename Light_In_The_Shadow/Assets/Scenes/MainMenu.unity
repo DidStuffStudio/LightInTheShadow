@@ -262,6 +262,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.5669087
       objectReference: {fileID: 0}
+    - target: {fileID: 1735364297, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: interactionDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735364297, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: darkThoughtInteractionDistance
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 180511454675759513, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_IsActive
       value: 0

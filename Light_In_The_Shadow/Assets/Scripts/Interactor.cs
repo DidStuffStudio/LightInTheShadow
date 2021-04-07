@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class Interactor : MonoBehaviour
 {
     private Camera _cam;
-    public float interactionDistance = 20;
+    public float interactionDistance = 20, darkThoughtInteractionDistance = 40;
     private GameObject _lastHitObject, _hitTorchObject, _lastHitDarkThought;
     public bool inventoryItemHit;
     public GameObject inventoryItem = null;
@@ -114,15 +114,15 @@ public class Interactor : MonoBehaviour
             }
             else if (!_isTorchHitNull) DisableTorchInteraction();
 
-            if (Physics.Raycast(torchRay, out var darkThoughtHit, interactionDistance, _darkThoughtsLayerMask)) // If we hit a monster
+            if (Physics.Raycast(torchRay, out var darkThoughtHit, darkThoughtInteractionDistance, _darkThoughtsLayerMask)) // If we hit a monster
             {
                 var monster = darkThoughtHit.transform.gameObject;
                 
-                if(_hitDarkThoughNull) HitDarkThought(monster, true);
+                if(_hitDarkThoughNull) HitDarkThought(monster);
                 
                 else if(monster != _lastHitDarkThought){
-                    HitDarkThought(_lastHitDarkThought, false);
-                    HitDarkThought(monster, true); //If it hasn't been hit yet, hit it
+                    ReleaseDarkThought(_lastHitDarkThought);
+                    HitDarkThought(monster); //If it hasn't been hit yet, hit it
                 }
             }
             else if (!_hitDarkThoughNull) ReleaseDarkThought(_lastHitDarkThought); //If we didn't hit a monster and one is still being damaged, inform it the torch isn't hitting it
@@ -188,20 +188,25 @@ public class Interactor : MonoBehaviour
         _isInventoryItemNull = true;
     }
     
-    void HitDarkThought(GameObject darkThought, bool hit)
+    void HitDarkThought(GameObject darkThought)
     {
-        var dark = darkThought.transform.GetComponent<DarkThought>();
-        dark.hitByTorch = hit;
-        if (!hit) return;
-        StartCoroutine(dark.DestroyByLight());
-        _lastHitDarkThought = darkThought;
-        _hitDarkThoughNull = false;
+        if (darkThought.transform.GetComponent<DarkThought>() != null)
+        {
+            var dark = darkThought.transform.GetComponent<DarkThought>();
+            dark.hitByTorch = true;
+            _lastHitDarkThought = darkThought;
+        }
+        else _hitDarkThoughNull = true;
     }
 
     public void ReleaseDarkThought(GameObject darkThought)
     {
-        var dark = darkThought.transform.GetComponent<DarkThought>();
-        dark.hitByTorch = false;
+        if (darkThought.transform.GetComponent<DarkThought>() != null)
+        {
+            var dark = darkThought.transform.GetComponent<DarkThought>();
+            dark.hitByTorch = false;
+        }
+
         _lastHitDarkThought = null;
         _hitDarkThoughNull = true;
     }
