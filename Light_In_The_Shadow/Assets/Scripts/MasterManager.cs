@@ -15,6 +15,7 @@ public class MasterManager : MonoBehaviour {
     public SoundtrackMaster soundtrackMaster;
     public GameObject[] portals = new GameObject[4];
     public Interactor interactor;
+    public bool isInFocusState;
 
     public static MasterManager Instance {
         get {

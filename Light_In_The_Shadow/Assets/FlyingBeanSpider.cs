@@ -11,8 +11,9 @@ public class FlyingBeanSpider : DarkThought
     private bool _isAttacking, _isPatrolling;
     [SerializeField] private float flyingSpeed = 10.0f, rotationSpeed = 5.0f;
     [SerializeField] private Transform flyTowardsPoint;
-    [SerializeField] private float timeBetweenAttacks;
+    [SerializeField] private float timeBetweenAttacks, fallbackDestroyTime = 30.0f;
     private bool _canAttack = true;
+    private bool hasAttackedInLastXSeconds;
 
     protected override void Start()
     {
@@ -20,6 +21,7 @@ public class FlyingBeanSpider : DarkThought
         
         base.Start();
         GetRandomPointInRange();
+        StartCoroutine(FallbackDestroy());
     }
 
     protected override void Update()
@@ -92,6 +94,27 @@ public class FlyingBeanSpider : DarkThought
         yield return new WaitForSeconds(timeBetweenAttacks);
         _canAttack = true;
 
+    }
+
+    IEnumerator FallbackDestroy() //If hasn't managed to attack in x seconds destroy it so it doesn't break the game
+    {
+        while (alive)
+        {
+            StartCoroutine(CheckIfAttacking());
+            yield return new WaitForSeconds(fallbackDestroyTime);
+            if(!hasAttackedInLastXSeconds)StartCoroutine(Explode());
+        }
+    }
+
+    IEnumerator CheckIfAttacking()
+    {
+        var timer = 0.0f;
+        while (timer < fallbackDestroyTime)
+        {
+            yield return new WaitForSeconds(1.0f);
+            timer += 1.0f;
+            if (_isAttacking) hasAttackedInLastXSeconds = true;
+        }
     }
     
 }

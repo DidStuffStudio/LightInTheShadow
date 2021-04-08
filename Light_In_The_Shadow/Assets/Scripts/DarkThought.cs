@@ -97,7 +97,7 @@ public class DarkThought : MonoBehaviour
         }
     }
 
-    IEnumerator Explode()
+    protected IEnumerator Explode()
     {
         if (MasterManager.Instance.levelIndex == 3)
         {

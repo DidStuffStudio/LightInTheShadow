@@ -24,7 +24,7 @@ namespace Puzzles
         public void CheckIfHasKey()
         {
             var hasKey = false;
-            foreach (var item in inventorySystem.itemsInInventory.Where(item => item.name.Contains("Key"))) hasKey = true;
+            foreach (var dummy in inventorySystem.itemsInInventory.Where(item => item.name.Contains("Key"))) hasKey = true;
             if (hasKey)
             {
                 door.Play("Scene");

@@ -119,14 +119,12 @@ namespace Puzzles
 
         protected virtual void BoyAnimations()
         {
-            //childCharacterGameObjects[_boyAnimatorIndex].SetActive(false);
             foreach (var meshRender in childCharacterGameObjects[_boyAnimatorIndex].GetComponentsInChildren<SkinnedMeshRenderer>())
             {
                 meshRender.enabled = false;
             }
             _boyAnimatorIndex++;
             if (_boyAnimatorIndex > _boyAnimators.Length - 1) _boyAnimatorIndex = 0;
-            //childCharacterGameObjects[_boyAnimatorIndex].SetActive(true);
             foreach (var meshRender in childCharacterGameObjects[_boyAnimatorIndex].GetComponentsInChildren<SkinnedMeshRenderer>())
             {
                 meshRender.enabled = true;
@@ -136,12 +134,12 @@ namespace Puzzles
 
         protected virtual void FocusOnPuzzleItem(bool focus)
         {
-            print("Being Called");
             MasterManager.Instance.interactor.mouseControl = focus;
             MasterManager.Instance.LockCursor(!focus);
             _focused = focus;
             puzzleFocusCamera.SetActive(focus);
             puzzleObject.GetComponent<Collider>().enabled = !focus;
+            MasterManager.Instance.isInFocusState = focus;
             if (!focus) return;
             MasterManager.Instance.interactor.DisableLastHitObject(puzzleObject);
         }

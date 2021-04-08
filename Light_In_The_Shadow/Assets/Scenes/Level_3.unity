@@ -252,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7985086443184911362, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 780587526, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
@@ -2355,7 +2355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1518844805
 Transform:
   m_ObjectHideFlags: 0
@@ -2878,7 +2878,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d13c7e37288767344b904763124e8f5e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2772c74f6361879409221eb29b573be7, type: 2}
+      objectReference: {fileID: 2100000, guid: d3cc45c0a8b409f4cb7760e82cb07ea5, type: 2}
     - target: {fileID: 919132149155446097, guid: d13c7e37288767344b904763124e8f5e, type: 3}
       propertyPath: m_Name
       value: Level_3_Cliffs
@@ -3114,7 +3114,7 @@ MonoBehaviour:
   bigBossMouth: {fileID: 1525592312}
   flyingBean: {fileID: 6226313335858314873, guid: 21ab93cf099f8684bb69d13ef66fa6a8, type: 3}
   spawnPoint: {fileID: 1229677891}
-  numberOfFlyingBeans: 20
+  numberOfFlyingBeans: 1
   breathForce: 50
   numberOfMonsters: 0
 --- !u!1 &1966594006

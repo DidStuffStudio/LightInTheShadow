@@ -2216,7 +2216,8 @@ MonoBehaviour:
   flyingSpeed: 15
   rotationSpeed: 2
   flyTowardsPoint: {fileID: 1804398965}
-  timeBetweenAttacks: 0
+  timeBetweenAttacks: 10
+  fallbackDestroyTime: 30
 --- !u!135 &919132148615073315
 SphereCollider:
   m_ObjectHideFlags: 0

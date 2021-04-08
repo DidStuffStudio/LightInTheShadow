@@ -172,7 +172,7 @@ public class playerController : MonoBehaviour
 
 
         
-        if (!menuPanels[3].activeSelf)
+        if (!menuPanels[3].activeSelf) //If inventory is closed open it
         {
             _forwardRendererData.rendererFeatures[0].SetActive(true);
             /*if (torch.activeSelf)
@@ -187,7 +187,7 @@ public class playerController : MonoBehaviour
             Time.timeScale = 0;
             MasterManager.Instance.LockCursor(false);
         }
-        else
+        else //If inventory is open close it
         {
             _forwardRendererData.rendererFeatures[0].SetActive(false);
             Time.timeScale = 1.0f;
@@ -198,7 +198,7 @@ public class playerController : MonoBehaviour
             inventory.descriptionPanel.SetActive(false);
             //if(hasTorch && _wasHoldingTorch) torch.SetActive(true);
             menuPanels[4].SetActive(true);
-            MasterManager.Instance.LockCursor(true);
+            if(!MasterManager.Instance.isInFocusState) MasterManager.Instance.LockCursor(true);
         }
     }
 
@@ -243,11 +243,11 @@ public class playerController : MonoBehaviour
         if (paused)
         {
             _forwardRendererData.rendererFeatures[0].SetActive(false);
-            MasterManager.Instance.LockCursor(true);
             Time.timeScale = 1.0f;
             FreezePlayer(false);
             menuPanels[4].SetActive(true);
             paused = false;
+            if(!MasterManager.Instance.isInFocusState) MasterManager.Instance.LockCursor(true);
         }
         else
         {  
