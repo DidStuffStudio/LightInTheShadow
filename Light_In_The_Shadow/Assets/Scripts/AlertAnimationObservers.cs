@@ -52,6 +52,7 @@ public class AlertAnimationObservers : MonoBehaviour
 
                 case AlertWho.BossManLogic:
                 {
+                    FindObjectOfType<BossFight>().EndCutscene();
                     break;
                 }
                 default:
@@ -70,6 +71,11 @@ public class AlertAnimationObservers : MonoBehaviour
         if (message.Equals("BreathDarkness"))
         {
             StartCoroutine(FindObjectOfType<BossFight>().SpawnDarkness());
+        }
+        
+        if (message.Equals("DestroyBigBossMan"))
+        {
+            StartCoroutine(FindObjectOfType<BossFight>().KillBigBossMan());
         }
         
         else if (message.Equals("SpawnMonsters"))

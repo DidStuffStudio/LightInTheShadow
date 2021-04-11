@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class MasterManager : MonoBehaviour {
     // instance of the Master Manager
     private static MasterManager _instance;
-    public VolumeProfile[] levelPP; //TODO Make post processing volumes and fog lerp between levels
+    public VolumeProfile[] levelPP;
+    public Volume ppVolume;
     public int levelIndex = 1;
     public playerController player;
     public InventorySystem inventory;
