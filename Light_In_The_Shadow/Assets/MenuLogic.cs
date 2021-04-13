@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuLogic : MonoBehaviour {
-    public playerController player;
+    public PlayerController player;
     public GameObject settingsPanel, pauseMenuPanel, mainMenuPanel;
     public bool paused = false, isMainMenu = false;
     public MasterManager manager;

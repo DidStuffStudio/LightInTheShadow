@@ -86,7 +86,19 @@ public class BossFight : MonoBehaviour
         if (health < 0 && alive)
         {
             alive = false;
+            MasterManager.Instance.player.playerHealth = 100;
             StartCutscene();
+            
+        }
+    }
+
+    public void RestartLevel()
+    {
+        health = 100.0f;
+        foreach (var flyingBean in FindObjectsOfType<FlyingBeanSpider>())
+        {
+            MasterManager.Instance.interactor.ReleaseDarkThought(flyingBean.gameObject);
+            Destroy(flyingBean);
         }
     }
 

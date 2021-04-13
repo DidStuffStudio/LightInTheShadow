@@ -9,7 +9,7 @@ public class PortalBlock : MonoBehaviour
    {
       print("Collided");
       if (other.gameObject.layer != 10) return;
-      var playerController = other.gameObject.GetComponentInChildren<playerController>();
+      var playerController = other.gameObject.GetComponentInChildren<PlayerController>();
       playerController.helpText.text = "This part of the mind is still to unclear to enter yet. Something must be missing...";
       playerController.OpenHelpMenu(true);
    }

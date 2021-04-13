@@ -211,6 +211,7 @@
         <e p="FlyingBeanSpider.cs" t="Include" />
         <e p="FlyingCollisionCheck.cs" t="Include" />
         <e p="Follow.cs" t="Include" />
+        <e p="Health.cs" t="Include" />
         <e p="HurtPlayer.cs" t="Include" />
         <e p="MenuLogic.cs" t="Include" />
         <e p="PortalBlock.cs" t="Include" />

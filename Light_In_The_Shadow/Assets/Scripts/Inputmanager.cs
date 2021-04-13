@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Inputmanager : MonoBehaviour
 {
-    private PlayerControls playerControls;
+    private PlayerControls _playerControls;
 
     private static Inputmanager _instance;
+    
+    //TODO Add all inputs here so we can reference them properly from other scripts as well as functions to detect what the input is so we can change UI hints
+    
+    
     public static Inputmanager Instance
     {
         get
@@ -18,31 +22,31 @@ public class Inputmanager : MonoBehaviour
     private void Awake()
     {
        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
-        playerControls = new PlayerControls();
+       {
+           Destroy(this.gameObject);
+       }
+       else
+       {
+           _instance = this;
+       }
+       _playerControls = new PlayerControls();
 
     }
     private void OnEnable()
     {
-        playerControls.Enable();
+        _playerControls.Enable();
     }
     private void OnDisable()
     {
-        playerControls.Disable();
+        _playerControls.Disable();
     }
 
-    public Vector2 getPlayerMovement()
+    public Vector2 GetPlayerMovement()
     {
-        return playerControls.Player.Movement.ReadValue<Vector2>();
+        return _playerControls.Player.Movement.ReadValue<Vector2>();
     }
-    public Vector2 getMouseDelta()
+    public Vector2 GetMouseDelta()
     {
-        return playerControls.Player.Look.ReadValue<Vector2>();
+        return _playerControls.Player.Look.ReadValue<Vector2>();
     }
 }

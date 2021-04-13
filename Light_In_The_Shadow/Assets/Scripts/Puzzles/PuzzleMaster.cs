@@ -28,7 +28,7 @@ namespace Puzzles
     
     
         private Animator _memoryLightAnimator;  
-        private protected playerController playerController;
+        private protected PlayerController playerController;
         private protected InventorySystem inventorySystem;
         private protected bool finished, fadeInNow;
         private protected PuzzleAudio puzzleAudio;

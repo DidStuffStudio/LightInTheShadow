@@ -11,7 +11,7 @@ public class MasterManager : MonoBehaviour {
     public VolumeProfile[] levelPP;
     public Volume ppVolume;
     public int levelIndex = 1;
-    public playerController player;
+    public PlayerController player;
     public InventorySystem inventory;
     public SoundtrackMaster soundtrackMaster;
     public GameObject[] portals = new GameObject[4];
@@ -28,8 +28,13 @@ public class MasterManager : MonoBehaviour {
         }
     }
 
-    
 
+    void ScaleUI()
+    {
+        // TODO Detect screen size and scale UI Accordingly
+    }
+
+    
     public void ChangeLevelAudio()
     {
         // Level 1 music is index 0, level 2 is 1 and so on
@@ -100,7 +105,7 @@ public class MasterManager : MonoBehaviour {
         if (enable) return;
         portals[2].SetActive(false);
         portals[3].SetActive(false);
-        player.GetComponent<playerController>().NewRespawnPoint();
+        player.GetComponent<PlayerController>().NewRespawnPoint();
     }
 
     public void Quality(int qualityIndex) {

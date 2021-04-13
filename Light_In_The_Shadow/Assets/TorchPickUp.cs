@@ -12,14 +12,14 @@ public class TorchPickUp : MonoBehaviour
     private GameObject _playerCam;
     private bool _inRange;
     private PlayerControls _playerControls;
-    private playerController _playerController;
+    private PlayerController _playerController;
 
     private Action func; 
 
     void Start()
     {
 
-        _playerController = FindObjectOfType<playerController>();
+        _playerController = FindObjectOfType<PlayerController>();
         _playerControls = _playerController.playerControls;
         _playerCam = Camera.main.gameObject;
         canvas = GetComponentInChildren<Canvas>().gameObject;
@@ -58,5 +58,15 @@ public class TorchPickUp : MonoBehaviour
         canvas.transform.LookAt(_playerCam.transform);
         if(Input.GetKeyDown(KeyCode.E)) PickupTorch();
     }
-    
+
+    private void OnEnable()
+    {
+        _playerControls = new PlayerControls();
+        _playerControls.Player.PickUp.started += _ => PickupTorch();
+    }
+
+    private void OnDisable()
+    {
+        _playerControls.Player.PickUp.started -= _ => PickupTorch();
+    }
 }

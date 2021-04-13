@@ -4,27 +4,32 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
-public class playerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [HideInInspector]
-    public CharacterController controller;
+    [HideInInspector] public CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     public float playerSpeed = 2.0f;
     private float _privatePlayerSpeed;
+
     private float jumpHeight = 1.0f;
+
     //private Inputmanager inputmanager;
     private Transform cameraTransform;
-    public GameObject[] menuPanels = new GameObject[7]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is help menu, 6 is inventory inform
+
+    public GameObject[]
+        menuPanels =
+            new GameObject[7]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is help menu, 6 is inventory inform
+
     private bool playerFrozen;
     public InventorySystem inventory;
-    [HideInInspector]
-    public bool isRunning;
+    [HideInInspector] public bool isRunning;
     public Vector3 respawnLocation;
     public CinemachineVirtualCamera playerCam;
     public PlayerControls playerControls;
@@ -39,6 +44,12 @@ public class playerController : MonoBehaviour
     public int mouseSensitivity = 150;
     [SerializeField] private ForwardRendererData _forwardRendererData;
     public int playerHealth = 100;
+    private Volume _postProcessing;
+    public int healthRegenerationRate = 1;
+    [SerializeField] private bool regenerateHealth;
+    private int _healthWas;
+    [SerializeField] private GameObject healthPanel;
+    private List<Image> _healthPanelImages = new List<Image>();
 
 
     private void Awake()
@@ -51,7 +62,8 @@ public class playerController : MonoBehaviour
     {
         _forwardRendererData.rendererFeatures[0].SetActive(false);
         MasterManager.Instance.LockCursor(false);
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0)) {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0))
+        {
             isMainMenu = true;
             FreezePlayer(true);
         }
@@ -66,24 +78,46 @@ public class playerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         cameraTransform = Camera.main.transform;
         playerControls.Player.OpenInventory.performed += _ => OpenInventory();
-        playerControls.Player.PickUp.started += _ => pickupObject();
-        playerControls.Player.HighlightObject.performed += _ => highlightObject();
+        playerControls.Player.PickUp.started += _ => PickupObject();
+        playerControls.Player.HighlightObject.performed += _ => HighlightObject();
         playerControls.Player.PlayPause.performed += _ => PlayPause();
         playerControls.Player.Torch.performed += _ => EquipTorch(true);
         playerControls.Player.Torch.canceled += _ => EquipTorch(false);
-        
+
         torch.SetActive(false);
+        _postProcessing = MasterManager.Instance.ppVolume;
+        foreach (var image in healthPanel.GetComponentsInChildren<Image>())
+        {
+            _healthPanelImages.Add(image);
+        }
+        if (regenerateHealth) StartCoroutine(RegenHealth());
 
     }
-    
+
 
     void FixedUpdate()
     {
 
+        if (playerHealth != _healthWas)
+        {
+            if (!_postProcessing.profile.TryGet<Vignette>(out var vignette))
+                throw new NullReferenceException(nameof(vignette));
+
+            var value = Map(playerHealth, 100, 0, 0, 1);
+
+            vignette.intensity.Override(value);
+            foreach (var img in _healthPanelImages)
+            {
+                img.color = new Color(0,0,0,value);
+            }
+
+        }
+
         if (playerHealth <= 0)
         {
-            transform.position = GetComponent<playerController>().respawnLocation;
+            RespawnPlayer();
         }
+
         groundedPlayer = controller.isGrounded;
 
         _privatePlayerSpeed = !controller.isGrounded ? 0.0f : playerSpeed;
@@ -93,24 +127,33 @@ public class playerController : MonoBehaviour
             _privatePlayerSpeed = playerSpeed;
             playerVelocity.y = gravity;
         }
-        else if(!playerFrozen)
+        else if (!playerFrozen)
         {
             _privatePlayerSpeed = 0.0f;
             playerVelocity.y += gravity * Time.deltaTime;
         }
-        
+
         if (!playerFrozen)
         {
             var movement = playerControls.Player.Movement.ReadValue<Vector2>();
-            var move = new Vector3(movement.x,0f,movement.y);
-            move = cameraTransform.forward * move.z+cameraTransform.right*move.x;
+            var move = new Vector3(movement.x, 0f, movement.y);
+            move = cameraTransform.forward * move.z + cameraTransform.right * move.x;
             move.y = 0;
             controller.Move(move * Time.deltaTime * _privatePlayerSpeed);
-            controller.Move(playerVelocity * Time.deltaTime);        
+            controller.Move(playerVelocity * Time.deltaTime);
         }
+
         torch.transform.parent.transform.rotation = cameraTransform.rotation;
+        _healthWas = playerHealth;
     }
-    
+
+    public void RespawnPlayer()
+    {
+        if(MasterManager.Instance.levelIndex == 3) FindObjectOfType<BossFight>().RestartLevel();
+        playerHealth = 100;
+        transform.position = GetComponent<PlayerController>().respawnLocation;
+    }
+
     public void PlayFromMainMenu()
     {
         FreezePlayer(false);
@@ -119,15 +162,16 @@ public class playerController : MonoBehaviour
         isMainMenu = false;
         MasterManager.Instance.portals[0].SetActive(true);
         MasterManager.Instance.portals[1].SetActive(true);
-        MasterManager.Instance.soundtrackMaster.MainThemeVolume(0,5.0f);
+        MasterManager.Instance.soundtrackMaster.MainThemeVolume(0, 5.0f);
         MasterManager.Instance.soundtrackMaster.PlayLevelMusic(1, true);
         MasterManager.Instance.soundtrackMaster.PlayLevelAmbience(1, true);
-        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(1,100, 5.0f);
-        MasterManager.Instance.soundtrackMaster.LevelAmbienceVolume(1,0, 0.1f);
+        MasterManager.Instance.soundtrackMaster.LevelMusicVolume(1, 100, 5.0f);
+        MasterManager.Instance.soundtrackMaster.LevelAmbienceVolume(1, 0, 0.1f);
         MasterManager.Instance.LockCursor(true);
-        
-        
+
+
     }
+
     public void NewRespawnPoint()
     {
         respawnLocation = transform.position;
@@ -141,7 +185,7 @@ public class playerController : MonoBehaviour
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0.0f;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0.0f;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0.0f;
-            Physics.gravity = new Vector3(0,0,0);
+            Physics.gravity = new Vector3(0, 0, 0);
         }
 
         else
@@ -150,7 +194,7 @@ public class playerController : MonoBehaviour
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = mouseSensitivity;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = mouseSensitivity;
-            Physics.gravity = new Vector3(0,gravity,0);
+            Physics.gravity = new Vector3(0, gravity, 0);
         }
     }
 
@@ -166,12 +210,13 @@ public class playerController : MonoBehaviour
         menuPanels[5].SetActive(enable);
         MasterManager.Instance.LockCursor(!enable);
     }
+
     void OpenInventory()
     {
         if (paused || isMainMenu || !_canOpenInventory) return;
 
 
-        
+
         if (!menuPanels[3].activeSelf) //If inventory is closed open it
         {
             _forwardRendererData.rendererFeatures[0].SetActive(true);
@@ -198,13 +243,13 @@ public class playerController : MonoBehaviour
             inventory.descriptionPanel.SetActive(false);
             //if(hasTorch && _wasHoldingTorch) torch.SetActive(true);
             menuPanels[4].SetActive(true);
-            if(!MasterManager.Instance.isInFocusState) MasterManager.Instance.LockCursor(true);
+            if (!MasterManager.Instance.isInFocusState) MasterManager.Instance.LockCursor(true);
         }
     }
 
 
-    void pickupObject()
-    {    
+    void PickupObject()
+    {
         if (interactRayCast.inventoryItemHit)
         {
             var temp = Instantiate(interactRayCast.inventoryItem.gameObject, itemHolder.transform, false);
@@ -214,7 +259,7 @@ public class playerController : MonoBehaviour
             inventory.idsInInventory.Add(temp.GetComponent<item>().id);
             temp.GetComponent<item>().inInventory = true;
             temp.GetComponent<Outline>().enabled = false;
-            temp.transform.localPosition = new Vector3(-250 + 100 * inventory.itemsInInventory.Count, 0, -10) ;
+            temp.transform.localPosition = new Vector3(-250 + 100 * inventory.itemsInInventory.Count, 0, -10);
             temp.transform.localScale *= 50;
             temp.transform.gameObject.layer = 5;
             interactRayCast.inventoryItemHit = false;
@@ -224,7 +269,8 @@ public class playerController : MonoBehaviour
             Destroy(item);
         }
     }
-    void highlightObject()
+
+    void HighlightObject()
     {
         RaycastHit hitInfo = new RaycastHit();
         bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
@@ -233,7 +279,7 @@ public class playerController : MonoBehaviour
             inventory.ShowHighlightedItem(hitInfo.transform.gameObject);
         }
     }
-    
+
 
     public void PlayPause()
     {
@@ -247,10 +293,10 @@ public class playerController : MonoBehaviour
             FreezePlayer(false);
             menuPanels[4].SetActive(true);
             paused = false;
-            if(!MasterManager.Instance.isInFocusState) MasterManager.Instance.LockCursor(true);
+            if (!MasterManager.Instance.isInFocusState) MasterManager.Instance.LockCursor(true);
         }
         else
-        {  
+        {
             _forwardRendererData.rendererFeatures[0].SetActive(true);
             MasterManager.Instance.LockCursor(false);
             paused = true;
@@ -268,15 +314,17 @@ public class playerController : MonoBehaviour
             panel.SetActive(false);
         }
     }
-    
-    public void Settings() {
+
+    public void Settings()
+    {
         ClosePanels();
         menuPanels[2].SetActive(true);
     }
 
-    public void Back() {
+    public void Back()
+    {
         ClosePanels();
-        if (isMainMenu)menuPanels[0].SetActive(true);
+        if (isMainMenu) menuPanels[0].SetActive(true);
         else
         {
             menuPanels[1].SetActive(true);
@@ -284,7 +332,8 @@ public class playerController : MonoBehaviour
     }
 
 
-    public void Quality(int qualityIndex) {
+    public void Quality(int qualityIndex)
+    {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
@@ -306,13 +355,36 @@ public class playerController : MonoBehaviour
         //if(!freeze)EquipTorch();
     }
 
-    IEnumerator InventoryAddInform(string name)
+    IEnumerator RegenHealth()
+    {
+        while (true)
+        {
+            if (playerHealth < 100)
+            {
+                playerHealth += healthRegenerationRate; 
+            }
+            else
+            {
+                playerHealth = 100;
+            }
+            yield return new WaitForSeconds(1.0f); 
+        }
+        
+    }
+
+
+IEnumerator InventoryAddInform(string name)
     {
         inventoryInformText.text = "A " + name + " has been added to your inventory (Press tab to view it)";
         menuPanels[6].SetActive(true);
         yield return new WaitForSeconds(3.0f);
         menuPanels[6].SetActive(false);
     }
+
+float Map(float s, float a1, float a2, float b1, float b2)
+{
+    return b1 + (s-a1)*(b2-b1)/(a2-a1);
+}
     private void OnEnable()
     {
         playerControls.Enable();
