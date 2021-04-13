@@ -156,19 +156,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 991667999, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.059778187
+      value: 0.05235405
       objectReference: {fileID: 0}
     - target: {fileID: 991667999, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.02175748
+      value: 0.036136873
       objectReference: {fileID: 0}
     - target: {fileID: 991667999, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9377893
+      value: 0.8213208
       objectReference: {fileID: 0}
     - target: {fileID: 991667999, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3413274
+      value: -0.5669087
       objectReference: {fileID: 0}
     - target: {fileID: 1279608134, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_IsActive
@@ -201,6 +201,10 @@ PrefabInstance:
     - target: {fileID: 4684040776900071835, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_LocalPosition.z
       value: 33.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684040776900071836, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: hasTorch
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4892700204647691949, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_IsActive
@@ -249,6 +253,10 @@ PrefabInstance:
     - target: {fileID: 7985086443184911360, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985086443184911361, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: levelIndex
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7985086443184911362, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_Name
@@ -3482,7 +3490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa614a5dfcf08843881cd2c38cb67c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alertWho: 4
+  alertWho: 6
 --- !u!4 &1203068383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5985246956061787112, guid: d73aadc8a07aa5a43aa2680ca6f80308, type: 3}
