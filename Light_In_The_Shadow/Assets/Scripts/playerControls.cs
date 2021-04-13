@@ -81,6 +81,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press(pressPoint=0.01)""
+                },
+                {
+                    ""name"": ""BreakingIce"",
+                    ""type"": ""Button"",
+                    ""id"": ""970b6d1d-fa21-4b77-b252-d3c7250754be"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.01)""
                 }
             ],
             ""bindings"": [
@@ -270,6 +278,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Torch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""31268c2d-5a25-46e7-a66b-d331b286cd12"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player"",
+                    ""action"": ""BreakingIce"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -292,6 +311,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player_rotateObject = m_Player.FindAction("rotateObject", throwIfNotFound: true);
         m_Player_PlayPause = m_Player.FindAction("PlayPause", throwIfNotFound: true);
         m_Player_Torch = m_Player.FindAction("Torch", throwIfNotFound: true);
+        m_Player_BreakingIce = m_Player.FindAction("BreakingIce", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -349,6 +369,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_rotateObject;
     private readonly InputAction m_Player_PlayPause;
     private readonly InputAction m_Player_Torch;
+    private readonly InputAction m_Player_BreakingIce;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -361,6 +382,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @rotateObject => m_Wrapper.m_Player_rotateObject;
         public InputAction @PlayPause => m_Wrapper.m_Player_PlayPause;
         public InputAction @Torch => m_Wrapper.m_Player_Torch;
+        public InputAction @BreakingIce => m_Wrapper.m_Player_BreakingIce;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -394,6 +416,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Torch.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTorch;
                 @Torch.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTorch;
                 @Torch.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTorch;
+                @BreakingIce.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBreakingIce;
+                @BreakingIce.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBreakingIce;
+                @BreakingIce.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBreakingIce;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -422,6 +447,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Torch.started += instance.OnTorch;
                 @Torch.performed += instance.OnTorch;
                 @Torch.canceled += instance.OnTorch;
+                @BreakingIce.started += instance.OnBreakingIce;
+                @BreakingIce.performed += instance.OnBreakingIce;
+                @BreakingIce.canceled += instance.OnBreakingIce;
             }
         }
     }
@@ -445,5 +473,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnRotateObject(InputAction.CallbackContext context);
         void OnPlayPause(InputAction.CallbackContext context);
         void OnTorch(InputAction.CallbackContext context);
+        void OnBreakingIce(InputAction.CallbackContext context);
     }
 }

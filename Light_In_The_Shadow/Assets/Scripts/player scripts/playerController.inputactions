@@ -68,6 +68,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(pressPoint=0.01)"
+                },
+                {
+                    "name": "BreakingIce",
+                    "type": "Button",
+                    "id": "970b6d1d-fa21-4b77-b252-d3c7250754be",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.01)"
                 }
             ],
             "bindings": [
@@ -255,6 +263,17 @@
                     "processors": "",
                     "groups": "Player",
                     "action": "Torch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31268c2d-5a25-46e7-a66b-d331b286cd12",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player",
+                    "action": "BreakingIce",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
