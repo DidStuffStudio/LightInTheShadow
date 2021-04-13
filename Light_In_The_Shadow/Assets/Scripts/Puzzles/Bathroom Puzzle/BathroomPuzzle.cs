@@ -28,9 +28,11 @@ public class BathroomPuzzle : PuzzleMaster {
     public int detachedWoodenPlanks = 0;
     [SerializeField] private int numberWoodenPlanks;
     private bool puzzleSolved;
+    private GameObject originalPuzzleObject;
 
     protected override void Start() {
         base.Start();
+        originalPuzzleObject = puzzleObject;
         crowbar = puzzleObject;
         fadeSpeedIncrement = 0.001f;
         _originalRotation = puzzleObject.transform.rotation;
@@ -66,6 +68,7 @@ public class BathroomPuzzle : PuzzleMaster {
     private void PuzzleSolved() {
         puzzleSolved = true;
         correct = true;
+        puzzleObject = originalPuzzleObject;
     }
 
     public void UpdateWoodenPlank() {

@@ -12,7 +12,7 @@ public class ChangeFadeGizmo : MonoBehaviour
     {
         if (other.gameObject.layer == 10)
         {
-            gizmo.transform.position = transform.position;
+            //gizmo.transform.position = transform.position;
         }
     }
 }

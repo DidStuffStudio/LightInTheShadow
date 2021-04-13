@@ -23,41 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AmaticSC-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AmaticSC-Bold.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AmaticSC-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AmaticSC-Regular.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/KickDoor.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/KickDoor.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/Kid Jumping.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/Kid Jumping.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/KidHoldingDoor 1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/KidHoldingDoor 1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/KidRunning.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/KidRunning.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/StrangleScene.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/StrangleScene.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/BathroomTimeline.playable" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/BathroomTimeline.playable.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/CM vcam1.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/CM vcam1.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/BathroomBoy.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/BathroomBoy.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BathroomMemory.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BathroomMemory.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Level_1/Global Volume.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Level_1/Global Volume.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/iceScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Level_1_PP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Level_2_PP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Level_2_PP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TorchPickUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TorchPickUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Key_Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Key_Item.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/KitchenMemory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/KitchenMemory.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/LivingRoomMem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/ItemCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/ItemCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeFadeGizmo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeFadeGizmo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +62,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerControls.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TorchPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -120,8 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/flicker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" />
         <option value="$PROJECT_DIR$/Assets/PortalBlock.cs" />
         <option value="$PROJECT_DIR$/Assets/MenuLogic.cs" />
@@ -157,7 +136,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" />
         <option value="$PROJECT_DIR$/Assets/TerrainChange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inputmanager.cs" />
@@ -171,6 +149,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChangeFadeGizmo.cs" />
       </list>
     </option>
   </component>
@@ -267,7 +248,7 @@
       <workItem from="1617960858851" duration="198000" />
       <workItem from="1618047642072" duration="10015000" />
       <workItem from="1618211358221" duration="7737000" />
-      <workItem from="1618316618797" duration="9085000" />
+      <workItem from="1618316618797" duration="12819000" />
     </task>
     <servers />
   </component>
@@ -309,16 +290,16 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="477" y="292" width="958" height="490" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616530010744" />
-    <state x="616" y="249" width="672" height="677" key="run.anything.popup" timestamp="1617787098785">
+    <state x="616" y="249" width="672" height="677" key="run.anything.popup" timestamp="1618343086780">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="249" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617787098785" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1618339267865">
+    <state x="616" y="249" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618343086780" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1618342445515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618339267865" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618342445515" />
     <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>
