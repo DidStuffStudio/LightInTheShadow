@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
         cameraTransform = Camera.main.transform;
         playerControls.Player.OpenInventory.performed += _ => OpenInventory();
         playerControls.Player.PickUp.started += _ => PickupObject();
+        playerControls.Player.BreakingIce.performed += _ => breakingIce();
         playerControls.Player.HighlightObject.performed += _ => HighlightObject();
         playerControls.Player.PlayPause.performed += _ => PlayPause();
         playerControls.Player.Torch.performed += _ => EquipTorch(true);
@@ -100,12 +101,12 @@ public class PlayerController : MonoBehaviour
 
         if (playerHealth != _healthWas)
         {
-            if (!_postProcessing.profile.TryGet<Vignette>(out var vignette))
-                throw new NullReferenceException(nameof(vignette));
+            //if (!_postProcessing.profile.TryGet<Vignette>(out var vignette))
+              //  throw new NullReferenceException(nameof(vignette));
 
             var value = Map(playerHealth, 100, 0, 0, 1);
 
-            vignette.intensity.Override(value);
+            //vignette.intensity.Override(value);
             foreach (var img in _healthPanelImages)
             {
                 img.color = new Color(0,0,0,value);
@@ -172,6 +173,17 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void breakingIce()
+    {
+        for (int i = 0; i < inventory.itemsInInventory.Count; i++)
+        {
+            if (inventory.itemsInInventory[i].GetComponent<item>().id.Contains("420"))
+            {
+                GameObject.Find("ice to meet you").GetComponent<iceScript>().counterForIce++;
+            }
+        }
+        
+    }
     public void NewRespawnPoint()
     {
         respawnLocation = transform.position;
