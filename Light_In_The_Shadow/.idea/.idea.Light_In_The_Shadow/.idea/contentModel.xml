@@ -401,6 +401,7 @@
             <e p="ScreenCutoutShader.shader" t="Include" />
           </e>
           <e p="Puzzles" t="Include">
+            <e p="BedroomPuzzle.cs" t="Include" />
             <e p="PhonePuzzle.cs" t="Include" />
             <e p="PuzzleAudio.cs" t="Include" />
             <e p="PuzzleMaster.cs" t="Include" />
