@@ -24,6 +24,7 @@ public class Level : MonoBehaviour
         // activate the appropriate fragment
         memoryFragments[i].SetActive(true);
         memorySlots[i].SetActive(false);
+        _inventorySystem.RemoveItem(memoryIds[i]);
         _puzzlesSolved++;
         if (_puzzlesSolved >= numberOfPuzzles)
         {

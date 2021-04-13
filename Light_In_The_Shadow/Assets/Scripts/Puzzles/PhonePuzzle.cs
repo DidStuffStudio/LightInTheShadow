@@ -2,17 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Management.Instrumentation;
+using System.Net.Mime;
 using System.Runtime.CompilerServices;
 using Puzzles;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class PhonePuzzle : PuzzleMaster
 {
     [Space] [Header("Unique Parameters")] 
     [SerializeField] private GameObject numbersCanvas;
 
+    [SerializeField] private Text numberFeedbackText; 
     [HideInInspector] 
     public bool goingBackToOriginalPos, _isRotating;
     [HideInInspector]
@@ -33,9 +36,10 @@ public class PhonePuzzle : PuzzleMaster
     }
 
     protected override void Update()
-    { 
+    {
+        
         base.Update();
-     if (currentNumber.Length > 3) currentNumber = "";
+        
         if (_isRotating) {
             _rotation = puzzleObject.transform.localRotation.eulerAngles.x;
             var mousePosition = Input.mousePosition - mouseDownPosition;
@@ -47,24 +51,21 @@ public class PhonePuzzle : PuzzleMaster
     
     public void UpdateDialNumber() {
         // check if any of the possible numbers to call contains the currently dialed number
-        var aux = _dialedNumber + currentNumber;
+        
+        _dialedNumber += currentNumber;
+        
         foreach (var number in _possibleNumbersToCall) {
-            if (number == aux) {
+            if (number == _dialedNumber) {
                 // the user starts calling the possible number
-                _dialedNumber = aux;
                 CallNumber();
                 break;
             }
-            // if the already dialed number + this number is part of the possible numbers, add it to the dialed number
-            if (number.StartsWith(aux)) {
-                _dialedNumber = aux;
-            }
         }
+        if (_dialedNumber.Length > 3) _dialedNumber = "";
+        numberFeedbackText.text = _dialedNumber;
     }
 
     private void CallNumber() {
-        
-        _dialedNumber = "";
         correct = true;
     }
     protected override void FadeOutCutscene()

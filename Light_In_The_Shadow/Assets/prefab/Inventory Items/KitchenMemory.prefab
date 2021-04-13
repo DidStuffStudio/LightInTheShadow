@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04eee022e130bb94db9917449bfe4fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Memory
+  itemName: A Memory
   description: It feels good to finally accept that this happened.
   id: KitchenMemory
   inInventory: 0
