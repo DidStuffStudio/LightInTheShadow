@@ -5710,7 +5710,7 @@ MonoBehaviour:
   interactionDistance: 100
   torchStrength: 20
   health: 100
-  healthDecayRate: 50
+  healthDecayRate: 20
   updateTime: 0.2
   alive: 1
   bigBossMan: {fileID: 1203068381}
@@ -5719,8 +5719,8 @@ MonoBehaviour:
   bigBossMouth: {fileID: 1525592312}
   flyingBean: {fileID: 6226313335858314873, guid: 21ab93cf099f8684bb69d13ef66fa6a8, type: 3}
   spawnPoint: {fileID: 1229677891}
-  numberOfFlyingBeans: 20
-  flyingBeansIncreaseRate: 0
+  numberOfFlyingBeans: 2
+  flyingBeansIncreaseRate: 2
   breathForce: 50
   skybox: {fileID: 2100000, guid: 7e791eca5f1a72347b693059399cddb4, type: 2}
   ice: {fileID: 2100000, guid: 8a2fb3018b688084582207c16d5b132b, type: 2}
