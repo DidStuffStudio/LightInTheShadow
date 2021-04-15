@@ -46,7 +46,7 @@ public class TorchPickUp : MonoBehaviour
     void PickupTorch()
     {
         if(_inRange) _playerController.hasTorch = true;
-        _playerController.helpText.text = "You picked up a torch! Toggle it using the right mouse button.";
+        _playerController.helpText.text = "You picked up a torch! Equip it by holding the right mouse button.";
         _playerController.OpenHelpMenu(true);
         
         Destroy(gameObject);

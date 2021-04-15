@@ -10,7 +10,7 @@ public class InventorySystem : MonoBehaviour
     
     public List<GameObject> itemsInInventory = new List<GameObject>();
     public List<String> idsInInventory = new List<string>();
-    public GameObject descriptionPanel,rotatableObject,buttonPanel,itemsholder;
+    public GameObject descriptionPanel, rotatableObject, itemsHolder;
     [SerializeField] private GameObject rotatePivot;
     [SerializeField] private  float sensitivity = 0.5f;
     private Vector3 _mouseReference;
@@ -63,26 +63,24 @@ public class InventorySystem : MonoBehaviour
     }
     
     
-    /*public void dropItem()
+    public void RemoveItem(string id)
     {
-        Transform player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         
-        for (int i = 0; i < itemsInInventory.Count; i++)
+        for (int i = 0; i < idsInInventory.Count; i++)
         {
-            if (itemsInInventory[i].name == highlightedItem.name)
+            if (idsInInventory[i] == id)
             {
-                GameObject removeItem = itemsInInventory[i];
-                GameObject insceneItem = GameObject.Find(removeItem.name);
-                Destroy(highlightedItem);
-                removeItem.SetActive(true);
-                removeItem.transform.position = new Vector3(player.position.x+1, player.position.y, player.position.z+1);
-                itemsInInventory.Remove(removeItem);
-                highlightedItem = null;
-                descriptionPanel.SetActive(false);
+                idsInInventory.Remove(idsInInventory[i]);
+                itemsInInventory.Remove(itemsInInventory[i]);
+                foreach (var item in itemsHolder.GetComponentsInChildren<item>())
+                {
+                    if(item.name.Contains(id)) Destroy(item.gameObject);
+                }
+                break;
             }
         }
    
-    }*/
+    }
     
  
      

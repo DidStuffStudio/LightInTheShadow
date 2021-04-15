@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject[]
         menuPanels =
-            new GameObject[7]; //0 is main menu, 1 is pause menu, 2 is settings, 3 is inventory, 4 is playPanel(crosshairs), 5 is help menu, 6 is inventory inform
+            new GameObject[7]; //0 is pause menu, 1 is settings, 2 is inventory, 3 is playPanel(crosshairs), 4 is help menu, 5 is inventory inform
 
     private bool playerFrozen;
     public InventorySystem inventory;
@@ -70,7 +71,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             ClosePanels();
-            menuPanels[4].SetActive(true);
+            menuPanels[3].SetActive(true);
         }
 
         interactRayCast = GetComponent<Interactor>();
@@ -79,7 +80,7 @@ public class PlayerController : MonoBehaviour
         cameraTransform = Camera.main.transform;
         playerControls.Player.OpenInventory.performed += _ => OpenInventory();
         playerControls.Player.PickUp.started += _ => PickupObject();
-        playerControls.Player.BreakingIce.performed += _ => breakingIce();
+        playerControls.Player.BreakingIce.performed += _ => BreakingIce();
         playerControls.Player.HighlightObject.performed += _ => HighlightObject();
         playerControls.Player.PlayPause.performed += _ => PlayPause();
         playerControls.Player.Torch.performed += _ => EquipTorch(true);
@@ -101,12 +102,12 @@ public class PlayerController : MonoBehaviour
 
         if (playerHealth != _healthWas)
         {
-            //if (!_postProcessing.profile.TryGet<Vignette>(out var vignette))
-              //  throw new NullReferenceException(nameof(vignette));
+            if (!_postProcessing.profile.TryGet<Vignette>(out var vignette)) throw new NullReferenceException(nameof(vignette));
 
             var value = Map(playerHealth, 100, 0, 0, 1);
 
-            //vignette.intensity.Override(value);
+            vignette.intensity.Override(value);
+            
             foreach (var img in _healthPanelImages)
             {
                 img.color = new Color(0,0,0,value);
@@ -152,14 +153,17 @@ public class PlayerController : MonoBehaviour
     {
         if(MasterManager.Instance.levelIndex == 3) FindObjectOfType<BossFight>().RestartLevel();
         playerHealth = 100;
+        GetComponent<CharacterController>().enabled = false;
         transform.position = GetComponent<PlayerController>().respawnLocation;
+        GetComponent<CharacterController>().enabled = true;
+        _healthWas = 0;
     }
 
     public void PlayFromMainMenu()
     {
         FreezePlayer(false);
         ClosePanels();
-        menuPanels[4].SetActive(true);
+        menuPanels[3].SetActive(true);
         isMainMenu = false;
         MasterManager.Instance.portals[0].SetActive(true);
         MasterManager.Instance.portals[1].SetActive(true);
@@ -173,13 +177,13 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void breakingIce()
+    public void BreakingIce()
     {
         for (int i = 0; i < inventory.itemsInInventory.Count; i++)
         {
             if (inventory.itemsInInventory[i].GetComponent<item>().id.Contains("420"))
             {
-                GameObject.Find("ice to meet you").GetComponent<iceScript>().counterForIce++;
+                GameObject.Find("ice to meet you").GetComponent<IceScript>().counterForIce++;
             }
         }
         
@@ -218,8 +222,8 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = t;
         ClosePanels();
         FreezePlayer(enable);
-        menuPanels[4].SetActive(!enable);
-        menuPanels[5].SetActive(enable);
+        menuPanels[3].SetActive(!enable);
+        menuPanels[4].SetActive(enable);
         MasterManager.Instance.LockCursor(!enable);
     }
 
@@ -229,7 +233,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        if (!menuPanels[3].activeSelf) //If inventory is closed open it
+        if (!menuPanels[2].activeSelf) //If inventory is closed open it
         {
             _forwardRendererData.rendererFeatures[0].SetActive(true);
             /*if (torch.activeSelf)
@@ -239,7 +243,7 @@ public class PlayerController : MonoBehaviour
             }
             else _wasHoldingTorch = false;*/
             ClosePanels();
-            menuPanels[3].SetActive(true);
+            menuPanels[2].SetActive(true);
             FreezePlayer(true);
             Time.timeScale = 0;
             MasterManager.Instance.LockCursor(false);
@@ -254,7 +258,7 @@ public class PlayerController : MonoBehaviour
             inventory.rotatableObject = null;
             inventory.descriptionPanel.SetActive(false);
             //if(hasTorch && _wasHoldingTorch) torch.SetActive(true);
-            menuPanels[4].SetActive(true);
+            menuPanels[3].SetActive(true);
             if (!MasterManager.Instance.isInFocusState) MasterManager.Instance.LockCursor(true);
         }
     }
@@ -264,13 +268,15 @@ public class PlayerController : MonoBehaviour
     {
         if (interactRayCast.inventoryItemHit)
         {
+            interactRayCast.inventoryItem.gameObject.GetComponent<Outline>().enabled = false;
+            Destroy(interactRayCast.inventoryItem.gameObject.GetComponent<Outline>());
             var temp = Instantiate(interactRayCast.inventoryItem.gameObject, itemHolder.transform, false);
             Destroy(temp.transform.GetChild(0).gameObject);
             inventory.itemsInInventory.Add(temp);
-            temp.name = temp.name + "UI";
+            temp.name = temp.GetComponent<item>().id + "UI";
             inventory.idsInInventory.Add(temp.GetComponent<item>().id);
             temp.GetComponent<item>().inInventory = true;
-            temp.GetComponent<Outline>().enabled = false;
+            //temp.GetComponent<Outline>().enabled = false;
             temp.transform.localPosition = new Vector3(-250 + 100 * inventory.itemsInInventory.Count, 0, -10);
             temp.transform.localScale *= 50;
             temp.transform.gameObject.layer = 5;
@@ -295,15 +301,19 @@ public class PlayerController : MonoBehaviour
 
     public void PlayPause()
     {
-
-        if (isMainMenu || menuPanels[3].activeSelf) return;
+        if (isMainMenu)
+        {
+            PlayFromMainMenu();
+            return;
+        }
+        if (menuPanels[2].activeSelf) return;
         ClosePanels();
         if (paused)
         {
             _forwardRendererData.rendererFeatures[0].SetActive(false);
             Time.timeScale = 1.0f;
             FreezePlayer(false);
-            menuPanels[4].SetActive(true);
+            menuPanels[3].SetActive(true);
             paused = false;
             if (!MasterManager.Instance.isInFocusState) MasterManager.Instance.LockCursor(true);
         }
@@ -313,7 +323,7 @@ public class PlayerController : MonoBehaviour
             MasterManager.Instance.LockCursor(false);
             paused = true;
             FreezePlayer(true);
-            menuPanels[1].SetActive(true);
+            menuPanels[0].SetActive(true);
             Time.timeScale = 0;
         }
     }
@@ -330,17 +340,13 @@ public class PlayerController : MonoBehaviour
     public void Settings()
     {
         ClosePanels();
-        menuPanels[2].SetActive(true);
+        menuPanels[1].SetActive(true);
     }
 
     public void Back()
     {
         ClosePanels();
-        if (isMainMenu) menuPanels[0].SetActive(true);
-        else
-        {
-            menuPanels[1].SetActive(true);
-        }
+        menuPanels[0].SetActive(true);
     }
 
 
@@ -387,10 +393,10 @@ public class PlayerController : MonoBehaviour
 
 IEnumerator InventoryAddInform(string name)
     {
-        inventoryInformText.text = "A " + name + " has been added to your inventory (Press tab to view it)";
-        menuPanels[6].SetActive(true);
+        inventoryInformText.text = name + " has been added to your inventory (Press tab to view it)";
+        menuPanels[5].SetActive(true);
         yield return new WaitForSeconds(3.0f);
-        menuPanels[6].SetActive(false);
+        menuPanels[5].SetActive(false);
     }
 
 float Map(float s, float a1, float a2, float b1, float b2)

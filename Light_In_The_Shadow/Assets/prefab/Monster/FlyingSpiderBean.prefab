@@ -2210,11 +2210,11 @@ MonoBehaviour:
   healthRegenerateRate: 20
   explosion: {fileID: 100006, guid: 8b940ede2c20ec44ba870a2cdd277051, type: 3}
   navigationPointRange: 100
-  sightRange: 100
+  sightRange: 150
   _redirecting: 0
   roamingVolume: {fileID: 0}
-  flyingSpeed: 15
-  rotationSpeed: 2
+  flyingSpeed: 18
+  rotationSpeed: 5
   flyTowardsPoint: {fileID: 1804398965}
   timeBetweenAttacks: 10
   fallbackDestroyTime: 30

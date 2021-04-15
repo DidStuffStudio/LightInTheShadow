@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04eee022e130bb94db9917449bfe4fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Memory
+  itemName: A Memory
   description: A repressed and somewhat uncharming memory.
   id: LivingRoomMemory
   inInventory: 0

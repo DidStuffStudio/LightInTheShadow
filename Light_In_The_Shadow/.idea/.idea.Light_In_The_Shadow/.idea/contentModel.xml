@@ -17,6 +17,152 @@
               </e>
             </e>
           </e>
+          <e p="com.unity.uiextensions" t="Include">
+            <e p="Runtime" t="Include">
+              <e p="Resources" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="UI Particle Add.shader" t="Include" />
+                  <e p="UI Particle AddMultiply.shader" t="Include" />
+                  <e p="UI Particle AddSmooth.shader" t="Include" />
+                  <e p="UI Particle Alpha Blend.shader" t="Include" />
+                  <e p="UI Particle Blend.shader" t="Include" />
+                  <e p="UI Particle Multiply.shader" t="Include" />
+                  <e p="UI Particle MultiplyDouble.shader" t="Include" />
+                  <e p="UI Particle Premultiply Blend.shader" t="Include" />
+                  <e p="UI Particle VertexLit Blended.shader" t="Include" />
+                  <e p="UIParticleHidden.shader" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Effects" t="Include">
+                  <e p="UIParticleSystem.cs" t="Include" />
+                </e>
+                <e p="Layout" t="Include">
+                  <e p="CardUI" t="Include">
+                    <e p="2D Cards" t="Include">
+                      <e p="CardExpanding2D.cs" t="Include" />
+                      <e p="CardPopup2D.cs" t="Include" />
+                      <e p="CardStack2D.cs" t="Include" />
+                    </e>
+                    <e p="3D Cards" t="Include">
+                      <e p="CardExpanding3D.cs" t="Include" />
+                    </e>
+                    <e p="Superellipse Creation" t="Include">
+                      <e p="MeshCreator.cs" t="Include" />
+                      <e p="SuperellipsePoints.cs" t="Include" />
+                      <e p="Triangulator.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="ContentScrollSnapHorizontal.cs" t="Include" />
+                  <e p="CurvedLayout.cs" t="Include" />
+                  <e p="FancyScrollView" t="Include">
+                    <e p="Core" t="Include">
+                      <e p="FancyCell.cs" t="Include" />
+                      <e p="FancyScrollView.cs" t="Include" />
+                    </e>
+                    <e p="GridView" t="Include">
+                      <e p="FancyCellGroup.cs" t="Include" />
+                      <e p="FancyGridView.cs" t="Include" />
+                      <e p="FancyGridViewCell.cs" t="Include" />
+                      <e p="FancyGridViewContext.cs" t="Include" />
+                      <e p="IFancyCellGroupContext.cs" t="Include" />
+                      <e p="IFancyGridViewContext.cs" t="Include" />
+                    </e>
+                    <e p="Scroller" t="Include">
+                      <e p="EasingCore.cs" t="Include" />
+                      <e p="MovementDirection.cs" t="Include" />
+                      <e p="MovementType.cs" t="Include" />
+                      <e p="ScrollDirection.cs" t="Include" />
+                      <e p="Scroller.cs" t="Include" />
+                    </e>
+                    <e p="ScrollRect" t="Include">
+                      <e p="FancyScrollRect.cs" t="Include" />
+                      <e p="FancyScrollRectCell.cs" t="Include" />
+                      <e p="FancyScrollRectContext.cs" t="Include" />
+                      <e p="IFancyScrollRectContext.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="FlowLayoutGroup.cs" t="Include" />
+                  <e p="HorizontalScrollSnap.cs" t="Include" />
+                  <e p="IScrollSnap.cs" t="Include" />
+                  <e p="RadialLayout.cs" t="Include" />
+                  <e p="ScrollPositionController.cs" t="Include" />
+                  <e p="ScrollSnap.cs" t="Include" />
+                  <e p="ScrollSnapBase.cs" t="Include" />
+                  <e p="ScrollSnapScrollbarHelper.cs" t="Include" />
+                  <e p="TableLayoutGroup.cs" t="Include" />
+                  <e p="TileSizeFitter.cs" t="Include" />
+                  <e p="UIVerticalScroller.cs" t="Include" />
+                  <e p="VerticalScrollSnap.cs" t="Include" />
+                </e>
+                <e p="MenuSystem" t="Include">
+                  <e p="Menu.cs" t="Include" />
+                  <e p="MenuManager.cs" t="Include" />
+                  <e p="SimpleMenu.cs" t="Include" />
+                </e>
+                <e p="Primitives" t="Include">
+                  <e p="DiamondGraph.cs" t="Include" />
+                  <e p="UICircle.cs" t="Include" />
+                  <e p="UICornerCut.cs" t="Include" />
+                  <e p="UIGridRenderer.cs" t="Include" />
+                  <e p="UILineRenderer.cs" t="Include" />
+                  <e p="UILineRendererList.cs" t="Include" />
+                  <e p="UILineTextureRenderer.cs" t="Include" />
+                  <e p="UIPolygon.cs" t="Include" />
+                  <e p="UIPrimitiveBase.cs" t="Include" />
+                  <e p="UISquircle.cs" t="Include" />
+                </e>
+                <e p="TabNavigationHelper.cs" t="Include" />
+                <e p="ToolTips" t="Include">
+                  <e p="BoundTooltip" t="Include">
+                    <e p="BoundTooltipItem.cs" t="Include" />
+                    <e p="BoundTooltipTrigger.cs" t="Include" />
+                  </e>
+                  <e p="HoverTooltip.cs" t="Include" />
+                  <e p="ToolTip.cs" t="Include" />
+                  <e p="TooltipTrigger.cs" t="Include" />
+                </e>
+                <e p="UIWindowBase.cs" t="Include" />
+                <e p="Utilities" t="Include">
+                  <e p="BezierPath.cs" t="Include" />
+                  <e p="CableCurve.cs" t="Include" />
+                  <e p="Circle.cs" t="Include" />
+                  <e p="CLZF2.cs" t="Include" />
+                  <e p="DragCorrector.cs" t="Include" />
+                  <e p="ExtensionsToggle.cs" t="Include" />
+                  <e p="ExtensionsToggleGroup.cs" t="Include" />
+                  <e p="ExtentionMethods.cs" t="Include" />
+                  <e p="InputFieldEnterSubmit.cs" t="Include" />
+                  <e p="NonDrawingGraphic.cs" t="Include" />
+                  <e p="PaginationManager.cs" t="Include" />
+                  <e p="PPIViewer.cs" t="Include" />
+                  <e p="ReadOnlyAttribute.cs" t="Include" />
+                  <e p="ReturnKeyTriggersButton.cs" t="Include" />
+                  <e p="ScrollConflictManager.cs" t="Include" />
+                  <e p="ScrollRectEx.cs" t="Include" />
+                  <e p="ScrollRectExtensions.cs" t="Include" />
+                  <e p="ScrollRectLinker.cs" t="Include" />
+                  <e p="ScrollRectTweener.cs" t="Include" />
+                  <e p="SelectableScaler.cs" t="Include" />
+                  <e p="SetPropertyUtility.cs" t="Include" />
+                  <e p="ShaderLibrary.cs" t="Include" />
+                  <e p="switchToRectTransform.cs" t="Include" />
+                  <e p="TestCompression.cs" t="Include" />
+                  <e p="UI_InfiniteScroll.cs" t="Include" />
+                  <e p="UI_MagneticInfiniteScroll.cs" t="Include" />
+                  <e p="UI_ScrollRectOcclusion.cs" t="Include" />
+                  <e p="UI_TweenScale.cs" t="Include" />
+                  <e p="UIExtensionMethods.cs" t="Include" />
+                  <e p="UIExtensionsInputManager.cs" t="Include" />
+                  <e p="UIHighlightable.cs" t="Include" />
+                  <e p="UILineConnector.cs" t="Include" />
+                  <e p="UIScrollToSelection.cs" t="Include" />
+                  <e p="UIScrollToSelectionXY.cs" t="Include" />
+                  <e p="UISelectableExtension.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Fantasy Forest Environment Free Sample" t="Include">
             <e p="StandardNoCulling.shader" t="Include" />
           </e>
@@ -217,6 +363,9 @@
         <e p="PortalBlock.cs" t="Include" />
         <e p="rotateAround.cs" t="Include" />
         <e p="Scenes" t="Include">
+          <e p="MainMenu" t="Include">
+            <e p="OnHover.cs" t="Include" />
+          </e>
           <e p="Testing" t="Include">
             <e p="DragObject.cs" t="Include" />
           </e>
@@ -229,6 +378,7 @@
           <e p="DetectClick.cs" t="Include" />
           <e p="FadeInScene.cs" t="Include" />
           <e p="GameConstantStrings.cs" t="Include" />
+          <e p="iceScript.cs" t="Include" />
           <e p="Inputmanager.cs" t="Include" />
           <e p="Interactor.cs" t="Include" />
           <e p="inventorySystem.cs" t="Include" />
@@ -251,6 +401,12 @@
             <e p="ScreenCutoutShader.shader" t="Include" />
           </e>
           <e p="Puzzles" t="Include">
+            <e p="Bathroom Puzzle" t="Include">
+              <e p="BathroomPuzzle.cs" t="Include" />
+              <e p="Crowbar.cs" t="Include" />
+              <e p="WoodenPlank.cs" t="Include" />
+            </e>
+            <e p="BedroomPuzzle.cs" t="Include" />
             <e p="PhonePuzzle.cs" t="Include" />
             <e p="PuzzleAudio.cs" t="Include" />
             <e p="PuzzleMaster.cs" t="Include" />

@@ -124,15 +124,21 @@ public class BossFight : MonoBehaviour
 
     public IEnumerator SpawnDarkness()
     {
-        var position = bigBossMouth.transform.position;
-        var vfx = Instantiate(darknessVFX, position, bigBossMouth.transform.rotation);
-        var rb = vfx.GetComponent<Rigidbody>();
-        rb.AddForce((_player.transform.position - position)*breathForce, ForceMode.Force);
-        yield return new WaitForSeconds(10.0f);
-        Destroy(vfx);
+        if (alive)
+        {
+            var position = bigBossMouth.transform.position;
+            var vfx = Instantiate(darknessVFX, position, bigBossMouth.transform.rotation);
+            var rb = vfx.GetComponent<Rigidbody>();
+            rb.AddForce((_player.transform.position - position) * breathForce, ForceMode.Force);
+            yield return new WaitForSeconds(10.0f);
+            Destroy(vfx);
+        }
     }
     public IEnumerator SpawnMonsters()
     {
+        if(alive)
+        {
+          
         for (int i = 0; i < numberOfFlyingBeans; i++)
         {
             numberOfMonsters += 1;
@@ -142,6 +148,7 @@ public class BossFight : MonoBehaviour
 
         
         numberOfFlyingBeans += flyingBeansIncreaseRate;
+        }
     }
 
     private void StartCutscene()

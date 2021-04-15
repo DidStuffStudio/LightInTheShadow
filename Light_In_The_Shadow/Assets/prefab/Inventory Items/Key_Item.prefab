@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04eee022e130bb94db9917449bfe4fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Key
+  itemName: A Key
   description: This is a rusty old key. I wonder what this is for..? hmm
-  id: 
+  id: LivingRoomDoorKey
   inInventory: 0
   shouldPlaySpawnEffect: 0
   spawnEffect: {fileID: 0}

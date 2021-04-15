@@ -11,6 +11,8 @@ public class AlertAnimationObservers : MonoBehaviour
     {
         TVPuzzleEndCutScene,
         PhonePuzzleEndCutScene,
+        BathroomPuzzleEndCutScene,
+        BedroomPuzzleEndCutscene,
         TVChildAnimations,
         KitchenChildAnimations,
         BossManLogic
@@ -35,6 +37,17 @@ public class AlertAnimationObservers : MonoBehaviour
                 case AlertWho.TVChildAnimations:
                 {
                     FindObjectOfType<TVPuzzle>().SwitchChildAnimation();
+                    break;
+                }
+
+                case AlertWho.BathroomPuzzleEndCutScene:
+                {
+                    FindObjectOfType<BathroomPuzzle>().EndBathroomCutscene();
+                    break;
+                }
+                
+                case AlertWho.BedroomPuzzleEndCutscene:
+                {
                     break;
                 }
                 
