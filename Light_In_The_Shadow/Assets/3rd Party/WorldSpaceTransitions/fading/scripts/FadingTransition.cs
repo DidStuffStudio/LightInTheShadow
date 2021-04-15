@@ -73,6 +73,7 @@ namespace WorldSpaceTransitions
 
         void Start()
         {
+            transform.SetParent(MasterManager.Instance.transform);
             UpdateGradientTexture();
             if (gradientOption.useGradient)
             {

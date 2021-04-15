@@ -7,6 +7,7 @@ public class DarkThoughtWalking : DarkThought
 {
     private NavMeshAgent _agent;
     private bool _checkingPath;
+    public bool shouldAttack = true;
 
     protected override void Start()
     {
@@ -19,7 +20,7 @@ public class DarkThoughtWalking : DarkThought
         base.Update();
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, _playerLayer);
         if (!playerInSightRange) Patrolling();
-        if (playerInSightRange) ChasePlayer();
+        if (playerInSightRange && !MasterManager.Instance.player.frozenForCutscene) ChasePlayer();
     }
 
     private void Patrolling()

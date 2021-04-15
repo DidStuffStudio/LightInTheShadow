@@ -83,7 +83,7 @@ public class BossFight : MonoBehaviour
                 position.z));
         }
 
-        if (health < 0 && alive)
+        if (health <= 0 && alive)
         {
             alive = false;
             MasterManager.Instance.player.playerHealth = 100;
@@ -95,11 +95,14 @@ public class BossFight : MonoBehaviour
     public void RestartLevel()
     {
         health = 100.0f;
-        foreach (var flyingBean in FindObjectsOfType<FlyingBeanSpider>())
+        foreach (var flyingBeanMonster in FindObjectsOfType<FlyingBeanSpider>())
         {
-            MasterManager.Instance.interactor.ReleaseDarkThought(flyingBean.gameObject);
-            Destroy(flyingBean);
+            MasterManager.Instance.interactor.ReleaseDarkThought(flyingBeanMonster.gameObject);
+            Destroy(flyingBeanMonster.gameObject);
         }
+        skinnedMeshRenderer.material.SetFloat("_health", health);
+        numberOfMonsters = 0;
+        numberOfFlyingBeans = 2; //Increase if you choose to start with more flying beans
     }
 
     IEnumerator HurtBigBossMan(Vector3 hitPoint)
@@ -117,14 +120,14 @@ public class BossFight : MonoBehaviour
 
     public void BreathDarkness()
     {
-        if (!alive) return;
+        if (health <= 0) return;
         _canHurtBigBossMan = true;
         if(!_animator.GetCurrentAnimatorStateInfo(0).IsName("BreathDarkness"))_animator.Play("BreathDarkness", 0, 0);
     }
 
     public IEnumerator SpawnDarkness()
     {
-        if (alive)
+        if (health > 0)
         {
             var position = bigBossMouth.transform.position;
             var vfx = Instantiate(darknessVFX, position, bigBossMouth.transform.rotation);
@@ -136,7 +139,7 @@ public class BossFight : MonoBehaviour
     }
     public IEnumerator SpawnMonsters()
     {
-        if(alive)
+        if(health > 0)
         {
           
         for (int i = 0; i < numberOfFlyingBeans; i++)
@@ -201,7 +204,7 @@ public class BossFight : MonoBehaviour
     {
         
         yield return new WaitForSeconds(10.0f);
-        //Show credits
+        MasterManager.Instance.PlayCredits();
     }
     
     float Map(float s, float a1, float a2, float b1, float b2)

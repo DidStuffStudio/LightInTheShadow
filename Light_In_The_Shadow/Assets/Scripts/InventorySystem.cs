@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,18 @@ public class InventorySystem : MonoBehaviour
     [SerializeField] private Camera _uiCamera;
 
     private Vector3 _mousePreviousPosition = Vector3.zero, _mouseDeltaPostion = Vector3.zero;
+
+    private void Start()
+    {
+        var dummyGameObject = new GameObject("Dummy");
+        dummyGameObject.transform.SetParent(gameObject.transform);
+        var item = dummyGameObject.AddComponent<item>();
+        item.itemName = item.description= item.id =  "Dummy";
+        itemsInInventory.Add(dummyGameObject);
+        idsInInventory.Add(item.id);
+        item.inInventory = true;
+    }
+
     private void Update()
     {
 
@@ -65,19 +78,23 @@ public class InventorySystem : MonoBehaviour
     
     public void RemoveItem(string id)
     {
-        
+        var indexToRemove = 0;
+        var hasItem = false;
         for (int i = 0; i < idsInInventory.Count; i++)
         {
             if (idsInInventory[i] == id)
             {
-                idsInInventory.Remove(idsInInventory[i]);
-                itemsInInventory.Remove(itemsInInventory[i]);
-                foreach (var item in itemsHolder.GetComponentsInChildren<item>())
-                {
-                    if(item.name.Contains(id)) Destroy(item.gameObject);
-                }
+                indexToRemove = i;
+                hasItem = true;
                 break;
             }
+        }
+        if(!hasItem) return;
+        idsInInventory.Remove(idsInInventory[indexToRemove]);
+        itemsInInventory.Remove(itemsInInventory[indexToRemove]);
+        foreach (var item in itemsHolder.GetComponentsInChildren<item>())
+        {
+            if(item.name.Contains(id)) Destroy(item.gameObject);
         }
    
     }

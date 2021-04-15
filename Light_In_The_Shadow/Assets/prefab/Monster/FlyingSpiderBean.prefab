@@ -2214,10 +2214,10 @@ MonoBehaviour:
   _redirecting: 0
   roamingVolume: {fileID: 0}
   flyingSpeed: 18
-  rotationSpeed: 5
+  rotationSpeed: 3
   flyTowardsPoint: {fileID: 1804398965}
-  timeBetweenAttacks: 10
-  fallbackDestroyTime: 30
+  timeBetweenAttacks: 5
+  fallbackDestroyTime: 60
 --- !u!135 &919132148615073315
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2240,10 +2240,10 @@ AudioSource:
   m_GameObject: {fileID: 6226313335858314873}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f5a861d778d99b84a9dc031ed4607910, type: 2}
   m_audioClip: {fileID: 8300000, guid: bc5d2876fb9decd4e87742b7ad1ec8c6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2251,8 +2251,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 50
+  MinDistance: 5
+  MaxDistance: 100
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2347,8 +2347,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 83bc99777e387eb4eb37d9aa252b22e6, type: 3}
   - {fileID: 8300000, guid: c2ea3f00da932074cb5abae76705d32b, type: 3}
   - {fileID: 8300000, guid: b255a7546907d9e4ab29b0e920b1d115, type: 3}
-  minimumWaitTime: 5
-  maximumWaitTime: 10
+  - {fileID: 8300000, guid: d385e1486a5a22e41adbbe452d1aaca6, type: 3}
+  - {fileID: 8300000, guid: a9a1b9a47ac12d84e99565133862df98, type: 3}
+  - {fileID: 8300000, guid: c9fafb3a7cf0a7240b0ed253dea209db, type: 3}
+  minimumWaitTime: 1
+  maximumWaitTime: 5
   audioSource: {fileID: 919132148615073317}
 --- !u!54 &7978713932446289162
 Rigidbody:

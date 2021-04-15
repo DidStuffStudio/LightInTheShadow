@@ -30,7 +30,7 @@ public class DetectClick : MonoBehaviour
 
     public void Update()
     {
-        if (!canClick || !clickEnabled || !Input.GetMouseButtonDown(0)) return;
+        if (!canClick || !clickEnabled || !Input.GetMouseButtonDown(0) || MasterManager.Instance.player.playerFrozen) return;
         Click();
         if (onlyInteractOnce) clickEnabled = canClick = _outline.enabled = false;
     }

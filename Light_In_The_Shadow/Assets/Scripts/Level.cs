@@ -35,8 +35,12 @@ public class Level : MonoBehaviour
 
     public void CheckInventoryForMemory(int i)
     {
-        print("Checking the inventory");
-        foreach (var id in _inventorySystem.idsInInventory.Where(id => id.Contains(memoryIds[i]))) SetPuzzleSolved(i);
+        var hasMemory = false;
+        
+            foreach (var t in _inventorySystem.idsInInventory.Where(t => t.Contains(memoryIds[i]))) hasMemory = true;
+
+            if(hasMemory)SetPuzzleSolved(i);
+        
     }
 
     void Update()

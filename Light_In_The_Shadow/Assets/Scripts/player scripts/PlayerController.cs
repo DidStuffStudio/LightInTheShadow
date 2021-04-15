@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-    public float playerSpeed = 2.0f;
+    public float playerWalkSpeed = 2.0f;
+    public float playerRunSpeed = 12.0f;
     private float _privatePlayerSpeed;
 
     private float jumpHeight = 1.0f;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
         menuPanels =
             new GameObject[7]; //0 is pause menu, 1 is settings, 2 is inventory, 3 is playPanel(crosshairs), 4 is help menu, 5 is inventory inform
 
-    private bool playerFrozen;
+    public bool playerFrozen;
     public InventorySystem inventory;
     [HideInInspector] public bool isRunning;
     public Vector3 respawnLocation;
@@ -42,16 +43,18 @@ public class PlayerController : MonoBehaviour
     public Text helpText, inventoryInformText;
     private bool _canEquipTorch = true, _canOpenInventory = true, _wasHoldingTorch = false;
     public float gravity = -2;
-    public int mouseSensitivity = 150;
+    public float mouseSensitivity = 150;
     [SerializeField] private ForwardRendererData _forwardRendererData;
     public int playerHealth = 100;
     private Volume _postProcessing;
     public int healthRegenerationRate = 1;
     [SerializeField] private bool regenerateHealth;
-    private int _healthWas;
     [SerializeField] private GameObject healthPanel;
     private List<Image> _healthPanelImages = new List<Image>();
-
+    [SerializeField] private Slider lookSensitivitySlider;
+    private bool _running;
+    [SerializeField] private Transform attachPoint;
+    public bool frozenForCutscene = false;
 
     private void Awake()
     {
@@ -63,6 +66,32 @@ public class PlayerController : MonoBehaviour
     {
         _forwardRendererData.rendererFeatures[0].SetActive(false);
         MasterManager.Instance.LockCursor(false);
+       
+
+        interactRayCast = GetComponent<Interactor>();
+        respawnLocation = transform.position;
+        controller = GetComponent<CharacterController>();
+        cameraTransform = Camera.main.transform;
+        playerControls.Player.OpenInventory.performed += _ => OpenInventory();
+        playerControls.Player.PickUp.started += _ => PickupObject();
+        //playerControls.Player.BreakingIce.performed += _ => BreakingIce();
+        playerControls.Player.HighlightObject.performed += _ => HighlightObject();
+        playerControls.Player.PlayPause.performed += _ => PlayPause();
+        
+        playerControls.Player.Torch.performed += _ => EquipTorch(true);
+        playerControls.Player.Torch.canceled += _ => EquipTorch(false);
+
+        playerControls.Player.Run.performed += _ => Run(true);
+        playerControls.Player.Run.canceled += _ => Run(false);
+
+        torch.SetActive(false);
+        _postProcessing = MasterManager.Instance.ppVolume;
+        foreach (var image in healthPanel.GetComponentsInChildren<Image>())
+        {
+            _healthPanelImages.Add(image);
+        }
+        if (regenerateHealth) StartCoroutine(RegenHealth());
+
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0))
         {
             isMainMenu = true;
@@ -73,35 +102,32 @@ public class PlayerController : MonoBehaviour
             ClosePanels();
             menuPanels[3].SetActive(true);
         }
-
-        interactRayCast = GetComponent<Interactor>();
-        respawnLocation = transform.position;
-        controller = GetComponent<CharacterController>();
-        cameraTransform = Camera.main.transform;
-        playerControls.Player.OpenInventory.performed += _ => OpenInventory();
-        playerControls.Player.PickUp.started += _ => PickupObject();
-        playerControls.Player.BreakingIce.performed += _ => BreakingIce();
-        playerControls.Player.HighlightObject.performed += _ => HighlightObject();
-        playerControls.Player.PlayPause.performed += _ => PlayPause();
-        playerControls.Player.Torch.performed += _ => EquipTorch(true);
-        playerControls.Player.Torch.canceled += _ => EquipTorch(false);
-
-        torch.SetActive(false);
-        _postProcessing = MasterManager.Instance.ppVolume;
-        foreach (var image in healthPanel.GetComponentsInChildren<Image>())
-        {
-            _healthPanelImages.Add(image);
-        }
-        if (regenerateHealth) StartCoroutine(RegenHealth());
-
     }
 
+    public void LookSensitivity()
+    {
+        mouseSensitivity = lookSensitivitySlider.value;
+    }
+    void Run(bool run)
+    {
+        if (run)
+        {
+            _running = true;
+            _privatePlayerSpeed = playerRunSpeed;
+            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 3.0f;
+        }
+        else
+        {
+            _running = false;
+            _privatePlayerSpeed = playerWalkSpeed;
+            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 1.0f;
+        }
+    }
 
     void FixedUpdate()
     {
 
-        if (playerHealth != _healthWas)
-        {
+        
             if (!_postProcessing.profile.TryGet<Vignette>(out var vignette)) throw new NullReferenceException(nameof(vignette));
 
             var value = Map(playerHealth, 100, 0, 0, 1);
@@ -112,21 +138,16 @@ public class PlayerController : MonoBehaviour
             {
                 img.color = new Color(0,0,0,value);
             }
-
-        }
+            
 
         if (playerHealth <= 0)
         {
             RespawnPlayer();
         }
-
-        groundedPlayer = controller.isGrounded;
-
-        _privatePlayerSpeed = !controller.isGrounded ? 0.0f : playerSpeed;
-
+        
         if (controller.isGrounded)
         {
-            _privatePlayerSpeed = playerSpeed;
+            _privatePlayerSpeed = _running ? playerRunSpeed : playerWalkSpeed;
             playerVelocity.y = gravity;
         }
         else if (!playerFrozen)
@@ -146,7 +167,6 @@ public class PlayerController : MonoBehaviour
         }
 
         torch.transform.parent.transform.rotation = cameraTransform.rotation;
-        _healthWas = playerHealth;
     }
 
     public void RespawnPlayer()
@@ -156,7 +176,6 @@ public class PlayerController : MonoBehaviour
         GetComponent<CharacterController>().enabled = false;
         transform.position = GetComponent<PlayerController>().respawnLocation;
         GetComponent<CharacterController>().enabled = true;
-        _healthWas = 0;
     }
 
     public void PlayFromMainMenu()
@@ -177,17 +196,8 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void BreakingIce()
-    {
-        for (int i = 0; i < inventory.itemsInInventory.Count; i++)
-        {
-            if (inventory.itemsInInventory[i].GetComponent<item>().id.Contains("420"))
-            {
-                GameObject.Find("ice to meet you").GetComponent<IceScript>().counterForIce++;
-            }
-        }
-        
-    }
+  
+    
     public void NewRespawnPoint()
     {
         respawnLocation = transform.position;
@@ -197,6 +207,7 @@ public class PlayerController : MonoBehaviour
     {
         if (freeze)
         {
+            interactRayCast.enabled = false;
             playerFrozen = true;
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0.0f;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0.0f;
@@ -206,6 +217,7 @@ public class PlayerController : MonoBehaviour
 
         else
         {
+            interactRayCast.enabled = true;
             playerFrozen = false;
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = mouseSensitivity;
@@ -337,6 +349,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void AttachObjectToPlayer(GameObject gameObject, bool pickup)
+    {
+        gameObject.GetComponent<Rigidbody>().isKinematic = pickup;
+        gameObject.GetComponent<Rigidbody>().useGravity = !pickup;
+        if (pickup)
+        {
+            gameObject.transform.SetParent(attachPoint);
+            gameObject.transform.localPosition = Vector3.zero;
+            gameObject.transform.localRotation = Quaternion.identity;
+        }
+        else gameObject.transform.SetParent(null, true);
+    }
     public void Settings()
     {
         ClosePanels();
@@ -370,7 +394,7 @@ public class PlayerController : MonoBehaviour
         FreezePlayer(freeze);
         _canEquipTorch = !freeze;
         _canOpenInventory = !freeze;
-        //if(!freeze)EquipTorch();
+        frozenForCutscene = freeze;
     }
 
     IEnumerator RegenHealth()

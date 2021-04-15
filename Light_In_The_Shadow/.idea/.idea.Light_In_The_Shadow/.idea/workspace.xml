@@ -23,14 +23,147 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Ice_chunk_heavy_07.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Ice_chunk_heavy_07.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Iceberg,Designed,Impact,Crack,Shatter,Huge_08.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Iceberg,Designed,Impact,Crack,Shatter,Huge_08.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Insults.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Insults/Idiot.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Insults/Idiot.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Insults/Stupid.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Insults/Stupid.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Insults/Worthlesst.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Monster/Insults/Worthlesst.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Thunder_Rumble_Deep_Fienup_003.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/Thunder_Rumble_Deep_Fienup_003.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BedroomLamp.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BedroomLamp.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BeforeBossLevel3.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BeforeBossLevel3.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CreditScroll.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CreditScroll.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Health.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Health.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceCracks1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceCracks1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceCracks2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceCracks2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceCracks3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceCracks3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceCracks4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/IceCracks4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Water.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Water.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/WaterMaterial.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/WaterMaterial.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Matress.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Matress.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/ChildJump.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/ChildJump.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/ChildJump.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/ChildJump.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/ChildRun.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/ChildRun.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/ChildRun.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/ChildRun.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/DadChase.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/DadChase.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/DadChaseFromHouse.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/DadChaseFromHouse.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/Kid Jumping.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/Kid Jumping.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/KidRunning.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/KidRunning.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/Strangle.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/Strangle.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Crowbar.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Crowbar.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Pickaxe.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Pickaxe.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Pickaxe.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Pickaxe.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/PickaxeAnimated.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/PickaxeAnimated.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/PickaxeAnimated.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/PickaxeAnimated.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PassAnimationEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PassAnimationEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level2LightSettings.lighting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level2LightSettings.lighting.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BedroomKey_Item.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BedroomKey_Item.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BedroomMemory.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BedroomMemory.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Pickaxe_Item.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Pickaxe_Item.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Puzzles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Puzzles/Kitchen.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Puzzles/Kitchen.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/common/GizmoFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/common/GizmoFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/FadingTransition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/FadingTransition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/KitchenCutScene.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/KitchenCutScene.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/MemoryLight.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/MemoryLight.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/MemoryLightAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/MemoryLightAnimation.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/MemorySpawnLocation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/MemorySpawnLocation.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ice_M.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ice_M.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Level_1/Soundtrack.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Level_1/Soundtrack.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/FadeInSceneMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/FadeInSceneMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/BedroomScene.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/BedroomScene.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/BedroomScene.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/BedroomScene.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/Monster.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/Monster.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/BathroomBoy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/BathroomBoy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/Kid Jumping.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/Kid Jumping.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/KidRunning.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/KidRunning.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/StrangleScene.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 5/StrangleScene.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Level 2 trees/Deadtree1LOD0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Level 2 trees/Deadtree1LOD0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Level 2 trees/Deadtree2LOD0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Level 2 trees/Deadtree2LOD0.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Lighting Settings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Lighting Settings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChangeFadeGizmo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChangeFadeGizmo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/BedroomPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/BedroomPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrains/Level_2_Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrains/Level_2_Terrain.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BathroomMemory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BathroomMemory.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Crowbar_Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/Crowbar_Item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Monster/DreamMonster1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Monster/DreamMonster1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingSpiderBean.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingSpiderBean.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,44 +174,49 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BeforeBossLevel3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/DialNumber.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Follow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Extended.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ActivateObjectInRange.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/Portal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerControls.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCameraParallax.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TorchPickUp.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossFight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoundtrackMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Antenna.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/FadingTransition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/EnvironmentTransitionExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PassAnimationEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PortalBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BedroomLamp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3rd Party/NastyWizard_CelSobel/CelShadingSobel/Shaders/Post/PostFunctions.cginc" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Smrvfx-master/Smrvfx-master/Packages/jp.keijiro.smrvfx/Runtime/SkinnedMeshBaker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Flicker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CopyOutline.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HurtPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FlyingCollisionCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DialNumber.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Follow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalNew.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/3rd Party/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox Cubemap Extended.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ActivateObjectInRange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Testing/FogChange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TorchPickUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CreditScroll.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerColliderTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameConstantStrings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UserInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/3rd Party/NastyWizard_CelSobel/CelShadingSobel/Shaders/Post/PostFunctions.cginc" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/Smrvfx-master/Smrvfx-master/Packages/jp.keijiro.smrvfx/Runtime/SkinnedMeshBaker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Flicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/ScreenCutoutShader.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/CopyOutline.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/HurtPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTextureSetup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/common/GizmoFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -86,20 +224,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TerrainChange.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FlyingCollisionCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerFocus.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scenes/Testing/RotateDrag.cs" />
-        <option value="$PROJECT_DIR$/Assets/PortalBlock.cs" />
-        <option value="$PROJECT_DIR$/Assets/MenuLogic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Follow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TriggerEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/inventorySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/testPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AlertObservers.cs" />
         <option value="$PROJECT_DIR$/Assets/PassToTVPuzzle.cs" />
@@ -107,42 +237,49 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Antenna.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" />
         <option value="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scenes/SkinnedCollisionHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/UpdateMeshCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/MeshColliderUpdate.cs" />
-        <option value="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/First person controller/Scripts/Components/FirstPersonAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/Flicker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/FlyingCollisionCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csParticleMove.cs" />
         <option value="$PROJECT_DIR$/Assets/HurtPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" />
         <option value="$PROJECT_DIR$/Assets/CopyOutline.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" />
         <option value="$PROJECT_DIR$/Assets/TerrainChange.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inputmanager.cs" />
         <option value="$PROJECT_DIR$/Assets/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/TorchPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/iceScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Matress.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" />
+        <option value="$PROJECT_DIR$/Assets/BeforeBossLevel3.cs" />
+        <option value="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/BedroomLamp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/BedroomPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/common/GizmoFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeFadeGizmo.cs" />
+        <option value="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/FadingTransition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/CreditScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
       </list>
     </option>
@@ -240,7 +377,9 @@
       <workItem from="1617960858851" duration="198000" />
       <workItem from="1618047642072" duration="10015000" />
       <workItem from="1618211358221" duration="7737000" />
-      <workItem from="1618316618797" duration="15265000" />
+      <workItem from="1618316618797" duration="16092000" />
+      <workItem from="1618384991677" duration="28286000" />
+      <workItem from="1618477866391" duration="8348000" />
     </task>
     <servers />
   </component>
@@ -266,6 +405,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="680" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618420496475">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="680" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1618420496475" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1617462323199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -286,12 +429,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="249" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618343086780" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1618349315753">
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1618487704785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618349315753" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618487704785" />
     <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>

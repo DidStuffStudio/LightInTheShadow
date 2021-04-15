@@ -76,6 +76,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(pressPoint=0.01)"
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "0360fd5b-bac4-4d59-a40d-60ef0beb7003",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.01)"
                 }
             ],
             "bindings": [
@@ -274,6 +282,17 @@
                     "processors": "",
                     "groups": "Player",
                     "action": "BreakingIce",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "53987c23-bbc0-4b59-9159-1928940e5712",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player",
+                    "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
