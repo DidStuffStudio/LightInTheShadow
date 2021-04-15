@@ -43,7 +43,7 @@ public class DarkThought : MonoBehaviour
     }
 
 
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         if (!alive || health > maxHealth) return;
 

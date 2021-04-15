@@ -101,6 +101,12 @@ public class MasterManager : MonoBehaviour {
         if (levelIndex > 0 && levelIndex < 4) SceneManager.UnloadSceneAsync(levelIndex - 1);
     }
 
+    public void RestartGame()
+    {
+        _instance = null;
+        SceneManager.LoadScene(0);
+        Destroy(gameObject);
+    }
     public void ToggleNeurons(bool enable) {
         loadingScreen.SetActive(enable);
         portals[0].SetActive(enable);

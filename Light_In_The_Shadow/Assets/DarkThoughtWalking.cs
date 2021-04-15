@@ -15,9 +15,9 @@ public class DarkThoughtWalking : DarkThought
         base.Start();
     }
 
-    protected override void Update()
+    protected override void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, _playerLayer);
         if (!playerInSightRange) Patrolling();
         if (playerInSightRange && !MasterManager.Instance.player.frozenForCutscene) ChasePlayer();

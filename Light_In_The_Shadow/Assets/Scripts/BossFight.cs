@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class BossFight : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class BossFight : MonoBehaviour
     [SerializeField] private Volume nicePP;
     [SerializeField] private TerrainChange terrainChange;
     public int numberOfMonsters;
+    [SerializeField] private GameObject iceInteract, healthPickups;
     
     
     void Start()
@@ -168,6 +170,8 @@ public class BossFight : MonoBehaviour
 
     public IEnumerator KillBigBossMan() //Set sky box float "Fog Intensity" set ice float "frozen" set fog density of environment to 0.01 and change colour.
     {
+        iceInteract.SetActive(false);
+        healthPickups.SetActive(false);
         yield return new WaitForSeconds(1.0f);
         //Spawn explosion
         bossManExplosion.SetActive(true);
@@ -203,8 +207,10 @@ public class BossFight : MonoBehaviour
     IEnumerator EndCredits()
     {
         
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(5.0f);
         MasterManager.Instance.PlayCredits();
+        yield return new WaitForSeconds(30.0f);
+        MasterManager.Instance.RestartGame();
     }
     
     float Map(float s, float a1, float a2, float b1, float b2)

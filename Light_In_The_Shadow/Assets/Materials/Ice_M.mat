@@ -125,7 +125,7 @@ Material:
     - Vector1_a357163bbebb46bf9f03c13c52292535: 0.1
     - Vector1_b68f3fdc5bdc4ac38f0fdcabef34eed3: 100
     - Vector1_ed843e010d594479ac6822c19be1d82d: 0
-    - frozen: 100
+    - frozen: -0.09904858
     m_Colors:
     - Color_4A56C174: {r: 0, g: 0.082352914, b: 0.145098, a: 0}
     - Color_D351E7C3: {r: 1, g: 1, b: 1, a: 0}

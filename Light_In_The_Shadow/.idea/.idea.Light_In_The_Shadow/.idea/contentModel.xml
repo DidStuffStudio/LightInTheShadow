@@ -366,6 +366,7 @@
         <e p="MenuLogic.cs" t="Include" />
         <e p="PassAnimationEvent.cs" t="Include" />
         <e p="PortalBlock.cs" t="Include" />
+        <e p="Respawn.cs" t="Include" />
         <e p="rotateAround.cs" t="Include" />
         <e p="Scenes" t="Include">
           <e p="MainMenu" t="Include">

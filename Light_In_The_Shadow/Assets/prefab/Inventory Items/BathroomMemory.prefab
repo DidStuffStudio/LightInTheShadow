@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: A Memory
-  description: A repressed and somewhat uncharming memory.
+  description: I remember jumping through the window to escape him.
   id: BathroomMemory
   inInventory: 0
   shouldPlaySpawnEffect: 1

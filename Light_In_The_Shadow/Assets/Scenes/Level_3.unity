@@ -370,14 +370,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 33.6
       objectReference: {fileID: 0}
-    - target: {fileID: 4684040776900071836, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
-      propertyPath: hasTorch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4684040776900071836, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
-      propertyPath: attachPoint
-      value: 
-      objectReference: {fileID: 1927666715}
     - target: {fileID: 4892700204647691949, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -6030,6 +6022,7 @@ GameObject:
   - component: {fileID: 1242923451}
   - component: {fileID: 1242923453}
   - component: {fileID: 1242923452}
+  - component: {fileID: 1242923454}
   m_Layer: 11
   m_Name: Matress
   m_TagString: ClickInteract
@@ -6123,7 +6116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242923445}
   m_LocalRotation: {x: -0, y: 0.22241859, z: -0, w: 0.97495127}
-  m_LocalPosition: {x: 43.37, y: 1.86, z: 28.05}
+  m_LocalPosition: {x: 43.37, y: 2.049, z: 28.05}
   m_LocalScale: {x: 2.4834638, y: 0.6041842, z: 4.5118885}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6141,6 +6134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b879558f1db0304187b4c91154188d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickedUp: 0
   targetTransform: {fileID: 1263179769}
   lerpStrength: 1
   distanceToCorrect: 3
@@ -6181,6 +6175,19 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1242923454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242923445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a93a128058a9041888dc8c66feac12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnDistance: 50
 --- !u!1 &1263179768
 GameObject:
   m_ObjectHideFlags: 0
@@ -6447,7 +6454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1573137762}
-  m_PathPosition: 1.999841
+  m_PathPosition: 1.999882
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -9520,11 +9527,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 229d7fab587866f4c9a74f4a8a1f4707, type: 3}
---- !u!4 &1927666715 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1493420864, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
-  m_PrefabInstance: {fileID: 31693718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1929599456
 GameObject:
   m_ObjectHideFlags: 0
@@ -9719,7 +9721,7 @@ MonoBehaviour:
   interactionDistance: 100
   torchStrength: 20
   health: 100
-  healthDecayRate: 20
+  healthDecayRate: 100
   updateTime: 0.2
   alive: 1
   bigBossMan: {fileID: 1203068381}
@@ -9740,6 +9742,8 @@ MonoBehaviour:
   nicePP: {fileID: 1740092480}
   terrainChange: {fileID: 1797051267}
   numberOfMonsters: 0
+  iceInteract: {fileID: 311756735}
+  healthPickups: {fileID: 261853963}
 --- !u!114 &1943743109
 MonoBehaviour:
   m_ObjectHideFlags: 0

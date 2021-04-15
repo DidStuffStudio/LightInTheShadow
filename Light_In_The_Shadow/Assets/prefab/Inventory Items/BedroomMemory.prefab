@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: A Memory
-  description: It feels good to finally accept that this happened.
+  description: I still remember the banging on the door.
   id: BedroomMemory
   inInventory: 0
   shouldPlaySpawnEffect: 1

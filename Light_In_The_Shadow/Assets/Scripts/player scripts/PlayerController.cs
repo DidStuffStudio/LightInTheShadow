@@ -348,6 +348,8 @@ public class PlayerController : MonoBehaviour
             panel.SetActive(false);
         }
     }
+    
+    
 
     public void AttachObjectToPlayer(GameObject gameObject, bool pickup)
     {
@@ -358,9 +360,12 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.SetParent(attachPoint);
             gameObject.transform.localPosition = Vector3.zero;
             gameObject.transform.localRotation = Quaternion.identity;
+            //gameObject.GetComponent<SpringJoint>().connectedBody = attachPoint.GetComponent<Rigidbody>();
         }
-        else gameObject.transform.SetParent(null, true);
+        else gameObject.transform.SetParent(null);
     }
+    
+    
     public void Settings()
     {
         ClosePanels();

@@ -24,9 +24,10 @@ public class FlyingBeanSpider : DarkThought
         StartCoroutine(FallbackDestroy());
     }
 
-    protected override void Update()
-    {
-        base.Update();
+    protected override void FixedUpdate()
+    
+        {
+        base.FixedUpdate();
         if (collided) hasAttackedInLastXSeconds = true;
             playerInSightRange = Physics.CheckSphere(transform.position, sightRange, _playerLayer);
             if (playerInSightRange && _canAttack)

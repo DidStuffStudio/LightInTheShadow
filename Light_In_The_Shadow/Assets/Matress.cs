@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Matress : MonoBehaviour
 {
-    private bool pickedUp = false, canPickUp = true;
+    private bool canPickUp = true;
+    public bool pickedUp = false;
     [SerializeField] private Transform targetTransform;
     [SerializeField] private float lerpStrength, distanceToCorrect = 2.0f;
     [SerializeField] private BeforeBossLevel3 logic;
@@ -12,7 +13,7 @@ public class Matress : MonoBehaviour
     void OnMouseDown()
     {
         pickedUp = !pickedUp;
-        GetComponent<Collider>().isTrigger = pickedUp;
+        ColliderTrigger(pickedUp);
         MasterManager.Instance.player.AttachObjectToPlayer(gameObject, pickedUp);
     }
 
@@ -27,5 +28,10 @@ public class Matress : MonoBehaviour
         logic.PlayJumping();
         
         // The matress is placed correctly, so let the boy jump and trigger the chase scene
+    }
+
+    public void ColliderTrigger(bool trigger)
+    {
+        GetComponent<Collider>().isTrigger = trigger;
     }
 }
