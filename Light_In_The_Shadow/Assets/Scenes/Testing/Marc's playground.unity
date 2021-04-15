@@ -348,8 +348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569dbc5135890c94e8c70ac66dccde7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  outliner: {fileID: 0}
+  counterForIce: 0
+  thresholdForIce: 5
 --- !u!64 &440594860
 MeshCollider:
   m_ObjectHideFlags: 0
