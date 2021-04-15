@@ -209,7 +209,7 @@ public class BossFight : MonoBehaviour
         
         yield return new WaitForSeconds(5.0f);
         MasterManager.Instance.PlayCredits();
-        yield return new WaitForSeconds(30.0f);
+        yield return new WaitForSeconds(90.0f);
         MasterManager.Instance.RestartGame();
     }
     

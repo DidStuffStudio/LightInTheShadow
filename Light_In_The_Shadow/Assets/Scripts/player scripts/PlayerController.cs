@@ -363,7 +363,7 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.localRotation = Quaternion.identity;
             //gameObject.GetComponent<SpringJoint>().connectedBody = attachPoint.GetComponent<Rigidbody>();
         }
-        else gameObject.transform.SetParent(null);
+        else gameObject.transform.SetParent(MasterManager.Instance.transform);
     }
     
     

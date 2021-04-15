@@ -5,13 +5,8 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: -623603649343465320
-    second: FlyingBeanMonster
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 42f3c89aba03e3b498041c47c0f4ab5a, type: 2}
+    second: Scene
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: FlyingBeanMonster
+      name: Scene
       takeName: Scene
       internalID: 0
       firstFrame: 1
@@ -68,7 +63,7 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1

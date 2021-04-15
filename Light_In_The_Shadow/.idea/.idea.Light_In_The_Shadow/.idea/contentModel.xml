@@ -392,6 +392,7 @@
           <e p="Level.cs" t="Include" />
           <e p="MainCamera.cs" t="Include" />
           <e p="MasterManager.cs" t="Include" />
+          <e p="MonsterAudio.cs" t="Include" />
           <e p="player scripts" t="Include">
             <e p="playerController.cs" t="Include" />
           </e>

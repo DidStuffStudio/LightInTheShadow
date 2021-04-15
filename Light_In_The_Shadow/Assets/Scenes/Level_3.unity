@@ -428,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7985086443184911362, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
@@ -6454,7 +6454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1573137762}
-  m_PathPosition: 1.999882
+  m_PathPosition: 0.01171486
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -7340,8 +7340,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 125.22, y: 114.78, z: 152.21}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 125.22, y: 106.488266, z: 152.21}
+  m_Center: {x: 0, y: 4.1458664, z: 0}
 --- !u!4 &1585272616
 Transform:
   m_ObjectHideFlags: 0
@@ -9721,14 +9721,14 @@ MonoBehaviour:
   interactionDistance: 100
   torchStrength: 20
   health: 100
-  healthDecayRate: 100
+  healthDecayRate: 20
   updateTime: 0.2
   alive: 1
   bigBossMan: {fileID: 1203068381}
   hitEffect: {fileID: 100004, guid: 96536afb634b32043bb988d4576053d3, type: 3}
   darknessVFX: {fileID: 100006, guid: 0ffc584583b8c1541b3c2100725f6ab5, type: 3}
   bigBossMouth: {fileID: 1525592312}
-  flyingBean: {fileID: 6226313335858314873, guid: 21ab93cf099f8684bb69d13ef66fa6a8, type: 3}
+  flyingBean: {fileID: 3824180919582793104, guid: 1ea331f43adc1e64590315f00c0133c1, type: 3}
   spawnPoint: {fileID: 1229677891}
   numberOfFlyingBeans: 2
   flyingBeansIncreaseRate: 3

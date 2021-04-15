@@ -23,28 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Respawn.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Respawn.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonsterAudio.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingBean.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingBean.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CreditScroll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CreditScroll.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall3.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KitchenSeparatePhone.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KitchenSeparatePhone.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ice_M.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ice_M.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Block Out/BedroomScene.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Block Out/BedroomScene.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingBeanController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingBeanController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BathroomMemory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BathroomMemory.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BedroomMemory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Inventory Items/BedroomMemory.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingSpiderBean.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingSpiderBean.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,15 +147,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeFadeGizmo.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/FadingTransition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Matress.cs" />
         <option value="$PROJECT_DIR$/Assets/Respawn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
         <option value="$PROJECT_DIR$/Assets/CreditScroll.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" />
         <option value="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" />
         <option value="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -261,7 +254,7 @@
       <workItem from="1618211358221" duration="7737000" />
       <workItem from="1618316618797" duration="16092000" />
       <workItem from="1618384991677" duration="28286000" />
-      <workItem from="1618477866391" duration="16011000" />
+      <workItem from="1618477866391" duration="25396000" />
     </task>
     <servers />
   </component>
@@ -307,16 +300,16 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="477" y="292" width="958" height="490" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616530010744" />
-    <state x="616" y="249" width="672" height="677" key="run.anything.popup" timestamp="1618343086780">
+    <state x="616" y="249" width="672" height="677" key="run.anything.popup" timestamp="1618516158677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="249" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618343086780" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1618507493767">
+    <state x="616" y="249" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618516158677" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1618516162350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618507493767" />
+    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618516162350" />
     <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>
