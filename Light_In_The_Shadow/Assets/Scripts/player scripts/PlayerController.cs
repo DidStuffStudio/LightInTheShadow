@@ -9,6 +9,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -341,12 +342,14 @@ public class PlayerController : MonoBehaviour
     {
         ClosePanels();
         menuPanels[1].SetActive(true);
+        menuPanels[0].transform.parent.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("Low"));
     }
 
     public void Back()
     {
         ClosePanels();
         menuPanels[0].SetActive(true);
+        menuPanels[0].transform.parent.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("Play Button"));
     }
 
 
