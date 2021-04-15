@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class BossFight : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class BossFight : MonoBehaviour
     [SerializeField] private Volume nicePP;
     [SerializeField] private TerrainChange terrainChange;
     public int numberOfMonsters;
+    [SerializeField] private GameObject iceInteract, healthPickups;
     
     
     void Start()
@@ -83,7 +85,7 @@ public class BossFight : MonoBehaviour
                 position.z));
         }
 
-        if (health < 0 && alive)
+        if (health <= 0 && alive)
         {
             alive = false;
             MasterManager.Instance.player.playerHealth = 100;
@@ -95,11 +97,14 @@ public class BossFight : MonoBehaviour
     public void RestartLevel()
     {
         health = 100.0f;
-        foreach (var flyingBean in FindObjectsOfType<FlyingBeanSpider>())
+        foreach (var flyingBeanMonster in FindObjectsOfType<FlyingBeanSpider>())
         {
-            MasterManager.Instance.interactor.ReleaseDarkThought(flyingBean.gameObject);
-            Destroy(flyingBean);
+            MasterManager.Instance.interactor.ReleaseDarkThought(flyingBeanMonster.gameObject);
+            Destroy(flyingBeanMonster.gameObject);
         }
+        skinnedMeshRenderer.material.SetFloat("_health", health);
+        numberOfMonsters = 0;
+        numberOfFlyingBeans = 2; //Increase if you choose to start with more flying beans
     }
 
     IEnumerator HurtBigBossMan(Vector3 hitPoint)
@@ -117,14 +122,14 @@ public class BossFight : MonoBehaviour
 
     public void BreathDarkness()
     {
-        if (!alive) return;
+        if (health <= 0) return;
         _canHurtBigBossMan = true;
         if(!_animator.GetCurrentAnimatorStateInfo(0).IsName("BreathDarkness"))_animator.Play("BreathDarkness", 0, 0);
     }
 
     public IEnumerator SpawnDarkness()
     {
-        if (alive)
+        if (health > 0)
         {
             var position = bigBossMouth.transform.position;
             var vfx = Instantiate(darknessVFX, position, bigBossMouth.transform.rotation);
@@ -136,7 +141,7 @@ public class BossFight : MonoBehaviour
     }
     public IEnumerator SpawnMonsters()
     {
-        if(alive)
+        if(health > 0)
         {
           
         for (int i = 0; i < numberOfFlyingBeans; i++)
@@ -165,6 +170,8 @@ public class BossFight : MonoBehaviour
 
     public IEnumerator KillBigBossMan() //Set sky box float "Fog Intensity" set ice float "frozen" set fog density of environment to 0.01 and change colour.
     {
+        iceInteract.SetActive(false);
+        healthPickups.SetActive(false);
         yield return new WaitForSeconds(1.0f);
         //Spawn explosion
         bossManExplosion.SetActive(true);
@@ -200,8 +207,10 @@ public class BossFight : MonoBehaviour
     IEnumerator EndCredits()
     {
         
-        yield return new WaitForSeconds(10.0f);
-        //Show credits
+        yield return new WaitForSeconds(5.0f);
+        MasterManager.Instance.PlayCredits();
+        yield return new WaitForSeconds(30.0f);
+        MasterManager.Instance.RestartGame();
     }
     
     float Map(float s, float a1, float a2, float b1, float b2)

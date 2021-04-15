@@ -345,12 +345,15 @@
         </e>
         <e p="ActivateObjectInRange.cs" t="Include" />
         <e p="Antenna.cs" t="Include" />
+        <e p="BedroomLamp.cs" t="Include" />
+        <e p="BeforeBossLevel3.cs" t="Include" />
         <e p="BlurRender" t="Include">
           <e p="KawaseBlur.cs" t="Include" />
           <e p="KawaseBlur.shader" t="Include" />
           <e p="testOffset.shader" t="Include" />
         </e>
         <e p="CopyOutline.cs" t="Include" />
+        <e p="CreditScroll.cs" t="Include" />
         <e p="DarkThoughtWalking.cs" t="Include" />
         <e p="DialNumber.cs" t="Include" />
         <e p="flicker.cs" t="Include" />
@@ -359,8 +362,11 @@
         <e p="Follow.cs" t="Include" />
         <e p="Health.cs" t="Include" />
         <e p="HurtPlayer.cs" t="Include" />
+        <e p="Matress.cs" t="Include" />
         <e p="MenuLogic.cs" t="Include" />
+        <e p="PassAnimationEvent.cs" t="Include" />
         <e p="PortalBlock.cs" t="Include" />
+        <e p="Respawn.cs" t="Include" />
         <e p="rotateAround.cs" t="Include" />
         <e p="Scenes" t="Include">
           <e p="MainMenu" t="Include">

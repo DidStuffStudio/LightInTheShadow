@@ -147,6 +147,7 @@ namespace Puzzles
         protected virtual void Update()
         {
             if (!_fadedIn) return;
+            if(MasterManager.Instance.player.playerHealth <= 0) FocusOnPuzzleItem(false);
             if((Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f) && _focused) FocusOnPuzzleItem(false);
             if (correct && !finished) FadeOutCutscene();
             if (!_fadingOut) return;

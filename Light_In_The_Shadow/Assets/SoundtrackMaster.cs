@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SoundtrackMaster : MonoBehaviour
 {
+    [SerializeField] private Slider volumeSlider;
     [Range(0,100)] public float masterVolume = 0.0f;
     
     public AudioMixer audioMixer;
@@ -122,6 +124,9 @@ public class SoundtrackMaster : MonoBehaviour
             case 3:
                 StartCoroutine(FadeAudio("Level_3_Music_Volume", Map(targetVolume, 0, 100, -80, 0), overTime));// level 3 music
                 break;
+            case 4:
+                StartCoroutine(FadeAudio("Level_3_Boss_Music_Volume", Map(targetVolume, 0, 100, -80, 0), overTime));// level 3 boss music
+                break;
             default:
                 Debug.LogError("Music level index out of bounds. 0 for global music volume, 1 for level 1, 2 for level 2 and 3 for level 3");
                 break;
@@ -219,8 +224,8 @@ public class SoundtrackMaster : MonoBehaviour
         return b1 + (s-a1)*(b2-b1)/(a2-a1);
     }
 
-    public void Update()
+    public void ChangeGlobalVolume()
     {
-        SetGlobalVolume(masterVolume);
+        SetGlobalVolume(volumeSlider.value);
     }
 }

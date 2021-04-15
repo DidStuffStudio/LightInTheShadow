@@ -28,7 +28,7 @@ public class DarkThought : MonoBehaviour
     private protected bool playerInSightRange;
     private bool _canKill = true;
     private protected bool collided;
-    protected int damageToHealth = 10;
+    [SerializeField] private int damageToHealth = 10;
     protected virtual void Start()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -43,9 +43,11 @@ public class DarkThought : MonoBehaviour
     }
 
 
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         if (!alive || health > maxHealth) return;
+
+        _canKill = !MasterManager.Instance.player.frozenForCutscene;
         
         if (health > maxHealth) health = maxHealth;
         

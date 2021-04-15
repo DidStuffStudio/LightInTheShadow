@@ -24,7 +24,7 @@ namespace Puzzles
         public void CheckIfHasKey()
         {
             var hasKey = false;
-            foreach (var dummy in inventorySystem.itemsInInventory.Where(item => item.name.Contains("Key"))) hasKey = true;
+            foreach (var item in inventorySystem.idsInInventory.Where(id => id.Contains("LivingRoomDoorKey"))) hasKey = true;
             if (hasKey)
             {
                 door.Play("Scene");
@@ -35,6 +35,8 @@ namespace Puzzles
             else
             {
                 MasterManager.Instance.soundtrackMaster.PlaySoundEffect(2); // Play door locked sfx
+                MasterManager.Instance.player.helpText.text = "You need something to open this door";
+                MasterManager.Instance.player.OpenHelpMenu(true);
             }
         }
 

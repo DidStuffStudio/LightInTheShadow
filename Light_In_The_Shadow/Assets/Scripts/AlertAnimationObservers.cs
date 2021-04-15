@@ -15,11 +15,15 @@ public class AlertAnimationObservers : MonoBehaviour
         BedroomPuzzleEndCutscene,
         TVChildAnimations,
         KitchenChildAnimations,
+        BathroomChildAnimations,
+        BedroomChildAnimations,
+        FinalLevelChildAnimations,
         BossManLogic
         
     }
 
     public AlertWho alertWho;
+    [SerializeField] private int finalAnimationIndex = 0;
     
     public void AlertObservers(string message)
     {
@@ -46,10 +50,24 @@ public class AlertAnimationObservers : MonoBehaviour
                     break;
                 }
                 
-                case AlertWho.BedroomPuzzleEndCutscene:
+                case AlertWho.BathroomChildAnimations:
                 {
+                    FindObjectOfType<BathroomPuzzle>().SwitchChildAnimation();
                     break;
                 }
+                
+                case AlertWho.BedroomPuzzleEndCutscene:
+                {
+                    FindObjectOfType<BedroomPuzzle>().EndBedroomCutscene();
+                    break;
+                }
+                
+                case AlertWho.BedroomChildAnimations:
+                {
+                    FindObjectOfType<BedroomPuzzle>().SwitchChildAnimation();
+                    break;
+                }
+
                 
                 case AlertWho.PhonePuzzleEndCutScene:
                 {
@@ -63,6 +81,22 @@ public class AlertAnimationObservers : MonoBehaviour
                     break;
                 }
 
+                case AlertWho.FinalLevelChildAnimations:
+                {
+                    switch (finalAnimationIndex)
+                    {
+                        case 1:
+                            FindObjectOfType<BeforeBossLevel3>().PlayChase();
+                            break;
+                        case 2:
+                            FindObjectOfType<BeforeBossLevel3>().PlayStrangle();
+                            break;
+                    }
+
+                    break;
+                }
+                
+                
                 case AlertWho.BossManLogic:
                 {
                     FindObjectOfType<BossFight>().EndCutscene();

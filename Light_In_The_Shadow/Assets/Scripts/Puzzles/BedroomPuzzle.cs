@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Puzzles;
 using UnityEngine;
 
 public class BedroomPuzzle : PuzzleMaster
 {
-    // Start is called before the first frame update
+    [SerializeField] private DetectClick doorDetectClick;
     protected override void Start()
     {
         base.Start();
@@ -13,8 +14,37 @@ public class BedroomPuzzle : PuzzleMaster
 
     protected override void Update()
     {
-        
-        
+
         base.Update();
     }
+
+    public void CheckIfHasKey()
+    {
+        var hasKey = false;
+        foreach (var item in inventorySystem.idsInInventory.Where(id => id.Contains("BedroomDoorKey"))) hasKey = true;
+        if (hasKey)
+        {
+            
+            MasterManager.Instance.soundtrackMaster.PlaySoundEffect(2); // Play door open sfx
+            inventorySystem.RemoveItem("BedroomDoorKey");
+            correct = true;
+            doorDetectClick.clickEnabled = false;
+        }
+        else
+        {
+            MasterManager.Instance.player.helpText.text = "Maybe I should lock this door to keep the child safe";
+            MasterManager.Instance.player.OpenHelpMenu(true);
+        }
+    }
+    
+       public void FaceScene(bool fadeIn) {
+           if (fadeIn)
+           {
+               doorDetectClick.clickEnabled = true;
+               base.FadeInScene();
+           }
+            else base.FadeOutCutscene();
+        }
+    public void EndBedroomCutscene() => base.EndCutScene();
+    public void SwitchChildAnimation() => base.BoyAnimations();
 }

@@ -24,10 +24,11 @@ public class FlyingBeanSpider : DarkThought
         StartCoroutine(FallbackDestroy());
     }
 
-    protected override void Update()
-    {
-        base.Update();
-        
+    protected override void FixedUpdate()
+    
+        {
+        base.FixedUpdate();
+        if (collided) hasAttackedInLastXSeconds = true;
             playerInSightRange = Physics.CheckSphere(transform.position, sightRange, _playerLayer);
             if (playerInSightRange && _canAttack)
             {
@@ -44,7 +45,6 @@ public class FlyingBeanSpider : DarkThought
             {
                 GetRandomPointInRange();
                 StartCoroutine(WaitToAttack());
-                print("Collided");
             }
             
             Movement();
@@ -100,21 +100,9 @@ public class FlyingBeanSpider : DarkThought
     {
         while (alive)
         {
-            StartCoroutine(CheckIfAttacking());
             yield return new WaitForSeconds(fallbackDestroyTime);
             if(!hasAttackedInLastXSeconds)StartCoroutine(Explode());
+            hasAttackedInLastXSeconds = false;
         }
     }
-
-    IEnumerator CheckIfAttacking()
-    {
-        var timer = 0.0f;
-        while (timer < fallbackDestroyTime)
-        {
-            yield return new WaitForSeconds(1.0f);
-            timer += 1.0f;
-            if (_isAttacking) hasAttackedInLastXSeconds = true;
-        }
-    }
-    
 }

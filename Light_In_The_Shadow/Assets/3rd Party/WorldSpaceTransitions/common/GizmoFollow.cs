@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 namespace WorldSpaceTransitions
@@ -36,6 +37,10 @@ namespace WorldSpaceTransitions
             //DontDestroyOnLoad(this.gameObject);
         }
 
+        private void Start()
+        {
+            transform.SetParent(MasterManager.Instance.transform);
+        }
 
         void Update()
         {
@@ -76,18 +81,6 @@ namespace WorldSpaceTransitions
             }
         }
 
-        void OnDrawGizmos()
-        {
-            Vector3 a = Camera.main.transform.position;
-            Plane sPlane = new Plane(transform.forward, transform.position);
-            Ray cameraRay = new Ray(a, Camera.main.transform.forward);
-            Vector3 b = Vector3.zero;
-            float planeDist = 0;
-            if (sPlane.Raycast(cameraRay, out planeDist))
-                b = a + planeDist * Camera.main.transform.forward;
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(a, b);
-            Gizmos.DrawLine(transform.position, b);
-        }
+
     }
 }

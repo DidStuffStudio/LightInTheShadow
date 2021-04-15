@@ -15,6 +15,7 @@ TagManager:
   - BossManBones
   - FlyingBounds
   - Monster
+  - Gizmo
   layers:
   - Default
   - TransparentFX

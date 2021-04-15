@@ -17,6 +17,7 @@ public class MasterManager : MonoBehaviour {
     public GameObject[] portals = new GameObject[4];
     public Interactor interactor;
     public bool isInFocusState;
+    [SerializeField] private GameObject credits;
 
     public static MasterManager Instance {
         get {
@@ -28,13 +29,11 @@ public class MasterManager : MonoBehaviour {
         }
     }
 
-
-    void ScaleUI()
+    private void Start()
     {
-        // TODO Detect screen size and scale UI Accordingly
+        soundtrackMaster.MainThemeVolume(100, 2);
     }
 
-    
     public void ChangeLevelAudio()
     {
         // Level 1 music is index 0, level 2 is 1 and so on
@@ -46,6 +45,10 @@ public class MasterManager : MonoBehaviour {
         soundtrackMaster.LevelAmbienceVolume(levelIndex , 0.0f, 0.1f);// reduce volume of previous level ambience
     }
 
+    public void PlayCredits()
+    {
+        credits.SetActive(true);
+    }
     
     
     public GameObject loadingScreen;
@@ -98,6 +101,12 @@ public class MasterManager : MonoBehaviour {
         if (levelIndex > 0 && levelIndex < 4) SceneManager.UnloadSceneAsync(levelIndex - 1);
     }
 
+    public void RestartGame()
+    {
+        _instance = null;
+        SceneManager.LoadScene(0);
+        Destroy(gameObject);
+    }
     public void ToggleNeurons(bool enable) {
         loadingScreen.SetActive(enable);
         portals[0].SetActive(enable);
