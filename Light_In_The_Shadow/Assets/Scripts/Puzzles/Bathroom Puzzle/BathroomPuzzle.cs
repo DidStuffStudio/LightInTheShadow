@@ -5,26 +5,27 @@ using UnityEditor;
 using UnityEngine;
 
 public class BathroomPuzzle : PuzzleMaster {
-    [Space] [Header("Unique Parameters")] [SerializeField]
+    [Space] [Header("Unique Parameters")] [SerializeField] [HideInInspector]
+    public bool goingBackToOriginalPos, _isRotating;
 
-    [HideInInspector] public bool goingBackToOriginalPos, _isRotating;
     [HideInInspector] public Vector3 mouseDownPosition = Vector3.zero;
 
     private readonly float _goBackRotationSpeed = 0.2f;
     private readonly float _rotationSensitivity = 0.01f;
     private Quaternion _originalRotation;
     private float _rotation;
-    
+
     [SerializeField] private List<GameObject> woodenPlanks = new List<GameObject>();
+    [SerializeField] private List<DetectClick> detectClicksOnWoodenPlanks = new List<DetectClick>();
     public GameObject crowbar;
 
     [SerializeField] private float deltaNeededToDetachWoodenPlank = 3.0f;
-    private float deltaBetweenWoodenPlankAndCrowbar;
+    private float deltaBetweenWoodenPlankAndCrowbar = 0.0f;
 
     [SerializeField] private float crowBarForce = 0.1f;
 
     public WoodenPlank selectedWoodenPlank;
-    
+
     public int detachedWoodenPlanks = 0;
     [SerializeField] private int numberWoodenPlanks;
     private bool puzzleSolved;
@@ -40,7 +41,7 @@ public class BathroomPuzzle : PuzzleMaster {
 
     protected override void Update() {
         base.Update();
-        if(puzzleSolved) return;
+        if (puzzleSolved) return;
         if (_isRotating) {
             // _rotation = puzzleObject.transform.localRotation.eulerAngles.y;
             var mousePosition = (mouseDownPosition - Input.mousePosition);
@@ -52,20 +53,36 @@ public class BathroomPuzzle : PuzzleMaster {
             // print(deltaBetweenWoodenPlankAndCrowbar + "   |   " + deltaNeededToDetachWoodenPlank);
             selectedWoodenPlank.AddForce(crowBarForce);
         }
-        else if(puzzleObject)
-            puzzleObject.transform.rotation =
-                Quaternion.Lerp(puzzleObject.transform.rotation, _originalRotation, _goBackRotationSpeed);
+
+        // else if(puzzleObject)
+        //     puzzleObject.transform.rotation =
+        //         Quaternion.Lerp(puzzleObject.transform.rotation, _originalRotation, _goBackRotationSpeed);
+        print(deltaBetweenWoodenPlankAndCrowbar);
         
-        if(Mathf.Abs(deltaBetweenWoodenPlankAndCrowbar) >= deltaNeededToDetachWoodenPlank) {
-            _isRotating = false;
-            _rotation = 0;
-            deltaBetweenWoodenPlankAndCrowbar = 0;
-            selectedWoodenPlank.Detach();
+        if (deltaBetweenWoodenPlankAndCrowbar <= deltaNeededToDetachWoodenPlank &&
+            !selectedWoodenPlank.pullCrowbarUpWardsToDetach) {
+            CrowBarHasDetachedWoodenPlank();
         }
+        
+        if (deltaBetweenWoodenPlankAndCrowbar >= deltaNeededToDetachWoodenPlank &&
+            selectedWoodenPlank.pullCrowbarUpWardsToDetach) {
+            CrowBarHasDetachedWoodenPlank();
+        }
+        
+        
+
         if (detachedWoodenPlanks >= numberWoodenPlanks) PuzzleSolved();
     }
 
+    private void CrowBarHasDetachedWoodenPlank() {
+        _isRotating = false;
+        _rotation = 0;
+        deltaBetweenWoodenPlankAndCrowbar = 0;
+        selectedWoodenPlank.Detach();
+    }
+
     private void PuzzleSolved() {
+        print("Puzzle solved");
         puzzleSolved = true;
         correct = true;
         puzzleObject = originalPuzzleObject;
@@ -76,25 +93,30 @@ public class BathroomPuzzle : PuzzleMaster {
         // var go = woodenPlanks.Find(item => item == woodenPlank);
     }
 
-    public void SetCrowbar(GameObject c) => puzzleObject = c;
-    
+    public void SetCrowbar(GameObject c) {
+        if (crowbar != null) crowbar.SetActive(false);
+        crowbar = puzzleObject = c;
+    }
+
 
     public void SelectWoodenPlank(WoodenPlank woodenPlank) {
-        // TODO: instantiate crowbar in
-        // TODO: change the crowbar's position and rotation corresponding to the wooden plank
         selectedWoodenPlank = woodenPlank;
-
-        // check for the rotation values, and modify it according to the crowbar's position
-
     }
 
     public void FaceScene(bool fadeIn) {
-        if(fadeIn) base.FadeInScene();
+        if (fadeIn) base.FadeInScene();
         else base.FadeOutCutscene();
     }
-    
 
-    public void FocusOnWoodenPlanks(bool focus) => base.FocusOnPuzzleItem(focus);
+
+    public void FocusOnWoodenPlanks(bool focus) {
+        base.FocusOnPuzzleItem(focus);
+        foreach (var dc in detectClicksOnWoodenPlanks) {
+            dc.gameObject.GetComponent<Collider>().enabled = true;
+            dc.clickEnabled = focus;
+        }
+    }
+
     public void EndBathroomCutscene() => base.EndCutScene();
     public void SwitchChildAnimation() => base.BoyAnimations();
 }

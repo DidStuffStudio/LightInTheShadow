@@ -6,29 +6,19 @@ using UnityEngine;
 public class WoodenPlank : MonoBehaviour {
     [SerializeField] private BathroomPuzzle _bathroomPuzzle;
     [SerializeField] private Crowbar _crowbar;
+    private DetectClick _detectClick;
     public bool isDetached; // is this wooden plank still nailed to the window?
 
     private Rigidbody _rigidbody;
     private Outline _outline;
     private bool mouseIsOver;
 
+    public bool pullCrowbarUpWardsToDetach;
+
     private void Start() {
         _rigidbody = GetComponent<Rigidbody>();
         _outline = GetComponent<Outline>();
-    }
-
-    private void OnMouseOver() {
-        mouseIsOver = true;
-        _outline.enabled = true;
-    }
-
-    private void OnMouseExit() {
-        mouseIsOver = false;
-        _outline.enabled = false;
-    }
-
-    private void OnMouseDown() {
-        if(mouseIsOver) SetSelfSelected(true);
+        _detectClick = GetComponent<DetectClick>();
     }
 
     public void Detach() {
@@ -41,6 +31,7 @@ public class WoodenPlank : MonoBehaviour {
         SetSelfSelected(false);
         _bathroomPuzzle.detachedWoodenPlanks++;
         _rigidbody.isKinematic = false;
+        if (_crowbar.pullCrowbarUpWardsToDetach) pullCrowbarUpWardsToDetach = true;
     }
 
     public void AddForce(float force) {

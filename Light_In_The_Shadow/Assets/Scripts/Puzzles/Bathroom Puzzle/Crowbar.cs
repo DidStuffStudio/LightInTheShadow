@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Crowbar : MonoBehaviour {
     [SerializeField] private BathroomPuzzle bathroomPuzzle;
+    public bool pullCrowbarUpWardsToDetach;
 
     private void OnMouseDown() {
         bathroomPuzzle._isRotating = true;
