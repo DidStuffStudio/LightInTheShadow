@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     private bool _running;
     [SerializeField] private Transform attachPoint;
     public bool frozenForCutscene = false;
-
+    public bool waitingForBossMan = false;
     private void Awake()
     {
         playerControls = new PlayerControls();
@@ -115,13 +115,17 @@ public class PlayerController : MonoBehaviour
         {
             _running = true;
             _privatePlayerSpeed = playerRunSpeed;
+            if (waitingForBossMan) return;
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 3.0f;
+            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
         }
         else
         {
             _running = false;
             _privatePlayerSpeed = playerWalkSpeed;
+            if (waitingForBossMan) return;
             playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 1.0f;
+            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
         }
     }
 
@@ -371,14 +375,14 @@ public class PlayerController : MonoBehaviour
     {
         ClosePanels();
         menuPanels[1].SetActive(true);
-        menuPanels[0].transform.parent.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("Low"));
+        //menuPanels[0].transform.parent.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("Low"));
     }
 
     public void Back()
     {
         ClosePanels();
         menuPanels[0].SetActive(true);
-        menuPanels[0].transform.parent.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("Play Button"));
+        //menuPanels[0].transform.parent.GetComponent<EventSystem>().SetSelectedGameObject(GameObject.Find("Play Button"));
     }
 
 

@@ -354,8 +354,19 @@
         </e>
         <e p="CopyOutline.cs" t="Include" />
         <e p="CreditScroll.cs" t="Include" />
+        <e p="CrowbarCollider.cs" t="Include" />
         <e p="DarkThoughtWalking.cs" t="Include" />
         <e p="DialNumber.cs" t="Include" />
+        <e p="FastMobilePlanarReflection" t="Include">
+          <e p="BumpDiffuse.shader" t="Include" />
+          <e p="BumpSpecular.shader" t="Include" />
+          <e p="DiffusePixel.shader" t="Include" />
+          <e p="DiffuseVertex.shader" t="Include" />
+          <e p="PlanarReflection.cs" t="Include" />
+          <e p="SpecularPixel.shader" t="Include" />
+          <e p="SpecularVertex.shader" t="Include" />
+          <e p="Unlit.shader" t="Include" />
+        </e>
         <e p="flicker.cs" t="Include" />
         <e p="FlyingBeanSpider.cs" t="Include" />
         <e p="FlyingCollisionCheck.cs" t="Include" />

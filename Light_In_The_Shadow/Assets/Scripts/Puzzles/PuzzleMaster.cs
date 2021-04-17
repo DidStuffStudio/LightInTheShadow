@@ -150,7 +150,6 @@ namespace Puzzles
             if(MasterManager.Instance.player.playerHealth <= 0) FocusOnPuzzleItem(false);
             if((Mathf.Abs(Input.GetAxis("Horizontal")) > 0.0f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.0f) && _focused) FocusOnPuzzleItem(false);
             if (correct && !finished) {
-                print("IT IS SOLVED!!");
                 FadeOutCutscene();
             }
             if (!_fadingOut) return;

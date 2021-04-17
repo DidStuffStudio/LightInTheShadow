@@ -12,8 +12,7 @@ public class BathroomPuzzle : PuzzleMaster {
 
     private readonly float _goBackRotationSpeed = 0.2f;
     private readonly float _rotationSensitivity = 0.01f;
-    private Quaternion _originalRotation;
-    private float _rotation;
+    public float _rotation;
 
     [SerializeField] private List<GameObject> woodenPlanks = new List<GameObject>();
     [SerializeField] private List<DetectClick> detectClicksOnWoodenPlanks = new List<DetectClick>();
@@ -29,37 +28,40 @@ public class BathroomPuzzle : PuzzleMaster {
     public int detachedWoodenPlanks = 0;
     [SerializeField] private int numberWoodenPlanks;
     private bool puzzleSolved;
-    private GameObject originalPuzzleObject;
+    private Crowbar currentCrowbar;
+    public bool crowbarIsNull = true;
 
     protected override void Start() {
         base.Start();
-        originalPuzzleObject = puzzleObject;
-        crowbar = puzzleObject;
         fadeSpeedIncrement = 0.001f;
-        _originalRotation = puzzleObject.transform.rotation;
     }
 
     protected override void Update() {
         base.Update();
         if (puzzleSolved) return;
         if (_isRotating) {
-            // _rotation = puzzleObject.transform.localRotation.eulerAngles.y;
             var mousePosition = (mouseDownPosition - Input.mousePosition);
             _rotation = mousePosition.y * _rotationSensitivity * -1;
-            // _rotation *= -1;
-            puzzleObject.transform.RotateAround(puzzleObject.transform.position, puzzleObject.transform.forward,
-                angle: _rotation);
-            deltaBetweenWoodenPlankAndCrowbar += _rotation;
-            // print(deltaBetweenWoodenPlankAndCrowbar + "   |   " + deltaNeededToDetachWoodenPlank);
-            selectedWoodenPlank.AddForce(crowBarForce);
+            
+
+            if (selectedWoodenPlank.pullCrowbarUpWardsToDetach) _rotation *= -1;
+            
+            
+                if (deltaBetweenWoodenPlankAndCrowbar <= 0)
+                {
+                    crowbar.transform.RotateAround(crowbar.transform.position, crowbar.transform.forward,
+                        angle: _rotation);
+                    deltaBetweenWoodenPlankAndCrowbar += _rotation;
+                }
+                else crowbar.transform.rotation = Quaternion.Lerp(crowbar.transform.rotation, currentCrowbar.originalRot, _goBackRotationSpeed);
+                
+            
         }
 
-        // else if(puzzleObject)
-        //     puzzleObject.transform.rotation =
-        //         Quaternion.Lerp(puzzleObject.transform.rotation, _originalRotation, _goBackRotationSpeed);
-        print(deltaBetweenWoodenPlankAndCrowbar);
+        if (crowbarIsNull) return;
+        if(currentCrowbar.atOriginalRot)deltaBetweenWoodenPlankAndCrowbar = 0.0f;
         
-        if (deltaBetweenWoodenPlankAndCrowbar <= deltaNeededToDetachWoodenPlank &&
+        /*if (deltaBetweenWoodenPlankAndCrowbar <= deltaNeededToDetachWoodenPlank &&
             !selectedWoodenPlank.pullCrowbarUpWardsToDetach) {
             CrowBarHasDetachedWoodenPlank();
         }
@@ -68,43 +70,50 @@ public class BathroomPuzzle : PuzzleMaster {
             selectedWoodenPlank.pullCrowbarUpWardsToDetach) {
             CrowBarHasDetachedWoodenPlank();
         }
+        */
         
         
 
         if (detachedWoodenPlanks >= numberWoodenPlanks) PuzzleSolved();
     }
 
-    private void CrowBarHasDetachedWoodenPlank() {
+    private void CrowBarHasDetachedWoodenPlank()
+    {
+        /*detachedWoodenPlanks++;*/
         _isRotating = false;
         _rotation = 0;
-        deltaBetweenWoodenPlankAndCrowbar = 0;
-        selectedWoodenPlank.Detach();
+        /*deltaBetweenWoodenPlankAndCrowbar = 0;*/
     }
 
-    private void PuzzleSolved() {
-        print("Puzzle solved");
+    private void PuzzleSolved()
+    {
+        print("Solved");
         puzzleSolved = true;
         correct = true;
-        puzzleObject = originalPuzzleObject;
-    }
-
-    public void UpdateWoodenPlank() {
-        // update the wooden plank which is currently selected
-        // var go = woodenPlanks.Find(item => item == woodenPlank);
     }
 
     public void SetCrowbar(GameObject c) {
-        if (crowbar != null) crowbar.SetActive(false);
-        crowbar = puzzleObject = c;
+        if (crowbar != null)
+        {
+            crowbar.SetActive(false);
+        }
+        crowbar = c;
+        crowbarIsNull = false;
     }
 
 
     public void SelectWoodenPlank(WoodenPlank woodenPlank) {
         selectedWoodenPlank = woodenPlank;
+        
+        if (crowbar.TryGetComponent(out Crowbar crowbarScript)) currentCrowbar = crowbarScript;
+        
     }
 
     public void FaceScene(bool fadeIn) {
-        if (fadeIn) base.FadeInScene();
+        if (fadeIn)
+        {
+            base.FadeInScene();
+        }
         else base.FadeOutCutscene();
     }
 
@@ -112,8 +121,10 @@ public class BathroomPuzzle : PuzzleMaster {
     public void FocusOnWoodenPlanks(bool focus) {
         base.FocusOnPuzzleItem(focus);
         foreach (var dc in detectClicksOnWoodenPlanks) {
-            dc.gameObject.GetComponent<Collider>().enabled = true;
+            dc.gameObject.GetComponent<Collider>().enabled = focus;
+            dc.gameObject.GetComponent<Outline>().enabled = false;
             dc.clickEnabled = focus;
+            if (!focus) crowbarIsNull = true;
         }
     }
 

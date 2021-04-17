@@ -23,21 +23,169 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonsterAudio.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingBean.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingBean.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CrowbarCollider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CrowbarCollider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/BumpDiffuse.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/BumpDiffuse.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/BumpSpecular.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/BumpSpecular.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/DiffusePixel.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/DiffusePixel.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/DiffuseVertex.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/DiffuseVertex.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Anims.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Anims/Main Camera.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Anims/Main Camera.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Anims/camAnim.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Anims/camAnim.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Example.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Example.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/ball.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/ball.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/bfbd.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/bfbd.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/cinterior.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/cinterior.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/exterior.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/exterior.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/floor.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/floor.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/hub.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/hub.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/interior.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/interior.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/left.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/left.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/right.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/right.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/top.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/top.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/top.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/wheel.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/wheel.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/wheel1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/wheel1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/wheeluf.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/wheeluf.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/wheeluf2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Materials/wheeluf2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/GRoom.FBX" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/GRoom.FBX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/BallVRayRawTotalLightingMap.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/BallVRayRawTotalLightingMap.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/ExteriorVRayCompleteMap.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/ExteriorVRayCompleteMap.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/INTERIORVRayCompleteMap.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/INTERIORVRayCompleteMap.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/LampVRayCompleteMap.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/LampVRayCompleteMap.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/Vidrios.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/Materials/Vidrios.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/rc-15.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Prefabs/rc-15.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/FloorNrm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/FloorNrm.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/bfbd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/bfbd.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/cinterior.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/cinterior.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/exterior.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/exterior.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/floor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/floor.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/hub.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/hub.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/interior.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/interior.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/left.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/right.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/wheel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/wheel.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/wheel1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/wheel1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/wheeluf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/wheeluf.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/wheeluf2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Example/Textures/wheeluf2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/PlanarReflection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/PlanarReflection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/README.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/README.pdf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/SpecularPixel.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/SpecularPixel.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/SpecularVertex.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/SpecularVertex.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/URP_Planar.unitypackage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Unlit.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FastMobilePlanarReflection/Unlit.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Level_3_Memories.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Level_3_Memories.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/MemoryEnvironment.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/MemoryEnvironment.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Matress.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Matress.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Window.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Window.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Level_3_Env.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Level_3_Env.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lit_Displacement.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lit_Displacement.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/LightInShadowIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/LightInShadowIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/LitSTitle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/LitSTitle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/LitSTitleStudio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/LitSTitleStudio.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Reflect.renderTexture" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Reflect.renderTexture.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/bb82af6b027c173c5b0c21cb7064401b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/bb82af6b027c173c5b0c21cb7064401b.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/water_new_height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/water_new_height.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/FireBall3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingBeanController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingBeanController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/FlyingSpiderBean.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BeforeBossLevel3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BeforeBossLevel3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Characters.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Characters.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/IceIceBaby.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/IceIceBaby.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ice_M.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ice_M.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Water.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Water.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WaterMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/WaterMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WoodDark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/WoodDark.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/BathroomBoy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CharacterFBX/Memory 3/BathroomBoy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Pickaxe.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Pickaxe.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Respawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Respawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/Crowbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/Crowbar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/WoodenPlank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/WoodenPlank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingSpiderBean.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/Monster/FlyingSpiderBean.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Characters.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Characters.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrains/Level_3_Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Water 0325normal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Water 0325normal.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/water 0342normal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/water 0342normal.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/MasterManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +212,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/PortalBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BedroomLamp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Unity/Hub/Editor/2020.2.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/3rd Party/NastyWizard_CelSobel/CelShadingSobel/Shaders/Post/PostFunctions.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Smrvfx-master/Smrvfx-master/Packages/jp.keijiro.smrvfx/Runtime/SkinnedMeshBaker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CrowbarCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Flicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CopyOutline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HurtPlayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,10 +255,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/AlertObservers.cs" />
-        <option value="$PROJECT_DIR$/Assets/PassToTVPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InputManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FadeInScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Portal/PortalTeleporter.cs" />
         <option value="$PROJECT_DIR$/Assets/Antenna.cs" />
         <option value="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csShowAllEffect.cs" />
@@ -127,18 +273,13 @@
         <option value="$PROJECT_DIR$/Assets/CopyOutline.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/TerrainChange.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inputmanager.cs" />
         <option value="$PROJECT_DIR$/Assets/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/TorchPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/iceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PhonePuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AlertAnimationObservers.cs" />
-        <option value="$PROJECT_DIR$/Assets/BeforeBossLevel3.cs" />
-        <option value="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/BedroomLamp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/BedroomPuzzle.cs" />
@@ -146,16 +287,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DetectClick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeFadeGizmo.cs" />
         <option value="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/FadingTransition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Matress.cs" />
-        <option value="$PROJECT_DIR$/Assets/Respawn.cs" />
         <option value="$PROJECT_DIR$/Assets/CreditScroll.cs" />
         <option value="$PROJECT_DIR$/Assets/DarkThoughtWalking.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DarkThought.cs" />
         <option value="$PROJECT_DIR$/Assets/FlyingBeanSpider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inputmanager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/3rd Party/IgniteCoders/Simple Water Shader/Resources/WaterReflection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/Crowbar.cs" />
+        <option value="$PROJECT_DIR$/Assets/CrowbarCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/WoodenPlank.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/BeforeBossLevel3.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Respawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/SoundtrackMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IceScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MasterManager.cs" />
       </list>
     </option>
   </component>
@@ -255,6 +405,8 @@
       <workItem from="1618316618797" duration="16092000" />
       <workItem from="1618384991677" duration="28286000" />
       <workItem from="1618477866391" duration="25396000" />
+      <workItem from="1618654487638" duration="17231000" />
+      <workItem from="1618691872823" duration="5297000" />
     </task>
     <servers />
   </component>
@@ -288,10 +440,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617462323199" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1617901584849">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1618679504479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617901584849" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618679504479" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1614669750894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -300,16 +452,16 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="477" y="292" width="958" height="490" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616530010744" />
-    <state x="616" y="249" width="672" height="677" key="run.anything.popup" timestamp="1618516158677">
+    <state x="616" y="249" width="672" height="677" key="run.anything.popup" timestamp="1618687266320">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="249" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618516158677" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup" timestamp="1618516162350">
+    <state x="616" y="249" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618687266320" />
+    <state x="707" y="237" width="672" height="160" key="search.everywhere.popup" timestamp="1618697703429">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="422" y="-1092" width="672" height="667" key="search.everywhere.popup/-521.-1415.2560.1415/0.25.1440.875@-521.-1415.2560.1415" timestamp="1615283428601" />
     <state x="422" y="-1111" width="672" height="678" key="search.everywhere.popup/-521.-1440.2560.1440/0.0.1440.900@-521.-1440.2560.1440" timestamp="1614704458804" />
-    <state x="707" y="237" width="672" height="650" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618516162350" />
+    <state x="707" y="237" width="672" height="160" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618697703429" />
     <state x="619" y="259" width="672" height="484" key="search.everywhere.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1616529976108" />
   </component>
 </project>

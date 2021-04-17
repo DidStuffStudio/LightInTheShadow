@@ -6,6 +6,7 @@ public class BeforeBossLevel3 : MonoBehaviour
 {
     [SerializeField] GameObject[] childObjects = new GameObject[4];
     [SerializeField] GameObject[] dadObjects = new GameObject[4];
+    [SerializeField] private DetectClick detectClick;
     
     public void PlayJumping()
     {
@@ -25,6 +26,7 @@ public class BeforeBossLevel3 : MonoBehaviour
         dadObjects[0].SetActive(false);
         //childObjects[2].SetActive(true);
         dadObjects[1].SetActive(true); //Just one object as of now
+        detectClick.clickEnabled = true;
     }
 
     public void PlayDadFall()

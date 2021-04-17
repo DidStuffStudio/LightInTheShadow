@@ -23,7 +23,7 @@ public class Respawn : MonoBehaviour
     {
         while (true)
         {
-            print(Vector3.Distance(transform.position, _startingPosition));
+            
             yield return new WaitForSeconds(0.5f);
             if (Vector3.Distance(transform.position, _startingPosition) > respawnDistance)
             {

@@ -103,7 +103,6 @@ public class SoundtrackMaster : MonoBehaviour
     public void PlayLevelMusic(int index, bool play) // Level music indices: Level 1 - 1, Level 2 - 2, Level 3 - 3
     {
         
-        print("Playing audiosource index from music "+index);
         if(play) audioSources[index].Play();
         else audioSources[index].Stop();
     }
@@ -137,7 +136,6 @@ public class SoundtrackMaster : MonoBehaviour
     public void PlayLevelAmbience(int index, bool play) //Level ambience indices: Level 1 = 4, level 2 = 5, Level 3 = 6
     {
         index += levelMusicClips.Length;
-        print("Playing audiosource index from ambience "+index);
         if(play) audioSources[index].Play();
         else audioSources[index].Stop();
     }

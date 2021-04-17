@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class IceScript : MonoBehaviour
@@ -17,7 +19,16 @@ public class IceScript : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip iceCracking, iceBreak, rumble;
     [SerializeField] private GameObject bigBossMan, health;
-   
+    [SerializeField] private float targetAmplitude, targetFrequency;
+    private bool buildShake = true;
+    private CinemachineBasicMultiChannelPerlin _cameraNoise;
+
+    private void Start()
+    {
+        _cameraNoise = MasterManager.Instance.player.playerCam
+            .GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+    }
+
     void Update()
     {
         if (counterForIce != counterWas) StartCoroutine(SpawnPickAxe());
@@ -63,6 +74,7 @@ public class IceScript : MonoBehaviour
         if (counterForIce > 1)iceCracks[counterForIce - 2].SetActive(false);
         if (counterForIce >= thresholdForIce)
         {
+            GetComponent<DetectClick>().clickEnabled = false;
             _audioSource.PlayOneShot(iceBreak);
             yield return new WaitForSeconds(3.0f);
             logic.PlayDadFall();
@@ -70,9 +82,19 @@ public class IceScript : MonoBehaviour
             MasterManager.Instance.soundtrackMaster.PlayLevelMusic(4, true);
             MasterManager.Instance.soundtrackMaster.LevelMusicVolume(3,0,10);
             MasterManager.Instance.soundtrackMaster.LevelMusicVolume(4,100,10);
+            MasterManager.Instance.player.waitingForBossMan = true;
+                
+            StartCoroutine(BuildCameraShake(targetAmplitude, targetFrequency, 0.01f));
             yield return new WaitForSeconds(20.0f);
             bigBossMan.SetActive(true);//Switch to animation of boss man breaking up through the ice and camera shake
             health.SetActive(true);
+            MasterManager.Instance.player.waitingForBossMan = false;
+            buildShake = false;
+            yield return new WaitForSeconds(0.5f);
+            buildShake = true;
+            StartCoroutine(BuildCameraShake(1, 1, 0.1f));
+            yield return new WaitForSeconds(10.0f);
+            buildShake = false;
         }
         
     }
@@ -86,5 +108,17 @@ public class IceScript : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Destroy(pick);
         canHit = true;
+    }
+
+    IEnumerator BuildCameraShake(float targetAmp, float targetFreq, float step)
+    {
+        while (_cameraNoise.m_FrequencyGain != targetFreq || _cameraNoise.m_AmplitudeGain != targetAmp && buildShake)
+        {
+            yield return new WaitForSeconds(0.1f);
+            _cameraNoise.m_FrequencyGain =
+                Mathf.Lerp(_cameraNoise.m_FrequencyGain, targetFreq, step);
+            _cameraNoise.m_AmplitudeGain =
+                Mathf.Lerp(_cameraNoise.m_AmplitudeGain, targetAmp, step);
+        }
     }
 }

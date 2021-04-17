@@ -175,6 +175,7 @@ public class BossFight : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         //Spawn explosion
         bossManExplosion.SetActive(true);
+        foreach (var transform in iceInteract.GetComponentsInChildren<Transform>()) transform.gameObject.SetActive(false);
         Destroy(trees);
         terrainChange.change = true;
         bigBossMan.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
