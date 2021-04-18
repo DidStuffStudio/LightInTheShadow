@@ -24,14 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="adeef2b2-2a8d-46d4-8e88-d511b7c2d1f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Light_In_The_Shadow/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Level_1/Soundtrack.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Level_1/Soundtrack.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1/Kitchen_PP Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1/Kitchen_PP Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,12 +138,12 @@
         <option value="$PROJECT_DIR$/Assets/3rd Party/WorldSpaceTransitions/fading/scripts/NoiseGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Bathroom Puzzle/BathroomPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleMaster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/BedroomPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/TVPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/player scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BossFight.cs" />
       </list>
     </option>
   </component>
@@ -257,7 +249,7 @@
       <workItem from="1618744441398" duration="560000" />
       <workItem from="1618754060070" duration="563000" />
       <workItem from="1618760484142" duration="269000" />
-      <workItem from="1618768148313" duration="1013000" />
+      <workItem from="1618768148313" duration="1701000" />
     </task>
     <servers />
   </component>
