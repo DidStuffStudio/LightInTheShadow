@@ -9,7 +9,7 @@ OcclusionCullingSettings:
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: 5cf21676f11751a4c9bf061b71095263
-  m_OcclusionCullingData: {fileID: 36300000, guid: 1b97c7df5823b4ecaa51e25b2cab381a, type: 2}
+  m_OcclusionCullingData: {fileID: 36300000, guid: 305f370293dfc8c489cf97f3e26d285a, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -319,6 +319,43 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 511257854, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559432362, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3682
+      objectReference: {fileID: 0}
+    - target: {fileID: 559432363, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_Text
+      value: 'Boxophobic (Skybox)
+
+
+        Jean Moreno (Particle Effects)
+
+
+        Ink
+        Phantom Studio (Environment props)
+
+
+        Triforge Assets (Environment
+        props)
+
+
+        10DollarsAnimation (Environment props)
+
+
+        EmacEArt
+        (Environment props)
+
+
+        Pure3D (Environment props)
+
+
+        VirtualPlayground
+        (Scene Fading)'
+      objectReference: {fileID: 0}
     - target: {fileID: 699847626, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 0.56700003
@@ -562,6 +599,10 @@ PrefabInstance:
     - target: {fileID: 567656129619569793, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_Lens.FarClipPlane
       value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 734732684194878435, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967276
       objectReference: {fileID: 0}
     - target: {fileID: 3610929480504827791, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b

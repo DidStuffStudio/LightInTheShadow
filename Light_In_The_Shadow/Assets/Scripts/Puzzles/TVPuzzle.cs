@@ -63,8 +63,8 @@ namespace Puzzles
             if (antennaA.antennaCorrect && antennaB.antennaCorrect && !finished) correct = true;
             if (correct)
             {
-                antennaB.masterMix.SetFloat("tv", -80.0f);
-                antennaB.masterMix.SetFloat("whiteNoise", -80.0f);
+                antennaB.masterMix.SetFloat("TVAudio", -80.0f);
+                antennaB.masterMix.SetFloat("WhiteNoise", -80.0f);
             }
             base.Update();
         }

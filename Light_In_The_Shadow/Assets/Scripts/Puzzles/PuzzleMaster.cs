@@ -85,8 +85,8 @@ namespace Puzzles
             _fadedIn = true;
             detectClick.clickEnabled = true;
             _fadeInScene.fadeInNow = true;
-            //puzzleAudio.active = true;
-            //StartCoroutine(puzzleAudio.PlayVoiceClip());
+            puzzleAudio.active = true;
+            StartCoroutine(puzzleAudio.PlayVoiceClip());
             MasterManager.Instance.soundtrackMaster.PlaySoundEffect(1);
             foreach (var go in hiddenInitiatorObjects)
             {
@@ -97,12 +97,12 @@ namespace Puzzles
         // once you solved the TV puzzle
         protected virtual void FadeOutCutscene()
         {
-            Destroy(puzzleAudio);
+            puzzleAudio.active = false;
+            puzzleAudio.canPlay = false;
             puzzleObject.GetComponent<Collider>().enabled = puzzleObject.GetComponent<Outline>().enabled = false;
             puzzleObject.layer = 0;
             FocusOnPuzzleItem(focus: false);
             finished = true;
-            //puzzleAudio.active = false;
             _fadeInScene.reverse = true;
             _fadeInScene.speed = fadeSpeedIncrement;
             /*var particleSystemVelocityOverLifetime = _particles.velocityOverLifetime;

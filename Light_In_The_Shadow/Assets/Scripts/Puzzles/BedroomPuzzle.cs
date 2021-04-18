@@ -8,6 +8,7 @@ public class BedroomPuzzle : PuzzleMaster
 {
     [SerializeField] private DetectClick doorDetectClick;
     [SerializeField] private AudioClip doorLockClip;
+    [SerializeField] private AudioSource audioSource;
     protected override void Start()
     {
         base.Start();
@@ -26,7 +27,7 @@ public class BedroomPuzzle : PuzzleMaster
         if (hasKey)
         {
             
-            GetComponent<AudioSource>().PlayOneShot(doorLockClip); // Play door open sfx
+            audioSource.PlayOneShot(doorLockClip); // Play door open sfx
             inventorySystem.RemoveItem("BedroomDoorKey");
             correct = true;
             doorDetectClick.clickEnabled = false;
