@@ -1,7 +1,6 @@
 Shader "Custom/TorchStencil"
 {
-	Properties{}
-
+	
 	SubShader{
 
 		Tags {
@@ -11,5 +10,7 @@ Shader "Custom/TorchStencil"
 		Pass {
 			ZWrite Off
 		}
-	}
+	
+		}	
+	
 }

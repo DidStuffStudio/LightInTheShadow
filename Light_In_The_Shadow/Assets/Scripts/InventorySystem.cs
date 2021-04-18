@@ -13,7 +13,6 @@ public class InventorySystem : MonoBehaviour
     public List<String> idsInInventory = new List<string>();
     public GameObject descriptionPanel, rotatableObject, itemsHolder;
     [SerializeField] private GameObject rotatePivot;
-    [SerializeField] private  float sensitivity = 0.5f;
     private Vector3 _mouseReference;
     private Vector3 _mouseOffset;
     private Vector3 _rotation;

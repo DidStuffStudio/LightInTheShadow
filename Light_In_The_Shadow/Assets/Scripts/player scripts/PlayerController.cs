@@ -20,8 +20,7 @@ public class PlayerController : MonoBehaviour
     public float playerWalkSpeed = 2.0f;
     public float playerRunSpeed = 12.0f;
     private float _privatePlayerSpeed;
-
-    private float jumpHeight = 1.0f;
+    
 
     //private Inputmanager inputmanager;
     private Transform cameraTransform;
@@ -42,7 +41,7 @@ public class PlayerController : MonoBehaviour
     public GameObject torch;
     public bool hasTorch, holdingTorch;
     public Text helpText, inventoryInformText;
-    private bool _canEquipTorch = true, _canOpenInventory = true, _wasHoldingTorch = false;
+    private bool _canEquipTorch = true, _canOpenInventory = true;
     public float gravity = -2;
     public float mouseSensitivity = 150;
     [SerializeField] private ForwardRendererData _forwardRendererData;

@@ -18,10 +18,10 @@ public class BathroomPuzzle : PuzzleMaster {
     [SerializeField] private List<DetectClick> detectClicksOnWoodenPlanks = new List<DetectClick>();
     public GameObject crowbar;
 
-    [SerializeField] private float deltaNeededToDetachWoodenPlank = 3.0f;
+
     private float deltaBetweenWoodenPlankAndCrowbar = 0.0f;
 
-    [SerializeField] private float crowBarForce = 0.1f;
+  
 
     public WoodenPlank selectedWoodenPlank;
 

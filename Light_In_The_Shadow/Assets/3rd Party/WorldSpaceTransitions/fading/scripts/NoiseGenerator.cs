@@ -18,8 +18,7 @@ namespace WorldSpaceTransitions
             int boxPxSize = Mathf.RoundToInt(boxSize * resolution2d);
             float[,] Values2D = new float[resolution2d, resolution2d];
 
-            float mins = 1f;
-            float maxs = 0f;
+            
 
             int iterations = 0;
 

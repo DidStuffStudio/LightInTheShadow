@@ -20,7 +20,7 @@ public class SceneSwitch : MonoBehaviour {
         }
         else
         {
-            DestroyObject(gameObject);
+            Destroy(gameObject);
         }
 	}
     void Update()

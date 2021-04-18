@@ -7,6 +7,7 @@ using UnityEngine;
 public class BedroomPuzzle : PuzzleMaster
 {
     [SerializeField] private DetectClick doorDetectClick;
+    [SerializeField] private AudioClip doorLockClip;
     protected override void Start()
     {
         base.Start();
@@ -25,7 +26,7 @@ public class BedroomPuzzle : PuzzleMaster
         if (hasKey)
         {
             
-            MasterManager.Instance.soundtrackMaster.PlaySoundEffect(2); // Play door open sfx
+            GetComponent<AudioSource>().PlayOneShot(doorLockClip); // Play door open sfx
             inventorySystem.RemoveItem("BedroomDoorKey");
             correct = true;
             doorDetectClick.clickEnabled = false;

@@ -22,9 +22,10 @@ namespace Puzzles
         [Space]
         [Tooltip("Child character game object with animations. Place in order of which they should activate and deactivate")]
         [SerializeField] private GameObject[] childCharacterGameObjects;
-        [Tooltip("Puzzle 1 should be 1, puzzle 2 should be 2 and so on...")]
-        [Space]
-        [SerializeField] private int puzzleMemorySoundIndex, otherPuzzleMemorySoundIndex;
+
+        [Tooltip("Puzzle 1 should be 1, puzzle 2 should be 2 and so on...")] [Space] [SerializeField]
+        private int puzzleMemorySoundIndex;
+        [SerializeField] private int[] otherMemorySoundIndices =  new int[3];
     
     
         private Animator _memoryLightAnimator;  
@@ -110,7 +111,10 @@ namespace Puzzles
             playerController.FreezePlayerForCutScene(true);
             cutsceneCamera.SetActive(true);
             MasterManager.Instance.soundtrackMaster.LevelMusicVolume(0,0.0f, 5.0f);
-            MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(otherPuzzleMemorySoundIndex, false);
+            for (int i = 0; i < otherMemorySoundIndices.Length; i++)
+            {
+                MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(i, false);
+            }
             MasterManager.Instance.soundtrackMaster.PlayMemoryMusic(puzzleMemorySoundIndex, true);
             MasterManager.Instance.soundtrackMaster.MemoryMusicVolume(100.0f, 5.0f);
             _fadingOut = true;

@@ -124,7 +124,7 @@ public class MasterManager : MonoBehaviour {
     public IEnumerator WaitToReturnMusic()
     {
         yield return new WaitForSeconds(20.0f);
-        soundtrackMaster.LevelMusicVolume(0,100.0f, 20.0f);
-        soundtrackMaster.MemoryMusicVolume(0.0f, 20.0f);
+        soundtrackMaster.LevelMusicVolume(0,100.0f, 30.0f);
+        soundtrackMaster.MemoryMusicVolume(0.0f, 30.0f);
     }
 }

@@ -20,7 +20,7 @@ public class IceScript : MonoBehaviour
     [SerializeField] private AudioClip iceCracking, iceBreak, rumble;
     [SerializeField] private GameObject bigBossMan, health;
     [SerializeField] private float targetAmplitude, targetFrequency;
-    private bool buildShake = true;
+
     private CinemachineBasicMultiChannelPerlin _cameraNoise;
 
     private void Start()
@@ -89,12 +89,10 @@ public class IceScript : MonoBehaviour
             bigBossMan.SetActive(true);//Switch to animation of boss man breaking up through the ice and camera shake
             health.SetActive(true);
             MasterManager.Instance.player.waitingForBossMan = false;
-            buildShake = false;
             yield return new WaitForSeconds(0.5f);
-            buildShake = true;
-            StartCoroutine(BuildCameraShake(1, 1, 0.1f));
+            StartCoroutine(DecreaseCameraShake(1, 1, 0.1f));
             yield return new WaitForSeconds(10.0f);
-            buildShake = false;
+            
         }
         
     }
@@ -112,7 +110,19 @@ public class IceScript : MonoBehaviour
 
     IEnumerator BuildCameraShake(float targetAmp, float targetFreq, float step)
     {
-        while (_cameraNoise.m_FrequencyGain != targetFreq || _cameraNoise.m_AmplitudeGain != targetAmp && buildShake)
+        while (!bigBossMan.activeSelf)
+        {
+            yield return new WaitForSeconds(0.1f);
+            _cameraNoise.m_FrequencyGain =
+                Mathf.Lerp(_cameraNoise.m_FrequencyGain, targetFreq, step);
+            _cameraNoise.m_AmplitudeGain =
+                Mathf.Lerp(_cameraNoise.m_AmplitudeGain, targetAmp, step);
+        }
+    }
+    
+    IEnumerator DecreaseCameraShake(float targetAmp, float targetFreq, float step)
+    {
+        while (Math.Abs(_cameraNoise.m_FrequencyGain - targetFreq) > 0.1f)
         {
             yield return new WaitForSeconds(0.1f);
             _cameraNoise.m_FrequencyGain =
