@@ -343,6 +343,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.9019608
       objectReference: {fileID: 0}
+    - target: {fileID: 991668002, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: far clip plane
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 1010486687, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -534,6 +538,26 @@ PrefabInstance:
     - target: {fileID: 2106097800, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_FirstSelected
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 180511453964238276, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 180511454696708285, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180511455233887209, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 180511455574077072, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 567656129619569793, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 3610929480504827791, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b

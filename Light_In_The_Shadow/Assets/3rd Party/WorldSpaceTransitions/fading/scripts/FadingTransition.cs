@@ -6,7 +6,7 @@ using System.IO;
 #endif
 namespace WorldSpaceTransitions
 {
-    [ExecuteInEditMode]
+    
     public class FadingTransition : MonoBehaviour
     {
         public enum SurfaceType

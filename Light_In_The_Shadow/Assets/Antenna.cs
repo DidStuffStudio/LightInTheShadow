@@ -30,8 +30,8 @@ public class Antenna : MonoBehaviour
 
         if (isVisualAntenna)_tvMaterial.SetFloat("_TVTransition", Mathf.Clamp01(distance));
         if (!isSoundAntenna) return;
-        masterMix.SetFloat("whiteNoise", Map(distance, 3.8f, 0, 20, -80));
-        masterMix.SetFloat("tv", Map(distance, 0, 3.8f, 20, -80));
+        masterMix.SetFloat("WhiteNoise", Map(distance, 3.8f, 0, 20, -80));
+        masterMix.SetFloat("TVAudio", Map(distance, 0, 3.8f, 20, -80));
     }
 
     void OnMouseDown()

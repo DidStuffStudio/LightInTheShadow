@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 327119702, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: sharedProfile
       value: 
-      objectReference: {fileID: 11400000, guid: 6b1ab4979a48b27448c1f2d358c69dc4, type: 2}
+      objectReference: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
     - target: {fileID: 956740931, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_DynamicOccludee
       value: 0
@@ -1114,7 +1114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 13953eee357233148a5ae88971b6cd7e, type: 3}
       propertyPath: m_CastShadows
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 13953eee357233148a5ae88971b6cd7e, type: 3}
       propertyPath: m_DynamicOccludee
@@ -11468,7 +11468,7 @@ MonoBehaviour:
   breathForce: 50
   skybox: {fileID: 2100000, guid: 7e791eca5f1a72347b693059399cddb4, type: 2}
   ice: {fileID: 2100000, guid: 8a2fb3018b688084582207c16d5b132b, type: 2}
-  fogEndColor: {r: 0.6698113, g: 0.45812565, b: 0.6673426, a: 1}
+  fogEndColor: {r: 0.8113208, g: 0.69268423, b: 0.8091238, a: 1}
   bossManExplosion: {fileID: 1209316518}
   trees: {fileID: 1807896767}
   cutSceneCam: {fileID: 974332495}

@@ -192,7 +192,7 @@ public class BossFight : MonoBehaviour
             value -= 0.1f;
             ice.SetFloat("frozen", value);   
             
-            RenderSettings.fogDensity = Map(value, 100, 0, fogIntensity, 0.0003f);
+            RenderSettings.fogDensity = Map(value, 100, 0, fogIntensity, 0.001f);
             RenderSettings.fogColor = Color.Lerp(_fogStartColor,fogEndColor, 1.0f);
             skybox.SetFloat("Fog Intensity", Map(value, 100,0,1.0f,0.1f));
             MasterManager.Instance.ppVolume.weight = Map(value, 100, 0, 1, 0);

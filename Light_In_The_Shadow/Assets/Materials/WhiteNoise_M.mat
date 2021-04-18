@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_a7235bf3733d4ff8b5784bb51fbff3da:
-        m_Texture: {fileID: 2800000, guid: f742e63f0001c874ba708fa89ab8cd99, type: 3}
+        m_Texture: {fileID: 2800000, guid: 55c51009b1f938f4588cf77c2ab70d2d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -62,6 +62,7 @@ Material:
     - _GlowIntensity: 1
     - _GlowScale: 1
     - _Metallic: 0
+    - _TVTransition: 1
     - _UseColorMap: 0
     - _UseEmissiveMap: 0
     - _UseMetallicMap: 0
