@@ -202,7 +202,6 @@ public class BossFight : MonoBehaviour
         MasterManager.Instance.soundtrackMaster.PlaySoundEffect(0);
         StartCoroutine(terrainChange.SpawnInTreesAndGrass());
         Destroy(bigBossMan);
-        print("Game Ended");
     }
 
     IEnumerator EndCredits()

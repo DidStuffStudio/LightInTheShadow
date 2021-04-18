@@ -12,6 +12,8 @@ public class Level : MonoBehaviour
     [SerializeField] private String[] memoryIds = new string[2];
     public int _puzzlesSolved = 0, numberOfPuzzles = 2;
     private bool _puzzlesCompleted;
+    [SerializeField] private bool removeItem = false;
+    [SerializeField] private String itemToRemoveID;
 
     private InventorySystem _inventorySystem;
     private void Start()
@@ -30,6 +32,9 @@ public class Level : MonoBehaviour
         {
             _puzzlesCompleted = true;
             portalBlock.GetComponent<Collider>().enabled = false;
+
+            if (!removeItem) return;
+            _inventorySystem.RemoveItem(itemToRemoveID);
         }
     }
 

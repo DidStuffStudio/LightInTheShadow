@@ -263,9 +263,11 @@ public class PlayerController : MonoBehaviour
             FreezePlayer(true);
             Time.timeScale = 0;
             MasterManager.Instance.LockCursor(false);
+            interactRayCast.enabled = false;
         }
         else //If inventory is open close it
         {
+            interactRayCast.enabled = true;
             _forwardRendererData.rendererFeatures[0].SetActive(false);
             Time.timeScale = 1.0f;
             ClosePanels();
