@@ -263,11 +263,11 @@ public class PlayerController : MonoBehaviour
             FreezePlayer(true);
             Time.timeScale = 0;
             MasterManager.Instance.LockCursor(false);
-            interactRayCast.enabled = false;
+            interactRayCast.EnableInteractor(false);
         }
         else //If inventory is open close it
         {
-            interactRayCast.enabled = true;
+            interactRayCast.EnableInteractor(true);
             _forwardRendererData.rendererFeatures[0].SetActive(false);
             Time.timeScale = 1.0f;
             ClosePanels();
@@ -301,8 +301,10 @@ public class PlayerController : MonoBehaviour
             interactRayCast.inventoryItemHit = false;
             var item = interactRayCast.inventoryItem.gameObject;
             StartCoroutine(InventoryAddInform(item.GetComponent<item>().name));
+            interactRayCast.EnableInteractor(false);
             interactRayCast.ReleaseInventoryItem(item);
             Destroy(item);
+            interactRayCast.EnableInteractor(true);
         }
     }
 
@@ -333,6 +335,7 @@ public class PlayerController : MonoBehaviour
             FreezePlayer(false);
             menuPanels[3].SetActive(true);
             paused = false;
+            interactRayCast.EnableInteractor(true);
             if (!MasterManager.Instance.isInFocusState) MasterManager.Instance.LockCursor(true);
         }
         else
@@ -343,6 +346,7 @@ public class PlayerController : MonoBehaviour
             FreezePlayer(true);
             menuPanels[0].SetActive(true);
             Time.timeScale = 0;
+            interactRayCast.EnableInteractor(false);
         }
     }
 
@@ -405,6 +409,7 @@ public class PlayerController : MonoBehaviour
     public void FreezePlayerForCutScene(bool freeze)
     {
         FreezePlayer(freeze);
+        interactRayCast.EnableInteractor(!freeze);
         _canEquipTorch = !freeze;
         _canOpenInventory = !freeze;
         frozenForCutscene = freeze;

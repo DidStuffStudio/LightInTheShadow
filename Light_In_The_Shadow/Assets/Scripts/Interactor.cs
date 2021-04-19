@@ -15,6 +15,7 @@ public class Interactor : MonoBehaviour
     public bool mouseControl;
     private Ray _ray;
     private bool _isInventoryItemNull, _isTorchHitNull, _hitObjectNull, _hitDarkThoughNull;
+    private bool canInteract = true;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class Interactor : MonoBehaviour
 
     private void Update()
     {
+        if (!canInteract) return;
         _ray = !mouseControl ? _cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0)) : _cam.ScreenPointToRay(Input.mousePosition);
         
         //Normal raycast
@@ -209,5 +211,18 @@ public class Interactor : MonoBehaviour
 
         _lastHitDarkThought = null;
         _hitDarkThoughNull = true;
+    }
+
+    public void EnableInteractor(bool enable)
+    {
+        canInteract = enable;
+        if(!_hitDarkThoughNull) ReleaseDarkThought(_lastHitDarkThought);
+        if(!_isInventoryItemNull) ReleaseInventoryItem(inventoryItem);
+        if(!_hitObjectNull) DisableLastHitObject(_lastHitObject);
+        if(!_isTorchHitNull) DisableTorchInteraction();
+            
+        _lastHitObject = _lastHitDarkThought = _hitTorchObject = inventoryItem = null;
+        _hitObjectNull = _hitDarkThoughNull = _isInventoryItemNull = _isTorchHitNull = true;
+        inventoryItemHit = false;
     }
 }
