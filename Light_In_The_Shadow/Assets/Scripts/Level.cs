@@ -28,6 +28,7 @@ public class Level : MonoBehaviour
         memorySlots[i].SetActive(false);
         _inventorySystem.RemoveItem(memoryIds[i]);
         _puzzlesSolved++;
+        StartCoroutine(MasterManager.Instance.player.InventoryRemoveInform("a memory"));
         if (_puzzlesSolved >= numberOfPuzzles)
         {
             _puzzlesCompleted = true;

@@ -31,6 +31,7 @@ public class BedroomPuzzle : PuzzleMaster
             inventorySystem.RemoveItem("BedroomDoorKey");
             correct = true;
             doorDetectClick.clickEnabled = false;
+            StartCoroutine(MasterManager.Instance.player.InventoryRemoveInform("a key"));
         }
         else
         {

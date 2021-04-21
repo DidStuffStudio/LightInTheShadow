@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     public Text helpText, inventoryInformText;
     private bool _canEquipTorch = true, _canOpenInventory = true;
     public float gravity = -2;
-    public float mouseSensitivity = 150;
+    public float mouseSensitivity = 0.5f;
     [SerializeField] private ForwardRendererData _forwardRendererData;
     public int playerHealth = 100;
     private Volume _postProcessing;
@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform attachPoint;
     public bool frozenForCutscene = false;
     public bool waitingForBossMan = false;
+    public float walkNoiseAmplitude = 0.1f, walkNoiseFrequency = 2.0f,  runNoiseAmplitude = 0.3f, runNoiseFrequency = 5.0f;
     private void Awake()
     {
         playerControls = new PlayerControls();
@@ -115,16 +116,16 @@ public class PlayerController : MonoBehaviour
             _running = true;
             _privatePlayerSpeed = playerRunSpeed;
             if (waitingForBossMan) return;
-            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 3.0f;
-            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
+            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = runNoiseFrequency;
+            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = runNoiseAmplitude;
         }
         else
         {
             _running = false;
             _privatePlayerSpeed = playerWalkSpeed;
             if (waitingForBossMan) return;
-            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 1.0f;
-            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
+            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = walkNoiseFrequency;
+            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain =walkNoiseAmplitude;
         }
     }
 
@@ -223,7 +224,7 @@ public class PlayerController : MonoBehaviour
         {
             interactRayCast.enabled = true;
             playerFrozen = false;
-            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 1.0f;
+            playerCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = walkNoiseAmplitude;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = mouseSensitivity;
             playerCam.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = mouseSensitivity;
             Physics.gravity = new Vector3(0, gravity, 0);
@@ -440,6 +441,14 @@ IEnumerator InventoryAddInform(string name)
         yield return new WaitForSeconds(3.0f);
         menuPanels[5].SetActive(false);
     }
+
+public IEnumerator InventoryRemoveInform(string name)
+{
+    inventoryInformText.text = "You used " + name + " from your inventory.";
+    menuPanels[5].SetActive(true);
+    yield return new WaitForSeconds(3.0f);
+    menuPanels[5].SetActive(false);
+}
 
 float Map(float s, float a1, float a2, float b1, float b2)
 {

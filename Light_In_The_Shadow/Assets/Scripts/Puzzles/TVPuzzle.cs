@@ -31,6 +31,7 @@ namespace Puzzles
                 MasterManager.Instance.soundtrackMaster.PlaySoundEffect(3); // Play door open sfx
                 inventorySystem.RemoveItem("LivingRoomDoorKey");
                 base.FadeInScene();
+                StartCoroutine(MasterManager.Instance.player.InventoryRemoveInform("a key"));
             }
             else
             {

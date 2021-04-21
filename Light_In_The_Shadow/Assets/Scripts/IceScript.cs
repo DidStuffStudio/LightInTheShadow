@@ -90,9 +90,7 @@ public class IceScript : MonoBehaviour
             health.SetActive(true);
             MasterManager.Instance.player.waitingForBossMan = false;
             yield return new WaitForSeconds(0.5f);
-            StartCoroutine(DecreaseCameraShake(1, 1, 0.1f));
-            yield return new WaitForSeconds(10.0f);
-            
+
         }
         
     }
@@ -120,15 +118,4 @@ public class IceScript : MonoBehaviour
         }
     }
     
-    IEnumerator DecreaseCameraShake(float targetAmp, float targetFreq, float step)
-    {
-        while (Math.Abs(_cameraNoise.m_FrequencyGain - targetFreq) > 0.1f)
-        {
-            yield return new WaitForSeconds(0.1f);
-            _cameraNoise.m_FrequencyGain =
-                Mathf.Lerp(_cameraNoise.m_FrequencyGain, targetFreq, step);
-            _cameraNoise.m_AmplitudeGain =
-                Mathf.Lerp(_cameraNoise.m_AmplitudeGain, targetAmp, step);
-        }
-    }
 }
