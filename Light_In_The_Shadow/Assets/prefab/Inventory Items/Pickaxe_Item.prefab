@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: A Pickaxe
-  description: Looks like a pickaxe.. Hmm.. maybe I can use it later
+  description: Looks like a pickaxe. This would be useful to break something.
   id: pickaxe
   inInventory: 0
   shouldPlaySpawnEffect: 0

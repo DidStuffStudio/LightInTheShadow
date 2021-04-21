@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: A Crowbar
-  description: Looks like a crowbar.. Hmm.. maybe I can use it later
+  description: Looks like a crowbar maybe I can use it to help the chid in some way.
   id: crowbar
   inInventory: 0
   shouldPlaySpawnEffect: 0

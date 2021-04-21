@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: A Key
-  description: This is a rusty old key. I wonder what this is for..? hmm
+  description: A rusty old key. Maybe I can use this to help remember something.
   id: LivingRoomDoorKey
   inInventory: 0
   shouldPlaySpawnEffect: 0

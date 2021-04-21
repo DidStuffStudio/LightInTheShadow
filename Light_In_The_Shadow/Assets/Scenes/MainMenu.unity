@@ -564,11 +564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1574789605, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_MaxValue
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1574789605, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_MinValue
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1574789605, guid: fd125bdabbd6c4e06902f6ade394dbc2, type: 3}
       propertyPath: m_WholeNumbers

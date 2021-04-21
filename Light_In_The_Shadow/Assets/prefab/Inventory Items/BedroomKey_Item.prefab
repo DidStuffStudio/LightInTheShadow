@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: A Key
-  description: A key maybe I can open a locked door with this. Or lock an open one...
+  description: A key, maybe I can open a locked door with this. Or lock an open one...
   id: BedroomDoorKey
   inInventory: 0
   shouldPlaySpawnEffect: 0

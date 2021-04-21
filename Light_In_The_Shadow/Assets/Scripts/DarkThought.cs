@@ -81,18 +81,18 @@ public class DarkThought : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
     
-    void OnTriggerEnter(Collider other) // Damage or kill player
+    void OnCollisionEnter(Collision other) // Damage or kill player
     {
-        print("collided with something");
+        
         if (other.gameObject.layer == 10 && _canKill)
         {
-            print("Collided with player");
+            
             collided = true;
             MasterManager.Instance.player.playerHealth -= damageToHealth;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.layer == 10)
         {
@@ -102,7 +102,7 @@ public class DarkThought : MonoBehaviour
 
     protected IEnumerator Explode()
     {
-        print("explode");
+        
         if (MasterManager.Instance.levelIndex == 3)
         {
             var bossFight = FindObjectOfType<BossFight>();
